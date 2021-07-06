@@ -111,16 +111,6 @@ if ($layout == 'post') {
         <?php wp_head() ?>
     </head>
     <body <?php body_class((array) $config('~theme.body_class')) ?>>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript>
-            <iframe
-                src="https://www.googletagmanager.com/ns.html?id=GTM-T75239K"
-                height="0"
-                width="0"
-                style="display:none;visibility:hidden"
-            ></iframe>
-        </noscript>
-        <!-- End Google Tag Manager (noscript) -->
         <?php wp_body_open(); ?>
 
         <?php if ($config('~site.layout') == 'boxed') : ?>
