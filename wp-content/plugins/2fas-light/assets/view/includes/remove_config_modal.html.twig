@@ -1,0 +1,21 @@
+<div class="twofas-modal-backdrop js-twofas-modal-remove-config">
+    <div class="twofas-modal-container">
+        <div class="twofas-modal-cell">
+            <div class="twofas-modal">
+                <h5>{{ esc_html__( 'Are you sure you want to delete your 2FAS Prime configuration?', '2fas-light' ) }}</h5>
+                <p>{{ esc_html__( "It's recommended only in case you lose your phone or access to your 2FAS app and want to restore Two Factor Authentication", '2fas-light' ) }}</p>
+
+                <div class="twofas-modal-close">
+                    <button class="twofas-btn-close js-twofas-modal-cancel">
+                        <img src="{{ twofas_light_plugin_path ~ 'assets/img/close.svg' }}" alt="Close" />
+                    </button>
+                </div>
+
+                <div class="twofas-modal-buttons">
+                    <a href="#" class="twofas-btn-empty js-twofas-remove-config-confirm">{{ esc_html__( 'Delete configuration', '2fas-light' ) }}</a>
+                    <a href="#" class="twofas-btn js-twofas-modal-cancel">{{ esc_html__( 'Cancel', '2fas-light' ) }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

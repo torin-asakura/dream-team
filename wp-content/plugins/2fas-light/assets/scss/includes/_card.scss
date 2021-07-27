@@ -1,0 +1,89 @@
+@import 'variables';
+@import 'functions';
+
+// TwoFas Card
+$cardBg: #fff;
+$footerBorderColor: #f1f1f1;
+$headerColor: #000;
+$contentColor: #000;
+
+.twofas-card {
+  background: $cardBg;
+  border-radius: 4px;
+  margin: 0 auto 42px;
+  max-width: 1386px;
+
+  @media all and (max-width: 500px) {
+    margin-bottom: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  &-body {
+    max-width: 736px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+
+    > .twofas-card-body-1,
+    > .twofas-card-body-2,
+    > .twofas-card-body-3 {
+      &.hidden {
+        display: none;
+      }
+    }
+
+    h4 {
+      color: $headerColor;
+      font-size: px-to-rem(16);
+      font-weight: 600;
+      line-height: px-to-rem(20);
+    }
+
+    p {
+      color: $contentColor;
+      font-size: px-to-rem(14);
+      line-height: px-to-rem(18);
+      margin: 0;
+
+      a {
+        color: $tf-theme-color;
+
+        &:hover {
+          color: darken($tf-theme-color, 5%);
+        }
+
+        &:focus,
+        &:active {
+          color: $tf-theme-color;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    border-top: 1px solid $footerBorderColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 37px;
+
+    @media all and (max-width: 500px) {
+      padding: 20px 10px;
+    }
+
+    button {
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}

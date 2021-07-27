@@ -1,0 +1,46 @@
+<div class="twofas-modal-backdrop js-twofas-modal-backup-codes">
+    <div class="twofas-modal-container">
+        <div class="twofas-modal-cell">
+            <div class="twofas-modal">
+                <h5>
+                    {{
+                    sprintf(
+                        esc_html__('Download, print or write down the following %scodes and keep them in a safe place.', '2fas-light'),
+                        '<br />'
+                    )|raw
+                    }}
+                </h5>
+
+                <div class="twofas-modal-close">
+                    <button class="twofas-btn-close js-twofas-modal-cancel">
+                        <img src="{{ twofas_light_plugin_path ~ 'assets/img/close.svg' }}" alt="{{ esc_attr__('Close', '2fas-light') }}" />
+                    </button>
+                </div>
+
+                <div class="twofas-modal-codes"></div>
+
+                <p class="small-margin">{{ esc_html__('These codes are your backup.', '2fas-light') }}</p>
+                <p>
+                    {{
+                    sprintf(
+                        esc_html__('Use them to access this WordPress account in case%syou lose or damage your phone with the authenticator app.', '2fas-light'),
+                        '<br />'
+                    )|raw
+                    }}
+                </p>
+
+                <div class="twofas-modal-buttons horizontal">
+                    <a href="#" class="twofas-btn twofas-download-codes-link" download="2fas_backup_codes.txt">{{ esc_html__('Download', '2fas-light') }}</a>
+                    <form action="{{ create_url(constant('TwoFAS\\Light\\Http\\Action_Index::TWOFAS_PERSONAL_SETTINGS'), constant('TwoFAS\\Light\\Http\\Action_Index::TWOFAS_ACTION_PRINT_BACKUP_CODES')) }}"
+                          method="post" target="_blank" rel="noreferrer noopener">
+                        {{ create_form_nonce(constant('TwoFAS\\Light\\Http\\Action_Index::TWOFAS_ACTION_PRINT_BACKUP_CODES')) | raw }}
+                        <div class="twofas-backup-codes-inputs"></div>
+                        <button type="submit" class="twofas-btn twofas-print-codes-btn">
+                            <span>{{ esc_html__( 'Print', '2fas-light') }}</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

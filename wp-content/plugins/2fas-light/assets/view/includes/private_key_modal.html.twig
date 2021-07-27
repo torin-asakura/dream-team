@@ -1,0 +1,33 @@
+<div class="twofas-modal-backdrop js-twofas-modal-private-key">
+    <div class="twofas-modal-container">
+        <div class="twofas-modal-cell">
+            <div class="twofas-modal">
+                <h5>
+                    {{
+                    sprintf(
+                        esc_html__('Enter following Service Key to your %s2FAS Authenticator App%sService Key:', '2fas-light'),
+                        '<br />',
+                        '<br />'
+                    )|raw
+                    }}
+                </h5>
+                <h6 class="twofas-private-key js-twofas-private-key-value">{{ totp_secret }}</h6>
+                <p class="twofas-private-key-instructions">
+                    {{
+                    sprintf(
+                        esc_html__("To enter Service Key click '%s+%s' icon on the main screen of your 2FAS app and choose 'Enter code manually'.", '2fas-light'),
+                        '<em>',
+                        '</em>'
+                    )|raw
+                    }}
+                </p>
+
+                <div class="twofas-modal-close">
+                    <button class="twofas-btn-close js-twofas-modal-cancel">
+                        <img src="{{ twofas_light_plugin_path ~ 'assets/img/close.svg' }}" alt="{{ esc_attr__('Close', '2fas-light') }}" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

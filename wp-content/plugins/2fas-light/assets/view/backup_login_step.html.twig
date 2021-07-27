@@ -1,0 +1,50 @@
+{% if twofas_light_login_error is not null %}
+    {{ login_header('Enter your one-time backup code', '', twofas_light_login_error) }}
+{% else %}
+    {{ login_header('Enter your one-time backup code', '') }}
+{% endif %}
+
+<form method="post" action="{{ login_form_action_url }}" id="twofas-light-loginform" class="twofas-light-login-form">
+    <p class="login-username">
+        <label for="twofas_code">{{ esc_html__('Enter your one-time backup code:', '2fas-light') }}</label>
+        <input type="text"
+               name="twofas_light_backup_code"
+               id="twofas_light_backup_code"
+               autocomplete="off"
+               minlength="14"
+               maxlength="14"
+               pattern="^[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}$"
+               title="XXXX-XXXX-XXXX"
+               required="required"
+               autofocus="autofocus"/>
+    </p>
+    {% include "includes/authentication_hidden_inputs.html.twig" %}
+
+    <input type="hidden" name="twofas_light_action" value="{{ actions['verify_backup_code'] }}"/>
+
+    <p class="submit">
+        <input class="button button-primary button-large" type="submit" name="wp-submit" id="wp-submit" value="{{ esc_attr__('Log In', '2fas-light') }}"/>
+    </p>
+</form>
+<div class="twofas-light-login-nav">
+    <div class="twofas-light-login-nav-wrapper">
+        <div class="twofas-light-table-wrapper">
+            <div class="twofas-light-login-nav-message">
+                <a href="#" class="js-twofas-how-backup-codes-works">{{ esc_html__('How backup codes works?', '2fas-light') }}</a>
+                <section class="twofas-login-another-account">
+                    <form action="{{ login_url }}" method="post" class="twofas-light-login-nav-form">
+                        {% if interim_login %}
+                            <input type="hidden" name="interim-login" value="{{ interim_login }}"/>
+                        {% endif %}
+                        <input type="hidden" name="twofas_light_action" value="{{ actions['log_in_with_totp_code'] }}"/>
+                        <input type="submit" class="button-link" value="{{ esc_attr__('Log in with the 2FAS Token', '2fas-light') }}"/>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'includes/backup_codes_log_in_modal.html.twig' %}
+
+{{ login_footer() }}

@@ -1,0 +1,29 @@
+{{ nonce_field | raw }}
+
+<div class="twofas-light-wrapper wrap">
+    <div class="twofas-light-logo-header">
+        <h1>
+            <img src="{{ twofas_light_plugin_path ~ 'assets/img/logo.svg' }}" alt="2FAS Light - Logo" />
+            <span class="twofas-light-logo-header-title">2FAS &mdash; Two Factor Authentication Service</span>
+        </h1>
+    </div>
+
+    <div class="js-twofas-light-notifications"></div>
+
+    {% if display_rate_plugin_prompt %}
+        {% include 'includes/rate_plugin_prompt.html.twig' %}
+    {% endif %}
+
+    {% if twofas_full_plugin_is_active %}
+        <div class="twofas-light-card">
+            <span>
+                <strong>
+                {{ esc_html__( 'In order to use the 2FAS Prime plugin, please deactivate the 2FAS Classic plugin.', '2fas-light' ) }}
+                </strong>
+            </span>
+        </div>
+    {% else %}
+        {% block content %}{% endblock %}
+    {% endif %}
+    {% block modals %}{% endblock %}
+</div>

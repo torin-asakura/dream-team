@@ -1,0 +1,86 @@
+@import '../includes/variables';
+
+#twofas-light-loginform {
+  padding-bottom: 20px !important;
+}
+
+.twofas-light-login-footer {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+
+  &:hover {
+    .twofas-light-login-footer-tooltip {
+      display: inline;
+    }
+  }
+
+  &.twofas-login-configuration-footer {
+    bottom: auto;
+    position: relative;
+    margin-right: 30px;
+    right: auto;
+    text-align: right;
+
+    .twofas-light-login-footer-tooltip {
+      position: absolute;
+      right: 35px;
+    }
+  }
+
+  .twofas-light-login-footer-tooltip {
+    display: none;
+    width: 250px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    margin-top: 3px;
+    margin-right: 4px;
+    float: left;
+  }
+}
+
+.twofas-light-login-nav {
+  margin-top: 10px;
+
+  .twofas-light-login-nav-wrapper {
+    padding: 10px 24px;
+
+    .twofas-light-table-wrapper {
+      width: 100%;
+      display: table;
+
+      .twofas-light-login-nav-message {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 11px;
+        line-height: 19px;
+        color: $login-nav-message-color;
+
+        a {
+          font-size: 11px;
+          line-height: 19px;
+          color: $login-nav-message-color;
+        }
+
+        .twofas-light-login-nav-form {
+          box-shadow: none;
+          padding: 0;
+          margin: 0;
+          background: transparent;
+          border: none;
+
+          input {
+            font-size: 11px;
+            line-height: 19px;
+            text-decoration: underline;
+            color: $login-nav-message-color;
+          }
+        }
+      }
+    }
+  }
+}

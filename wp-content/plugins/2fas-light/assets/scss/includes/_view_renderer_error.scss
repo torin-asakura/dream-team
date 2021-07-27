@@ -1,0 +1,15 @@
+@import 'variables';
+
+.twofas-light-view-renderer-error {
+  background: $tf-view-renderer-background;
+  border-left: 4px solid $tf-view-renderer-border;
+  box-shadow: 0 1px 1px 0 $tf-view-renderer-shadow;
+  -webkit-box-shadow: 0 1px 1px 0 $tf-view-renderer-shadow;
+  padding: 5px 12px;
+  margin: 5px 0 15px;
+}
+
+body.login .twofas-light-view-renderer-error-container {
+  margin: auto;
+  width: 320px;
+}

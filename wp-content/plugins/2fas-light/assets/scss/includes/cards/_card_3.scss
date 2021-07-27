@@ -1,0 +1,81 @@
+@import '../variables';
+@import '../functions';
+
+// VARIABLES
+$contentColor: #000;
+$labelColor: #898989;
+
+.twofas-card-body-3 {
+  &-content {
+    &-totp-token {
+      &-container {
+        display: inline-flex;
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      form {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 67px;
+        text-align: center;
+
+        @media all and (max-width: 500px) {
+          margin-bottom: 30px;
+        }
+
+        label {
+          color: $labelColor;
+          font-size: px-to-rem(16);
+          font-weight: 500;
+          line-height: px-to-rem(20);
+          margin-bottom: 27px;
+
+          @media all and (max-width: 500px) {
+            margin-bottom: 10px;
+          }
+        }
+
+        input {
+          appearance: none;
+          background-image: url('data:image/svg+xml;utf8,<svg fill="none" height="2" viewBox="0 0 195 2" width="195" xmlns="http://www.w3.org/2000/svg"><g fill="%23ed1c24"><rect height="2" rx="1" width="29.5246"/><rect height="2" rx="1" width="28.1514" x="33.6443"/><rect height="2" rx="1" width="29.5246" x="65.9155"/><rect height="2" rx="1" width="29.5246" x="99.5598"/><rect height="2" rx="1" width="28.1514" x="133.204"/><rect height="2" rx="1" width="29.5246" x="165.475"/></g></svg>');
+          background-size: 195px 2px;
+          background-position: bottom left;
+          background-repeat: no-repeat;
+          border-radius: 0;
+          border: 0;
+          box-shadow: none;
+          color: $contentColor;
+          font-family: monospace;
+          font-size: 24px;
+          font-weight: 500;
+          height: 42px;
+          letter-spacing: 18.5px;
+          line-height: 29px;
+          margin-right: -18.5px;
+          outline: 0;
+          padding: 0 0 0 8px;
+          width: 213.5px;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          &:focus,
+          &:active {
+            border: 0;
+            box-shadow: none;
+            outline: 0;
+          }
+        }
+      }
+    }
+
+    h4 {
+      margin-bottom: 43px;
+      text-align: center;
+    }
+  }
+}

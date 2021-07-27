@@ -1,0 +1,27 @@
+<div class="twofas-modal-backdrop js-twofas-modal-backup-codes-confirm">
+    <div class="twofas-modal-container">
+        <div class="twofas-modal-cell">
+            <div class="twofas-modal">
+                <h5>
+                    {{
+                    sprintf(
+                        esc_html__('Are you sure you want to generate new %sbackup codes?', '2fas-light'),
+                        '<br />'
+                    )|raw
+                    }}
+                </h5>
+
+                <div class="twofas-modal-close">
+                    <button class="twofas-btn-close js-twofas-modal-cancel">
+                        <img src="{{ twofas_light_plugin_path ~ 'assets/img/close.svg' }}" alt="{{ esc_attr__('Close', '2fas-light') }}" />
+                    </button>
+                </div>
+
+                <div class="twofas-modal-buttons">
+                    <a href="#" class="twofas-btn-empty js-twofas-regenerate-backup-codes-confirm">{{ esc_html__('Yes', '2fas-light') }}</a>
+                    <a href="#" class="twofas-btn js-twofas-modal-cancel">{{ esc_html__('No', '2fas-light') }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

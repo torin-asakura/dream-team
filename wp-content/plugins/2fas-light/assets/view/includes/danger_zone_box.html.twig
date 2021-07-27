@@ -1,0 +1,43 @@
+<h3 class="twofas-danger-zone-header js-twofas-danger-zone-box{% if twofas_light_user_is_configured %} twofas-show{% endif %}">{{ esc_html__('Danger Zone', '2fas-light') }}</h3>
+
+<div class="twofas-danger-zone-box js-twofas-danger-zone-box{% if twofas_light_user_is_configured %} twofas-show{% endif %}">
+    {% if totp_obligatory == false %}
+    <div class="twofas-danger-zone-box-item">
+        <h4>{{ esc_html__('Disable Two Factor authentication', '2fas-light') }}</h4>
+        <h5>{{ esc_html__('(not recommended)', '2fas-light') }}</h5>
+
+        <div class="twofas-danger-zone-box-item-switch">
+            <label for="twofas-totp-switch">{{ esc_html__('Two Factor Authentication', '2fas-light') }}</label>
+
+            <div class="twofas-switch">
+                <input id="twofas-totp-switch" class="twofas-totp-switch js-twofas-totp-switch" type="checkbox" value="{{ twofas_light_totp_status }}" />
+                <label for="twofas-totp-switch">
+                    <span class="twofas-totp-switch-indicator"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="twofas-danger-zone-box-item">
+        <h4>{{ esc_html__('Delete your current 2FAS Prime plugin configuration', '2fas-light') }}</h4>
+        <h5>
+            {{
+            sprintf(
+                esc_html__("(It's recommended only in case you lose phone or access to your 2FAS app and want to restore %ssecond factor authentication).", '2fas-light'),
+                '<br />'
+            )|raw
+            }}
+        </h5>
+
+        <div class="twofas-danger-zone-box-item-remove-config{% if not twofas_light_user_is_configured %} twofas-light-non-configured{% endif %}">
+            <form action="{{ create_url(constant('TwoFAS\\Light\\Http\\Action_Index::TWOFAS_PERSONAL_SETTINGS'), constant('TwoFAS\\Light\\Http\\Action_Index::TWOFAS_ACTION_REMOVE_CONFIGURATION')) }}" method="post" class="js-twofas-remove-bar-form">
+                {{ create_form_nonce(constant('TwoFAS\\Light\\Http\\Action_Index::TWOFAS_ACTION_REMOVE_CONFIGURATION')) | raw }}
+
+                <a href="#" class="js-twofas-remove-config">
+                    <span>{{ esc_html__('Click here to delete your configuration', '2fas-light') }}</span>
+                </a>
+            </form>
+        </div>
+    </div>
+</div>

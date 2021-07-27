@@ -1,0 +1,17 @@
+<div class="twofas-configured-box twofas-configured js-twofas-configured-box{% if twofas_light_user_is_configured %} twofas-show{% endif %}">
+    <div class="twofas-configured-box-content js-twofas-configured-box-content{% if twofas_light_totp_status == "totp_enabled" %} twofas-show{% endif %}" data-totp-status="totp_enabled">
+        <img src="{{ twofas_light_plugin_path ~ 'assets/img/tick.svg' }}" alt="2FAS Configuration tick" />
+        <h2>{{ esc_html__( '2FAS Prime plugin is running', '2fas-light' ) }}</h2>
+        <p>{{ esc_html__( 'Use tokens from 2FAS app to authenticate your WordPress account.', '2fas-light' ) }}</p>
+    </div>
+
+    <div class="twofas-configured-box-content js-twofas-configured-box-content{% if twofas_light_totp_status == "totp_disabled" %} twofas-show{% endif %}" data-totp-status="totp_disabled">
+        <img src="{{ twofas_light_plugin_path ~ 'assets/img/tick-disabled.svg' }}" alt="2FAS Disabled tick" />
+        <h2>{{ esc_html__( '2FAS Prime plugin is disabled', '2fas-light' ) }}</h2>
+        <p>{{ esc_html__( 'Use tokens from 2FAS app to authenticate your WordPress account.', '2fas-light' ) }}</p>
+    </div>
+
+    <div class="twofas-configured-box-footer">
+        <p>Learn more at <a href="https://www.2fas.com/plugins/" target="_blank" rel="noreferrer noopener">www.2fas.com/plugins</a></p>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="twofas-modal-backdrop js-twofas-modal-backup-log-in">
+    <div class="twofas-modal-container">
+        <div class="twofas-modal-cell">
+            <div class="twofas-modal">
+                <div class="twofas-modal-close">
+                    <button class="twofas-btn-close js-twofas-modal-cancel">
+                        <img src="{{ twofas_light_plugin_path ~ 'assets/img/close.svg' }}" alt="{{ esc_attr__('Close', '2fas-light') }}" />
+                    </button>
+                </div>
+
+                {% include 'includes/backup_codes_tutorial.html.twig' with {
+                    'modal': true
+                } %}
+
+                <div class="twofas-buttons">
+                    <a href="#" class="twofas-btn js-twofas-modal-cancel">{{ esc_html__('OK', '2fas-light') }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
