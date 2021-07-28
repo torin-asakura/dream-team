@@ -1,17 +1,15 @@
 ---
-uri: "/docs/media/"
-title: "Media"
+uri: '/docs/media/'
+title: 'Media'
 ---
 
 WPGraphQL provides support for querying Media Items, what WordPress calls "attachments".
-
 
 This page will be most useful for users what are familiar with [GraphQL Concepts](/docs/intro-to-graphql/) and understand the basics of [writing GraphQL Queries](/docs/intro-to-graphql/#queries-and-mutation).
 
 ## Querying Media Items
 
 WPGraphQL supports querying Media Items in various ways.
-
 
 Below are some common examples of querying Media Items with WPGraphQL.
 
@@ -59,10 +57,7 @@ If you have the source url for an image in the media library, you can use that a
 
 ```graphql
 {
-  mediaItem (
-    id: "/static/9cb15e2b7fddc510b725924a6a491cb9/dadJoke.png", 
-    idType: SOURCE_URL
-  ) {
+  mediaItem(id: "/static/9cb15e2b7fddc510b725924a6a491cb9/dadJoke.png", idType: SOURCE_URL) {
     id
     title
     sourceUrl

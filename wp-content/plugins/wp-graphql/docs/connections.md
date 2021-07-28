@@ -1,6 +1,6 @@
 ---
-uri: "/docs/connections/"
-title: "Connections"
+uri: '/docs/connections/'
+title: 'Connections'
 ---
 
 **Connections? and Edges? and Nodes? Oh my?!?!**
@@ -13,7 +13,7 @@ Below is an image that attempts to visualize what an "application data graph" mi
 
 ![The graphql application data graph visualization](./connections-graph.png)
 
-In the image, the pink circles represent individual resources, or "nodes". The "nodes" have individual properties as well as connections to other resources. For example, a Post in WordPress can have properties such as Title, and can be connected to other "nodes" such as Images and Categories. The Image and Category nodes can have their own properties such as "name" and "sourceUrl", and can *also* have "connections" to other nodes. The yellow lines between the "nodes" represent the "edge" of the connection where contextual data can be represented.
+In the image, the pink circles represent individual resources, or "nodes". The "nodes" have individual properties as well as connections to other resources. For example, a Post in WordPress can have properties such as Title, and can be connected to other "nodes" such as Images and Categories. The Image and Category nodes can have their own properties such as "name" and "sourceUrl", and can _also_ have "connections" to other nodes. The yellow lines between the "nodes" represent the "edge" of the connection where contextual data can be represented.
 
 To help understand "edges", consider a Social Network, where there might be two Users that are friends. The date the two users became friends is not a property of either user, but a contextual property about their connection as friends. That contextual data that exists only in the context of a connection between nodes is considered "edge" data.
 
@@ -56,17 +56,16 @@ And a response would look something like:
       },
       {
         "id": 2,
-  "title": "Hello World, again"
-       }
-     ]
-   }
+        "title": "Hello World, again"
+      }
+    ]
+  }
 }
 ```
 
 ### Problem: Pagination
 
 This worked well, if the only goal was to get a small set of data. But, for WordPress sites with more than a few posts, this doesn't scale, because there was no good way to handle pagination. To paginate, the UI needs more information from the server to determine if there are more items to fetch, how to fetch them, etc.
-
 
 An early iteration of the WPGraphQL Schema adjusted to allow querying posts like so:
 
@@ -86,7 +85,6 @@ An early iteration of the WPGraphQL Schema adjusted to allow querying posts like
 
 By nesting the posts a level deeper, the client could ask for the items, but also ask for data related to pagination, such as the `pageNumber`, `nextPageNumber` and `postsPerPage`. With that info, the client could make another request to get the next page of data.
 
-
 The follow-up request would have looked something like:
 
 ```graphql
@@ -98,7 +96,6 @@ The follow-up request would have looked something like:
 ```
 
 This worked ok, so we could implement it for other Types, right?
-
 
 Well, this just looked weird:
 
@@ -114,10 +111,9 @@ Well, this just looked weird:
 
 The name `postsPerPage` seemed only applicable to Posts. We'd need different terminology for paging Terms.
 
-
 We could match WordPress internals and use `posts_per_page` and `paged` for [Post objects](https://core.trac.wordpress.org/browser/tags/5.2/src/wp-includes/class-wp-query.php#L682), and `number / offset` for [Terms](https://core.trac.wordpress.org/browser/tags/5.2/src/wp-includes/class-wp-term-query.php#L119), and [Users](https://codex.wordpress.org/Class_Reference/WP_User_Query#Pagination_Parameters). But this seemed a bit tacky. There was an opportunity to abstract things to paginate using the same terminology regardless of what Type is being paginated, including Types, such as Themes and Plugins that have no way to be paginated in WordPress currently.
 
-Surely there was a way we could paginate *all* types of data with the same conventions!
+Surely there was a way we could paginate _all_ types of data with the same conventions!
 
 ### Problem: Contextual Relationship Data
 
@@ -138,7 +134,6 @@ A caching client will cache the Image based on its ID, and will cache fields aga
 ### Relay Spec for Connections
 
 While researching various ways to paginate, The Relay Specification was discovered, and it aimed to solve many of the issues we had experienced.
-
 
 Relay introduces the concept of "Connections". You can read about them in the official [Relay Connection Specification](https://facebook.github.io/relay/graphql/connections.htm).
 
@@ -196,7 +191,7 @@ If we look closely, we can also see that this addresses the other problems.
 
 ### Naming Conventions
 
-It provides agnostic, consistently named fields for paginating *any* type of Data. We can now use the same pageInfo fields (`hasNextPage`, `endCursor`) and the same arguments (`first`, `after`) for pagination of Posts, Pages, Tags, Categories, Users, Comments, and even data that's not traditionally easy to paginate in WordPress, such as Themes and Plugins!
+It provides agnostic, consistently named fields for paginating _any_ type of Data. We can now use the same pageInfo fields (`hasNextPage`, `endCursor`) and the same arguments (`first`, `after`) for pagination of Posts, Pages, Tags, Categories, Users, Comments, and even data that's not traditionally easy to paginate in WordPress, such as Themes and Plugins!
 
 ### Contextual (edge) Data
 

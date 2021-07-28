@@ -1,6 +1,6 @@
 ---
-uri: "/docs/wpgraphql-concepts/"
-title: "WPGraphQL Concepts"
+uri: '/docs/wpgraphql-concepts/'
+title: 'WPGraphQL Concepts'
 ---
 
 This page covers some opinionated concepts of GraphQL that are implemented by WPGraphQL
@@ -25,7 +25,7 @@ WPGraphQL allows for a global ID to be passed to the root `node` field, like so:
 
 ```graphql
 {
-  node( id: "cG9zdDox" ) {
+  node(id: "cG9zdDox") {
     __typename
   }
 }

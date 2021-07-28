@@ -1,6 +1,6 @@
 ---
-uri: "/docs/menus/"
-title: "Menus"
+uri: '/docs/menus/'
+title: 'Menus'
 ---
 
 In WordPress, Navigation Menus consist of 2 types of entities: Menus and MenuItems.
@@ -115,7 +115,7 @@ It's likely more common that you would want to query Menu Items associated with 
 
 ```graphql
 query MENU_ITEMS {
-  menuItems(where: {location: "PRIMARY"}) {
+  menuItems(where: { location: "PRIMARY" }) {
     nodes {
       key: id
       parentId
@@ -145,33 +145,33 @@ Given the query above, we might have a payload of data like so:
       "key": "bmF2X21lbnVfaXRlbTo2Mjk=",
       "parentId": null,
       "title": "Sample Page",
-      "url": "http://acf2.local/sample-page/",
+      "url": "http://acf2.local/sample-page/"
     },
     {
       "key": "bmF2X21lbnVfaXRlbTo2MzA=",
       "parentId": "bmF2X21lbnVfaXRlbTo2Mjk=",
       "title": "Child Page",
-      "url": "http://acf2.local/sample-page/child-page/",
+      "url": "http://acf2.local/sample-page/child-page/"
     },
     {
       "key": "bmF2X21lbnVfaXRlbTo2MzE=",
       "parentId": "bmF2X21lbnVfaXRlbTo2MzA=",
       "title": "Grandchild",
-      "url": "http://acf2.local/sample-page/child-page/grandchild/",
+      "url": "http://acf2.local/sample-page/child-page/grandchild/"
     },
     {
       "key": "bmF2X21lbnVfaXRlbTo1NTE=",
       "parentId": null,
       "title": "test",
-      "url": "http://acf2.local/test/",
+      "url": "http://acf2.local/test/"
     },
     {
       "key": "bmF2X21lbnVfaXRlbTo1NTI=",
       "parentId": null,
       "title": "Test Page",
-      "url": "http://acf2.local/test-page/",
+      "url": "http://acf2.local/test-page/"
     }
-  ],
+  ]
 }
 ```
 
@@ -181,30 +181,28 @@ A function like the following could be used to convert the flat list to a hierar
 
 ```js
 const flatListToHierarchical = (
-    data = [],
-    {idKey='key',parentKey='parentId',childrenKey='children'} = {}
+  data = [],
+  { idKey = 'key', parentKey = 'parentId', childrenKey = 'children' } = {}
 ) => {
-    const tree = [];
-    const childrenOf = {};
-    data.forEach((item) => {
-        const newItem = {...item};
-        const { [idKey]: id, [parentKey]: parentId = 0 } = newItem;
-        childrenOf[id] = childrenOf[id] || [];
-        newItem[childrenKey] = childrenOf[id];
-        parentId
-            ? (
-                childrenOf[parentId] = childrenOf[parentId] || []
-            ).push(newItem)
-            : tree.push(newItem);
-    });
-    return tree;
-};
+  const tree = []
+  const childrenOf = {}
+  data.forEach((item) => {
+    const newItem = { ...item }
+    const { [idKey]: id, [parentKey]: parentId = 0 } = newItem
+    childrenOf[id] = childrenOf[id] || []
+    newItem[childrenKey] = childrenOf[id]
+    parentId
+      ? (childrenOf[parentId] = childrenOf[parentId] || []).push(newItem)
+      : tree.push(newItem)
+  })
+  return tree
+}
 ```
 
 This could be used like so:
 
 ```js
-$hierarchicalList = flatListToHierarchical( data.nodes );
+$hierarchicalList = flatListToHierarchical(data.nodes)
 ```
 
 And the data would be transformed like so:

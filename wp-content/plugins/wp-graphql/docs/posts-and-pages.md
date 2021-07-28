@@ -1,6 +1,6 @@
 ---
-uri: "/docs/posts-and-pages/"
-title: "Posts and Pages"
+uri: '/docs/posts-and-pages/'
+title: 'Posts and Pages'
 ---
 
 WPGraphQL provides support for querying Posts, Pages and Custom Post Types in various ways.
@@ -61,7 +61,7 @@ This example shows querying posts written by a specific author (using the author
 
 ```graphql
 {
-  posts(where: {author: 1}) {
+  posts(where: { author: 1 }) {
     nodes {
       id
       title
@@ -95,7 +95,7 @@ Below is an example of querying a single post using the [GraphQL Global ID](/doc
 
 ```graphql
 {
-  post( id: "cG9zdDozMzM=" ) {
+  post(id: "cG9zdDozMzM=") {
     id
     databaseId
     title
@@ -111,7 +111,7 @@ Below is an example of querying a single post using the Database ID as an identi
 
 ```graphql
 {
-  post( id: 333, idType: DATABASE_ID ) {
+  post(id: 333, idType: DATABASE_ID) {
     id
     databaseId
     title
@@ -142,7 +142,6 @@ Below is an example of querying a single post using the `slug` as the ID.
     uri
   }
 }
-
 ```
 
 ![Screenshot of a GraphQL query for a single post using the SLUG](./posts-query-by-slug.png)
@@ -161,10 +160,7 @@ There are 2 required input fields to create a post: `clientMutationId` and `titl
 
 ```graphql
 mutation CREATE_POST {
-  createPost(input: {
-    clientMutationId: "CreatePost"
-    title: "New Post Title"
-  }) {
+  createPost(input: { clientMutationId: "CreatePost", title: "New Post Title" }) {
     post {
       id
       title
@@ -172,7 +168,6 @@ mutation CREATE_POST {
     }
   }
 }
-
 ```
 
 This Mutation will only succeed for users with proper capabilities to create posts (of the post type being created).
@@ -195,11 +190,7 @@ Below is an example of a GraphQL Mutation to update a post. In order to update a
 
 ```graphql
 mutation UPDATE_POST {
-  updatePost(input: {
-    clientMutationId: "UpdatePost",
-    id: "cG9zdDoxNzg5",
-    title: "New title!"
-  }) {
+  updatePost(input: { clientMutationId: "UpdatePost", id: "cG9zdDoxNzg5", title: "New title!" }) {
     post {
       id
       title
@@ -228,10 +219,7 @@ Below is an example of of a GraphQL Mutation to delete a post. In order to delet
 
 ```graphql
 mutation DELETE_POST {
-  deletePost(input: {
-    clientMutationId:"DeletePost"
-    id:"cG9zdDoxNzg5"
-  }) {
+  deletePost(input: { clientMutationId: "DeletePost", id: "cG9zdDoxNzg5" }) {
     deletedId
     post {
       id

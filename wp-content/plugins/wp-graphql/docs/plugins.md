@@ -1,6 +1,6 @@
 ---
-uri: "/docs/plugins/"
-title: "Plugins"
+uri: '/docs/plugins/'
+title: 'Plugins'
 ---
 
 This page will be most useful for users what are familiar with [GraphQL Concepts](/docs/intro-to-graphql/) and understand the basics of [writing GraphQL Queries](/docs/intro-to-graphql/#queries-and-mutation).

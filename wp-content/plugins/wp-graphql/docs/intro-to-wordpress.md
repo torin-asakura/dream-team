@@ -1,6 +1,6 @@
 ---
-uri: "/docs/intro-to-wordpress/"
-title: "Intro to WordPress"
+uri: '/docs/intro-to-wordpress/'
+title: 'Intro to WordPress'
 ---
 
 This guide will be most useful for developers with little to no WordPress experience. This is not intended to be the most comprehensive guide to WordPress in the world, but is intended to provide some insight into how WordPress works and resources to learn more about WordPress.
@@ -97,7 +97,7 @@ The WordPress plugin ecosystem is booming, with more than 48,000 free plugins av
 
 ### How do Plugins Work with decoupled WordPress?
 
-Many WordPress plugins were created with the assumption that WordPress is the CMS as well as the presentation layer, but that's not always the case today. With the rise of decoupled WordPress, it's common for WordPress to be used as a CMS, but *not* be used for its theme layer.
+Many WordPress plugins were created with the assumption that WordPress is the CMS as well as the presentation layer, but that's not always the case today. With the rise of decoupled WordPress, it's common for WordPress to be used as a CMS, but _not_ be used for its theme layer.
 
 WPGraphQL has an extendable API which allows for WordPress plugins to extend the GraphQL Schema so their custom data can be used in decoupled applications via GraphQL Queries and Mutations.
 

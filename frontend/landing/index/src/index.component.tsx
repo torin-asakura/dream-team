@@ -1,24 +1,23 @@
-import React from 'react'
-import { useQuery } from '@apollo/client'
+import React                   from 'react'
 
-import { MY_QUERY } from './queries'
+import { Navigation }          from '@fragments/navigation'
+import { LandingIntroduction } from '@fragments/landing-introduction'
+import { LandingAbout }        from '@fragments/landing-about'
+import { LandingReviews }      from '@fragments/landing-reviews'
+import { LandingDreamTeam }    from '@fragments/landing-dream-team'
+import { LandingFeedback }     from '@fragments/landing-feedback'
+import { LandingFooter }       from '@fragments/landing-footer'
 
 const Index = () => {
-  const { loading, error, data } = useQuery(MY_QUERY)
-
-  const Data = ({ data }) => (
-    <>
-      {Object.keys(data).map((item) => (
-        <h1>{JSON.stringify(data[item])}</h1>
-      ))}
-    </>
-  )
-
   return (
     <>
-      {loading && <h1>Loading</h1>}
-      {error && <h1>error</h1>}
-      {data && <Data data={data}/>}
+      <Navigation />
+      <LandingIntroduction />
+      <LandingAbout />
+      <LandingReviews />
+      <LandingDreamTeam />
+      <LandingFeedback />
+      <LandingFooter />
     </>
   )
 }

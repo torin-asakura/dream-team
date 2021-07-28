@@ -1,6 +1,6 @@
 ---
-uri: "/docs/custom-post-types/"
-title: "Custom Post Types"
+uri: '/docs/custom-post-types/'
+title: 'Custom Post Types'
 ---
 
 ## Using Custom Post Types with WPGraphQL
@@ -79,7 +79,7 @@ And if your `graphql_single_name` were `Doc`, you would be able to query a singl
 
 ```graphql
 {
-  doc( id: "validIdGoesHere" ) {
+  doc(id: "validIdGoesHere") {
     id
     title
   }

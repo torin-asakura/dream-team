@@ -1,3 +1,3 @@
-window.onload = function() {
-	window.print();
-};
+window.onload = function () {
+  window.print()
+}

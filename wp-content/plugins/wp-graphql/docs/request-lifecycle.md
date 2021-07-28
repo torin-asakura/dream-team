@@ -1,6 +1,6 @@
 ---
-uri: "/docs/wpgraphql-request-lifecycle/"
-title: "WPGraphQL Request Lifecycle"
+uri: '/docs/wpgraphql-request-lifecycle/'
+title: 'WPGraphQL Request Lifecycle'
 ---
 
 This page is intended to be a technical guide on how a WPGraphQL request executes.
@@ -15,7 +15,7 @@ An over-simplified summary of the WPGraphQL lifecycle looks something like the f
 - If the request is valid, the fields are mapped to their resolvers (callback functions) and execution proceeds.
 - Each resolver returns data and passes it down to the next level of resolvers until no more fields require execution.
 - The response is formatted as JSON and returned
-GraphQL Endpoint
+  GraphQL Endpoint
 
 Most users of WPGraphQL will be interacting with it from the site's `/graphql` endpoint.
 

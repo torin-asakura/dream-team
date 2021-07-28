@@ -1,6 +1,6 @@
 ---
-uri: "/docs/testing/"
-title: "Testing"
+uri: '/docs/testing/'
+title: 'Testing'
 ---
 
 This document will be most useful for developers that want to contribute to WPGraphQL and want to run tests locally.
@@ -142,7 +142,7 @@ To run the tests, run the following commands (you can use `control + c` to exit)
 vendor/bin/codecept run wpunit
 ```
 
-This will run *all* of the tests of the `wpunit` suite.
+This will run _all_ of the tests of the `wpunit` suite.
 
 To run an individual test file, you can specify the file like so:
 
@@ -162,7 +162,7 @@ The tests should start running and you should see something similar to the follo
 
 ## Testing with Docker
 
-Testing in docker is slower than testing locally with Codeception, but it allows you to test in a consistent environment and not have to worry about a local environment issue getting in the way of running the tests. 
+Testing in docker is slower than testing locally with Codeception, but it allows you to test in a consistent environment and not have to worry about a local environment issue getting in the way of running the tests.
 
 ### Pre-Requisites
 
@@ -240,6 +240,6 @@ export SUITES="tests/wpunit/BarTest.php tests/wpunit/FooTest.php" composer run-t
 
 - If you make a change that requires `composer install` to be rerun, run composter build-app again.
 - Leave the container shell by typing `exit`.
-- Docker artifacts will *usually* be cleaned up automatically when the script completes. In case it doesn't do the job, try these solutions:
-    - Run this command: `docker system prune`
-    - https://docs.docker.com/config/pruning/#prune-containers
+- Docker artifacts will _usually_ be cleaned up automatically when the script completes. In case it doesn't do the job, try these solutions:
+  - Run this command: `docker system prune`
+  - https://docs.docker.com/config/pruning/#prune-containers

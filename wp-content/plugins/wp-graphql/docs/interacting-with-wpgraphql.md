@@ -1,6 +1,6 @@
 ---
-uri: "/docs/interacting-with-wpgraphql/"
-title: "Interacting with WPGraphQL"
+uri: '/docs/interacting-with-wpgraphql/'
+title: 'Interacting with WPGraphQL'
 ---
 
 On this page, you will find details on the various ways you can interact with your WPGraphQL API.
@@ -65,8 +65,8 @@ fetch('https://www.wpgraphql.com/graphql', {
     `,
   }),
 })
-  .then(res => res.json())
-  .then(res => console.log(res.data))
+  .then((res) => res.json())
+  .then((res) => console.log(res.data))
 ```
 
 ![Screenshot showing the request being made](./interacting-fetch-graphql-from-browser-console-1024x619.gif)

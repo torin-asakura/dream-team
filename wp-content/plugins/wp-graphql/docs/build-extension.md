@@ -1,6 +1,6 @@
 ---
-uri: "/docs/build-your-first-wpgraphql-extension/"
-title: "Build your First WPGraphQL Extension"
+uri: '/docs/build-your-first-wpgraphql-extension/'
+title: 'Build your First WPGraphQL Extension'
 ---
 
 This tutorial should be helpful for developers of any experience level, but it will be most useful for developers that have some previous experience building WordPress plugins.
@@ -160,11 +160,11 @@ Now we have a type `CustomType` in our Schema and we can verify this by searchin
 
 ![Screenshot of "CustomType" type in GraphiQL Docs explorer](./extension-graphiql-explorer-custom-type.png)
 
-**Note:** *Anytime you change the Schema on the server, you will need to refresh GraphiQL to re-fetch the Schema and pick up your changes.*
+**Note:** _Anytime you change the Schema on the server, you will need to refresh GraphiQL to re-fetch the Schema and pick up your changes._
 
 ## Use a Custom Type with a Custom Field
 
-We just registered a CustomType to the Schema, but it's not in use at all. In order to query data in the shape of the CustomType, it needs to be defined as the Type of a field. 
+We just registered a CustomType to the Schema, but it's not in use at all. In order to query data in the shape of the CustomType, it needs to be defined as the Type of a field.
 
 Let's change the `type` of our `customField` to be `CustomType` instead of `String`. And let's change the resolver to return something that matches the shape of `CustomType` so we can fulfill the contract we have with the Schema.
 
@@ -195,7 +195,7 @@ register_graphql_field( 'RootQuery', 'customField', [
 
 Here we change the `type` to be `CustomType` and we change the resolve function to return an array with a key of "count" and a value of "5", and a key of "testField" with a value of "test value&#8230;".
 
-Since the field `customField` no longer returns a string, but instead returns the type `CustomType` we would need to adjust our query to reflect. 
+Since the field `customField` no longer returns a string, but instead returns the type `CustomType` we would need to adjust our query to reflect.
 
 **Before**:
 

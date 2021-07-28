@@ -1,6 +1,6 @@
 ---
-uri: "/docs/upgrading/"
-title: "Upgrading"
+uri: '/docs/upgrading/'
+title: 'Upgrading'
 ---
 
 It is recommended that anytime you want to update WPGraphQL that you get familiar with what's changed in the release.

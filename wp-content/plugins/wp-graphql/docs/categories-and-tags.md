@@ -1,6 +1,6 @@
 ---
-uri: "/docs/categories-and-tags/"
-title: "Categories and Tags"
+uri: '/docs/categories-and-tags/'
+title: 'Categories and Tags'
 ---
 
 WPGraphQL provides support for querying Categories, Tags and Custom Taxonomies in various ways.
@@ -86,7 +86,7 @@ The following example shows querying tags with a name like "Gatsby".
 
 ```graphql
 query GetTagNodes {
-  tags(where: {nameLike: "Gatsby"}) {
+  tags(where: { nameLike: "Gatsby" }) {
     nodes {
       id
       name
@@ -101,16 +101,16 @@ query GetTagNodes {
 
 Below is an example of querying a single term (of any Taxonomy) using the `termNode` field and passing the GraphQL [Global ID](/docs/wpgraphql-concepts/).
 
-> The `termNode` field returns a TermNode [Interface](/docs/interfaces/) Type, which allows for terms of *any* Taxonomy to be queried.
+> The `termNode` field returns a TermNode [Interface](/docs/interfaces/) Type, which allows for terms of _any_ Taxonomy to be queried.
 
 ```graphql
 {
-  category: termNode( id: "dGVybTozNA==" ) {
+  category: termNode(id: "dGVybTozNA==") {
     __typename
     id
     name
   }
-  tag: termNode( id: "dGVybTo0MA==" ) {
+  tag: termNode(id: "dGVybTo0MA==") {
     __typename
     id
     name
@@ -126,7 +126,7 @@ The following example shows a query for a single Tag using the uri (the url path
 
 ```graphql
 {
-  tag( id: "/tag/gatsby/", idType: URI ) {
+  tag(id: "/tag/gatsby/", idType: URI) {
     __typename
     id
     name
@@ -151,7 +151,7 @@ The only required field to create a Category is the `name`.
 
 ```graphql
 mutation {
-  createCategory(input: {name: "New Category"}) {
+  createCategory(input: { name: "New Category" }) {
     category {
       id
       name
@@ -180,7 +180,7 @@ Below is an example of a GraphQL Mutation to update a Category. In order to upda
 
 ```graphql
 mutation {
-  updateCategory(input: {id: "dGVybTo0NA==", description: "New description..."}) {
+  updateCategory(input: { id: "dGVybTo0NA==", description: "New description..." }) {
     category {
       id
       name
@@ -208,7 +208,7 @@ Below is an example of a GraphQL Mutation to delete a Category term. In order to
 
 ```graphql
 mutation {
-  deleteCategory(input: {id: "dGVybTo0NA=="}) {
+  deleteCategory(input: { id: "dGVybTo0NA==" }) {
     category {
       id
       name

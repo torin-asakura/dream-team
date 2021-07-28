@@ -5,7 +5,7 @@ const MY_QUERY = gql`
     allSettings {
       discussionSettingsDefaultCommentStatus
     }
-}
+  }
 `
 
 export { MY_QUERY }

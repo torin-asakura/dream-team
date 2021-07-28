@@ -4,7 +4,5 @@
   "main": "toggles.min.js",
   "description": "Toggles is a lightweight jQuery plugin that creates easily-styleable toggle buttons.",
   "license": "MIT",
-  "ignore": [
-    "lib/*"
-  ]
+  "ignore": ["lib/*"]
 }

@@ -16,14 +16,14 @@
 
 /* global define */
 
-(function (factory) {
+;(function (factory) {
   typeof define === 'function' && define.amd
     ? define(factory)
     : typeof exports === 'object'
-      ? (module.exports = factory())
-      : factory()
+    ? (module.exports = factory())
+    : factory()
 })(function () {
-  ('use strict') // eslint-disable-line no-unused-expressions
+  ;('use strict') // eslint-disable-line no-unused-expressions
 
   /* globals window:true */
   var _window = typeof window !== 'undefined' ? window : this
@@ -50,7 +50,7 @@
         // easeInQuad
         easing: function (x, t, b, c, d) {
           return c * (t /= d) * t + b
-        }
+        },
       },
       settings
     )
@@ -83,10 +83,10 @@
     // set events
     _.resize = _.init.bind(_, true)
     _.event(_.ele, 'add', {
-      scroll: _.updateControls.bind(_)
+      scroll: _.updateControls.bind(_),
     })
     _.event(_window, 'add', {
-      resize: _.resize
+      resize: _.resize,
     })
   })
 
@@ -98,10 +98,9 @@
 
     var height = 0
 
-    _.slides = _.track.children;
+    _.slides = _.track.children
 
-
-    [].forEach.call(_.slides, function (_, i) {
+    ;[].forEach.call(_.slides, function (_, i) {
       _.classList.add('glider-slide')
       _.setAttribute('data-gslide', i)
     })
@@ -111,26 +110,19 @@
     var breakpointChanged = _.settingsBreakpoint()
     if (!paging) paging = breakpointChanged
 
-    if (
-      _.opt.slidesToShow === 'auto' ||
-      typeof _.opt._autoSlide !== 'undefined'
-    ) {
+    if (_.opt.slidesToShow === 'auto' || typeof _.opt._autoSlide !== 'undefined') {
       var slideCount = _.containerWidth / _.opt.itemWidth
 
-      _.opt._autoSlide = _.opt.slidesToShow = _.opt.exactWidth
-        ? slideCount
-        : Math.floor(slideCount)
+      _.opt._autoSlide = _.opt.slidesToShow = _.opt.exactWidth ? slideCount : Math.floor(slideCount)
     }
     if (_.opt.slidesToScroll === 'auto') {
       _.opt.slidesToScroll = Math.floor(_.opt.slidesToShow)
     }
 
-    _.itemWidth = _.opt.exactWidth
-      ? _.opt.itemWidth
-      : _.containerWidth / _.opt.slidesToShow;
+    _.itemWidth = _.opt.exactWidth ? _.opt.itemWidth : _.containerWidth / _.opt.slidesToShow
 
     // set slide dimensions
-    [].forEach.call(_.slides, function (__) {
+    ;[].forEach.call(_.slides, function (__) {
       __.style.height = 'auto'
       __.style.width = _.itemWidth + 'px'
       width += _.itemWidth
@@ -184,7 +176,7 @@
           e.stopPropagation()
         }
         _.preventClick = false
-      }
+      },
     }
 
     _.ele.classList.toggle('draggable', _.opt.draggable === true)
@@ -214,7 +206,7 @@
       dot.setAttribute('aria-label', 'Page ' + (i + 1))
       dot.className = 'glider-dot ' + (i ? '' : 'active')
       _.event(dot, 'add', {
-        click: _.scrollItem.bind(_, i, true)
+        click: _.scrollItem.bind(_, i, true),
       })
       _.dots.appendChild(dot)
     }
@@ -229,17 +221,17 @@
       })
       return
     }
-    ['prev', 'next'].forEach(function (direction) {
+    ;['prev', 'next'].forEach(function (direction) {
       var arrow = _.opt.arrows[direction]
       if (arrow) {
         if (typeof arrow === 'string') arrow = document.querySelector(arrow)
         if (arrow) {
           arrow._func = arrow._func || _.scrollItem.bind(_, direction)
           _.event(arrow, 'remove', {
-            click: arrow._func
+            click: arrow._func,
           })
           _.event(arrow, 'add', {
-            click: arrow._func
+            click: arrow._func,
           })
           _.arrows[direction] = arrow
         }
@@ -258,16 +250,12 @@
 
     if (!_.opt.rewind) {
       if (_.arrows.prev) {
-        _.arrows.prev.classList.toggle(
-          'disabled',
-          _.ele.scrollLeft <= 0 || disableArrows
-        )
+        _.arrows.prev.classList.toggle('disabled', _.ele.scrollLeft <= 0 || disableArrows)
       }
       if (_.arrows.next) {
         _.arrows.next.classList.toggle(
           'disabled',
-          Math.ceil(_.scrollLeft + _.containerWidth) >=
-            Math.floor(_.trackWidth) || disableArrows
+          Math.ceil(_.scrollLeft + _.containerWidth) >= Math.floor(_.trackWidth) || disableArrows
         )
       }
     }
@@ -288,7 +276,7 @@
       _.page = _.dots ? _.dots.children.length - 1 : 0
     }
 
-    [].forEach.call(_.slides, function (slide, index) {
+    ;[].forEach.call(_.slides, function (slide, index) {
       var slideClasses = slide.classList
 
       var wasVisible = slideClasses.contains('visible')
@@ -299,10 +287,10 @@
 
       var itemStart = _.itemWidth * index
 
-      var itemEnd = itemStart + _.itemWidth;
+      var itemEnd = itemStart + _.itemWidth
 
-      [].forEach.call(slideClasses, function (className) {
-        /^left|right/.test(className) && slideClasses.remove(className)
+      ;[].forEach.call(slideClasses, function (className) {
+        ;/^left|right/.test(className) && slideClasses.remove(className)
       })
       slideClasses.toggle('active', _.slide === index)
       if (middle === index || (extraMiddle && extraMiddle === index)) {
@@ -312,22 +300,21 @@
         slideClasses.add(
           [
             index < middle ? 'left' : 'right',
-            Math.abs(index - (index < middle ? middle : extraMiddle || middle))
+            Math.abs(index - (index < middle ? middle : extraMiddle || middle)),
           ].join('-')
         )
       }
 
-      var isVisible =
-        Math.ceil(itemStart) >= start && Math.floor(itemEnd) <= end
+      var isVisible = Math.ceil(itemStart) >= start && Math.floor(itemEnd) <= end
       slideClasses.toggle('visible', isVisible)
       if (isVisible !== wasVisible) {
         _.emit('slide-' + (isVisible ? 'visible' : 'hidden'), {
-          slide: index
+          slide: index,
         })
       }
     })
     if (_.dots) {
-      [].forEach.call(_.dots.children, function (dot, index) {
+      ;[].forEach.call(_.dots.children, function (dot, index) {
         dot.classList.toggle('active', _.page === index)
       })
     }
@@ -384,10 +371,9 @@
           slide =
             backwards && !scrollLeft
               ? _.slides.length
-              : !backwards &&
-                scrollLeft + _.containerWidth >= Math.floor(_.trackWidth)
-                ? 0
-                : slide
+              : !backwards && scrollLeft + _.containerWidth >= Math.floor(_.trackWidth)
+              ? 0
+              : slide
         }
       }
 
@@ -397,18 +383,13 @@
       slide = _.itemWidth * slide
     }
 
-    _.scrollTo(
-      slide,
-      _.opt.duration * Math.abs(_.ele.scrollLeft - slide),
-      function () {
-        _.updateControls()
-        _.emit('animated', {
-          value: originalSlide,
-          type:
-            typeof originalSlide === 'string' ? 'arrow' : dot ? 'dot' : 'slide'
-        })
-      }
-    )
+    _.scrollTo(slide, _.opt.duration * Math.abs(_.ele.scrollLeft - slide), function () {
+      _.updateControls()
+      _.emit('animated', {
+        value: originalSlide,
+        type: typeof originalSlide === 'string' ? 'arrow' : dot ? 'dot' : 'slide',
+      })
+    })
 
     return false
   }
@@ -452,7 +433,8 @@
 
     var animate = function () {
       var now = new Date().getTime() - start
-      _.scrollLeft = _.scrollLeft + (scrollTarget - _.scrollLeft) * _.opt.easing(0, now, 0, 1, scrollDuration)
+      _.scrollLeft =
+        _.scrollLeft + (scrollTarget - _.scrollLeft) * _.opt.easing(0, now, 0, 1, scrollDuration)
       _.ele.scrollLeft = _.scrollLeft
 
       if (now < scrollDuration && animateIndex === _.animate_id) {
@@ -488,8 +470,7 @@
     var _ = this
     if (_.mouseDown) {
       _.isDrag = true
-       _.scrollLeft +=
-        (_.mouseDown - e.clientX) * (_.opt.dragVelocity || 3.3)
+      _.scrollLeft += (_.mouseDown - e.clientX) * (_.opt.dragVelocity || 3.3)
       _.mouseDown = e.clientX
       _.ele.scrollLeft = _.scrollLeft
     }
@@ -531,18 +512,18 @@
     var replace = _.ele.cloneNode(true)
 
     var clear = function (ele) {
-      ele.removeAttribute('style');
-      [].forEach.call(ele.classList, function (className) {
-        /^glider/.test(className) && ele.classList.remove(className)
+      ele.removeAttribute('style')
+      ;[].forEach.call(ele.classList, function (className) {
+        ;/^glider/.test(className) && ele.classList.remove(className)
       })
     }
     // remove track
     replace.children[0].outerHTML = replace.children[0].innerHTML
-    clear(replace);
-    [].forEach.call(replace.getElementsByTagName('*'), clear)
+    clear(replace)
+    ;[].forEach.call(replace.getElementsByTagName('*'), clear)
     _.ele.parentNode.replaceChild(replace, _.ele)
     _.event(_window, 'remove', {
-      resize: _.resize
+      resize: _.resize,
     })
     _.emit('destroy')
   }
@@ -552,7 +533,7 @@
 
     var e = new _window.CustomEvent('glider-' + name, {
       bubbles: !_.opt.eventPropagate,
-      detail: arg
+      detail: arg,
     })
     _.ele.dispatchEvent(e)
   }

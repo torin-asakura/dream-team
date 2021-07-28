@@ -1,19 +1,19 @@
 ---
-uri: "/docs/graphql-resolvers/"
-title: "GraphQL Resolvers"
+uri: '/docs/graphql-resolvers/'
+title: 'GraphQL Resolvers'
 ---
 
 On this page you will find information about what GraphQL resolvers are and how they work. This page will be most useful for developers that are [already familiar with GraphQL](/docs/intro-to-graphql/).
 
-> Resolvers exist in *any* GraphQL implementation, not just WPGraphQL, but how they are implemented and the API for working with them varies from language to language, which is why you find this page under the WPGraphQL Concepts section.
+> Resolvers exist in _any_ GraphQL implementation, not just WPGraphQL, but how they are implemented and the API for working with them varies from language to language, which is why you find this page under the WPGraphQL Concepts section.
 
 A GraphQL Schema consists of Types and Fields, which declares what is possible to be asked for. Resolvers are the functions that execute when a field is asked for.
 
 When registering a field to theWPGraphQL Schema defining a resolver is optional.
 
-**Registering a field *without* a resolver:**
+**Registering a field _without_ a resolver:**
 
-Below is an example of registering a field to the Schema *without* a resolve function defined.
+Below is an example of registering a field to the Schema _without_ a resolve function defined.
 
 ```php
 add_action( 'graphql_register_types', function() {
@@ -41,9 +41,9 @@ However, if we were to execute this, the results would be a `null` value for the
 }
 ```
 
-This is because we registered the field to the Schema, but *did not* define a resolver.
+This is because we registered the field to the Schema, but _did not_ define a resolver.
 
-**Registering a field *with* a resolver:**
+**Registering a field _with_ a resolver:**
 
 Below is the same example as above, but with a resolve function included.
 
@@ -92,7 +92,7 @@ add_action( 'graphql_register_types', function() {
        ]
     ],
     'resolve' => function( $root, $args, $context, $info ) {
-      
+
       // if the name argument was input in the query, return it
       return ( isset( $args['name'] ) ? $args['name'] : 'world';
 
@@ -109,7 +109,7 @@ Now we could query like so:
 
 ```graphql
 {
-  hello( name: "Pam" )
+  hello(name: "Pam")
 }
 ```
 
@@ -133,14 +133,14 @@ During GraphQL execution, the `graphql_pre_resolve_field` filter executes prior 
 
 This can be used like so:
 
- ```php
+```php
 add_filter( 'graphql_pre_resolve_field', function( $default, $source, $args, $context, $info, $type_name, $field_key, $field, $field_resolver ) {
 
-  if ( 'rootquery' === strtolower( $type_name ) && 'hello' === $field_key ) {
-    return 'custom value';
-  }
+ if ( 'rootquery' === strtolower( $type_name ) && 'hello' === $field_key ) {
+   return 'custom value';
+ }
 
-  return $default;
+ return $default;
 
 }, 10, 9 );
 ```
@@ -159,11 +159,11 @@ The same query for the `hello` field would now return the following:
 
 > **NOTE:** We used `strtolower()` to convert the type name to lowercase because behind the scenes WPGraphQL converts type names to lowercase strings, so it's always safest to check type names using all lowercase characters.
 
-[Learn more about the graphql\_pre\_resolve\_field filter](/filters/graphql_pre_resolve_field/).
+[Learn more about the graphql_pre_resolve_field filter](/filters/graphql_pre_resolve_field/).
 
 ### graphql_resolve_field filter
 
-This filter is similar to above, but the difference is that this filter runs *after* default execution of the resolve field has already run.
+This filter is similar to above, but the difference is that this filter runs _after_ default execution of the resolve field has already run.
 
 Let's say we wanted to prefix the results of the `hello` field with something custom.
 
@@ -185,7 +185,7 @@ Now executing the following query:
 
 ```graphql
 {
-  hello( name: "Pam" )
+  hello(name: "Pam")
 }
 ```
 
@@ -199,13 +199,13 @@ Would return the following, with our prefix before the existing results of the q
 }
 ```
 
-[Learn more about the graphql\_resolve\_field filter](/filters/graphql_resolve_field/).
+[Learn more about the graphql_resolve_field filter](/filters/graphql_resolve_field/).
 
 ### Completely Replacing the Field Resolve Function
 
 Below is an example of replacing the field's resolve function altogether.
 
-Let's say we wanted the `hello` field to *always* return the string "goodbye", no matter what.
+Let's say we wanted the `hello` field to _always_ return the string "goodbye", no matter what.
 
 We could replace the resolve function for the field like so:
 

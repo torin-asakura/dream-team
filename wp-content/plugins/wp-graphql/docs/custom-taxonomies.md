@@ -1,6 +1,6 @@
 ---
-uri: "/docs/custom-taxonomies/"
-title: "Custom Taxonomies"
+uri: '/docs/custom-taxonomies/'
+title: 'Custom Taxonomies'
 ---
 
 ## Using Custom Taxonomies with WPGraphQL

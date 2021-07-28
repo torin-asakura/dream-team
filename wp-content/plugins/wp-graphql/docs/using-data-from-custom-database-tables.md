@@ -1,6 +1,6 @@
 ---
-uri: "/docs/using-data-from-custom-database-tables/"
-title: "Using Data from Custom Database Tables"
+uri: '/docs/using-data-from-custom-database-tables/'
+title: 'Using Data from Custom Database Tables'
 ---
 
 This is an advanced guide that will be most useful for developers with experience with PHP and MySQL.

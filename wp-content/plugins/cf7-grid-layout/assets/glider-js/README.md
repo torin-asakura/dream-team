@@ -9,9 +9,9 @@ Demos and full documentation available on Github Pages: https://nickpiscitelli.g
 Include glider.min.css:
 
 ```html
-<link rel="stylesheet" href="glider.min.css">
+<link rel="stylesheet" href="glider.min.css" />
 or
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" />
 ```
 
 Include Glider.js:
@@ -26,26 +26,25 @@ Example HTML:
 
 ```html
 <div class="glider">
-  <div> 1 </div>
-  <div> 2 </div>
-  <div> 3 </div>
-  <div> 4 </div>
-  <div> 5 </div>
-  <div> 6 </div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
 </div>
 ```
 
 Glider.js Initialization
 
 ```javascript
-new Glider(document.querySelector('.glider'));
+new Glider(document.querySelector('.glider'))
 ```
 
 Glider.js Initialization w/ full options:
 
 ```javascript
 new Glider(document.querySelector('.glider'), {
-
   // `auto` allows automatic responsive
   // width calculations
   slidesToShow: 'auto',
@@ -62,7 +61,7 @@ new Glider(document.querySelector('.glider'), {
   exactWidth: false,
 
   // speed aggravator - higher is slower
-  duration: .5,
+  duration: 0.5,
 
   // dot container element or selector
   dots: 'CSS Selector',
@@ -71,7 +70,7 @@ new Glider(document.querySelector('.glider'), {
   arrows: {
     prev: 'CSS Selector',
     // may also pass element directly
-    next: document.querySelector('CSS Selector')
+    next: document.querySelector('CSS Selector'),
   },
 
   // allow mouse dragging
@@ -82,7 +81,7 @@ new Glider(document.querySelector('.glider'), {
   // use any custom easing function
   // compatible with most easing plugins
   easing: function (x, t, b, c, d) {
-    return c*(t/=d)*t + b;
+    return c * (t /= d) * t + b
   },
 
   // event control
@@ -104,19 +103,19 @@ new Glider(document.querySelector('.glider'), {
       breakpoint: 900,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
-      }
+        slidesToScroll: 2,
+      },
     },
     {
       breakpoint: 575,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3
-      }
-    }
-  ]
-});
- ```
+        slidesToScroll: 3,
+      },
+    },
+  ],
+})
+```
 
 Change options:
 
@@ -144,7 +143,7 @@ document.querySelector(element_path).addEventListener('glider-slide-visible', fu
 Destroy with:
 
 ```javascript
-Glider(document.querySelector(element_path)).destroy();
+Glider(document.querySelector(element_path)).destroy()
 ```
 
 #### Browser support
@@ -165,7 +164,6 @@ Most browsers now support the `scrollbar-width` property allowing us to avoid th
 }
 ```
 
-
 Since Glider.js uses native scrolling, the browser wants to apply the standard scrollbar to the glider. In most cases, this is fine since the scrollbar can be hidden with CSS and Glider.js does so when appropriate. In browsers such as Firefox though, the scrollbars cannot be hidden with CSS and require additional markup to hide.
 
 To hide the scrollbars in Firefox, you'll want to wrap your glider with `<div class="glider-wrap">` and apply the following CSS/JS:
@@ -182,15 +180,15 @@ To hide the scrollbars in Firefox, you'll want to wrap your glider with `<div cl
 ```
 
 ```javascript
-document.addEventListener('glider-loaded', hideFFScrollBars);
-document.addEventListener('glider-refresh', hideFFScrollBars);
-function hideFFScrollBars(e){
-  var scrollbarHeight = 17; // Currently 17, may change with updates
-  if(/firefox/i.test(navigator.userAgent)){
+document.addEventListener('glider-loaded', hideFFScrollBars)
+document.addEventListener('glider-refresh', hideFFScrollBars)
+function hideFFScrollBars(e) {
+  var scrollbarHeight = 17 // Currently 17, may change with updates
+  if (/firefox/i.test(navigator.userAgent)) {
     // We only need to appy to desktop. Firefox for mobile uses
     // a different rendering engine (WebKit)
-    if (window.innerWidth > 575){
-      e.target.parentNode.style.height = (e.target.offsetHeight - scrollbarHeight) + 'px'
+    if (window.innerWidth > 575) {
+      e.target.parentNode.style.height = e.target.offsetHeight - scrollbarHeight + 'px'
     }
   }
 }
@@ -198,7 +196,7 @@ function hideFFScrollBars(e){
 
 #### Packages using Glider.js :rocket:
 
-- [react-glider](https://www.npmjs.com/package/react-glider) - A react wrapper for Glider.js written in typescript. 
+- [react-glider](https://www.npmjs.com/package/react-glider) - A react wrapper for Glider.js written in typescript.
 
 #### Dependencies
 

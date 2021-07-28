@@ -1,6 +1,6 @@
 ---
-uri: "/docs/wpgraphql-vs-wp-rest-api/"
-title: "WPGraphQL vs. WP REST API"
+uri: '/docs/wpgraphql-vs-wp-rest-api/'
+title: 'WPGraphQL vs. WP REST API'
 ---
 
 This guide should be useful to developers or organizations looking to compare and contrast features and benefits of the WordPress REST API and WPGraphQL. This guide will be most useful if you have a general understanding of what the WP REST API is and how it works. If you want to learn more about the WP REST API, check out the [WP REST API Handbook](https://developer.wordpress.org/rest-api/).
@@ -15,7 +15,7 @@ GraphQL on the other hand, is a [specification](https://spec.graphql.org/June201
 
 ### Improved Tooling
 
-A benefit of the GraphQL specification is that you can use tools such as [GraphiQL](https://github.com/graphql/graphiql), [GraphQL Playground](https://github.com/prisma-labs/graphql-playground) or [GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager) (and so many others) with *any* GraphQL API.
+A benefit of the GraphQL specification is that you can use tools such as [GraphiQL](https://github.com/graphql/graphiql), [GraphQL Playground](https://github.com/prisma-labs/graphql-playground) or [GraphQL Voyager](https://github.com/APIs-guru/graphql-voyager) (and so many others) with _any_ GraphQL API.
 
 To get an idea of how helpful this is, below is a screenshot of using GraphiQL to query the Github GraphQL API for Repositories and using the same tool in the WordPress admin for querying Posts from a WPGraphQL API.
 
@@ -166,7 +166,7 @@ Using the same Advanced Custom Fields field group as we did for the REST API exa
 
 Then, still using GraphiQL, we can compose queries to ask for exactly what fields are needed, even in the case of ACF Flex Fields where it feels like the data should be unpredictable.
 
-In this case, we specify that we want the "flexField" field within the "acfPostFieldGroup", and we use an inline fragment to specify what fields we want for each flex field layout that *could* be returned from the flex field.
+In this case, we specify that we want the "flexField" field within the "acfPostFieldGroup", and we use an inline fragment to specify what fields we want for each flex field layout that _could_ be returned from the flex field.
 
 And in response, we get exactly the fields we asked for.
 
@@ -225,7 +225,7 @@ Let's say you needed to build an interface that needed the following data:
 
 With the WP REST API, we would need to request the '/posts' endpoint to get a list of posts.
 
-This would include the posts' Title, Date and Author ID, but it would *also* include much more data than we need, such as the posts' category IDs, tag IDs, content, excerpt and more. So, not only is the server executing functions to gather the data you don't need, but you also have to wait for the extra unneeded data to be downloaded.
+This would include the posts' Title, Date and Author ID, but it would _also_ include much more data than we need, such as the posts' category IDs, tag IDs, content, excerpt and more. So, not only is the server executing functions to gather the data you don't need, but you also have to wait for the extra unneeded data to be downloaded.
 
 So now you have more data than you need (content, excerpt, etc) but you also have less data than you need as you're still missing the Author's name and avatar.
 
@@ -242,7 +242,7 @@ Below is a GraphQL query getting exactly what we need in 1 request. Nothing more
 #### Fewer Functions Executing
 
 > The fastest code is the code that never runs.
->   -- [Robert Galanakis](https://news.ycombinator.com/item?id=10979240#:~:text=Robert%20Galanakis%3A%20%E2%80%9CThe%20fastest%20code,code%20that%20was%20never%20written.%E2%80%9D)
+> -- [Robert Galanakis](https://news.ycombinator.com/item?id=10979240#:~:text=Robert%20Galanakis%3A%20%E2%80%9CThe%20fastest%20code,code%20that%20was%20never%20written.%E2%80%9D)
 
 With GraphQL, since you ask for the exact fields you need, this means that behind the scenes fewer functions are executing to get the data. For example, if you don't ask for the post's content, filters such as 'the_content' (which can be expensive for some sites) don't execute and this has real impact on processing time.
 
@@ -256,7 +256,7 @@ In the screenshots above, we saw that the REST endpoint for 100 posts was return
 
 As seen in the image above, not only does GraphQL allow for you to specify the exact fields that you need for individual resources, it also allows you to follow connections to related resources.
 
-Instead of having to make round-trip requests to get the Author Avatar's *after* getting the Posts, we can ask for the Posts, the Post's Author and the Author's Avatar in a single GraphQL query.
+Instead of having to make round-trip requests to get the Author Avatar's _after_ getting the Posts, we can ask for the Posts, the Post's Author and the Author's Avatar in a single GraphQL query.
 
 This reduces the number of HTTP requests which reduces latency and server processing.
 
@@ -270,7 +270,7 @@ Let's take a look at what this means using our example query from above:
 
 ```graphql
 query {
-  posts( first: 5 ) {
+  posts(first: 5) {
     id
     title
     date
@@ -310,7 +310,7 @@ You can even [use WPGraphQL to fetch data in your PHP plugins and themes](/docs/
 
 WPGraphQL also enables multiple root resources to be fetched at the same time.
 
-Let's say you needed a list of Posts *and* a list of Categories. With the WP REST API you would need to hit 2 enpdoints: /posts and /categories.
+Let's say you needed a list of Posts _and_ a list of Categories. With the WP REST API you would need to hit 2 enpdoints: /posts and /categories.
 
 With WPGraphQL, you can ask for both resources in a single request:
 
@@ -335,7 +335,7 @@ query GET_POSTS_AND_CATEGORIES {
 
 ### Batch Queries
 
-WPGraphQL also supports batch queries. What this means is that multiple separate queries can be sent to the WPGraphQL server to be processed at the *same time*. Client tools such as [Apollo Link Batch HTTP](https://www.apollographql.com/docs/link/links/batch-http/) allow for different components to declare their data dependencies, and if the components are used on the same screen, the queries can be batched to one HTTP request and WPGraphQL can process them and return the results at once.
+WPGraphQL also supports batch queries. What this means is that multiple separate queries can be sent to the WPGraphQL server to be processed at the _same time_. Client tools such as [Apollo Link Batch HTTP](https://www.apollographql.com/docs/link/links/batch-http/) allow for different components to declare their data dependencies, and if the components are used on the same screen, the queries can be batched to one HTTP request and WPGraphQL can process them and return the results at once.
 
 Below is a screenshot showing this concept in action.
 

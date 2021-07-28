@@ -1,6 +1,6 @@
 ---
-uri: "/docs/settings/"
-title: "Settings"
+uri: '/docs/settings/'
+title: 'Settings'
 ---
 
 On this page you will find information about using GraphQL to interact with settings that have been registered to WordPress via the `register_settings()` API provided by WordPress.
@@ -126,7 +126,7 @@ Would return results similar to the following:
 
 ### Site Settings by Settings Group
 
-Site settings can *also* be queried by setting group name. Field names will be the camel case version of the setting, no longer prepended by the group name since you are using it to query with.
+Site settings can _also_ be queried by setting group name. Field names will be the camel case version of the setting, no longer prepended by the group name since you are using it to query with.
 
 For example, fields in the General Settings group can be accessed like so:
 
@@ -172,7 +172,7 @@ Here's an example of a Mutation to update the Site's title:
 
 ```graphql
 mutation {
-  updateSettings(input: {generalSettingsTitle: "New Title"}) {
+  updateSettings(input: { generalSettingsTitle: "New Title" }) {
     generalSettings {
       title
     }

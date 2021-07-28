@@ -1,6 +1,6 @@
 ---
-uri: "/docs/introduction/"
-title: "Introduction"
+uri: '/docs/introduction/'
+title: 'Introduction'
 ---
 
 WPGraphQL is a free, open-source WordPress plugin that provides an extendable [GraphQL](/glossary/graphql/) schema and [API](/glossary/api/) for any [WordPress](/docs/intro-to-wordpress/) site.
@@ -15,7 +15,7 @@ Are you new to using GraphQL with WordPress? This is the place to start!
   - **[Intro to GraphQL](/docs/intro-to-graphql/)**: New to GraphQL? This guide covers basic concepts of using GraphQL and includes resources to learn even more.
   - **[Intro to WordPress](/docs/intro-to-wordpress/)**: New to WordPress? This guide will help you understand some basics of WordPress, how to use it as a CMS and how to extend it as a Developer.
   - **[Interacting with WPGraphQL](/docs/interacting-with-wpgraphql/)**: This guide covers some of the basics for interacting with WPGraphQL using tooling such as GraphiQL and fetch requests from the browser.
-  - **[Build your first WPGraphQL Extension](/docs/build-your-first-wpgraphql-extension/)**: This guide covers some of the APIs WPGraphQL makes available to plugin developers to extend the WPGraphQL Schema. This is great for developers of any level that want to start building WPGraphQL Extensions. 
+  - **[Build your first WPGraphQL Extension](/docs/build-your-first-wpgraphql-extension/)**: This guide covers some of the APIs WPGraphQL makes available to plugin developers to extend the WPGraphQL Schema. This is great for developers of any level that want to start building WPGraphQL Extensions.
   - **[WPGraphQL vs. WP REST API](/docs/wpgraphql-vs-wp-rest-api/)**: Learn about the similarities and differences between WPGraphQL and the WordPress REST API
 
 - **Using WPGraphQL**: Learn how to use the GraphQL query language to interact data managed in WordPress.

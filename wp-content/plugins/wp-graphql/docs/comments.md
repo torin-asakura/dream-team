@@ -1,6 +1,6 @@
 ---
-uri: "/docs/comments/"
-title: "Comments"
+uri: '/docs/comments/'
+title: 'Comments'
 ---
 
 This page will be most useful for users what are familiar with [GraphQL Concepts](/docs/intro-to-graphql/) and understand the basics of [writing GraphQL Queries](/docs/intro-to-graphql/#queries-and-mutation).
@@ -11,7 +11,7 @@ WPGraphQL provides support for querying Comments in various ways.
 
 ## Comments of a Post
 
-Below is an example of querying a list of comments of a specific post. 
+Below is an example of querying a list of comments of a specific post.
 
 ```graphql
 {
@@ -33,9 +33,9 @@ Below is an example of querying a list of comments of a specific post.
 
 ## Hierarchical Data
 
-Comments are one of many types of hierarchical data in WordPress. By that, we mean that there can be root-level comments on a post, but also replies to those comments, replies to the replies, and so on. WPGraphQL returns comments in a flat-list by default, meaning root-level comments as well as their replies, and the replies to the replies, will all be returned in one flat-list by default. 
+Comments are one of many types of hierarchical data in WordPress. By that, we mean that there can be root-level comments on a post, but also replies to those comments, replies to the replies, and so on. WPGraphQL returns comments in a flat-list by default, meaning root-level comments as well as their replies, and the replies to the replies, will all be returned in one flat-list by default.
 
-There's a good chance you'll need to convert the flat list into a hierarchical list in your client application. 
+There's a good chance you'll need to convert the flat list into a hierarchical list in your client application.
 
 [We've written a guide](/docs/hierarchical-data/) on how to interact with Hierarchical data, and why WPGraphQL returns hierarchical data in flat lists.
 
@@ -49,11 +49,7 @@ Below is an example of a GraphQL Mutation to create a comment. The Mutation requ
 
 ```graphql
 mutation CREATE_COMMENT {
-  createComment(input: {
-    commentOn: 149, 
-    content: "This is a test comment, yo", 
-    author: "Jason"
-  }) {
+  createComment(input: { commentOn: 149, content: "This is a test comment, yo", author: "Jason" }) {
     success
     comment {
       id
@@ -82,20 +78,17 @@ WordPress protects against submitting duplicate comments. If the exact same muta
 
 **Unsuccessful Mutation: Comments closed**
 
-If comments are closed for a Post, a `createComment` Mutation will not create a comment, and will return an error. 
+If comments are closed for a Post, a `createComment` Mutation will not create a comment, and will return an error.
 
 ![Screenshot of a failed createComment mutation because the post was closed to comments.](./comments-mutation-closed-failure.png)
 
 ## Update Comment
 
-Below is an example of a GraphQL Mutation to update a comment. 
+Below is an example of a GraphQL Mutation to update a comment.
 
 ```graphql
 mutation {
-  updateComment(input: {
-    id: "Y29tbWVudDoy", 
-    content: "Updated comment..."
-  }) {
+  updateComment(input: { id: "Y29tbWVudDoy", content: "Updated comment..." }) {
     comment {
       id
       content
@@ -106,23 +99,23 @@ mutation {
 
 **Successful Mutation**
 
-If the user executing the Mutation is authenticated and has proper capabilities to update comments, the comment of the ID provided will be updated and the fields requested in response will be returned. 
+If the user executing the Mutation is authenticated and has proper capabilities to update comments, the comment of the ID provided will be updated and the fields requested in response will be returned.
 
 ![Screenshot of a successful createComment Mutation](./comments-mutation-success.png)
 
 **Unsuccessful Mutation**
 
-If the user executing the Mutation is not authenticated, or does not have proper capabilities to update comments, the comment will not be modified in WordPress and an error will be returned. 
+If the user executing the Mutation is not authenticated, or does not have proper capabilities to update comments, the comment will not be modified in WordPress and an error will be returned.
 
 ![Screenshot of an unsuccessful updateComment Mutation](./comments-mutation-not-allowed.png)
 
 ## Delete Comment
 
-Below is an example Mutation to delete a comment. The ID of the comment must be provided to delete a comment. 
+Below is an example Mutation to delete a comment. The ID of the comment must be provided to delete a comment.
 
 ```graphql
 mutation {
-  deleteComment(input: {id: "Y29tbWVudDoy"}) {
+  deleteComment(input: { id: "Y29tbWVudDoy" }) {
     deletedId
   }
 }
@@ -146,7 +139,7 @@ Comments that have been deleted can be restored using the `restoreComment` mutat
 
 ```graphql
 mutation {
-  restoreComment(input: {id: "Y29tbWVudDoy"}) {
+  restoreComment(input: { id: "Y29tbWVudDoy" }) {
     comment {
       id
       content

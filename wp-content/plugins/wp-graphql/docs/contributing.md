@@ -1,6 +1,6 @@
 ---
-uri: "/docs/contributing/"
-title: "Contributing"
+uri: '/docs/contributing/'
+title: 'Contributing'
 ---
 
 This document will be most useful for developers that want to contribute to WPGraphQL and want to run the docker container locally as well as utilize xdebug for debugging and tracing.
@@ -42,7 +42,7 @@ In one terminal window, start the WordPress app:
 composer run-app
 ```
 
-In your web browser, open the site, [http://localhost:8091](http://localhost:8091).  And the WP admin at [http://localhost:8091/wp-admin](http://localhost:8091/wp-admin). Username is 'admin'. Password is 'password'.
+In your web browser, open the site, [http://localhost:8091](http://localhost:8091). And the WP admin at [http://localhost:8091/wp-admin](http://localhost:8091/wp-admin). Username is 'admin'. Password is 'password'.
 
 ### Using XDebug
 
@@ -66,7 +66,7 @@ Start your IDE, like VSCode. Enable xdebug and set breakpoints. Load pages in yo
 
 #### Using XDebug with unit Tests
 
-See the testing page on running the unit test suite.  These instructions show how to enable xdebug for those unit tests and allow debugging in an IDE.
+See the testing page on running the unit test suite. These instructions show how to enable xdebug for those unit tests and allow debugging in an IDE.
 
 Use the environment variable USING_XDEBUG to run tests with xdebug configured to use port 9003 to communicated with your IDE.
 
@@ -82,26 +82,27 @@ Use the environment variable SUITES to specify individual test files for quicker
 Create or add the following configuration to your .vscode/launch.json in the root directory. Restart VSCode. Start the debug listener before running the app or testing images.
 
 If you have WordPress core files in a directory for local development, you can add the location to the `pathMappings` for debug step through.
+
 ```json
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Listen for Xdebug",
-            "type": "php",
-            "request": "launch",
-            "port": 9003,
-            "xdebugSettings": {
-                "max_children": 128,
-                "max_data": 1024,
-                "max_depth": 3,
-                "show_hidden": 1
-            },
-            "pathMappings": {
-                "/var/www/html/wp-content/plugins/wp-graphql": "${workspaceFolder}",
-                "/var/www/html": "${workspaceFolder}/wordpress",
-            }
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Listen for Xdebug",
+      "type": "php",
+      "request": "launch",
+      "port": 9003,
+      "xdebugSettings": {
+        "max_children": 128,
+        "max_data": 1024,
+        "max_depth": 3,
+        "show_hidden": 1
+      },
+      "pathMappings": {
+        "/var/www/html/wp-content/plugins/wp-graphql": "${workspaceFolder}",
+        "/var/www/html": "${workspaceFolder}/wordpress"
+      }
+    }
+  ]
 }
 ```
