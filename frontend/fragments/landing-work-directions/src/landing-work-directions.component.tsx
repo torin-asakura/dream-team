@@ -16,7 +16,7 @@ const LandingWorkDirections: FC = () => (
       </Box>
       <Layout flexBasis={48} />
       <Row>
-        <Column>
+        <Column width='100%'>
           {[...Array(3)].map(() => (
             <>
               <Item />
@@ -25,7 +25,7 @@ const LandingWorkDirections: FC = () => (
           ))}
         </Column>
         <Layout flexBasis={32} />
-        <Column>
+        <Column width='100%'>
           {[...Array(3)].map(() => (
             <>
               <Item />

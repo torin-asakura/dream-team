@@ -1330,20 +1330,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/landing-dream-team@workspace:frontend/fragments/landing-dream-team":
-  version: 0.0.0-use.local
-  resolution: "@fragments/landing-dream-team@workspace:frontend/fragments/landing-dream-team"
-  dependencies:
-    "@apollo/client": ^3.3.21
-    "@types/react": ^17
-    "@types/react-dom": ^17
-    "@ui/layout": "workspace:frontend/ui/layout"
-    graphql: ^15.5.1
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  languageName: unknown
-  linkType: soft
-
 "@fragments/landing-feedback@workspace:frontend/fragments/landing-feedback":
   version: 0.0.0-use.local
   resolution: "@fragments/landing-feedback@workspace:frontend/fragments/landing-feedback"
@@ -1372,9 +1358,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/landing-introduction@workspace:frontend/fragments/landing-introduction":
+"@fragments/landing-hero@workspace:frontend/fragments/landing-hero":
   version: 0.0.0-use.local
-  resolution: "@fragments/landing-introduction@workspace:frontend/fragments/landing-introduction"
+  resolution: "@fragments/landing-hero@workspace:frontend/fragments/landing-hero"
   dependencies:
     "@apollo/client": ^3.3.21
     "@types/react": ^17
@@ -1389,6 +1375,20 @@ __metadata:
 "@fragments/landing-reviews@workspace:frontend/fragments/landing-reviews":
   version: 0.0.0-use.local
   resolution: "@fragments/landing-reviews@workspace:frontend/fragments/landing-reviews"
+  dependencies:
+    "@apollo/client": ^3.3.21
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/layout": "workspace:frontend/ui/layout"
+    graphql: ^15.5.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@fragments/landing-team@workspace:frontend/fragments/landing-team":
+  version: 0.0.0-use.local
+  resolution: "@fragments/landing-team@workspace:frontend/fragments/landing-team"
   dependencies:
     "@apollo/client": ^3.3.21
     "@types/react": ^17
@@ -1743,11 +1743,11 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.3.21
     "@fragments/landing-about": "workspace:frontend/fragments/landing-about"
-    "@fragments/landing-dream-team": "workspace:frontend/fragments/landing-dream-team"
     "@fragments/landing-feedback": "workspace:frontend/fragments/landing-feedback"
     "@fragments/landing-footer": "workspace:frontend/fragments/landing-footer"
-    "@fragments/landing-introduction": "workspace:frontend/fragments/landing-introduction"
+    "@fragments/landing-hero": "workspace:frontend/fragments/landing-hero"
     "@fragments/landing-reviews": "workspace:frontend/fragments/landing-reviews"
+    "@fragments/landing-team": "workspace:frontend/fragments/landing-team"
     "@fragments/navigation": "workspace:frontend/fragments/navigation"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -2403,7 +2403,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17":
+"@types/react-dom@npm:^17, @types/react-dom@npm:^17.0.9":
   version: 17.0.9
   resolution: "@types/react-dom@npm:17.0.9"
   dependencies:
@@ -2511,7 +2511,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/zen-observable@npm:^0.8.0":
+"@types/zen-observable@npm:*, @types/zen-observable@npm:^0.8.0":
   version: 0.8.3
   resolution: "@types/zen-observable@npm:0.8.3"
   checksum: 08c88354abcf03a2176a2ec32e07da1f25fdad94fbc2f419bea53d77deb04ad4759518b4fe3fc695e61065dd4bdf7c8bd26b5211a6cd5be2233872806bdee48d
@@ -2655,6 +2655,7 @@ __metadata:
   resolution: "@ui/text@workspace:frontend/ui/text"
   dependencies:
     "@atls-ui-parts/text": ^0.0.5
+    "@emotion/styled": ^11.3.0
   languageName: unknown
   linkType: soft
 
@@ -12689,6 +12690,7 @@ resolve@^2.0.0-next.3:
     "@atls/actl-cli": ^0.4.48
     "@types/node": 14.17.6
     "@types/react": ^17.0.15
+    "@types/react-dom": ^17.0.9
   languageName: unknown
   linkType: soft
 

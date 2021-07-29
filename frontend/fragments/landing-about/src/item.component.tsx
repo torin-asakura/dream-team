@@ -2,8 +2,6 @@ import React         from 'react'
 import { FC }        from 'react'
 
 import { Layout }    from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Column }    from '@ui/layout'
 import { Box }       from '@ui/layout'
 import { Condition } from '@ui/condition'
 

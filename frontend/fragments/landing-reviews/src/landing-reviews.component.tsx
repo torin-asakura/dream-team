@@ -9,16 +9,16 @@ import { Box }    from '@ui/layout'
 import { Item }   from './item.component'
 
 const LandingReviews: FC = () => (
-  <Box border='1px solid black'>
+  <Box px={['32px', '32px', '0px']} border='1px solid black'>
     <Layout flexGrow={1} />
-    <Layout width={1280}>
+    <Layout width='100%' maxWidth={1280}>
       <Column justifyContent='center' width='100%'>
         <Layout flexBasis={120} />
         <Row>
           <Box height={64} width='100%' border='1px solid black'>
             Отзывы клиентов
           </Box>
-          <Layout flexGrow={1} />
+          <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
           <Box height={64} width='100%' border='1px solid black'>
             Arrows
           </Box>

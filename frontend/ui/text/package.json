@@ -4,6 +4,7 @@
   "license": "MIT",
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/text": "^0.0.5"
+    "@atls-ui-parts/text": "^0.0.5",
+    "@emotion/styled": "^11.3.0"
   }
 }

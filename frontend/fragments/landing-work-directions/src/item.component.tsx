@@ -7,7 +7,7 @@ import { Column } from '@ui/layout'
 import { Box }    from '@ui/layout'
 
 const Item: FC = () => (
-  <Box height={248} width={624} border='1px solid blue'>
+  <Box height={248} width='100%' maxWidth={624} border='1px solid blue'>
     <Layout flexBasis={32} />
     <Column>
       <Layout flexBasis={32} />
