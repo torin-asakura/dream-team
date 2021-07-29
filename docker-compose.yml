@@ -11,8 +11,7 @@ services:
       WORDPRESS_DB_NAME: exampledb
     volumes:
       - wordpress:/var/www/html
-      - ./wp-content/plugins/:/var/www/html/wp-content/plugins/
-      - ./wp-content/uploads/:/var/www/html/wp-content/uploads/
+      - ./.ignore/wp-content/plugins/:/var/www/html/wp-content/plugins/
     ports:
       - 8080:80
     depends_on:
