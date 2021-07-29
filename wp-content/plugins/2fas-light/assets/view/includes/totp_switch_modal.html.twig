@@ -1,0 +1,21 @@
+<div class="twofas-modal-backdrop js-twofas-modal-toggle-totp">
+    <div class="twofas-modal-container">
+        <div class="twofas-modal-cell">
+            <div class="twofas-modal">
+                <h5>
+                    {{
+                    sprintf(
+                        esc_html__('Are you sure you want to disable %s2FAS Prime plugin?', '2fas-light'),
+                        '<br />'
+                    )|raw
+                    }}
+                </h5>
+
+                <div class="twofas-buttons">
+                    <a href="#" class="twofas-btn js-twofas-toggle-totp-cancel">{{ esc_html__('Cancel', '2fas-light') }}</a>
+                    <a href="#" class="twofas-btn-empty js-twofas-toggle-totp-confirm">{{ esc_html__('Yes, disable plugin', '2fas-light') }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

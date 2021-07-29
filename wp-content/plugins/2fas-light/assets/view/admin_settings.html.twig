@@ -1,0 +1,64 @@
+{% extends 'plugin_main_page.html.twig' %}
+
+{% block content %}
+    <section class="twofas-admin-settings">
+        <h3>{{ esc_html__( 'Roles 2FA settings', '2fas-light' ) }}</h3>
+
+        <div class="twofas-card">
+            <div class="twofas-card-body">
+                <div class="twofas-card-body-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Users roles</th>
+                                <th>2FA is obligatory <br />for this role</th>
+                                <th>Allow users to add trusted <br />browsers and devices</th>
+                                <th>Active / Inactive users</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for role in roles %}
+                                <tr>
+                                    <td data-rwd-desc="User role: ">{{ role.name }}</td>
+                                    <td data-rwd-desc="2FA is obligatory for this role: ">
+                                        <div class="checkbox-container">
+                                            <input type="checkbox" id="{{ role.key }}-obligatory" name="role-obligatory" value="{{ role.key }}" {% if role.obligatory_role == true %} checked {% endif %}>
+                                            <label for="{{ role.key }}-obligatory">
+                                                    <span class="unchecked"></span>
+                                                    <span class="checked">
+                                                        <img src="{{ twofas_light_plugin_path ~ 'assets/img/check.svg' }}" alt="Checked" />
+                                                    </span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td data-rwd-desc="Allow users to add trusted browsers and devices">
+                                        <div class="checkbox-container">
+                                            <input type="checkbox" id="{{ role.key }}-trusted" name="role-trusted" value="{{ role.key }}" {% if role.remember_browser_allowed_role == true %} checked {% endif %}>
+                                            <label for="{{ role.key }}-trusted">
+                                                <span class="unchecked"></span>
+                                                <span class="checked">
+                                                    <img src="{{ twofas_light_plugin_path ~ 'assets/img/check.svg' }}" alt="Checked" />
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td data-rwd-desc="Active / Inactive users: ">
+                                        <p>{{ role.active_users~'/'~role.inactive_users }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <div class="twofas-admin-settings-buttons">
+                        <a href="#" class="twofas-btn-empty js-twofas-cancel-roles" disabled>Cancel</a>
+                        <a href="#" class="twofas-btn js-twofas-save-roles" disabled>Save Settings</a>
+                    </div>
+                </div>
+                <div class="twofas-card-body-footer">
+                    <p>Need help with 2FAS Wordpress plugin administration? Visit our website: <a href="https://www.2fas.com/plugin/" target="_blank" rel="noreferrer noopener">www.2fas.com/plugin</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

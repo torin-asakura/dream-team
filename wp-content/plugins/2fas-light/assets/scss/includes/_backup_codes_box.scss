@@ -1,0 +1,143 @@
+@import 'variables';
+@import 'functions';
+
+// VARIABLES
+$backupCodesBoxBg: #fff;
+$backupCodesBoxColor: #000;
+$backupCodesSubTextColor: #898989;
+$backupCodesFooterColor: #f1f1f1;
+$backupTutorialBoxBorder: #d4d4d9;
+
+h3 {
+  &.twofas-backup-codes-header {
+    margin-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+
+    &.twofas-show {
+      max-height: 9999px;
+    }
+  }
+}
+
+.twofas-backup-codes-box {
+  background-color: $backupCodesBoxBg;
+  border-radius: 4px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+
+  &.twofas-show {
+    margin-bottom: 41px;
+    margin-top: 17px;
+    max-height: 9999px;
+  }
+
+  &-new,
+  &-current {
+    max-height: 0;
+    overflow: hidden;
+
+    &.twofas-show {
+      max-height: 9999px;
+    }
+  }
+
+  .twofas-backup-codes-box-new {
+    &.twofas-show {
+      padding: 45px 125px;
+
+      @media all and (max-width: 1280px) {
+        padding: 45px 20px;
+      }
+
+      @media all and (max-width: 600px) {
+        padding: 20px 10px;
+      }
+    }
+  }
+
+  .twofas-backup-codes-box-current {
+    &.twofas-show {
+      padding: 45px 125px 23px;
+
+      @media all and (max-width: 1280px) {
+        padding: 45px 20px 23px;
+      }
+
+      @media all and (max-width: 600px) {
+        padding: 20px 0;
+      }
+    }
+
+    &-stats {
+      margin-bottom: 36px;
+      margin-top: 20px;
+
+      h5 {
+        color: $backupCodesBoxColor;
+        font-size: px-to-rem(21);
+        font-weight: 800;
+        line-height: px-to-rem(26);
+        margin-bottom: 6px;
+        margin-top: 0;
+      }
+    }
+
+    &-footer {
+      border-top: 1px solid $backupCodesFooterColor;
+
+      @media all and (max-width: 600px) {
+        padding: 0 10px;
+      }
+
+      p {
+        color: $backupCodesSubTextColor;
+        font-size: px-to-rem(14);
+        font-weight: 600;
+        line-height: px-to-rem(16);
+        margin-top: 22px;
+
+        a {
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          box-shadow: none;
+          color: $tf-theme-color;
+          outline: none !important;
+
+          &:hover {
+            color: darken($tf-theme-color, 5%);
+          }
+
+          &:focus,
+          &:active {
+            box-shadow: none;
+            color: $tf-theme-color;
+            outline: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  h4 {
+    color: $backupCodesBoxColor;
+    font-size: px-to-rem(16);
+    font-weight: 600;
+    line-height: px-to-rem(20);
+    margin-bottom: 6px;
+    margin-top: 0;
+  }
+
+  p {
+    color: $backupCodesBoxColor;
+    font-size: px-to-rem(14);
+    line-height: px-to-rem(17);
+    margin: 0;
+  }
+
+  button {
+    margin-top: 30px;
+  }
+}

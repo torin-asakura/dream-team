@@ -1,0 +1,96 @@
+@import 'variables';
+@import 'functions';
+
+// VARIABLES
+$configuredBoxBackground: #fff;
+$configuredBoxColor: #000;
+$configuredBoxBorder: #f1f1f1;
+$configuredBoxFooterColor: #898989;
+
+.twofas-configured-box {
+  background-color: $configuredBoxBackground;
+  border-radius: 4px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+
+  &.twofas-show {
+    margin-bottom: 41px;
+    margin-top: 17px;
+    max-height: 9999px;
+
+    .twofas-configured-box-content {
+      padding: 41px 10px 28px;
+
+      @media all and (max-width: 600px) {
+        padding: 25px 10px;
+      }
+    }
+
+    .twofas-configured-box-footer {
+      padding: 22px 10px;
+    }
+  }
+
+  &-content {
+    display: none;
+    padding: 0;
+
+    &.twofas-show {
+      display: block;
+    }
+
+    img {
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: $configuredBoxColor;
+      font-size: px-to-rem(16);
+      font-weight: 600;
+      line-height: px-to-rem(20);
+      margin-bottom: 6px;
+      margin-top: 0;
+    }
+
+    p {
+      color: $configuredBoxColor;
+      font-size: px-to-rem(14);
+      line-height: px-to-rem(17);
+      margin: 0;
+    }
+  }
+
+  &-footer {
+    border-top: 1px solid $configuredBoxBorder;
+    padding: 0;
+
+    p {
+      color: $configuredBoxFooterColor;
+      font-size: px-to-rem(14);
+      font-weight: 600;
+      line-height: px-to-rem(16);
+      margin: 0;
+
+      a {
+        -webkit-appearance: none;
+        appearance: none;
+        box-shadow: none;
+        color: $tf-theme-color;
+        outline: none;
+
+        &:hover {
+          color: darken($tf-theme-color, 5%);
+        }
+
+        &:focus,
+        &:active {
+          box-shadow: none;
+          color: $tf-theme-color;
+          outline: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+// MONTSERRAT
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap');
+
+// INCLUDES
+@import 'includes/variables';
+@import 'includes/functions';
+@import 'includes/wrapper';
+@import 'includes/typography';
+@import 'includes/buttons';
+@import 'includes/header';
+@import 'includes/config_bar';
+@import 'includes/card';
+@import 'includes/switch';
+@import 'includes/breadcrumb';
+@import 'includes/trusted_devices';
+@import 'includes/configured_box';
+@import 'includes/backup_codes_box';
+@import 'includes/backup_codes_tutorial';
+@import 'includes/danger_zone_box';
+@import 'includes/toast';
+@import 'includes/config_wrapper';
+@import 'includes/view_renderer_error';
+@import 'includes/error_message';
+@import 'includes/modal';
+@import 'includes/rate_plugin_prompt';
+@import 'includes/admin_settings';
+@import 'includes/checkbox_container';
+@import 'includes/login_configuration_step';
+
+// CARDS
+@import 'includes/cards/card_1';
+@import 'includes/cards/card_2';
+@import 'includes/cards/card_3';
+
+// WP
+@import 'wp/login_form';
+@import 'wp/menu_icon';

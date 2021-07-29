@@ -1,0 +1,12 @@
+{
+  "name": "@providers/next-config-with-aliases",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "nd": "node src/helpers/babel-runtime-imports.js"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.8"
+  }
+}

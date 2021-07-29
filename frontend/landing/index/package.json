@@ -1,0 +1,21 @@
+{
+  "name": "@landing/index-page",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@apollo/client": "^3.3.21",
+    "@fragments/landing-about": "workspace:frontend/fragments/landing-about",
+    "@fragments/landing-dream-team": "workspace:frontend/fragments/landing-dream-team",
+    "@fragments/landing-feedback": "workspace:frontend/fragments/landing-feedback",
+    "@fragments/landing-footer": "workspace:frontend/fragments/landing-footer",
+    "@fragments/landing-introduction": "workspace:frontend/fragments/landing-introduction",
+    "@fragments/landing-reviews": "workspace:frontend/fragments/landing-reviews",
+    "@fragments/navigation": "workspace:frontend/fragments/navigation",
+    "graphql": "^15.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17",
+    "@types/react-dom": "^17"
+  }
+}

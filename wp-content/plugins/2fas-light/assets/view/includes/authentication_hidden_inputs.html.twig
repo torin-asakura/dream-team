@@ -1,0 +1,23 @@
+{% if rememberme is not empty %}
+    <input name="rememberme" type="hidden" value="{{ rememberme }}"/>
+{% endif %}
+
+{% if redirect_to is not empty %}
+    <input name="redirect_to" type="hidden" value="{{ redirect_to }}"/>
+{% endif %}
+
+{% if testcookie is not empty %}
+    <input name="testcookie" type="hidden" value="{{ testcookie }}"/>
+{% endif %}
+
+{% if interim_login is not empty %}
+    <input name="interim-login" type="hidden" value="{{ interim_login }}"/>
+{% endif %}
+
+{% if customize_login is not empty %}
+    <input name="customize-login" type="hidden" value="{{ customize_login }}"/>
+{% endif %}
+
+{% if twofas_light_login_redirect is not empty %}
+    <input name="twofas_light_login_redirect" type="hidden" value="{{ twofas_light_login_redirect }}"/>
+{% endif %}

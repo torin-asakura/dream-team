@@ -1,0 +1,72 @@
+{% if twofas_light_login_error is not null %}
+    {{ login_header(esc_html__('Configure Two Factor Authentication', '2fas-light'), '', twofas_light_login_error) }}
+{% else %}
+    {{ login_header(esc_html__('Configure Two Factor Authentication', '2fas-light'), '') }}
+{% endif %}
+
+<div class="twofas-light-wrapper">
+    <div class="twofas-config-wrapper twofas-login-configuration-step twofas-show">
+        <h4 class="js-twofas-configuration-subheader">{{ esc_html__( 'Follow these instructions to configure 2FAS security tokens correctly.', '2fas-light' ) }}</h4>
+
+        <div class="twofas-card">
+            <div class="twofas-breadcrumb">
+                <div class="twofas-breadcrumb-step js-twofas-step-breadcrumb {% if twofas_light_login_error is null %}active{% endif %}" data-step="1">
+                    <div class="twofas-breadcrumb-step-number">1</div>
+                    <div class="twofas-breadcrumb-step-text">{{ esc_html__( 'Download 2FAS app', '2fas-light' ) }}</div>
+                </div>
+
+                <div class="twofas-breadcrumb-step js-twofas-step-breadcrumb" data-step="2">
+                    <div class="twofas-breadcrumb-step-number">2</div>
+                    <div class="twofas-breadcrumb-step-text">{{ esc_html__( 'Scan the QR code', '2fas-light' ) }}</div>
+                </div>
+
+                <div class="twofas-breadcrumb-step js-twofas-step-breadcrumb {% if twofas_light_login_error is not null %}active{% endif %}" data-step="3">
+                    <div class="twofas-breadcrumb-step-number">3</div>
+                    <div class="twofas-breadcrumb-step-text">{{ esc_html__( 'Enter 6-digit token', '2fas-light' ) }}</div>
+                </div>
+            </div>
+
+            <div class="twofas-card-body">
+                {% include 'steps/step_1.html.twig' with {
+                    'twofas_light_plugin_path': twofas_light_plugin_path
+                } %}
+
+                {% include 'steps/step_2.html.twig' with {
+                    'twofas_light_plugin_path': twofas_light_plugin_path,
+                    'qr_code': qr_code
+                } %}
+
+                {% include 'steps/step_3.html.twig' with {
+                    'totp_secret': totp_secret,
+                    'form_nonce': ''
+                } %}
+            </div>
+
+            <div class="twofas-card-footer">
+                <form action="{{ login_url }}" method="post">
+                    <div>
+                        {% if interim_login %}
+                            <input type="hidden" name="interim-login" value="{{ interim_login }}" />
+                        {% endif %}
+                        <input type="hidden" name="twofas_light_action" value="{{ actions['stop_login_process'] }}" />
+                    </div>
+                    <button type="submit" class="twofas-btn-empty js-twofas-step-cancel-btn">{{ esc_html__( 'Cancel', '2fas-light' ) }}</button>
+                </form>
+
+                <button class="twofas-btn-empty js-twofas-step-back-btn hidden">{{ esc_html__( 'Back', '2fas-light' ) }}</button>
+                <button class="twofas-btn js-twofas-step-continue-btn">{{ esc_html__( 'Continue', '2fas-light' ) }}</button>
+                <button class="twofas-btn js-twofas-totp-submit js-twofas-totp-login-configuration-submit hidden" disabled="disabled">{{ esc_html__( 'Finish configuration', '2fas-light' ) }}</button>
+            </div>
+        </div>
+    </div>
+
+    {% include 'includes/confirmation_modal.html.twig' %}
+    {% include 'includes/private_key_modal.html.twig' with {
+        'totp_secret': totp_secret
+    } %}
+    {% if twofas_light_login_error is null %}
+        {% include 'includes/login_configuration_step_modal.html.twig' %}
+    {% endif %}
+</div>
+
+{{ login_footer() }}

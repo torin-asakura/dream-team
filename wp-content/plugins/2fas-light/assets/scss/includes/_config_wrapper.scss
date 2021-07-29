@@ -1,0 +1,11 @@
+@import 'variables';
+@import 'functions';
+
+.twofas-config-wrapper {
+  display: none;
+  margin-bottom: 50px;
+
+  &.twofas-show {
+    display: block;
+  }
+}

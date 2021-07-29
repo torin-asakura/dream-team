@@ -1,0 +1,9 @@
+{
+  "name": "@ui/text",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@atls-ui-parts/text": "^0.0.5"
+  }
+}

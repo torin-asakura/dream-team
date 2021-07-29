@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ esc_html__('Print your 2FAS offline codes', '2fas-light') }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ twofas_light_assets_url }}css/print.min.css">
+</head>
+<body>
+    <div class="twofas-print-backup-codes">
+        <h1>{{ app_name }}</h1>
+        <h2>{{ esc_html__('Backup codes', '2fas-light') }}</h2>
+
+        <div class="twofas-backup-codes-list">
+            <ul>
+                {% for code in codes %}
+                    <li><span>{{ code }}</span></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="twofas-print-backup-codes-footer">
+            <div class="twofas-print-backup-codes-wrapper">
+                <img src="{{ twofas_light_assets_url }}img/logo.svg" alt="2FAS Logo" />
+                <span>{{ esc_html__('2FAS Prime - Two Factor Authentication', '2fas-light') }}</span>
+            </div>
+        </div>
+    </div>
+    <script src="{{ twofas_light_assets_url }}js/print.min.js"></script>
+</body>
+</html>
