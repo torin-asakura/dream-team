@@ -10,6 +10,7 @@ const GET_MENUS = gql`
             path
             id
             label
+            url
           }
         }
         name
@@ -19,7 +20,7 @@ const GET_MENUS = gql`
 `
 
 const useData = () => {
-  const { data, error } = useQuery(GET_MENUS)
+  const { data, loading, error } = useQuery(GET_MENUS)
 
   if (error) {
     throw new Error(error.message)

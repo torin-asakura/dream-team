@@ -4,16 +4,18 @@ import { FC }      from 'react'
 import { Box }     from '@ui/layout'
 import { Layout }  from '@ui/layout'
 import { Row }     from '@ui/layout'
+import { Condition } from '@ui/condition'
 
 import { useData } from './useData'
+import { NavigationProps } from './navigation.interface'
+import { Language } from './navigation.interface'
 
-const Navigation: FC = () => {
-  // TODO map data
+const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
+  const [EN, RU] = useData()
 
-  const [RU, EN] = useData()
-
-  console.log('RU', RU)
-  console.log('EN', EN)
+  const switchLanguage = (language: Language) => () => {
+    languageVar(language === 'RU' ? 'EN' : 'RU')
+  }
 
   return (
     <Box px={['32px', '32px', '0px']} border='1px solid black' height={84}>
@@ -25,7 +27,24 @@ const Navigation: FC = () => {
           </Box>
           <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
           <Box width={212} height='100%' border='1px solid black'>
-            Map here
+            <Condition match={language === 'RU'}>
+              {RU?.map(({ label, url }) => (
+                <a href={url}>{label}</a>
+              ))}
+            </Condition>
+            <Condition match={language === 'EN'}>
+              {EN?.map(({ label, url }) => (
+                <a href={url}>{label}</a>
+              ))}
+            </Condition>
+            <button onClick={switchLanguage(language)}>
+              <Condition match={language === 'RU'}>
+                РУ
+              </Condition>
+              <Condition match={language === 'EN'}>
+                EN
+              </Condition>
+            </button>
           </Box>
         </Row>
       </Layout>
