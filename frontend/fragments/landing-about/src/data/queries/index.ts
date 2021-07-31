@@ -1,1 +1,1 @@
-export * from './about-cards.query'
+export * from './card-by-id.query'

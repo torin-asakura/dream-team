@@ -1,14 +1,14 @@
-import React       from 'react'
-import { FC }      from 'react'
+import React               from 'react'
+import { FC }              from 'react'
 
-import { Box }     from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Row }     from '@ui/layout'
-import { Condition } from '@ui/condition'
+import { Box }             from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Condition }       from '@ui/condition'
 
-import { useData } from './useData'
+import { useData }         from './useData'
 import { NavigationProps } from './navigation.interface'
-import { Language } from './navigation.interface'
+import { Language }        from './navigation.interface'
 
 const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
   const [EN, RU] = useData()
@@ -38,12 +38,8 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
               ))}
             </Condition>
             <button onClick={switchLanguage(language)}>
-              <Condition match={language === 'RU'}>
-                РУ
-              </Condition>
-              <Condition match={language === 'EN'}>
-                EN
-              </Condition>
+              <Condition match={language === 'RU'}>РУ</Condition>
+              <Condition match={language === 'EN'}>EN</Condition>
             </button>
           </Box>
         </Row>

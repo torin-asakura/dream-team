@@ -1,13 +1,13 @@
 import { useQuery } from '@apollo/client'
-import { gql } from '@apollo/client'
+import { gql }      from '@apollo/client'
 
 const GET_HERO_CONTENT_RU = gql`
   query HeroContentRU {
-  fragment(id: "cG9zdDo0ODE=") {
-    title
-    content
+    fragment(id: "cG9zdDo0ODE=") {
+      title
+      content
+    }
   }
-}
 `
 
 const useHeroContentRU = () => {

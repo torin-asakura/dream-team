@@ -1,6 +1,6 @@
 import React               from 'react'
 import { FC }              from 'react'
-import { from, useReactiveVar } from '@apollo/client'
+import { useReactiveVar }  from '@apollo/client'
 
 import { Navigation }      from '@fragments/navigation'
 import { LandingHero }     from '@fragments/landing-hero'
@@ -10,22 +10,23 @@ import { LandingTeam }     from '@fragments/landing-team'
 import { LandingFeedback } from '@fragments/landing-feedback'
 import { LandingFooter }   from '@fragments/landing-footer'
 
-import { languageVar } from './store'
-import { Language } from './store'
+import { languageVar }     from './store'
+import { Language }        from './store'
 
 const Index: FC = () => {
-    const language = useReactiveVar<Language>(languageVar)
+  const language = useReactiveVar<Language>(languageVar)
 
-    return (
+  return (
     <>
-        <Navigation language={language} languageVar={languageVar} />
-        <LandingHero language={language} />
-        <LandingAbout/>
-        <LandingReviews/>
-        <LandingTeam/>
-        <LandingFeedback/>
-        <LandingFooter/>
+      <Navigation language={language} languageVar={languageVar} />
+      <LandingHero language={language} />
+      <LandingAbout language={language} />
+      <LandingReviews />
+      <LandingTeam />
+      <LandingFeedback />
+      <LandingFooter />
     </>
-)}
+  )
+}
 
 export { Index }

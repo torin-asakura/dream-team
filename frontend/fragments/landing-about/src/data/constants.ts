@@ -1,0 +1,8 @@
+export const COSTS_ID_EN = 'cG9zdDo0OTM='
+export const COSTS_ID_RU = 'cG9zdDo0OTI='
+export const TIME_FRAME_ID_EN = 'cG9zdDo0OTE='
+export const TIME_FRAME_ID_RU = 'cG9zdDo0OTA='
+export const HOW_WE_DO_ID_EN = 'cG9zdDo0ODY='
+export const HOW_WE_DO_ID_RU = 'cG9zdDo0ODk='
+export const WHY_US_ID_EN = 'cG9zdDo0ODU='
+export const WHY_US_ID_RU = 'cG9zdDo0ODQ='
