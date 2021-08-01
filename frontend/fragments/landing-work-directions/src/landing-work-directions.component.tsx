@@ -11,19 +11,7 @@ import { useData }                    from './data'
 import { LandingWorkDirectionsProps } from './landing-work-directions.interface'
 
 const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => {
-  // TODO map/reorganize
-  const {
-    Mobile,
-    Frontend,
-    Backend,
-    'Data science': DataScience,
-    'Artificial Intelligence': AI,
-    GameDev,
-    Testing,
-    Ops,
-    'Project Management': PM,
-    Analytics,
-  } = useData()
+  const { leftSide, rightSide } = useData()
 
   return (
     <Box>
@@ -34,12 +22,23 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
         <Layout flexBasis={48} />
         <Row>
           <Column width='100%'>
-            {skills.map((skill) => (
-              <Item skill={skill} />
+            {leftSide.map((category) => (
+              <>
+                <Item category={category} />
+                <Layout flexBasis={32} />
+              </>
             ))}
           </Column>
           <Layout flexBasis={32} />
-          <Column width='100%' />
+          <Column width='100%'>
+            {rightSide.map((category) => (
+              <>
+                <Item category={category} />
+                <Layout flexBasis={32} />
+              </>
+            ))}
+            <Layout flexBasis={32} />
+          </Column>
         </Row>
       </Column>
     </Box>

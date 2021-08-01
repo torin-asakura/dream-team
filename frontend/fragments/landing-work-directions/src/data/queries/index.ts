@@ -1,1 +1,1 @@
-export * from './skills-lists.query'
+export * from './skill-categories.query'

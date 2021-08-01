@@ -21,9 +21,9 @@ const Index: FC = () => {
       <Navigation language={language} languageVar={languageVar} />
       <LandingHero language={language} />
       <LandingAbout language={language} />
-      <LandingReviews />
-      <LandingTeam />
-      <LandingFeedback />
+      <LandingReviews language={language} />
+      <LandingTeam language={language} />
+      <LandingFeedback language={language} />
       <LandingFooter />
     </>
   )

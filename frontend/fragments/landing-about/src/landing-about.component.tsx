@@ -32,6 +32,7 @@ const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
             <Item contentObject={getContentByLanguage(timeFrame, language)} />
             <Layout flexBasis={160} />
             <Item contentObject={getContentByLanguage(costs, language)} />
+            <Layout flexBasis={160} />
           </Column>
         </Layout>
       </Column>

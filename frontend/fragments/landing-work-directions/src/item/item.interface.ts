@@ -1,8 +1,13 @@
-export interface Skill {
-  title: string
-  categories: string[]
+export interface Category {
+  name: string
+  skills: {
+    nodes: {
+      title: string
+      menuOrder: number | null
+    }[]
+  }
 }
 
 export interface ItemProps {
-  skill: Skill
+  category: Category
 }

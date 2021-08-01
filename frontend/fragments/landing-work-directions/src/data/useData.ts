@@ -1,15 +1,10 @@
-import { useSkillLists } from './queries'
+import { useSkills } from './queries'
+import { sort }      from './sort'
 
 const useData = () => {
-  const skillLists = useSkillLists()
+  const skills = useSkills()
 
-  return skillLists.reduce(
-    (acc, { name, skills }) => ({
-      ...acc,
-      [name]: [...skills.nodes.map(({ title }) => title)],
-    }),
-    {}
-  )
+  return sort(skills)
 }
 
 export { useData }

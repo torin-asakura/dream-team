@@ -7,9 +7,8 @@ import { Column }    from '@ui/layout'
 import { Box }       from '@ui/layout'
 
 import { ItemProps } from './item.interface'
-import { Category }  from './category'
 
-const Item: FC<ItemProps> = ({ skill }) => (
+const Item: FC<ItemProps> = ({ category }) => (
   <Box width='100%' maxWidth={624} border='1px solid blue'>
     <Layout flexBasis={32} />
     <Column>
@@ -22,14 +21,16 @@ const Item: FC<ItemProps> = ({ skill }) => (
       <Layout flexBasis={24} />
       <Row>
         <Box height={40} border='1px solid black' width='100%'>
-          {skill.title}
+          {category.name}
         </Box>
       </Row>
       <Layout flexBasis={32} />
       <Row>
-        <Box border='1px solid black' width='100%'>
-          {skill.categories.map((category) => (
-            <Category>{category}</Category>
+        <Box border='1px solid black' width='100%' flexWrap='wrap'>
+          {category.skills.nodes.map(({ title }) => (
+            <Box px='12px' py='8px'>
+              {title}
+            </Box>
           ))}
         </Box>
       </Row>

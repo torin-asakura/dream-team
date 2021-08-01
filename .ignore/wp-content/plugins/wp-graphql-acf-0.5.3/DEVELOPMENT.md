@@ -4,8 +4,8 @@
 
 The `app` docker image starts a running WordPress site with the local wp-graphql-acf directory installed and activated. Local changes to the source code is immediately reflects in the app.
 
-1. Build the plugin. 
-1.1 `composer install` or `docker run -v $PWD:/app composer --ignore-platform-reqs install`
+1. Build the plugin.
+   1.1 `composer install` or `docker run -v $PWD:/app composer --ignore-platform-reqs install`
 1. Run `composer build-app` to build the `app` docker image.
 1. Run `composer build-test` to build the `testing` docker image.
 1. Run `composer run-app` to start the WordPress site.
@@ -22,20 +22,21 @@ The `testing` docker image starts a running WordPress and runs the codeception t
 # Using XDebug
 
 ## Local WordPress Site With XDebug
-Use an environment variable USING_XDEBUG to start the docker image and WordPress with xdebug configured to use port 9003 to communicated with your IDE. 
+
+Use an environment variable USING_XDEBUG to start the docker image and WordPress with xdebug configured to use port 9003 to communicated with your IDE.
 
 ```
 export USING_XDEBUG=1
 composer run-app
 ```
 
-Start the debugger in your IDE. Set breakpoints. 
+Start the debugger in your IDE. Set breakpoints.
 
 Load the app in http://localhost:8091/.
 
 ## Using XDebug With Tests
 
-Use the environment variable USING_XDEBUG to run tests with xdebug configured to use port 9003 to communicated with your IDE. 
+Use the environment variable USING_XDEBUG to run tests with xdebug configured to use port 9003 to communicated with your IDE.
 
 ```
 export USING_XDEBUG=1
@@ -73,3 +74,4 @@ If you have WordPress core files in a directory for local development, you can a
 		}
     ]
 }
+```
