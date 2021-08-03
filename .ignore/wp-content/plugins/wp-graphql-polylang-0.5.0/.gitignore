@@ -1,6 +1,0 @@
-.idea
-node_modules
-/.env
-/.vscode/launch.json
-/.wp-install
-/composer.lock

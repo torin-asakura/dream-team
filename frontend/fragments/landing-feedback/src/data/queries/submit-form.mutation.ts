@@ -2,14 +2,21 @@ import { gql }         from '@apollo/client'
 import { useMutation } from '@apollo/client'
 
 const SUBMIT_FORM = gql`
-  mutation SubmitForm($input: SubmitGravityFormsFormInput!) {
-    submitGravityFormsForm(input: $input) {
-      clientMutationId
-      errors {
-        message
-      }
+mutation SEND_EMAIL {
+  sendEmail(
+    input: {
+      to: "ne@atls.team"
+      from: "test@test.com"
+      subject: "test email"
+      body: "test email"
+      clientMutationId: "test"
     }
+  ) {
+    origin
+    sent
+    message
   }
+}
 `
 
 const useSubmitForm = () => {

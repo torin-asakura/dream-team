@@ -63,7 +63,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
                   <input value={phone} onChange={(event) => setPhone(event.target.value)} />
                 </Layout>
                 <Layout flexBasis={32} />
-                <button width='100%' onClick={() => submitForm({ variables: { input: payload } })}>
+                <button onClick={() => {}}>
                   Отправить
                 </button>
                 <Layout flexBasis={24} />

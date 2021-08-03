@@ -1,5 +1,10 @@
 {
   "private": true,
+  "scripts": {
+    "landing:build": "yarn workspace @landing/app build",
+    "rezip": "rm -rf dt-next.zip && zip -r dt-next.zip dt-next",
+    "prepare": "yarn landing:build && yarn rezip"
+  },
   "resolutions": {
     "@types/node": "14.17.6"
   },
