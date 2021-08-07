@@ -1,6 +1,8 @@
 import { gql }      from '@apollo/client'
 import { useQuery } from '@apollo/client'
 
+import { validate } from '../validate'
+
 const GET_RECRUITS = gql`
   query GetRecruits {
     recruits {
@@ -19,7 +21,7 @@ const useRecruits = () => {
   }
 
   if (data) {
-    return data.recruits.nodes
+    return data.recruits.nodes.map((node) => validate(node))
   }
 
   return []

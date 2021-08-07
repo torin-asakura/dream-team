@@ -1,9 +1,5 @@
 import { useSubmitForm } from './queries'
 
-const useAction = () => {
-  const action = useSubmitForm()
-
-  return action
-}
+const useAction = () => useSubmitForm()
 
 export { useAction }

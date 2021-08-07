@@ -24,7 +24,7 @@ const Index: FC = () => {
       <LandingReviews language={language} />
       <LandingTeam language={language} />
       <LandingFeedback language={language} />
-      <LandingFooter />
+      <LandingFooter language={language} />
     </>
   )
 }

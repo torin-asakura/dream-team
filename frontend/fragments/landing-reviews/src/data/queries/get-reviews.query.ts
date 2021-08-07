@@ -1,12 +1,15 @@
 import { gql }      from '@apollo/client'
 import { useQuery } from '@apollo/client'
 
+import { validate } from '../validate'
+
 const GET_REVIEWS = gql`
   query GetReviews {
     reviews {
       nodes {
         title
         content
+        menuOrder
         review {
           respondent
           companylink
@@ -24,7 +27,7 @@ const useReviews = () => {
   }
 
   if (data) {
-    return data.reviews.nodes
+    return data.reviews.nodes.map((node) => validate(node))
   }
 
   return []

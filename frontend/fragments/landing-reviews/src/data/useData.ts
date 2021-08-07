@@ -1,9 +1,10 @@
 import { useReviews } from './queries'
+import { sort }       from './sort'
 
 const useData = () => {
   const reviews = useReviews()
 
-  return reviews
+  return sort(reviews)
 }
 
 export { useData }

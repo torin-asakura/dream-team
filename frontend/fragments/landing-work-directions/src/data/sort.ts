@@ -1,12 +1,18 @@
+const compare = ({ menuOrder: a }, { menuOrder: b }) => (a > b ? 1 : -1)
+
 const sort = (skills) => {
-  const leftSide = []
-  const rightSide = []
+  const leftSide: any[] = []
+  const rightSide: any[] = []
 
   const split = (skill, index) => {
-    index % 2 === 0 ? leftSide.push(skill) : rightSide.push(skill)
+    if (index % 2 === 0) {
+      leftSide.push(skill)
+    } else {
+      rightSide.push(skill)
+    }
   }
 
-  skills.forEach(split)
+  ;[...skills].sort(compare).forEach(split)
 
   return { leftSide, rightSide }
 }

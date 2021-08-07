@@ -22,7 +22,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [type, setType] = useState<Type>('phone')
-  const [phone, setPhone] = useState<string>('')
+  const [requisites, setRequisites] = useState<string>('')
 
   return (
     <Box px={['32px', '32px', '0px']} height={838} border='1px solid blue'>
@@ -54,16 +54,31 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
                 </Layout>
                 <Layout flexBasis={24} />
                 <Layout>
-                  <input type='radio' />
-                  <input type='radio' />
-                  <input type='radio' />
+                  <input type='radio' name='type' onChange={() => setType('phone')} />
+                  <input type='radio' name='type' onChange={() => setType('telegram')} />
+                  <input type='radio' name='type' onChange={() => setType('skype')} />
                 </Layout>
                 <Layout flexBasis={24} />
                 <Layout>
-                  <input value={phone} onChange={(event) => setPhone(event.target.value)} />
+                  <input
+                    value={requisites}
+                    onChange={(event) => setRequisites(event.target.value)}
+                  />
                 </Layout>
                 <Layout flexBasis={32} />
-                <button onClick={() => {}}>
+                <button
+                  type='button'
+                  onClick={() => {
+                    submitForm({
+                      variables: {
+                        name,
+                        email,
+                        type,
+                        requisites,
+                      },
+                    })
+                  }}
+                >
                   Отправить
                 </button>
                 <Layout flexBasis={24} />

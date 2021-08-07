@@ -1,6 +1,8 @@
 import { useQuery } from '@apollo/client'
 import { gql }      from '@apollo/client'
 
+import { validate } from '../validate'
+
 const GET_SKILL_CATEGORIES = gql`
   query GetSkillCategories {
     skillCategories {
@@ -25,7 +27,7 @@ const useSkills = () => {
   }
 
   if (data) {
-    return data.skillCategories.nodes
+    return data.skillCategories.nodes.map((node) => validate(node))
   }
 
   return []

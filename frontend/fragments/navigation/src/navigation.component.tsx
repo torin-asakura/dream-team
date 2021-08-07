@@ -6,16 +6,16 @@ import { Layout }          from '@ui/layout'
 import { Row }             from '@ui/layout'
 import { Condition }       from '@ui/condition'
 
-import { useData }         from './useData'
+import { useData }         from './data'
 import { NavigationProps } from './navigation.interface'
 import { Language }        from './navigation.interface'
 
+const switchLanguage = (language: Language, languageVar) => () => {
+  languageVar(language === 'RU' ? 'EN' : 'RU')
+}
+
 const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
   const [EN, RU] = useData()
-
-  const switchLanguage = (language: Language) => () => {
-    languageVar(language === 'RU' ? 'EN' : 'RU')
-  }
 
   return (
     <Box px={['32px', '32px', '0px']} border='1px solid black' height={84}>
@@ -37,7 +37,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
                 <a href={url}>{label}</a>
               ))}
             </Condition>
-            <button onClick={switchLanguage(language)}>
+            <button type='button' onClick={switchLanguage(language, languageVar)}>
               <Condition match={language === 'RU'}>РУ</Condition>
               <Condition match={language === 'EN'}>EN</Condition>
             </button>
