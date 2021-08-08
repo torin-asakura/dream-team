@@ -1,13 +1,12 @@
 import React         from 'react'
 import { FC }        from 'react'
 
-import { Condition } from '@ui/condition'
 import { Layout }    from '@ui/layout'
 import { Row }       from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Box }       from '@ui/layout'
-import { Text } from '@ui/text'
-import { Button } from '@ui/button'
+import { Text }      from '@ui/text'
+import { Button }    from '@ui/button'
 
 import { HeroProps } from './landing-hero.interface'
 import { useData }   from './data'
@@ -15,13 +14,13 @@ import { useData }   from './data'
 const getContentByLanguage = (object) => (
   <>
     <Layout>
-      <Text color='black' fontSize='huge'>
+      <Text color='text.black' fontSize='huge'>
         {object?.title}
       </Text>
     </Layout>
     <Layout flexBasis={32} />
     <Layout maxWidth={400}>
-      <Text color='black' fontSize='regular'>
+      <Text color='text.black' fontSize='regular'>
         {object?.content}
       </Text>
     </Layout>

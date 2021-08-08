@@ -5,6 +5,8 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/link": "^0.0.2",
+    "@emotion/styled": "^11.3.0",
+    "next": "^11.0.1",
     "react": "^17.0.2"
   },
   "devDependencies": {

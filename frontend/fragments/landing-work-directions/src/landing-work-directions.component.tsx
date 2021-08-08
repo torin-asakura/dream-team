@@ -5,6 +5,7 @@ import { Layout }                     from '@ui/layout'
 import { Row }                        from '@ui/layout'
 import { Column }                     from '@ui/layout'
 import { Box }                        from '@ui/layout'
+import { Text }                       from '@ui/text'
 
 import { Item }                       from './item'
 import { useData }                    from './data'
@@ -16,9 +17,11 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
   return (
     <Box>
       <Column width='100%'>
-        <Box border='1px solid black' width='100%' height={30}>
-          Направления работы
-        </Box>
+        <Layout>
+          <Text color='text.black' fontSize='big' fontWeight='slim'>
+            Направления работы
+          </Text>
+        </Layout>
         <Layout flexBasis={48} />
         <Row>
           <Column width='100%'>

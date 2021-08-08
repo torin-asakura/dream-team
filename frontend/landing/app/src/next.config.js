@@ -6,12 +6,15 @@ const withPlugins = require('next-compose-plugins')
 module.exports = withPlugins([
   withWorkspaces,
   withFutureWebpack5,
-  withAliases([
-    '@apollo/client$',
-    '@apollo/client/react/ssr$',
-    '@apollo/client/core$',
-    'events',
-    '@emotion/react',
-    '@emotion/styled'
-  ], require),
+  withAliases(
+    [
+      '@apollo/client$',
+      '@apollo/client/react/ssr$',
+      '@apollo/client/core$',
+      'events',
+      '@emotion/react',
+      '@emotion/styled',
+    ],
+    require
+  ),
 ])

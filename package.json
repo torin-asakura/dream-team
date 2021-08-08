@@ -6,7 +6,8 @@
     "prepare": "yarn landing:build && yarn rezip"
   },
   "resolutions": {
-    "@types/node": "14.17.6"
+    "@types/node": "14.17.6",
+    "next": "^10.2.3"
   },
   "devDependencies": {
     "@atls/actl-cli": "^0.4.48",

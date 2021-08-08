@@ -9,20 +9,16 @@ import { Content }   from './content'
 import { ItemProps } from './item.interface'
 
 const Item: FC<ItemProps> = ({ contentObject: { title, content, excerpt, fragments } }) => (
-  <Box height={444} border='1px solid black'>
+  <Box>
     <Condition match={!fragments?.reverse}>
-      <Box width='100%' border='1px solid red'>
-        Image
-      </Box>
+      <Layout width='100%'>Image</Layout>
       <Layout flexBasis={32} />
       <Content title={title} content={content} excerpt={excerpt} />
     </Condition>
     <Condition match={fragments?.reverse}>
       <Content title={title} content={content} excerpt={excerpt} />
       <Layout flexBasis={32} />
-      <Box width='100%' border='1px solid red'>
-        Image
-      </Box>
+      <Layout width='100%'>Image</Layout>
     </Condition>
   </Box>
 )

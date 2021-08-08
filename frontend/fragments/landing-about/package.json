@@ -6,6 +6,7 @@
     "@fragments/landing-work-directions": "workspace:frontend/fragments/landing-work-directions",
     "@ui/condition": "workspace:frontend/ui/condition",
     "@ui/layout": "workspace:frontend/ui/layout",
+    "@ui/text": "workspace:frontend/ui/text",
     "graphql": "^15.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
