@@ -1,2 +1,2 @@
 export * from './normal-size.styles'
-export * from './small-size.styles'
+export * from './big-size.styles'

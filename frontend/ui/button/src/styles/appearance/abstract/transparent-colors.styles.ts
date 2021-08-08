@@ -3,7 +3,7 @@ import { styleFn }                from 'styled-system'
 
 const getTransparentColorsStyles = (theme): styleFn => {
   const transparentDefaultColors = createAppearanceStyles({
-    fontColor: theme.colors.button.primary.fontColor,
+    fontColor: theme.colors.button.transparent.fontColor,
     backgroundColor: 'transparent',
   })
 

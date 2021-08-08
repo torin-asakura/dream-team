@@ -1,0 +1,13 @@
+{
+  "name": "@ui/link",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@atls-ui-parts/link": "^0.0.2",
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17"
+  }
+}
