@@ -9,9 +9,6 @@ const GET_CARD_BY = gql`
       excerpt
       content
       title
-      language {
-        code
-      }
       fragments {
         reverse
       }

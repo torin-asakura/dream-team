@@ -10,4 +10,3 @@
   echo $str;
   wp_footer();
   echo '</body></html>';
-?>
