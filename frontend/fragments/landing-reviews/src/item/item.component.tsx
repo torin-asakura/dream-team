@@ -1,35 +1,49 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React            from 'react'
+import { FC }           from 'react'
 
-import { Layout }    from '@ui/layout'
-import { Column }    from '@ui/layout'
-import { Box }       from '@ui/layout'
+import { Layout }       from '@ui/layout'
+import { Column }       from '@ui/layout'
+import { Box }          from '@ui/layout'
+import { Text }         from '@ui/text'
+import { TextEllipsis } from '@ui/text'
 
-import { ItemProps } from './item.interface'
+import { messages }     from './messages'
+import { ItemProps }    from './item.interface'
 
-const Item: FC<ItemProps> = ({ review }) => (
-  <Box width={405} border='1px solid blue'>
-    <Layout flexBasis={24} />
+const Item: FC<ItemProps> = ({ review, language }) => (
+  <Box
+    width={405}
+    height={276}
+    backgroundColor='white'
+    borderRadius='normal'
+    overflow='hidden'
+    padding='24px'
+  >
     <Column>
-      <Layout flexBasis={24} />
-      <Box height={32} border='1px solid black'>
-        {review.title}
-      </Box>
+      <Layout>
+        <Text fontWeight='slim' fontSize='large' color='text.black'>
+          {review.title}
+        </Text>
+      </Layout>
       <Layout flexBasis={4} />
-      <Box height={24} border='1px solid black'>
-        {review.review.respondent}
-      </Box>
+      <Layout>
+        <Text fontSize='regular' color='text.lightGray'>
+          {review.review.respondent}
+        </Text>
+      </Layout>
       <Layout flexBasis={16} />
-      <Box width='100%' border='1px solid black'>
-        {review.content}
-      </Box>
-      <Layout flexBasis={16} />
-      <Box height={24} border='1px solid black'>
-        + Подробнее
-      </Box>
-      <Layout flexBasis={24} />
+      <Layout overflow='hidden'>
+        <TextEllipsis fontSize='regular' color='text.gray' lineClamp={7}>
+          {review.content}
+        </TextEllipsis>
+      </Layout>
+      <Layout flexGrow={1} />
+      <Layout>
+        <Text color='text.accent' fontSize='regular'>
+          + {messages.details[language]}
+        </Text>
+      </Layout>
     </Column>
-    <Layout flexBasis={24} />
   </Box>
 )
 

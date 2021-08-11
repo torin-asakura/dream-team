@@ -5,22 +5,23 @@ __metadata:
   version: 4
   cacheKey: 8
 
-"@apollo/client@npm:^3.0.0-beta.23, @apollo/client@npm:^3.3.21, @apollo/client@npm:latest":
-  version: 3.4.5
-  resolution: "@apollo/client@npm:3.4.5"
+"@apollo/client@npm:3.3.21":
+  version: 3.3.21
+  resolution: "@apollo/client@npm:3.3.21"
   dependencies:
     "@graphql-typed-document-node/core": ^3.0.0
+    "@types/zen-observable": ^0.8.0
     "@wry/context": ^0.6.0
     "@wry/equality": ^0.5.0
-    "@wry/trie": ^0.3.0
-    graphql-tag: ^2.12.3
+    fast-json-stable-stringify: ^2.0.0
+    graphql-tag: ^2.12.0
     hoist-non-react-statics: ^3.3.2
-    optimism: ^0.16.1
+    optimism: ^0.16.0
     prop-types: ^15.7.2
     symbol-observable: ^4.0.0
-    ts-invariant: ^0.9.0
-    tslib: ^2.3.0
-    zen-observable-ts: ^1.1.0
+    ts-invariant: ^0.8.0
+    tslib: ^1.10.0
+    zen-observable: ^0.8.14
   peerDependencies:
     graphql: ^14.0.0 || ^15.0.0
     react: ^16.8.0 || ^17.0.0
@@ -30,7 +31,7 @@ __metadata:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 3bca173f7f4b66d3a8ca5a1da323d6442394e2029d34403dae83911676844518a2c951ae567e3cab3d20718ffb0cde9529e6fa868d5757d889ad01b59e5490b7
+  checksum: cdb501045ce8154fadd2cc38d10e92b90c789f58c1960797244f114fd2ac39f535895228545521407ef6b3e7cea64dc8e7050980ca47df7f54d36cb4ecef35df
   languageName: node
   linkType: hard
 
@@ -118,6 +119,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/conditional-render@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@atls-ui-parts/conditional-render@npm:0.0.1"
+  peerDependencies:
+    react: ^17.0.1
+  checksum: f770730caabacacd69cadf0137b44f2ef16be4e6021c431bcc313b1584adebd22652080c28fcbd502459c325de0c4409d22b4489c2dd31e96a102b70eec511a4
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/events-state@npm:0.0.1":
+  version: 0.0.1
+  resolution: "@atls-ui-parts/events-state@npm:0.0.1"
+  peerDependencies:
+    react: ^17.0.1
+  checksum: d29bca36a6456e2aecec28a49f50fd606d9b325fbc0d86ecb7b4bff2a156e8336f6eb6a012181bc59cf1b985ae1becb16f2aa06e62d3b79eb22c8660156d1c0a
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/input@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@atls-ui-parts/input@npm:0.0.2"
+  dependencies:
+    "@atls-ui-parts/events-state": 0.0.1
+    "@atls-ui-parts/styles": 0.0.1
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  checksum: 752a77738fc74e3b73dd078be02f5c1ae62b47f201e00959086d6545775a312f2df4d89151fd8eea8441e758fe0878b835e7564a5bbe457403d7aff245f20784
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/layout@npm:^0.0.2":
   version: 0.0.2
   resolution: "@atls-ui-parts/layout@npm:0.0.2"
@@ -161,6 +195,17 @@ __metadata:
     "@emotion/styled": ^11.1.5
     react: ^17.0.1
   checksum: a5ed056a72fa128036b74cc289b49bdfe245b616fb51c34fec834d29eacf7c51c2cdad874c1f2ef9b8d403ed67b98da3f09b140dd63807a8a01f97004238854f
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/text@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@atls-ui-parts/text@npm:0.0.4"
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+  checksum: 71c8e8c1d659f51f30be7b9cdbefd02ac2591201034676b77352d7598d1e04f3f2194cdedbafbe2a8243cd11795b3f1eb3fa3cbaf465bf264167ef114e60b456
   languageName: node
   linkType: hard
 
@@ -1269,6 +1314,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/is-prop-valid@npm:^0.8.2":
+  version: 0.8.8
+  resolution: "@emotion/is-prop-valid@npm:0.8.8"
+  dependencies:
+    "@emotion/memoize": 0.7.4
+  checksum: bb7ec6d48c572c540e24e47cc94fc2f8dec2d6a342ae97bc9c8b6388d9b8d283862672172a1bb62d335c02662afe6291e10c71e9b8642664a8b43416cdceffac
+  languageName: node
+  linkType: hard
+
 "@emotion/is-prop-valid@npm:^1.1.0":
   version: 1.1.0
   resolution: "@emotion/is-prop-valid@npm:1.1.0"
@@ -1296,6 +1350,13 @@ __metadata:
     enzyme-to-json:
       optional: true
   checksum: f41a73b96ffca558d5134da95bd50626ab24c5e3272169755a0d37f6a7df874a127584605fce5fe8bb5fcc2a3fa3e9bf8103d52e143a8d4b1588c802368b01f3
+  languageName: node
+  linkType: hard
+
+"@emotion/memoize@npm:0.7.4":
+  version: 0.7.4
+  resolution: "@emotion/memoize@npm:0.7.4"
+  checksum: 4e3920d4ec95995657a37beb43d3f4b7d89fed6caa2b173a4c04d10482d089d5c3ea50bbc96618d918b020f26ed6e9c4026bbd45433566576c1f7b056c3271dc
   languageName: node
   linkType: hard
 
@@ -1460,7 +1521,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/landing-about@workspace:frontend/fragments/landing-about"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": ^3.4.7
     "@fragments/landing-work-directions": "workspace:frontend/fragments/landing-work-directions"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -1470,6 +1531,8 @@ __metadata:
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -1477,13 +1540,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/landing-feedback@workspace:frontend/fragments/landing-feedback"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": ^3.4.7
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/button": "workspace:frontend/ui/button"
+    "@ui/image": "workspace:frontend/ui/image"
+    "@ui/input": "workspace:frontend/ui/input"
     "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/link": "workspace:frontend/ui/link"
+    "@ui/text": "workspace:frontend/ui/text"
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -1491,14 +1561,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/landing-footer@workspace:frontend/fragments/landing-footer"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": ^3.4.7
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:frontend/ui/condition"
+    "@ui/icons": "workspace:frontend/ui/icons"
     "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/text": "workspace:frontend/ui/text"
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -1506,16 +1580,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/landing-hero@workspace:frontend/fragments/landing-hero"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": ^3.4.7
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:frontend/ui/button"
     "@ui/condition": "workspace:frontend/ui/condition"
     "@ui/layout": "workspace:frontend/ui/layout"
     "@ui/text": "workspace:frontend/ui/text"
+    "@ui/video": "workspace:frontend/ui/video"
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -1523,13 +1600,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/landing-reviews@workspace:frontend/fragments/landing-reviews"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": ^3.4.7
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/button": "workspace:frontend/ui/button"
+    "@ui/carousel": "workspace:frontend/ui/carousel"
+    "@ui/icons": "workspace:frontend/ui/icons"
     "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/text": "workspace:frontend/ui/text"
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -1537,13 +1620,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/landing-team@workspace:frontend/fragments/landing-team"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": ^3.4.7
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/image": "workspace:frontend/ui/image"
     "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/text": "workspace:frontend/ui/text"
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -1551,14 +1638,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/landing-work-directions@workspace:frontend/fragments/landing-work-directions"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": ^3.4.7
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/image": "workspace:frontend/ui/image"
     "@ui/layout": "workspace:frontend/ui/layout"
     "@ui/text": "workspace:frontend/ui/text"
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -1566,7 +1656,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/navigation@workspace:frontend/fragments/navigation"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": ^3.4.7
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:frontend/ui/button"
@@ -1577,6 +1667,8 @@ __metadata:
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -1887,7 +1979,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/index-page@workspace:frontend/landing/index"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": ^3.4.7
     "@fragments/landing-about": "workspace:frontend/fragments/landing-about"
     "@fragments/landing-feedback": "workspace:frontend/fragments/landing-feedback"
     "@fragments/landing-footer": "workspace:frontend/fragments/landing-footer"
@@ -1899,6 +1991,8 @@ __metadata:
     "@types/react-dom": ^17
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -2730,7 +2824,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/zen-observable@npm:*, @types/zen-observable@npm:0.8.3":
+"@types/zen-observable@npm:*, @types/zen-observable@npm:^0.8.0":
   version: 0.8.3
   resolution: "@types/zen-observable@npm:0.8.3"
   checksum: 08c88354abcf03a2176a2ec32e07da1f25fdad94fbc2f419bea53d77deb04ad4759518b4fe3fc695e61065dd4bdf7c8bd26b5211a6cd5be2233872806bdee48d
@@ -2849,6 +2943,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/carousel@workspace:frontend/ui/carousel":
+  version: 0.0.0-use.local
+  resolution: "@ui/carousel@workspace:frontend/ui/carousel"
+  dependencies:
+    "@emotion/styled": ^11.3.0
+    "@ui/layout": "workspace:frontend/ui/layout"
+    framer-motion: ^4.1.17
+    react: ^17.0.2
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/condition@workspace:frontend/ui/condition":
   version: 0.0.0-use.local
   resolution: "@ui/condition@workspace:frontend/ui/condition"
@@ -2874,6 +2981,34 @@ __metadata:
     prettier: ^2.3.2
     react: ^17.0.2
     ts-node: 8.10.2
+  languageName: unknown
+  linkType: soft
+
+"@ui/image@workspace:frontend/ui/image":
+  version: 0.0.0-use.local
+  resolution: "@ui/image@workspace:frontend/ui/image"
+  dependencies:
+    "@emotion/styled": ^11.3.0
+    "@types/styled-system": ^5
+    styled-system: ^5.1.5
+  languageName: unknown
+  linkType: soft
+
+"@ui/input@workspace:frontend/ui/input":
+  version: 0.0.0-use.local
+  resolution: "@ui/input@workspace:frontend/ui/input"
+  dependencies:
+    "@atls-ui-parts/conditional-render": ^0.0.1
+    "@atls-ui-parts/input": ^0.0.2
+    "@atls-ui-parts/text": ^0.0.4
+    "@emotion/react": ^11.1.5
+    "@emotion/styled": ^11.3.0
+    "@types/node": ^14.14.41
+    "@types/react": ^17.0.3
+    "@ui/text": "workspace:frontend/ui/text"
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   languageName: unknown
   linkType: soft
 
@@ -2919,6 +3054,18 @@ __metadata:
     "@types/node": ^14.14.41
     "@types/react": ^17.0.3
     react: ^17.0.1
+  languageName: unknown
+  linkType: soft
+
+"@ui/video@workspace:frontend/ui/video":
+  version: 0.0.0-use.local
+  resolution: "@ui/video@workspace:frontend/ui/video"
+  dependencies:
+    "@emotion/styled": ^11.3.0
+    "@types/react": ^17
+    "@types/styled-system": ^5
+    react: ^17.0.2
+    styled-system: ^5.1.5
   languageName: unknown
   linkType: soft
 
@@ -6815,6 +6962,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^4.1.17":
+  version: 4.1.17
+  resolution: "framer-motion@npm:4.1.17"
+  dependencies:
+    "@emotion/is-prop-valid": ^0.8.2
+    framesync: 5.3.0
+    hey-listen: ^1.0.8
+    popmotion: 9.3.6
+    style-value-types: 4.1.4
+    tslib: ^2.1.0
+  peerDependencies:
+    react: ">=16.8 || ^17.0.0"
+    react-dom: ">=16.8 || ^17.0.0"
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  checksum: f6b5fc8f189e6760353aa5b67515b6576ebaa164d8df73118780a09d1d4a162e54dfeb126a05c6a28727af88f4a80f8b94900ff9510be44dada6496a99273fde
+  languageName: node
+  linkType: hard
+
+"framesync@npm:5.3.0":
+  version: 5.3.0
+  resolution: "framesync@npm:5.3.0"
+  dependencies:
+    tslib: ^2.1.0
+  checksum: 9ebbb2863e6a1cfd2e9dd1b73af427d23caa03c92dd49ea767ebdd208c3a573bba4a1026f67068d856a21704f79adcdf2f750cc852ff73bc1f0e80edaaecded8
+  languageName: node
+  linkType: hard
+
 "fresh@npm:0.5.2":
   version: 0.5.2
   resolution: "fresh@npm:0.5.2"
@@ -7178,7 +7354,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-tag@npm:^2.12.3":
+"graphql-tag@npm:^2.12.0":
   version: 2.12.5
   resolution: "graphql-tag@npm:2.12.5"
   dependencies:
@@ -7336,6 +7512,13 @@ __metadata:
   version: 4.3.0
   resolution: "hex-rgb@npm:4.3.0"
   checksum: e654648db8647446f0111c68690d9b340eb192a93c8b2c6789a2b8deb5c20e757515ae209c5ae67074acfddf8575f9fc645d4ffaa0596d859457b08e180d791d
+  languageName: node
+  linkType: hard
+
+"hey-listen@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "hey-listen@npm:1.0.8"
+  checksum: 6bad60b367688f5348e25e7ca3276a74b59ac5a09b0455e6ff8ab7d4a9e38cd2116c708a7dcd8a954d27253ce1d8717ec891d175723ea739885b828cf44e4072
   languageName: node
   linkType: hard
 
@@ -10219,7 +10402,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"optimism@npm:^0.16.1":
+"optimism@npm:^0.16.0":
   version: 0.16.1
   resolution: "optimism@npm:0.16.1"
   dependencies:
@@ -10681,6 +10864,18 @@ __metadata:
   dependencies:
     ts-pnp: ^1.1.6
   checksum: 0606a63db96400b07f182300168298da9518727a843f9e10cf5045d2a102a4be06bb18c73dc481281e3e0f1ed8d04ef0d285a342b6dcd0eff1340e28e5d2328d
+  languageName: node
+  linkType: hard
+
+"popmotion@npm:9.3.6":
+  version: 9.3.6
+  resolution: "popmotion@npm:9.3.6"
+  dependencies:
+    framesync: 5.3.0
+    hey-listen: ^1.0.8
+    style-value-types: 4.1.4
+    tslib: ^2.1.0
+  checksum: 551446ec3763790efde7a3bb8c43189122f9b559985be2efa79842138257c4e331efcff606732a4bd5ac82d9bde1b236258d69a435f4bb5e9fc5908241b5ba3f
   languageName: node
   linkType: hard
 
@@ -12461,6 +12656,16 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"style-value-types@npm:4.1.4":
+  version: 4.1.4
+  resolution: "style-value-types@npm:4.1.4"
+  dependencies:
+    hey-listen: ^1.0.8
+    tslib: ^2.1.0
+  checksum: 96189770076a2717bf579f7d73a49953f0c3d633b90fed9b44b8285cbbe7facd19d6d7a0d2802fb493b45995791f62b87983c3d3c24128818a69e593b6d77aed
+  languageName: node
+  linkType: hard
+
 "styled-jsx@npm:3.3.2":
   version: 3.3.2
   resolution: "styled-jsx@npm:3.3.2"
@@ -12893,12 +13098,12 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-invariant@npm:^0.9.0":
-  version: 0.9.1
-  resolution: "ts-invariant@npm:0.9.1"
+"ts-invariant@npm:^0.8.0":
+  version: 0.8.2
+  resolution: "ts-invariant@npm:0.8.2"
   dependencies:
     tslib: ^2.1.0
-  checksum: 810f8abd2f7f0cf85c16db797ef72f705bc52a51d1982a18656b7b15e2b32739556e8d37989557eec6b69f8a08ddada27651064f2330a529a388e0fa5a5e2e9a
+  checksum: 783ec7a6aff6cc7c39712f0aa40c63e4a6f1cb3d217a15a639b477251ad019dd945e740e7d769e12ada8ef8df27b2b180f04cd301aeb8df4ab66102b08bd9c87
   languageName: node
   linkType: hard
 
@@ -12981,14 +13186,14 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
+"tslib@npm:^1.10.0, tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0, tslib@npm:^2.3.0":
+"tslib@npm:^2.1.0":
   version: 2.3.0
   resolution: "tslib@npm:2.3.0"
   checksum: 8869694c26e4a7b56d449662fd54a4f9ba872c889d991202c74462bd99f10e61d5bd63199566c4284c0f742277736292a969642cc7b590f98727a7cae9529122
@@ -13868,17 +14073,7 @@ typescript@^3.2.4:
   languageName: node
   linkType: hard
 
-"zen-observable-ts@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "zen-observable-ts@npm:1.1.0"
-  dependencies:
-    "@types/zen-observable": 0.8.3
-    zen-observable: 0.8.15
-  checksum: 1772727f2c96af228c52b008260e1e4ae512782abc9d4f4a78d1a61913aa3b55ae672ad343ecf6895d9b968b5e3f4a41b5a317702cdc6cd5f6f93bc0dacf8103
-  languageName: node
-  linkType: hard
-
-"zen-observable@npm:0.8.15":
+"zen-observable@npm:^0.8.14":
   version: 0.8.15
   resolution: "zen-observable@npm:0.8.15"
   checksum: b7289084bc1fc74a559b7259faa23d3214b14b538a8843d2b001a35e27147833f4107590b1b44bf5bc7f6dfe6f488660d3a3725f268e09b3925b3476153b7821

@@ -2,14 +2,14 @@ import React         from 'react'
 import { FC }        from 'react'
 
 import { Layout }    from '@ui/layout'
-import { Box }       from '@ui/layout'
+import { Row }       from '@ui/layout'
 import { Condition } from '@ui/condition'
 
 import { Content }   from './content'
 import { ItemProps } from './item.interface'
 
 const Item: FC<ItemProps> = ({ contentObject: { title, content, excerpt, fragments } }) => (
-  <Box>
+  <Row>
     <Condition match={!fragments?.reverse}>
       <Layout width='100%'>Image</Layout>
       <Layout flexBasis={32} />
@@ -20,7 +20,7 @@ const Item: FC<ItemProps> = ({ contentObject: { title, content, excerpt, fragmen
       <Layout flexBasis={32} />
       <Layout width='100%'>Image</Layout>
     </Condition>
-  </Box>
+  </Row>
 )
 
 export { Item }

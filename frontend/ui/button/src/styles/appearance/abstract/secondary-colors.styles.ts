@@ -1,7 +1,7 @@
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 import { styleFn }                from 'styled-system'
 
-const getSecondaryColorsStyles = (theme): styleFn => {
+const getSecondaryColorsStyles = (theme, active): styleFn => {
   const secondaryDefaultColors = createAppearanceStyles({
     fontColor: theme.colors.button.secondary.default,
     borderColor: theme.colors.button.secondary.default,
@@ -28,6 +28,7 @@ const getSecondaryColorsStyles = (theme): styleFn => {
     '&:active': {
       ...secondaryActiveColors(),
     },
+    ...(active && secondaryActiveColors()),
   })
 }
 

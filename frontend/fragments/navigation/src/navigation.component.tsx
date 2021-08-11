@@ -42,36 +42,29 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
   const [EN, RU] = useData()
 
   return (
-    <Box px={['32px', '32px', '0px']} height={84} justifyContent='center'>
+    <Box width='100%' px={['32px', '32px', '0px']} height='8vh' justifyContent='center'>
       <Layout width='100%' maxWidth={1280} alignItems='center'>
-        <Row alignItems='center'>
+        <Row alignItems='center' justifyContent='space-between'>
           <Layout>
             <DreamTeamIcon width={202} height={26} />
           </Layout>
-          <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
-          {mapToLinks(language === 'RU' ? RU : EN)}
-          <Layout flexBasis={32} />
-          <Layout>
-            <Button width='100%'>Оставить заявку</Button>
-          </Layout>
-          <Layout flexBasis={16} />
-          <Box
-            border='1px solid'
-            borderColor='border.lightGray'
-            borderRadius='huge'
-            width={44}
-            height={44}
-            justifyContent='center'
-            alignItems='center'
-          >
-            <Button
-              colors='transparent'
-              onClick={switchLanguage(language, languageVar)}
-              width='100%'
-            >
-              {language === 'RU' ? 'РУ' : 'EN'}
-            </Button>
-          </Box>
+          <Row justifyContent='flex-end'>
+            {mapToLinks(language === 'RU' ? RU : EN)}
+            <Layout flexBasis={32} />
+            <Layout>
+              <Button width='100%'>Оставить заявку</Button>
+            </Layout>
+            <Layout flexBasis={16} />
+            <Layout>
+              <Button
+                colors='transparent'
+                onClick={switchLanguage(language, languageVar)}
+                width={44}
+              >
+                {language === 'RU' ? 'РУ' : 'EN'}
+              </Button>
+            </Layout>
+          </Row>
         </Row>
       </Layout>
     </Box>

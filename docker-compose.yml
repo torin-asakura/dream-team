@@ -13,6 +13,7 @@ services:
     volumes:
       - wordpress:/var/www/html
       - ./.ignore/wp-content/plugins/:/var/www/html/wp-content/plugins/
+      - ./.ignore/wp-content/uploads/:/var/www/html/wp-content/uploads/
       - ./.ignore/upload.ini:/usr/local/etc/php/conf.d/uploads.ini
     ports:
       - 8080:80

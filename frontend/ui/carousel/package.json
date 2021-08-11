@@ -1,0 +1,17 @@
+{
+  "name": "@ui/carousel",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "@emotion/styled": "^11.3.0",
+    "@ui/layout": "workspace:frontend/ui/layout",
+    "framer-motion": "^4.1.17"
+  }
+}

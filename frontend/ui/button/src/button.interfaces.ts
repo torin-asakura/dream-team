@@ -11,4 +11,5 @@ export interface ButtonProps extends BaseButtonProps, LayoutProps {
   colors?: ButtonColors
   size?: ButtonSizes
   dotted?: boolean
+  active?: boolean
 }

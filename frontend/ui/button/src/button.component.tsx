@@ -16,9 +16,10 @@ export const Button: FC<ButtonProps> = ({
   rounded = false,
   children,
   dotted = false,
+  active = false,
   ...props
 }) => (
-  <ButtonElement rounding={rounded && 20} {...props}>
+  <ButtonElement rounding={rounded && 20} active={active} {...props}>
     <Content divider={divider}>{children}</Content>
   </ButtonElement>
 )

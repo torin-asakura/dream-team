@@ -4,7 +4,6 @@ import { FC }                         from 'react'
 import { Layout }                     from '@ui/layout'
 import { Row }                        from '@ui/layout'
 import { Column }                     from '@ui/layout'
-import { Box }                        from '@ui/layout'
 import { Text }                       from '@ui/text'
 
 import { Item }                       from './item'
@@ -15,7 +14,7 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
   const { leftSide, rightSide } = useData()
 
   return (
-    <Box>
+    <Row flexWrap='wrap'>
       <Column width='100%'>
         <Layout>
           <Text color='text.black' fontSize='big' fontWeight='slim'>
@@ -44,7 +43,7 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
           </Column>
         </Row>
       </Column>
-    </Box>
+    </Row>
   )
 }
 

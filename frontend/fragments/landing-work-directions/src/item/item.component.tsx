@@ -6,6 +6,7 @@ import { Row }       from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Box }       from '@ui/layout'
 import { Text }      from '@ui/text'
+import { Image }     from '@ui/image'
 
 import { ItemProps } from './item.interface'
 
@@ -21,9 +22,9 @@ const Item: FC<ItemProps> = ({ category }) => (
     <Column width='100%'>
       <Layout flexBasis={32} />
       <Row>
-        <Box border='1px solid black' width={56} height={56}>
-          Icon
-        </Box>
+        <Layout width={56} height={56}>
+          <Image url={category.skillAddons.ikonka.link} />
+        </Layout>
       </Row>
       <Layout flexBasis={24} />
       <Row>
