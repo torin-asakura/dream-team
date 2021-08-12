@@ -3,24 +3,32 @@ import { FC }        from 'react'
 
 import { Layout }    from '@ui/layout'
 import { Row }       from '@ui/layout'
+import { Box }       from '@ui/layout'
 import { Condition } from '@ui/condition'
+import { Image }     from '@ui/image'
 
 import { Content }   from './content'
 import { ItemProps } from './item.interface'
 
-const Item: FC<ItemProps> = ({ contentObject: { title, content, excerpt, fragments } }) => (
-  <Row>
+const Item: FC<ItemProps> = ({
+  contentObject: { title, content, excerpt, fragments, featuredImage },
+}) => (
+  <Box height={416}>
     <Condition match={!fragments?.reverse}>
-      <Layout width='100%'>Image</Layout>
-      <Layout flexBasis={32} />
+      <Row>
+        <Image url={featuredImage?.node?.link} actualSize />
+      </Row>
+      <Layout flexBasis={64} />
       <Content title={title} content={content} excerpt={excerpt} />
     </Condition>
     <Condition match={fragments?.reverse}>
       <Content title={title} content={content} excerpt={excerpt} />
-      <Layout flexBasis={32} />
-      <Layout width='100%'>Image</Layout>
+      <Layout flexBasis={64} />
+      <Row>
+        <Image url={featuredImage?.node?.link} actualSize />
+      </Row>
     </Condition>
-  </Row>
+  </Box>
 )
 
 export { Item }

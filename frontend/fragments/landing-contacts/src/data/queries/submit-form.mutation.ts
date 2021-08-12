@@ -27,10 +27,10 @@ const SUBMIT_FORM = gql`
       input: {
         formId: 3
         data: [
-          { id: 7, value: $name }
-          { id: 8, value: $email }
-          { id: 9, value: $type }
-          { id: 10, value: $requisites }
+          { id: 12, value: $name }
+          { id: 13, value: $email }
+          { id: 20, value: $type }
+          { id: 15, value: $requisites }
         ]
       }
     ) {

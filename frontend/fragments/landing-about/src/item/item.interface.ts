@@ -6,6 +6,11 @@ export interface ContentObject extends ContentProps {
   fragments: {
     reverse: boolean
   }
+  featuredImage: {
+    node: {
+      link: string
+    }
+  }
 }
 
 export interface ItemProps {

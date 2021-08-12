@@ -20,9 +20,14 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
   const reviews = useData()
   const [swipeLeft, swipeRight, Carousel] = useCarousel()
 
+  const filterByLanguage = ({ language: { code } }) => code === language
+
   return (
-    <Box px={['32px', '32px', '0px']} backgroundColor='background.lightGray'>
-      <Layout flexGrow={1} />
+    <Box
+      px={['32px', '32px', '0px']}
+      backgroundColor='background.lightGray'
+      justifyContent='center'
+    >
       <Layout width='100%' maxWidth={1280}>
         <Column justifyContent='center' width='100%'>
           <Layout flexBasis={120} />
@@ -46,17 +51,14 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
             </Layout>
           </Row>
           <Layout flexBasis={48} />
-          <Row overflowX='scroll'>
-            <Carousel spaceBetween={32}>
-              {reviews.map((review) => (
-                <Item review={review} language={language} />
-              ))}
-            </Carousel>
-          </Row>
+          <Carousel spaceBetween={32}>
+            {reviews.filter(filterByLanguage).map((review) => (
+              <Item review={review} language={language} />
+            ))}
+          </Carousel>
           <Layout flexBasis={120} />
         </Column>
       </Layout>
-      <Layout flexGrow={1} />
     </Box>
   )
 }

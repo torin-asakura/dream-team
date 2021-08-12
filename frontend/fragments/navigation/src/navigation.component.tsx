@@ -11,6 +11,7 @@ import { DreamTeamIcon }   from '@ui/icons'
 import { useData }         from './data'
 import { NavigationProps } from './navigation.interface'
 import { Language }        from './navigation.interface'
+import { messages }        from './messages'
 
 const switchLanguage = (language: Language, languageVar) => () => {
   languageVar(language === 'RU' ? 'EN' : 'RU')
@@ -45,14 +46,26 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
     <Box width='100%' px={['32px', '32px', '0px']} height='8vh' justifyContent='center'>
       <Layout width='100%' maxWidth={1280} alignItems='center'>
         <Row alignItems='center' justifyContent='space-between'>
-          <Layout>
-            <DreamTeamIcon width={202} height={26} />
-          </Layout>
+          <NextLink href='/'>
+            <Layout>
+              <DreamTeamIcon width={202} height={26} />
+            </Layout>
+          </NextLink>
           <Row justifyContent='flex-end'>
             {mapToLinks(language === 'RU' ? RU : EN)}
             <Layout flexBasis={32} />
             <Layout>
-              <Button width='100%'>Оставить заявку</Button>
+              <Button
+                width='100%'
+                onClick={() => {
+                  window.scroll({
+                    top: 6800,
+                    behavior: 'smooth',
+                  })
+                }}
+              >
+                {messages.contactUs[language]}
+              </Button>
             </Layout>
             <Layout flexBasis={16} />
             <Layout>
@@ -61,7 +74,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
                 onClick={switchLanguage(language, languageVar)}
                 width={44}
               >
-                {language === 'RU' ? 'РУ' : 'EN'}
+                {messages.language[language]}
               </Button>
             </Layout>
           </Row>

@@ -28,6 +28,7 @@ const colors = {
   },
   border: {
     lightGray: 'rgba(15,76,139,0.08)',
+    transparent: 'rgba(255, 255, 255, 0.3)',
   },
   text: {
     accent: 'rgba(63, 135, 249, 1)',

@@ -5,6 +5,7 @@
     "@ui/button": "workspace:frontend/ui/button",
     "@ui/carousel": "workspace:frontend/ui/carousel",
     "@ui/icons": "workspace:frontend/ui/icons",
+    "@ui/layer": "workspace:frontend/ui/layer",
     "@ui/layout": "workspace:frontend/ui/layout",
     "@ui/text": "workspace:frontend/ui/text",
     "graphql": "^15.5.1",

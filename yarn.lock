@@ -1526,7 +1526,31 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:frontend/ui/condition"
+    "@ui/image": "workspace:frontend/ui/image"
     "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/text": "workspace:frontend/ui/text"
+    graphql: ^15.5.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/landing-contacts@workspace:frontend/fragments/landing-contacts":
+  version: 0.0.0-use.local
+  resolution: "@fragments/landing-contacts@workspace:frontend/fragments/landing-contacts"
+  dependencies:
+    "@apollo/client": ^3.4.7
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/button": "workspace:frontend/ui/button"
+    "@ui/form": "workspace:frontend/ui/form"
+    "@ui/icons": "workspace:frontend/ui/icons"
+    "@ui/image": "workspace:frontend/ui/image"
+    "@ui/input": "workspace:frontend/ui/input"
+    "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/link": "workspace:frontend/ui/link"
     "@ui/text": "workspace:frontend/ui/text"
     graphql: ^15.5.1
     react: ^17.0.2
@@ -1544,6 +1568,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:frontend/ui/button"
+    "@ui/form": "workspace:frontend/ui/form"
     "@ui/image": "workspace:frontend/ui/image"
     "@ui/input": "workspace:frontend/ui/input"
     "@ui/layout": "workspace:frontend/ui/layout"
@@ -1606,6 +1631,7 @@ __metadata:
     "@ui/button": "workspace:frontend/ui/button"
     "@ui/carousel": "workspace:frontend/ui/carousel"
     "@ui/icons": "workspace:frontend/ui/icons"
+    "@ui/layer": "workspace:frontend/ui/layer"
     "@ui/layout": "workspace:frontend/ui/layout"
     "@ui/text": "workspace:frontend/ui/text"
     graphql: ^15.5.1
@@ -1951,6 +1977,8 @@ __metadata:
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
+    "@fragments/navigation": "workspace:frontend/fragments/navigation"
+    "@landing/contacts-page": "workspace:frontend/landing/contacts"
     "@landing/index-page": "workspace:frontend/landing/index"
     "@providers/next-app-with-emotion": "workspace:frontend/providers/next-app-with-emotion"
     "@providers/next-config-with-aliases": "workspace:frontend/providers/next-config-with-aliases"
@@ -1972,6 +2000,22 @@ __metadata:
     react-dom: ^17.0.2
     recompose: ^0.30.0
     typescript: ^4.3.5
+  languageName: unknown
+  linkType: soft
+
+"@landing/contacts-page@workspace:frontend/landing/contacts":
+  version: 0.0.0-use.local
+  resolution: "@landing/contacts-page@workspace:frontend/landing/contacts"
+  dependencies:
+    "@apollo/client": ^3.4.7
+    "@fragments/landing-contacts": "workspace:frontend/fragments/landing-contacts"
+    "@fragments/navigation": "workspace:frontend/fragments/navigation"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -2725,7 +2769,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^17, @types/react@npm:^17.0.15, @types/react@npm:^17.0.3":
+"@types/react@npm:*, @types/react@npm:^17, @types/react@npm:^17.0.15":
   version: 17.0.15
   resolution: "@types/react@npm:17.0.15"
   dependencies:
@@ -2938,8 +2982,12 @@ __metadata:
     "@emotion/react": ^11.4.0
     "@emotion/styled": ^11.3.0
     react: ^17.0.2
+    react-dom: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -2951,8 +2999,10 @@ __metadata:
     "@ui/layout": "workspace:frontend/ui/layout"
     framer-motion: ^4.1.17
     react: ^17.0.2
+    react-dom: ^17.0.2
   peerDependencies:
     react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -2960,8 +3010,28 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/condition@workspace:frontend/ui/condition"
   dependencies:
-    "@types/react": ^17
     react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/form@workspace:frontend/ui/form":
+  version: 0.0.0-use.local
+  resolution: "@ui/form@workspace:frontend/ui/form"
+  dependencies:
+    "@ui/button": "workspace:frontend/ui/button"
+    "@ui/input": "workspace:frontend/ui/input"
+    "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/link": "workspace:frontend/ui/link"
+    "@ui/text": "workspace:frontend/ui/text"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -2980,7 +3050,11 @@ __metadata:
     glob-promise: 3.4.0
     prettier: ^2.3.2
     react: ^17.0.2
+    react-dom: ^17.0.2
     ts-node: 8.10.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -2990,7 +3064,12 @@ __metadata:
   dependencies:
     "@emotion/styled": ^11.3.0
     "@types/styled-system": ^5
+    react: ^17.0.2
+    react-dom: ^17.0.2
     styled-system: ^5.1.5
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -3004,11 +3083,32 @@ __metadata:
     "@emotion/react": ^11.1.5
     "@emotion/styled": ^11.3.0
     "@types/node": ^14.14.41
-    "@types/react": ^17.0.3
     "@ui/text": "workspace:frontend/ui/text"
-    react: ^17.0.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/layer@workspace:frontend/ui/layer":
+  version: 0.0.0-use.local
+  resolution: "@ui/layer@workspace:frontend/ui/layer"
+  dependencies:
+    "@emotion/styled": ^11.3.0
+    framer-motion: ^4.1.17
+    global: 4.4.0
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-scrolllock: 5.0.1
+    styled-system: 5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -3019,7 +3119,12 @@ __metadata:
     "@atls-ui-parts/layout": ^0.0.2
     "@emotion/styled": ^11.3.0
     "@types/styled-system": ^5
+    react: ^17.0.2
+    react-dom: ^17.0.2
     styled-system: ^5.1.5
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -3029,9 +3134,12 @@ __metadata:
   dependencies:
     "@atls-ui-parts/link": ^0.0.2
     "@emotion/styled": ^11.3.0
-    "@types/react": ^17
     next: ^11.0.1
     react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -3041,8 +3149,11 @@ __metadata:
   dependencies:
     "@atls-ui-parts/text": ^0.0.5
     "@emotion/styled": ^11.3.0
-    "@types/react": ^17
     react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -3052,8 +3163,11 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.1.5
     "@types/node": ^14.14.41
-    "@types/react": ^17.0.3
-    react: ^17.0.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -3062,10 +3176,13 @@ __metadata:
   resolution: "@ui/video@workspace:frontend/ui/video"
   dependencies:
     "@emotion/styled": ^11.3.0
-    "@types/react": ^17
     "@types/styled-system": ^5
     react: ^17.0.2
+    react-dom: ^17.0.2
     styled-system: ^5.1.5
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -5801,6 +5918,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom-walk@npm:^0.1.0":
+  version: 0.1.2
+  resolution: "dom-walk@npm:0.1.2"
+  checksum: 19eb0ce9c6de39d5e231530685248545d9cd2bd97b2cb3486e0bfc0f2a393a9addddfd5557463a932b52fdfcf68ad2a619020cd2c74a5fe46fbecaa8e80872f3
+  languageName: node
+  linkType: hard
+
 "domain-browser@npm:4.19.0":
   version: 4.19.0
   resolution: "domain-browser@npm:4.19.0"
@@ -6159,6 +6283,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-import-resolver-node@npm:*":
+  version: 0.3.5
+  resolution: "eslint-import-resolver-node@npm:0.3.5"
+  dependencies:
+    debug: ^3.2.7
+    resolve: ^1.20.0
+  checksum: 93a8176205f18c40d2c11c444fab89aa3990c5a5eed226ef03a893b5779e7cd4d1f5f52b2bbbbbe4b13fb2a75ef629278be0b52099480cbe6e7024888d9982dd
+  languageName: node
+  linkType: hard
+
 "eslint-import-resolver-node@npm:^0.3.4":
   version: 0.3.4
   resolution: "eslint-import-resolver-node@npm:0.3.4"
@@ -6510,6 +6644,13 @@ __metadata:
     signal-exit: ^3.0.3
     strip-final-newline: ^2.0.0
   checksum: fba9022c8c8c15ed862847e94c252b3d946036d7547af310e344a527e59021fd8b6bb0723883ea87044dc4f0201f949046993124a42ccb0855cae5bf8c786343
+  languageName: node
+  linkType: hard
+
+"exenv@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "exenv@npm:1.2.2"
+  checksum: a894f3b60ab8419e0b6eec99c690a009c8276b4c90655ccaf7d28faba2de3a6b93b3d92210f9dc5efd36058d44f04098f6bbccef99859151104bfd49939904dc
   languageName: node
   linkType: hard
 
@@ -7288,6 +7429,16 @@ __metadata:
     is-windows: ^1.0.1
     which: ^1.2.14
   checksum: 061b43470fe498271bcd514e7746e8a8535032b17ab9570517014ae27d700ff0dca749f76bbde13ba384d185be4310d8ba5712cb0e74f7d54d59390db63dd9a0
+  languageName: node
+  linkType: hard
+
+"global@npm:4.4.0":
+  version: 4.4.0
+  resolution: "global@npm:4.4.0"
+  dependencies:
+    min-document: ^2.19.0
+    process: ^0.11.10
+  checksum: 9c057557c8f5a5bcfbeb9378ba4fe2255d04679452be504608dd5f13b54edf79f7be1db1031ea06a4ec6edd3b9f5f17d2d172fb47e6c69dae57fd84b7e72b77f
   languageName: node
   linkType: hard
 
@@ -9654,6 +9805,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"min-document@npm:^2.19.0":
+  version: 2.19.0
+  resolution: "min-document@npm:2.19.0"
+  dependencies:
+    dom-walk: ^0.1.0
+  checksum: da6437562ea2228041542a2384528e74e22d1daa1a4ec439c165abf0b9d8a63e17e3b8a6dc6e0c731845e85301198730426932a0e813d23f932ca668340c9623
+  languageName: node
+  linkType: hard
+
 "min-indent@npm:^1.0.0":
   version: 1.0.1
   resolution: "min-indent@npm:1.0.1"
@@ -11326,7 +11486,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:*, react@npm:^17.0.1, react@npm:^17.0.2":
+"react-scrolllock@npm:5.0.1":
+  version: 5.0.1
+  resolution: "react-scrolllock@npm:5.0.1"
+  dependencies:
+    exenv: ^1.2.2
+  peerDependencies:
+    react: ^16.3.0
+  checksum: 61833bdb1f48cf7dbf54e7483f1e7b4b18617b2c356d1388f60d5c32b5befeea407601f8e4980ba43f910d6b08dc89b8f2e67cfee4c7a99d03073e72b43dec92
+  languageName: node
+  linkType: hard
+
+"react@npm:*, react@npm:^17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:
@@ -12684,7 +12855,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"styled-system@npm:^5.1.5":
+"styled-system@npm:5.1.5, styled-system@npm:^5.1.5":
   version: 5.1.5
   resolution: "styled-system@npm:5.1.5"
   dependencies:

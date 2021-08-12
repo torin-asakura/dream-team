@@ -7,11 +7,6 @@ const getTertiaryColorsStyles = (theme, active): styleFn => {
     backgroundColor: theme.colors.button.tertiary.default,
   })
 
-  const tertiaryHoverColors = createAppearanceStyles({
-    fontColor: theme.colors.button.tertiary.activeFontColor,
-    backgroundColor: theme.colors.button.tertiary.active,
-  })
-
   const tertiaryActiveColors = createAppearanceStyles({
     fontColor: theme.colors.button.tertiary.activeFontColor,
     backgroundColor: theme.colors.button.tertiary.active,
@@ -20,9 +15,6 @@ const getTertiaryColorsStyles = (theme, active): styleFn => {
   return () => ({
     ...tertiaryDefaultColors(),
     ...(active && tertiaryActiveColors()),
-    '&:hover': {
-      ...tertiaryHoverColors(),
-    },
     '&:active': {
       ...tertiaryActiveColors(),
     },

@@ -9,6 +9,7 @@ import { Text }      from '@ui/text'
 import { Button }    from '@ui/button'
 import { Video }     from '@ui/video'
 
+import { messages }  from './messages'
 import { HeroProps } from './landing-hero.interface'
 import { useData }   from './data'
 
@@ -44,7 +45,16 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
                   {getContentByLanguage(language === 'RU' ? RU : EN)}
                   <Layout flexBasis={32} />
                   <Layout>
-                    <Button>Оставить заявку</Button>
+                    <Button
+                      onClick={() => {
+                        window.scroll({
+                          top: 6800,
+                          behavior: 'smooth',
+                        })
+                      }}
+                    >
+                      {messages.contactUs[language]}
+                    </Button>
                   </Layout>
                 </Column>
               </Layout>

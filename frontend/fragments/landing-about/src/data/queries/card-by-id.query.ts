@@ -12,6 +12,11 @@ const GET_CARD_BY = gql`
       fragments {
         reverse
       }
+      featuredImage {
+        node {
+          link
+        }
+      }
     }
   }
 `

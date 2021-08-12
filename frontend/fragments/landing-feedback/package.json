@@ -3,6 +3,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@ui/button": "workspace:frontend/ui/button",
+    "@ui/form": "workspace:frontend/ui/form",
     "@ui/image": "workspace:frontend/ui/image",
     "@ui/input": "workspace:frontend/ui/input",
     "@ui/layout": "workspace:frontend/ui/layout",

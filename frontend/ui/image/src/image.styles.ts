@@ -7,9 +7,9 @@ export const baseStyles: styleFn = () => ({
   height: '100%',
 })
 
-export const imageStyles: styleFn = ({ url }) => ({
+export const imageStyles: styleFn = ({ url, actualSize }) => ({
   backgroundImage: `url(${url})`,
   backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
+  backgroundSize: !actualSize && 'cover',
   backgroundPosition: 'center',
 })

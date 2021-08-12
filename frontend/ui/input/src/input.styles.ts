@@ -47,7 +47,7 @@ export const primaryColorsStyles = ({ theme }) => ({
 })
 
 export const errorColorsStyles = createAppearanceStyles({
-  fontColor: ({ theme }) => theme.colors.black.font,
+  fontColor: ({ theme }) => theme.colors.input.font,
   backgroundColor: ({ theme }) => theme.colors.input.background,
   borderColor: ({ theme }) => theme.colors.input.error,
 })

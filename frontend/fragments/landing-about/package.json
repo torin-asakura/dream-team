@@ -4,6 +4,7 @@
   "dependencies": {
     "@fragments/landing-work-directions": "workspace:frontend/fragments/landing-work-directions",
     "@ui/condition": "workspace:frontend/ui/condition",
+    "@ui/image": "workspace:frontend/ui/image",
     "@ui/layout": "workspace:frontend/ui/layout",
     "@ui/text": "workspace:frontend/ui/text",
     "graphql": "^15.5.1",

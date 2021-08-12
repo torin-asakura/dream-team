@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 const stringProps = ['title', 'content', 'excerpt']
 
 const formatString = (str) => {

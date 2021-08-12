@@ -14,6 +14,8 @@
     "@atls/next-config-with-pnp-workspaces": "^0.0.1",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@fragments/navigation": "workspace:frontend/fragments/navigation",
+    "@landing/contacts-page": "workspace:frontend/landing/contacts",
     "@landing/index-page": "workspace:frontend/landing/index",
     "@providers/next-app-with-emotion": "workspace:frontend/providers/next-app-with-emotion",
     "@providers/next-config-with-aliases": "workspace:frontend/providers/next-config-with-aliases",

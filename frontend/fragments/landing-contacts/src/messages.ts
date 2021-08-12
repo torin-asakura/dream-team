@@ -19,4 +19,8 @@ export const messages = {
     EN: 'Phone',
     RU: 'Телефон',
   },
+  required: {
+    EN: 'This field is required.',
+    RU: 'Это обязательное поле.',
+  },
 }
