@@ -13,7 +13,7 @@ import { ItemProps } from './item.interface'
 const Item: FC<ItemProps> = ({
   contentObject: { title, content, excerpt, fragments, featuredImage },
 }) => (
-  <Box height={416}>
+  <Box height={['auto', 'auto', 416]} width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>
     <Condition match={!fragments?.reverse}>
       <Row>
         <Image url={featuredImage?.node?.link} actualSize />

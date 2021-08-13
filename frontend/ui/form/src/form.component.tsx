@@ -17,7 +17,7 @@ import { getFieldDataByLanguage } from './utils'
 import { formatRequisitesField }  from './utils'
 import { messages }               from './messages'
 
-const Form: FC<FormProps> = ({ language }) => {
+const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () => {} }) => {
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [type, setType] = useState<Type>('phone')
@@ -39,13 +39,35 @@ const Form: FC<FormProps> = ({ language }) => {
       if (message === messages.required.EN) {
         return messages.required[language]
       }
+
+      if (message === '?') {
+        return messages.incorrect[language]
+      }
+
+      return message
     }
 
     return ''
   }
 
+  const handleSubmit = (data) => {
+    if (data.message === 'OK') {
+      if (!data.success) {
+        onFailure()
+        return
+      }
+      onSuccess()
+    }
+  }
+
   return (
-    <Box borderRadius='normal' backgroundColor='white' width={515} height={598} padding='32px'>
+    <Box
+      borderRadius='normal'
+      backgroundColor='white'
+      maxWidth={515}
+      height={598}
+      padding={['16px', '16px', '32px']}
+    >
       <Column width='100%'>
         <Layout>
           <Text fontSize='increased' fontWeight='slim' color='text.black'>
@@ -67,7 +89,7 @@ const Form: FC<FormProps> = ({ language }) => {
             value={email}
             onChange={(value) => setEmail(value)}
             placeholder={getFieldDataByLanguage(forms, language, 'email')}
-            errorText={getError('name')}
+            errorText={getError('email')}
           />
         </Layout>
         <Layout flexBasis={24} />
@@ -127,6 +149,8 @@ const Form: FC<FormProps> = ({ language }) => {
                 type,
                 requisites,
               },
+            }).then(({ data }) => {
+              handleSubmit(data.submitForm)
             })
           }}
         >

@@ -1,5 +1,6 @@
 import React               from 'react'
 import { FC }              from 'react'
+import { useState }        from 'react'
 
 import { Button }          from '@ui/button'
 import { Box }             from '@ui/layout'
@@ -7,6 +8,7 @@ import { Layout }          from '@ui/layout'
 import { Row }             from '@ui/layout'
 import { NextLink }        from '@ui/link'
 import { DreamTeamIcon }   from '@ui/icons'
+import { FormPopover }     from '@fragments/form-popover'
 
 import { useData }         from './data'
 import { NavigationProps } from './navigation.interface'
@@ -41,9 +43,19 @@ const mapToLinks =
 
 const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
   const [EN, RU] = useData()
+  const [visible, setVisible] = useState<boolean>(false)
 
   return (
-    <Box width='100%' px={['32px', '32px', '0px']} height='8vh' justifyContent='center'>
+    <Box
+      width='100%'
+      height='8vh'
+      justifyContent='center'
+      position='sticky'
+      top={0}
+      backgroundColor='white'
+      zIndex={10}
+    >
+      <FormPopover language={language} visible={visible} setVisible={setVisible} />
       <Layout width='100%' maxWidth={1280} alignItems='center'>
         <Row alignItems='center' justifyContent='space-between'>
           <NextLink href='/'>
@@ -55,15 +67,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
             {mapToLinks(language === 'RU' ? RU : EN)}
             <Layout flexBasis={32} />
             <Layout>
-              <Button
-                width='100%'
-                onClick={() => {
-                  window.scroll({
-                    top: 6800,
-                    behavior: 'smooth',
-                  })
-                }}
-              >
+              <Button width='100%' onClick={() => setVisible(true)}>
                 {messages.contactUs[language]}
               </Button>
             </Layout>

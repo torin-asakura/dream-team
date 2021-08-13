@@ -23,4 +23,8 @@ export const messages = {
     EN: 'This field is required.',
     RU: 'Это обязательное поле.',
   },
+  incorrect: {
+    EN: 'The field is filled in incorrectly',
+    RU: 'Поле заполнено неверно',
+  },
 }

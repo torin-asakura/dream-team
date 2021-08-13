@@ -1517,6 +1517,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fragments/form-popover@workspace:frontend/fragments/form-popover":
+  version: 0.0.0-use.local
+  resolution: "@fragments/form-popover@workspace:frontend/fragments/form-popover"
+  dependencies:
+    "@ui/button": "workspace:frontend/ui/button"
+    "@ui/condition": "workspace:frontend/ui/condition"
+    "@ui/form": "workspace:frontend/ui/form"
+    "@ui/icons": "workspace:frontend/ui/icons"
+    "@ui/layer": "workspace:frontend/ui/layer"
+    "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/text": "workspace:frontend/ui/text"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@fragments/landing-about@workspace:frontend/fragments/landing-about":
   version: 0.0.0-use.local
   resolution: "@fragments/landing-about@workspace:frontend/fragments/landing-about"
@@ -1545,6 +1561,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:frontend/ui/button"
+    "@ui/condition": "workspace:frontend/ui/condition"
     "@ui/form": "workspace:frontend/ui/form"
     "@ui/icons": "workspace:frontend/ui/icons"
     "@ui/image": "workspace:frontend/ui/image"
@@ -1552,6 +1569,7 @@ __metadata:
     "@ui/layout": "workspace:frontend/ui/layout"
     "@ui/link": "workspace:frontend/ui/link"
     "@ui/text": "workspace:frontend/ui/text"
+    framer-motion: ^4.1.17
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1606,6 +1624,7 @@ __metadata:
   resolution: "@fragments/landing-hero@workspace:frontend/fragments/landing-hero"
   dependencies:
     "@apollo/client": ^3.4.7
+    "@fragments/form-popover": "workspace:frontend/fragments/form-popover"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:frontend/ui/button"
@@ -1683,6 +1702,7 @@ __metadata:
   resolution: "@fragments/navigation@workspace:frontend/fragments/navigation"
   dependencies:
     "@apollo/client": ^3.4.7
+    "@fragments/form-popover": "workspace:frontend/fragments/form-popover"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:frontend/ui/button"
@@ -1690,6 +1710,24 @@ __metadata:
     "@ui/icons": "workspace:frontend/ui/icons"
     "@ui/layout": "workspace:frontend/ui/layout"
     "@ui/link": "workspace:frontend/ui/link"
+    "@ui/text": "workspace:frontend/ui/text"
+    graphql: ^15.5.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/privacy-policy@workspace:frontend/fragments/privacy-policy":
+  version: 0.0.0-use.local
+  resolution: "@fragments/privacy-policy@workspace:frontend/fragments/privacy-policy"
+  dependencies:
+    "@apollo/client": ^3.4.7
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/text": "workspace:frontend/ui/text"
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1980,6 +2018,7 @@ __metadata:
     "@fragments/navigation": "workspace:frontend/fragments/navigation"
     "@landing/contacts-page": "workspace:frontend/landing/contacts"
     "@landing/index-page": "workspace:frontend/landing/index"
+    "@landing/privacy-policy-page": "workspace:frontend/landing/privacy-policy"
     "@providers/next-app-with-emotion": "workspace:frontend/providers/next-app-with-emotion"
     "@providers/next-config-with-aliases": "workspace:frontend/providers/next-config-with-aliases"
     "@providers/next-config-with-future-webpack-5": "workspace:frontend/providers/next-config-with-future-webpack-5"
@@ -2031,6 +2070,23 @@ __metadata:
     "@fragments/landing-reviews": "workspace:frontend/fragments/landing-reviews"
     "@fragments/landing-team": "workspace:frontend/fragments/landing-team"
     "@fragments/navigation": "workspace:frontend/fragments/navigation"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/privacy-policy-page@workspace:frontend/landing/privacy-policy":
+  version: 0.0.0-use.local
+  resolution: "@landing/privacy-policy-page@workspace:frontend/landing/privacy-policy"
+  dependencies:
+    "@apollo/client": ^3.4.7
+    "@fragments/landing-footer": "workspace:frontend/fragments/landing-footer"
+    "@fragments/navigation": "workspace:frontend/fragments/navigation"
+    "@fragments/privacy-policy": "workspace:frontend/fragments/privacy-policy"
     "@types/react": ^17
     "@types/react-dom": ^17
     react: ^17.0.2
@@ -3022,6 +3078,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/form@workspace:frontend/ui/form"
   dependencies:
+    "@apollo/client": ^3.4.7
     "@ui/button": "workspace:frontend/ui/button"
     "@ui/input": "workspace:frontend/ui/input"
     "@ui/layout": "workspace:frontend/ui/layout"
@@ -3030,6 +3087,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@apollo/client": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -3099,8 +3157,10 @@ __metadata:
   resolution: "@ui/layer@workspace:frontend/ui/layer"
   dependencies:
     "@emotion/styled": ^11.3.0
+    "@ui/layout": "workspace:frontend/ui/layout"
     framer-motion: ^4.1.17
     global: 4.4.0
+    nanoid: ^3.1.25
     react: ^17.0.2
     react-dom: ^17.0.2
     react-scrolllock: 5.0.1
@@ -10034,6 +10094,15 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 8fa8dc3283a4fa159700a36cb22f61197547c8155831cb74f1b9c51fbc29ea80c136fd91001468d147a31d3a77f884958aec6c1beabac903c89780acacca9327
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^3.1.25":
+  version: 3.1.25
+  resolution: "nanoid@npm:3.1.25"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: e2353828c7d8fde65265e9c981380102e2021f292038a93fd27288bad390339833286e8cbc7531abe1cb2c6b317e55f38b895dcb775151637bb487388558e0ff
   languageName: node
   linkType: hard
 

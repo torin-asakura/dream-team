@@ -7,10 +7,10 @@ const colors = {
       fontColor: 'rgba(255,255,255,1)',
     },
     secondary: {
-      default: 'rgba(63, 135, 249, 0.16)',
-      hover: 'rgba(63, 135, 249, 0.15)',
-      active: 'rgba(63, 135, 249, 0.15)',
-      fontColor: 'rgba(63, 135, 249, 1)',
+      default: 'rgba(63,135,249,1)',
+      hover: 'rgba(36,113,237,1)',
+      active: 'rgba(24,97,214,1)',
+      background: 'rgba(63,135,249,0.16)',
     },
     tertiary: {
       default: 'transparent',
@@ -24,6 +24,13 @@ const colors = {
       active: 'rgba(24,97,214,1)',
       fontColor: 'rgba(23, 46, 71, 1)',
       backgroundColor: 'rgba(0,0,0,0)',
+    },
+    clipboard: {
+      default: 'rgba(255, 255, 255, 0.3)',
+      hover: 'rgba(255, 255, 255, 0.5)',
+      active: 'rgba(255,255,255,1)',
+      fontColor: 'rgba(255,255,255,1)',
+      background: 'transparent',
     },
   },
   border: {
@@ -39,7 +46,8 @@ const colors = {
   },
   background: {
     lightGray: 'rgba(246, 246, 251, 1)',
-    transparentBlack: 'rgba(23, 35, 68, 0.75)',
+    transparentBlue: 'rgba(23, 35, 68, 0.75)',
+    transparentBlack: 'rgba(0,0,0,0.5)',
   },
   input: {
     background: 'rgba(255, 255, 255, 1)',

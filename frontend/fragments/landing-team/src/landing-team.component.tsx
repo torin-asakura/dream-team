@@ -15,7 +15,7 @@ const LandingTeam: FC<LandingProps> = ({ language }) => {
   const recruits = useData()
 
   return (
-    <Box px={['32px', '32px', '0px']} minHeight={830} border='1px solid black'>
+    <Box px={['32px', '32px', '0px']} height={['auto', 'auto', 830]}>
       <Column width='100%' justifyContent='center' alignItems='center'>
         <Layout width='100%' maxWidth={1280}>
           <Column width='100%' justifyContent='center'>
@@ -26,7 +26,7 @@ const LandingTeam: FC<LandingProps> = ({ language }) => {
               </Text>
             </Row>
             <Layout flexBasis={74} />
-            <Row>
+            <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
               {recruits.map(({ title: recruit, featuredImage: image }) => (
                 <Item recruit={recruit} image={image} language={language} />
               ))}

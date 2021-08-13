@@ -2,6 +2,7 @@
   "name": "@fragments/landing-hero",
   "main": "src/index.ts",
   "dependencies": {
+    "@fragments/form-popover": "workspace:frontend/fragments/form-popover",
     "@ui/button": "workspace:frontend/ui/button",
     "@ui/condition": "workspace:frontend/ui/condition",
     "@ui/layout": "workspace:frontend/ui/layout",

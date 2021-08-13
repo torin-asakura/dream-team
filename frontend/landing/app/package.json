@@ -17,6 +17,7 @@
     "@fragments/navigation": "workspace:frontend/fragments/navigation",
     "@landing/contacts-page": "workspace:frontend/landing/contacts",
     "@landing/index-page": "workspace:frontend/landing/index",
+    "@landing/privacy-policy-page": "workspace:frontend/landing/privacy-policy",
     "@providers/next-app-with-emotion": "workspace:frontend/providers/next-app-with-emotion",
     "@providers/next-config-with-aliases": "workspace:frontend/providers/next-config-with-aliases",
     "@providers/next-config-with-future-webpack-5": "workspace:frontend/providers/next-config-with-future-webpack-5",

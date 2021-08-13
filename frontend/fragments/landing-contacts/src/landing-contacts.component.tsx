@@ -1,6 +1,11 @@
 import React                    from 'react'
 import { FC }                   from 'react'
+import { useState }             from 'react'
+import { motion }               from 'framer-motion'
+import { useAnimation }         from 'framer-motion'
 
+import { Button }               from '@ui/button'
+import { Condition }            from '@ui/condition'
 import { Layout }               from '@ui/layout'
 import { Row }                  from '@ui/layout'
 import { Column }               from '@ui/layout'
@@ -11,10 +16,50 @@ import { CopyIcon }             from '@ui/icons'
 import { Form }                 from '@ui/form'
 
 import { useData }              from './data'
-import { LandingFeedbackProps } from './landing-feedback.interface'
+import { messages }             from './messages'
+import { LandingContactsProps } from './landing-contacts.interface'
 
-const LandingContacts: FC<LandingFeedbackProps> = ({ language }) => {
+const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
   const { contacts, feedbackEmail, feedbackPhone, asset, workingHours } = useData()
+  const [email, setEmail] = useState<boolean>(false)
+  const [phone, setPhone] = useState<boolean>(false)
+
+  const Copied = ({ target, setTarget }) => {
+    const main = useAnimation()
+
+    main
+      .start({
+        opacity: 1,
+      })
+      .then(() => {
+        setTimeout(() => {
+          main
+            .start({
+              opacity: 0,
+            })
+            .then(() => {
+              setTarget(false)
+            })
+        }, 1000)
+      })
+
+    return (
+      <Condition match={target}>
+        <motion.div initial={{ opacity: 0 }} animate={main}>
+          <Box
+            px='10px'
+            py='6px'
+            backgroundColor='background.transparentBlack'
+            borderRadius='small'
+          >
+            <Text fontSize='semiMedium' color='text.white'>
+              {messages.copied[language]}
+            </Text>
+          </Box>
+        </motion.div>
+      </Condition>
+    )
+  }
 
   return (
     <Box height='92vh' width='100%'>
@@ -24,7 +69,7 @@ const LandingContacts: FC<LandingFeedbackProps> = ({ language }) => {
           height='100%'
           width='100%'
           justifyContent='center'
-          backgroundColor='background.transparentBlack'
+          backgroundColor='background.transparentBlue'
         >
           <Layout width='100%' maxWidth={1280}>
             <Column width='100%'>
@@ -51,19 +96,22 @@ const LandingContacts: FC<LandingFeedbackProps> = ({ language }) => {
                         </Text>
                       </Layout>
                       <Layout flexBasis={16} />
-                      <Box
-                        width={40}
-                        height={40}
-                        justifyContent='center'
-                        alignItems='center'
-                        border='1px solid'
-                        borderColor='border.transparent'
-                        borderRadius='huge'
-                        cursor='pointer'
-                        onClick={() => navigator.clipboard.writeText(feedbackEmail.content)}
-                      >
-                        <CopyIcon width={15} height={18} />
+                      <Box width={40} height={40}>
+                        <Button
+                          width='100%'
+                          colors='clipboard'
+                          onClick={() => {
+                            navigator.clipboard.writeText(feedbackEmail.content)
+                            setEmail(true)
+                          }}
+                        >
+                          <Layout>
+                            <CopyIcon width={15} height={18} />
+                          </Layout>
+                        </Button>
                       </Box>
+                      <Layout flexBasis={10} />
+                      <Copied target={email} setTarget={setEmail} />
                     </Row>
                     <Layout flexBasis={32} />
                     <Row alignItems='center'>
@@ -73,19 +121,22 @@ const LandingContacts: FC<LandingFeedbackProps> = ({ language }) => {
                         </Text>
                       </Layout>
                       <Layout flexBasis={16} />
-                      <Box
-                        width={40}
-                        height={40}
-                        justifyContent='center'
-                        alignItems='center'
-                        border='1px solid'
-                        borderColor='border.transparent'
-                        borderRadius='huge'
-                        cursor='pointer'
-                        onClick={() => navigator.clipboard.writeText(feedbackPhone.content)}
-                      >
-                        <CopyIcon width={15} height={18} />
+                      <Box width={40} height={40}>
+                        <Button
+                          width='100%'
+                          colors='clipboard'
+                          onClick={() => {
+                            navigator.clipboard.writeText(feedbackPhone.content)
+                            setPhone(true)
+                          }}
+                        >
+                          <Layout>
+                            <CopyIcon width={15} height={18} />
+                          </Layout>
+                        </Button>
                       </Box>
+                      <Layout flexBasis={10} />
+                      <Copied target={phone} setTarget={setPhone} />
                     </Row>
                     <Layout flexBasis={16} />
                     <Layout>

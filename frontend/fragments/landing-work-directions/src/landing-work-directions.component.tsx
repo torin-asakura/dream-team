@@ -6,6 +6,7 @@ import { Row }                        from '@ui/layout'
 import { Column }                     from '@ui/layout'
 import { Text }                       from '@ui/text'
 
+import { messages }                   from './messages'
 import { Item }                       from './item'
 import { useData }                    from './data'
 import { LandingWorkDirectionsProps } from './landing-work-directions.interface'
@@ -14,15 +15,15 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
   const { leftSide, rightSide } = useData()
 
   return (
-    <Row flexWrap='wrap'>
+    <Layout width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>
       <Column width='100%'>
         <Layout>
           <Text color='text.black' fontSize='big' fontWeight='slim'>
-            Направления работы
+            {messages.workDirections[language]}
           </Text>
         </Layout>
         <Layout flexBasis={48} />
-        <Row>
+        <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
           <Column width='100%'>
             {leftSide.map((category) => (
               <>
@@ -43,7 +44,7 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
           </Column>
         </Row>
       </Column>
-    </Row>
+    </Layout>
   )
 }
 
