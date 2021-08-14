@@ -75,7 +75,7 @@ export const Layer: FC<LayerProps> = ({
           {...props}
         >
           <Box position='absolute' top='20px' left='20px' display={['flex', 'flex', 'none']}>
-            <CrossIcon width={16} height={16} cursor='pointer' transition='.2s' onClick={close} />
+            <CrossIcon width={16} height={16} cursor='pointer' onClick={close} />
           </Box>
           <Box
             id={childrenId}
