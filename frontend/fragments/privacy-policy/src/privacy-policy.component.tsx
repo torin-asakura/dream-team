@@ -23,7 +23,7 @@ const PrivacyPolicy: FC<PrivacyPolicyProps> = ({ language }) => {
           </Layout>
           <Layout flexBasis={32} />
           <Column width='100%'>
-            {data[language].content.map((paragraph) => (
+            {(data[language]?.content || []).map((paragraph) => (
               <>
                 <Text fontSize='regular' color='text.black'>
                   {paragraph}

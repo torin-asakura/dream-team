@@ -37,8 +37,8 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
 
   return (
     <Box
-      px={['32px', '32px', '0px']}
-      height={['100%', '100%', '92vh']}
+      px={['20px', '20px', '0px']}
+      height={['92vh', '92vh', '92vh']}
       position='relative'
       overflow='hidden'
     >
@@ -53,7 +53,7 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
                 <Column>
                   {getContentByLanguage(language === 'RU' ? RU : EN)}
                   <Layout flexBasis={32} />
-                  <Layout>
+                  <Layout display={['none', 'none', 'flex']}>
                     <Button onClick={() => setVisible(true)}>{messages.contactUs[language]}</Button>
                   </Layout>
                 </Column>

@@ -21,7 +21,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
   return (
     <Image url={asset.link}>
       <Box
-        px={['32px', '32px', '0px']}
+        px={['20px', '20px', '0px']}
         height={['auto', 'auto', 838]}
         width='100%'
         justifyContent='center'
@@ -30,7 +30,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
         <Layout width='100%' maxWidth={1280}>
           <Column width='100%'>
             <Layout flexBasis={120} />
-            <Row flexWrap='wrap'>
+            <Row flexWrap='wrap' justifyContent='space-between'>
               <Layout maxWidth={580}>
                 <Column width='100%'>
                   <Row width='100%'>
@@ -46,11 +46,10 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
                   </Row>
                 </Column>
               </Layout>
-              <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
               <Form
                 language={language}
                 onSuccess={() => setSuccess(true)}
-                onFailure={() => setSuccess(true)}
+                onFailure={() => setFailure(true)}
               />
             </Row>
           </Column>

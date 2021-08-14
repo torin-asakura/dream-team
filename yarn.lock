@@ -1710,6 +1710,7 @@ __metadata:
     "@ui/icons": "workspace:frontend/ui/icons"
     "@ui/layout": "workspace:frontend/ui/layout"
     "@ui/link": "workspace:frontend/ui/link"
+    "@ui/logo": "workspace:frontend/ui/logo"
     "@ui/text": "workspace:frontend/ui/text"
     graphql: ^15.5.1
     react: ^17.0.2
@@ -3195,6 +3196,23 @@ __metadata:
     "@atls-ui-parts/link": ^0.0.2
     "@emotion/styled": ^11.3.0
     next: ^11.0.1
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/logo@workspace:frontend/ui/logo":
+  version: 0.0.0-use.local
+  resolution: "@ui/logo@workspace:frontend/ui/logo"
+  dependencies:
+    "@emotion/styled": ^11.3.0
+    "@ui/condition": "workspace:frontend/ui/condition"
+    "@ui/icons": "workspace:frontend/ui/icons"
+    "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/link": "workspace:frontend/ui/link"
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:

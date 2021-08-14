@@ -15,7 +15,7 @@ const LandingTeam: FC<LandingProps> = ({ language }) => {
   const recruits = useData()
 
   return (
-    <Box px={['32px', '32px', '0px']} height={['auto', 'auto', 830]}>
+    <Box px={['50px', '50px', '0px']} height={['auto', 'auto', 830]}>
       <Column width='100%' justifyContent='center' alignItems='center'>
         <Layout width='100%' maxWidth={1280}>
           <Column width='100%' justifyContent='center'>

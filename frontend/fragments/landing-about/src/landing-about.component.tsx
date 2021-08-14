@@ -19,9 +19,14 @@ const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
 
   return (
     <Box px={['32px', '32px', '0px']}>
-      <Column width='100%' justifyContent='center' alignItems='center'>
+      <Column
+        width='100%'
+        height={['auto', 'auto', '100%']}
+        justifyContent='center'
+        alignItems='center'
+      >
         <Layout width='100%' maxWidth={1280}>
-          <Column width='100%'>
+          <Column width='100%' height={['auto', 'auto', '100%']}>
             <Layout flexBasis={160} />
             <Item contentObject={getContentByLanguage(whyUs, language)} />
             <Layout flexBasis={160} />

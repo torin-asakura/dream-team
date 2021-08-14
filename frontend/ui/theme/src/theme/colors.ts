@@ -48,6 +48,7 @@ const colors = {
     lightGray: 'rgba(246, 246, 251, 1)',
     transparentBlue: 'rgba(23, 35, 68, 0.75)',
     transparentBlack: 'rgba(0,0,0,0.5)',
+    darkBlue: 'rgba(23,35,68,1)',
   },
   input: {
     background: 'rgba(255, 255, 255, 1)',

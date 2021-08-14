@@ -50,9 +50,9 @@ const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () =>
     return ''
   }
 
-  const handleSubmit = (data) => {
-    if (data.message === 'OK') {
-      if (!data.success) {
+  const handleSubmit = (res) => {
+    if (res.message === 'OK') {
+      if (!res.success) {
         onFailure()
         return
       }
@@ -64,7 +64,7 @@ const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () =>
     <Box
       borderRadius='normal'
       backgroundColor='white'
-      maxWidth={515}
+      maxWidth={[335, 335, 515]}
       height={598}
       padding={['16px', '16px', '32px']}
     >
@@ -149,8 +149,8 @@ const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () =>
                 type,
                 requisites,
               },
-            }).then(({ data }) => {
-              handleSubmit(data.submitForm)
+            }).then(({ data: res }) => {
+              handleSubmit(res.submitForm)
             })
           }}
         >

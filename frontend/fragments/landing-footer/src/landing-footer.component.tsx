@@ -17,10 +17,10 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
   const { workingHoursRu, workingHoursEn, feedbackPhone, feedbackEmail, by } = useData()
 
   return (
-    <Box px={['32px', '32px', '0px']} height={248}>
+    <Box px={['32px', '32px', '0px']} height={['auto', 'auto', 248]}>
       <Column width='100%' justifyContent='center' alignItems='center'>
         <Layout width='100%' maxWidth={1280}>
-          <Row>
+          <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
             <Column width='100%'>
               <Layout>
                 <DreamTeamIcon width={233} height={30} />

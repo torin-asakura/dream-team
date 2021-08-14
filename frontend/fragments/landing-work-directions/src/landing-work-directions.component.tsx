@@ -16,7 +16,7 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
 
   return (
     <Layout width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>
-      <Column width='100%'>
+      <Column width='100%' height={['auto', 'auto', '100%']}>
         <Layout>
           <Text color='text.black' fontSize='big' fontWeight='slim'>
             {messages.workDirections[language]}
@@ -24,7 +24,7 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
         </Layout>
         <Layout flexBasis={48} />
         <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
-          <Column width='100%'>
+          <Column width='100%' height={['auto', 'auto', '100%']}>
             {leftSide.map((category) => (
               <>
                 <Item category={category} />
@@ -33,7 +33,7 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
             ))}
           </Column>
           <Layout flexBasis={32} />
-          <Column width='100%'>
+          <Column width='100%' height={['auto', 'auto', '100%']}>
             {rightSide.map((category) => (
               <>
                 <Item category={category} />

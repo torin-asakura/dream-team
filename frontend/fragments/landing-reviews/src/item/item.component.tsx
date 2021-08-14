@@ -50,6 +50,7 @@ const Item: FC<ItemProps> = ({ review, language }) => {
         borderRadius='normal'
         overflow='hidden'
         padding='24px'
+        // @ts-ignore
         cursor='pointer'
         onClick={() => setVisible(true)}
       >

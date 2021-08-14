@@ -8,6 +8,7 @@
     "@ui/icons": "workspace:frontend/ui/icons",
     "@ui/layout": "workspace:frontend/ui/layout",
     "@ui/link": "workspace:frontend/ui/link",
+    "@ui/logo": "workspace:frontend/ui/logo",
     "@ui/text": "workspace:frontend/ui/text",
     "graphql": "^15.5.1",
     "react": "^17.0.2",

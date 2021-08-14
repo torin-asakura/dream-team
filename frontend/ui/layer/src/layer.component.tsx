@@ -38,7 +38,7 @@ export const Layer: FC<LayerProps> = ({
 
   document.addEventListener('click', handleClick)
 
-  useEffect(() => () => document.removeEventListener('click', handleClick), [])
+  useEffect(() => () => document.removeEventListener('click', handleClick), [handleClick])
 
   if (visible) {
     return createPortal(
