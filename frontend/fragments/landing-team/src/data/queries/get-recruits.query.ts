@@ -13,6 +13,9 @@ const GET_RECRUITS = gql`
             link
           }
         }
+        language {
+          code
+        }
       }
     }
   }

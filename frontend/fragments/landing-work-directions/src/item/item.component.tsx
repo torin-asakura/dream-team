@@ -10,7 +10,12 @@ import { Image }     from '@ui/image'
 
 import { ItemProps } from './item.interface'
 
-const Item: FC<ItemProps> = ({ category }) => (
+const filterByLanguage =
+  (language) =>
+  ({ language: lang }) =>
+    lang ? lang.code === language : true
+
+const Item: FC<ItemProps> = ({ category, language }) => (
   <Box
     width='100%'
     maxWidth={624}
@@ -37,7 +42,7 @@ const Item: FC<ItemProps> = ({ category }) => (
       <Layout flexBasis={32} />
       <Row>
         <Layout width='100%' flexWrap='wrap'>
-          {category.skills.nodes.map(({ title }) => (
+          {category.skills.nodes.filter(filterByLanguage(language)).map(({ title }) => (
             <>
               <Layout>
                 <Column>

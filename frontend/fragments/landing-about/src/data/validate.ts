@@ -1,6 +1,6 @@
 const stringProps = ['title', 'content', 'excerpt']
 
-const formatString = (str) => str.replace(/(<p>|<\/p>)/g, '')
+const formatString = (str) => str.replace(/(<p>|<\/p>)/g, '').replace(/&#(.*?);/g, '')
 
 const validate = (target) =>
   stringProps.reduce((acc, prop) => {

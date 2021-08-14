@@ -19,7 +19,13 @@ const Item: FC<ItemProps> = ({ review, language }) => {
   return (
     <>
       <Layer visible={visible} onClose={() => setVisible(false)} opacity='small'>
-        <Box width={960} height={649} borderRadius='normal' backgroundColor='white' padding='32px'>
+        <Box
+          width={['100%', '100%', 960]}
+          height={649}
+          borderRadius='normal'
+          backgroundColor='white'
+          padding='32px'
+        >
           <Column>
             <Row alignItems='center'>
               <Column>

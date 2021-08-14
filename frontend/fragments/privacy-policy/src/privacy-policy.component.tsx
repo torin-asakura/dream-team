@@ -13,7 +13,7 @@ const PrivacyPolicy: FC<PrivacyPolicyProps> = ({ language }) => {
 
   return (
     <Layout width='100%' height='100%' justifyContent='center' alignItems='center'>
-      <Layout height='100%' width='100%' maxWidth={1280}>
+      <Layout height='100%' width='100%' maxWidth={1280} px={['20px', '20px', '0px']}>
         <Column width='100%'>
           <Layout flexBasis={64} />
           <Layout>
@@ -25,7 +25,7 @@ const PrivacyPolicy: FC<PrivacyPolicyProps> = ({ language }) => {
           <Column width='100%'>
             {(data[language]?.content || []).map((paragraph) => (
               <>
-                <Text fontSize='regular' color='text.black'>
+                <Text fontSize='regular' color='text.black' lineHeight='primary'>
                   {paragraph}
                 </Text>
                 <Layout flexBasis={32} />

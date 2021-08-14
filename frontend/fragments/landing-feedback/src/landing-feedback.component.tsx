@@ -1,6 +1,5 @@
 import React                    from 'react'
 import { FC }                   from 'react'
-import { useState }             from 'react'
 
 import { Layout }               from '@ui/layout'
 import { Row }                  from '@ui/layout'
@@ -15,13 +14,12 @@ import { LandingFeedbackProps } from './landing-feedback.interface'
 
 const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
   const { asset, ...content } = useData()
-  const [success, setSuccess] = useState<boolean>(false)
-  const [failure, setFailure] = useState<boolean>(false)
 
   return (
     <Image url={asset.link}>
       <Box
         px={['20px', '20px', '0px']}
+        py={['48px', '48px', '120px']}
         height={['auto', 'auto', 838]}
         width='100%'
         justifyContent='center'
@@ -29,7 +27,6 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
       >
         <Layout width='100%' maxWidth={1280}>
           <Column width='100%'>
-            <Layout flexBasis={120} />
             <Row flexWrap='wrap' justifyContent='space-between'>
               <Layout maxWidth={580}>
                 <Column width='100%'>
@@ -46,11 +43,10 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
                   </Row>
                 </Column>
               </Layout>
-              <Form
-                language={language}
-                onSuccess={() => setSuccess(true)}
-                onFailure={() => setFailure(true)}
-              />
+              <Column>
+                <Layout flexBasis={[32, 32, 0]} />
+                <Form language={language} />
+              </Column>
             </Row>
           </Column>
         </Layout>

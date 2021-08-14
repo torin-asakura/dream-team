@@ -62,19 +62,19 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
   }
 
   return (
-    <Box height='92vh' width='100%'>
+    <Box height={['auto', 'auto', '92vh']} width='100%'>
       <Image url={asset.link}>
         <Box
-          px={['32px', '32px', '0px']}
-          height='100%'
+          px={['20px', '20px', '0px']}
+          py={['48px', '48px', '120px']}
+          height={['auto', 'auto', '100%']}
           width='100%'
           justifyContent='center'
           backgroundColor='background.transparentBlue'
         >
           <Layout width='100%' maxWidth={1280}>
             <Column width='100%'>
-              <Layout flexBasis={120} />
-              <Row>
+              <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
                 <Layout maxWidth={580}>
                   <Column width='100%'>
                     <Row width='100%'>
@@ -90,26 +90,31 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                     </Row>
                     <Layout flexGrow={1} />
                     <Row alignItems='center'>
-                      <Layout>
-                        <Text fontSize='increased' fontWeight='slim' color='text.white'>
-                          {feedbackEmail.content}
-                        </Text>
-                      </Layout>
+                      <Column>
+                        <Layout flexBasis={[48, 48, 0]} />
+                        <Layout>
+                          <Text fontSize='increased' fontWeight='slim' color='text.white'>
+                            {feedbackEmail.content}
+                          </Text>
+                        </Layout>
+                      </Column>
                       <Layout flexBasis={16} />
-                      <Box width={40} height={40}>
-                        <Button
-                          width='100%'
-                          colors='clipboard'
-                          onClick={() => {
-                            navigator.clipboard.writeText(feedbackEmail.content)
-                            setEmail(true)
-                          }}
-                        >
-                          <Layout>
-                            <CopyIcon width={15} height={18} />
-                          </Layout>
-                        </Button>
-                      </Box>
+                      <Layout display={['none', 'none', 'flex']}>
+                        <Box width={40} height={40}>
+                          <Button
+                            width='100%'
+                            colors='clipboard'
+                            onClick={() => {
+                              navigator.clipboard.writeText(feedbackEmail.content)
+                              setEmail(true)
+                            }}
+                          >
+                            <Layout>
+                              <CopyIcon width={15} height={18} />
+                            </Layout>
+                          </Button>
+                        </Box>
+                      </Layout>
                       <Layout flexBasis={10} />
                       <Copied target={email} setTarget={setEmail} />
                     </Row>
@@ -121,28 +126,35 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                         </Text>
                       </Layout>
                       <Layout flexBasis={16} />
-                      <Box width={40} height={40}>
-                        <Button
-                          width='100%'
-                          colors='clipboard'
-                          onClick={() => {
-                            navigator.clipboard.writeText(feedbackPhone.content)
-                            setPhone(true)
-                          }}
-                        >
-                          <Layout>
-                            <CopyIcon width={15} height={18} />
-                          </Layout>
-                        </Button>
-                      </Box>
+                      <Layout display={['none', 'none', 'flex']}>
+                        <Box width={40} height={40}>
+                          <Button
+                            width='100%'
+                            colors='clipboard'
+                            onClick={() => {
+                              navigator.clipboard.writeText(feedbackPhone.content)
+                              setPhone(true)
+                            }}
+                          >
+                            <Layout>
+                              <CopyIcon width={15} height={18} />
+                            </Layout>
+                          </Button>
+                        </Box>
+                      </Layout>
                       <Layout flexBasis={10} />
                       <Copied target={phone} setTarget={setPhone} />
                     </Row>
                     <Layout flexBasis={16} />
                     <Layout>
-                      <Text fontSize='regular' color='text.lightGray'>
-                        {workingHours[language].content}
-                      </Text>
+                      <Column height='auto'>
+                        <Layout>
+                          <Text fontSize='regular' color='text.lightGray'>
+                            {workingHours[language].content}
+                          </Text>
+                        </Layout>
+                        <Layout flexBasis={[48, 48, 0]} />
+                      </Column>
                     </Layout>
                   </Column>
                 </Layout>

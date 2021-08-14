@@ -3,4 +3,5 @@ export interface ContainerProps {
   justifyContent: string
   alignItems: string
   scroll: boolean
+  backgroundColor?: any
 }

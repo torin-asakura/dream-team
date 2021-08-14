@@ -7,7 +7,7 @@ const createBaseStyles =
     height: '100%',
     position: 'fixed',
     display: 'flex',
-    zIndex: visible ? 15 : 'initial',
+    zIndex: 15,
     top: 0,
     left: 0,
     right: 0,

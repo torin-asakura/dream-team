@@ -24,7 +24,7 @@ const Content: FC<ContentProps> = ({ title, excerpt, content }) => (
       </Layout>
       <Layout flexBasis={32} />
       <Layout>
-        <Text color='text.black' fontSize='regular'>
+        <Text color='text.black' fontSize='regular' lineHeight='primary'>
           {content}
         </Text>
       </Layout>

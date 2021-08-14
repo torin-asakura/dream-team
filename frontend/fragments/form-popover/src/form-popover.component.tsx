@@ -30,7 +30,12 @@ const FormPopover: FC<FormPopoverProps> = ({ language, visible, setVisible }) =>
         />
       </Layer>
       <Layer visible={success} onClose={() => setSuccess(false)} opacity='small'>
-        <Box width={640} borderRadius='normal' backgroundColor='white' padding='32px'>
+        <Box
+          width={['100%', '100%', 640]}
+          borderRadius='normal'
+          backgroundColor='white'
+          padding='32px'
+        >
           <Column width='100%'>
             <Row justifyContent='center'>
               <SuccessIcon width={120} height={120} />
@@ -55,7 +60,12 @@ const FormPopover: FC<FormPopoverProps> = ({ language, visible, setVisible }) =>
         </Box>
       </Layer>
       <Layer visible={failure} onClose={() => setFailure(false)} opacity='small'>
-        <Box width={640} borderRadius='normal' backgroundColor='white' padding='32px'>
+        <Box
+          width={['100%', '100%', 640]}
+          borderRadius='normal'
+          backgroundColor='white'
+          padding='32px'
+        >
           <Column width='100%'>
             <Row justifyContent='center'>
               <FailureIcon width={120} height={120} />

@@ -17,6 +17,9 @@ const GET_SKILL_CATEGORIES = gql`
           nodes {
             title
             menuOrder
+            language {
+              code
+            }
           }
         }
       }

@@ -27,7 +27,7 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
           <Column width='100%' height={['auto', 'auto', '100%']}>
             {leftSide.map((category) => (
               <>
-                <Item category={category} />
+                <Item category={category} language={language} />
                 <Layout flexBasis={32} />
               </>
             ))}
@@ -36,7 +36,7 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
           <Column width='100%' height={['auto', 'auto', '100%']}>
             {rightSide.map((category) => (
               <>
-                <Item category={category} />
+                <Item category={category} language={language} />
                 <Layout flexBasis={32} />
               </>
             ))}

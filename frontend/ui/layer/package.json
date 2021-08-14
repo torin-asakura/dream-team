@@ -5,6 +5,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/styled": "^11.3.0",
+    "@ui/icons": "workspace:frontend/ui/icons",
     "@ui/layout": "workspace:frontend/ui/layout",
     "framer-motion": "^4.1.17",
     "global": "4.4.0",

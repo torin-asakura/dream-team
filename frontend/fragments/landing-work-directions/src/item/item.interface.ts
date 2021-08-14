@@ -1,3 +1,5 @@
+import { Language } from '../landing-work-directions.interface'
+
 export interface Category {
   name: string
   skillAddons: {
@@ -9,10 +11,17 @@ export interface Category {
     nodes: {
       title: string
       menuOrder: number | null
+      language:
+        | {
+            code: Language
+          }
+        | null
+        | undefined
     }[]
   }
 }
 
 export interface ItemProps {
   category: Category
+  language: Language
 }

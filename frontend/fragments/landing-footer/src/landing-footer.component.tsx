@@ -20,24 +20,53 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
     <Box px={['32px', '32px', '0px']} height={['auto', 'auto', 248]}>
       <Column width='100%' justifyContent='center' alignItems='center'>
         <Layout width='100%' maxWidth={1280}>
-          <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
-            <Column width='100%'>
+          <Layout display={['none', 'none', 'flex']} width='100%'>
+            <Row>
+              <Column width='100%'>
+                <Layout>
+                  <DreamTeamIcon width={233} height={30} />
+                </Layout>
+                <Layout flexBasis={60} />
+                <Layout>
+                  <Text fontSize='regular' color='text.lightGray'>
+                    {by.title}
+                  </Text>
+                  <Space />
+                  <Text fontSize='regular' color='text.lightGray' fontWeight='bold'>
+                    {by.content}
+                  </Text>
+                </Layout>
+              </Column>
+              <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
+              <Column width='100%' alignItems='flex-end'>
+                <Layout>
+                  <Text fontSize='large' color='text.black' fontWeight='slim'>
+                    {feedbackEmail.content}
+                  </Text>
+                </Layout>
+                <Layout flexBasis={24} />
+                <Layout>
+                  <Text fontSize='large' color='text.black' fontWeight='slim'>
+                    {feedbackPhone.content}
+                  </Text>
+                </Layout>
+                <Layout flexBasis={16} />
+                <Layout>
+                  <Text fontSize='regular' color='text.lightGray'>
+                    <Condition match={language === 'RU'}>{workingHoursRu.content}</Condition>
+                    <Condition match={language === 'EN'}>{workingHoursEn.content}</Condition>
+                  </Text>
+                </Layout>
+              </Column>
+            </Row>
+          </Layout>
+          <Layout display={['flex', 'flex', 'none']} width='100%'>
+            <Column width='100%' justifyContent='center' alignItems='center'>
+              <Layout flexBasis={36} />
               <Layout>
                 <DreamTeamIcon width={233} height={30} />
               </Layout>
-              <Layout flexBasis={60} />
-              <Layout>
-                <Text fontSize='regular' color='text.lightGray'>
-                  {by.title}
-                </Text>
-                <Space />
-                <Text fontSize='regular' color='text.lightGray' fontWeight='bold'>
-                  {by.content}
-                </Text>
-              </Layout>
-            </Column>
-            <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
-            <Column width='100%' alignItems='flex-end'>
+              <Layout flexBasis={28} />
               <Layout>
                 <Text fontSize='large' color='text.black' fontWeight='slim'>
                   {feedbackEmail.content}
@@ -49,15 +78,28 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                   {feedbackPhone.content}
                 </Text>
               </Layout>
-              <Layout flexBasis={16} />
+              <Layout flexBasis={8} />
               <Layout>
                 <Text fontSize='regular' color='text.lightGray'>
                   <Condition match={language === 'RU'}>{workingHoursRu.content}</Condition>
                   <Condition match={language === 'EN'}>{workingHoursEn.content}</Condition>
                 </Text>
               </Layout>
+              <Layout flexBasis={32} />
+              <Box height='1px' width='100%' backgroundColor='background.lightGray' />
+              <Layout flexBasis={16} />
+              <Layout>
+                <Text fontSize='regular' color='text.lightGray'>
+                  {by.title}
+                </Text>
+                <Space />
+                <Text fontSize='regular' color='text.lightGray' fontWeight='bold'>
+                  {by.content}
+                </Text>
+              </Layout>
+              <Layout flexBasis={16} />
             </Column>
-          </Row>
+          </Layout>
         </Layout>
       </Column>
     </Box>

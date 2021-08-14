@@ -14,6 +14,8 @@ import { LandingProps } from './landing-team.interface'
 const LandingTeam: FC<LandingProps> = ({ language }) => {
   const recruits = useData()
 
+  const filterByLanguage = ({ language: { code } }) => code === language
+
   return (
     <Box px={['50px', '50px', '0px']} height={['auto', 'auto', 830]}>
       <Column width='100%' justifyContent='center' alignItems='center'>
@@ -27,7 +29,7 @@ const LandingTeam: FC<LandingProps> = ({ language }) => {
             </Row>
             <Layout flexBasis={74} />
             <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
-              {recruits.map(({ title: recruit, featuredImage: image }) => (
+              {recruits.filter(filterByLanguage).map(({ title: recruit, featuredImage: image }) => (
                 <Item recruit={recruit} image={image} language={language} />
               ))}
             </Row>

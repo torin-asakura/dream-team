@@ -22,6 +22,7 @@ const useCarousel: UseCarousel = (duration = 1) => {
     // @ts-ignore
     const delta = itemNode.current.offsetWidth + spaceBetween
     position = position === max ? position : position + 1
+    // @ts-ignore
     containerNode.current.scroll({ left: delta * position, behavior: 'smooth' })
   }
 
@@ -29,6 +30,7 @@ const useCarousel: UseCarousel = (duration = 1) => {
     // @ts-ignore
     const delta = itemNode.current.offsetWidth + spaceBetween
     position = position === 0 ? position : position - 1
+    // @ts-ignore
     containerNode.current.scroll({ left: delta * position, behavior: 'smooth' })
   }
 
