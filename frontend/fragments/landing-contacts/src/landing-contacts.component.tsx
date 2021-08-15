@@ -24,6 +24,21 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
   const [email, setEmail] = useState<boolean>(false)
   const [phone, setPhone] = useState<boolean>(false)
 
+  const copy = (content) => {
+    if (navigator && navigator.clipboard) navigator.clipboard.writeText(content)
+    else {
+      const input = document.createElement('input')
+      input.setAttribute('type', 'text')
+      input.style.position = 'absolute'
+      input.style.left = '-100%'
+      input.setAttribute('value', content)
+      document.body.appendChild(input)
+      input.select()
+      document.execCommand('copy')
+      document.body.removeChild(input)
+    }
+  }
+
   const Copied = ({ target, setTarget }) => {
     const main = useAnimation()
 
@@ -73,11 +88,11 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
           backgroundColor='background.transparentBlue'
         >
           <Layout width='100%' maxWidth={1280}>
-            <Column width='100%'>
+            <Column width='100%' justifyContent='center'>
               <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
                 <Layout maxWidth={580}>
                   <Column width='100%'>
-                    <Row width='100%'>
+                    <Row>
                       <Text fontSize='medium' color='text.accent' fontWeight='bold'>
                         {contacts[language].title}
                       </Text>
@@ -93,7 +108,12 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                       <Column>
                         <Layout flexBasis={[48, 48, 0]} />
                         <Layout>
-                          <Text fontSize='increased' fontWeight='slim' color='text.white'>
+                          <Text
+                            fontSize='increased'
+                            fontWeight='slim'
+                            color='text.white'
+                            id='emailContent'
+                          >
                             {feedbackEmail.content}
                           </Text>
                         </Layout>
@@ -105,7 +125,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                             width='100%'
                             colors='clipboard'
                             onClick={() => {
-                              navigator.clipboard.writeText(feedbackEmail.content)
+                              copy(feedbackEmail.content)
                               setEmail(true)
                             }}
                           >
@@ -132,7 +152,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                             width='100%'
                             colors='clipboard'
                             onClick={() => {
-                              navigator.clipboard.writeText(feedbackPhone.content)
+                              copy(feedbackPhone.content)
                               setPhone(true)
                             }}
                           >

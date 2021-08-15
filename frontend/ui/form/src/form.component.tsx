@@ -22,7 +22,7 @@ const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () =>
   const [email, setEmail] = useState<string>('')
   const [type, setType] = useState<Type>('phone')
   const [requisites, setRequisites] = useState<string>('')
-  const [submitForm, data] = useAction()
+  const [submitForm, data, error] = useAction()
   const forms = useData()
 
   const getError = (field: string) => {
@@ -51,6 +51,9 @@ const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () =>
   }
 
   const handleSubmit = (res) => {
+    if (error) {
+      onFailure()
+    }
     if (res.message === 'OK') {
       if (!res.success) {
         onFailure()

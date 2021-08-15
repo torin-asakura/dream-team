@@ -48,15 +48,11 @@ const SUBMIT_FORM = gql`
 const useSubmitForm = () => {
   const [submitForm, { data, error }] = useMutation(SUBMIT_FORM)
 
-  if (error) {
-    throw new Error(error.message)
-  }
-
   if (data) {
-    return [submitForm, data.submitForm]
+    return [submitForm, data.submitForm, error]
   }
 
-  return [submitForm, {}]
+  return [submitForm, {}, error]
 }
 
 export { useSubmitForm }
