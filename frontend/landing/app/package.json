@@ -2,15 +2,15 @@
   "name": "@landing/app",
   "scripts": {
     "prepack": "yarn app renderer build --export",
-    "build": "yarn app renderer build --export",
+    "build": "yarn app renderer build --export && cp -R dist ../../../dt-next",
     "dev": "yarn app renderer dev",
-    "start": "node dist/index.js"
+    "start": "node index.js"
   },
   "main": "src/index.ts",
   "dependencies": {
     "@apollo/client": "^3.3.21",
     "@apollo/react-ssr": "^4.0.0",
-    "@atls/next-app-with-apollo": "^0.2.69",
+    "@atls/next-app-with-apollo": "^0.2.70",
     "@atls/next-config-with-pnp-workspaces": "^0.0.1",
     "@landing/index-page": "workspace:frontend/landing/index",
     "@providers/next-app-with-emotion": "workspace:frontend/providers/next-app-with-emotion",

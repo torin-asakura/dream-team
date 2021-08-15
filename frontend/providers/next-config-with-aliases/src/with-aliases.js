@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
-const { babelRuntimeImports, babelAliases } = require('./helpers')
+// const { babelRuntimeImports, babelAliases } = require('./helpers')
 
 const withAliases = (aliases, require) => (nextConfig) => ({
   ...nextConfig,

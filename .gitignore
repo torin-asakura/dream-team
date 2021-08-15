@@ -65,3 +65,8 @@ credentials.json
 # unique for each install yarn states
 .yarn/build-state.yml
 .yarn/install-state.gz
+
+# local
+.ini
+.ignore
+dt-next.zip
