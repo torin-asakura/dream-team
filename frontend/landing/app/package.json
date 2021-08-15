@@ -1,10 +1,9 @@
 {
   "name": "@landing/app",
   "scripts": {
-    "prepack": "yarn app renderer build --export",
-    "build": "yarn app renderer build --export && cp -R dist ../../../dt-next",
-    "dev": "yarn app renderer dev",
-    "start": "node index.js"
+    "build": "yarn app renderer build --export",
+    "prepack": "yarn build && cp -R dist ../../../dream-team",
+    "dev": "yarn app renderer dev"
   },
   "main": "src/index.ts",
   "dependencies": {
