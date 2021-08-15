@@ -5,6 +5,7 @@ import { Layout }       from '@ui/layout'
 import { Row }          from '@ui/layout'
 import { Column }       from '@ui/layout'
 import { Box }          from '@ui/layout'
+import { Text }         from '@ui/text'
 
 import { Item }         from './item'
 import { useData }      from './data'
@@ -13,19 +14,23 @@ import { LandingProps } from './landing-team.interface'
 const LandingTeam: FC<LandingProps> = ({ language }) => {
   const recruits = useData()
 
+  const filterByLanguage = ({ language: { code } }) => code === language
+
   return (
-    <Box px={['32px', '32px', '0px']} height={830} border='1px solid black'>
+    <Box px={['50px', '50px', '0px']} height={['auto', 'auto', 830]}>
       <Column width='100%' justifyContent='center' alignItems='center'>
         <Layout width='100%' maxWidth={1280}>
           <Column width='100%' justifyContent='center'>
             <Layout flexBasis={152} />
-            <Box height={64} border='1px solid black'>
-              Dream team
-            </Box>
+            <Row justifyContent='center' alignItems='center'>
+              <Text fontWeight='slim' fontSize='massive' color='text.black'>
+                Dream team
+              </Text>
+            </Row>
             <Layout flexBasis={74} />
-            <Row>
-              {recruits.map(({ title: recruit }) => (
-                <Item recruit={recruit} />
+            <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
+              {recruits.filter(filterByLanguage).map(({ title: recruit, featuredImage: image }) => (
+                <Item recruit={recruit} image={image} language={language} />
               ))}
             </Row>
             <Layout flexBasis={160} />

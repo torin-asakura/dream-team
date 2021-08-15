@@ -1,3 +1,5 @@
+import { Language } from '../landing-reviews.interface'
+
 export interface Review {
   title: string
   content: string
@@ -9,4 +11,5 @@ export interface Review {
 
 export interface ItemProps {
   review: Review
+  language: Language
 }

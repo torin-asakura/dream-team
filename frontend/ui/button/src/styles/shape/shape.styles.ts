@@ -3,15 +3,15 @@ import { switchProp }          from 'styled-tools'
 import { prop }                from 'styled-tools'
 
 import { getNormalSizeStyles } from './abstract'
-import { getSmallSizeStyles }  from './abstract'
+import { getBigSizeStyles }    from './abstract'
 
 const getShapeStyles = (theme): styleFn => {
   const normalSizeStyles = getNormalSizeStyles(theme)
-  const smallSizeStyles = getSmallSizeStyles(theme)
+  const bigSizeStyles = getBigSizeStyles(theme)
 
   return switchProp(prop('size', 'normal'), {
     normal: normalSizeStyles,
-    small: smallSizeStyles,
+    big: bigSizeStyles,
   })
 }
 

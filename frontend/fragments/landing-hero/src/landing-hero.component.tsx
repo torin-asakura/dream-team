@@ -1,42 +1,113 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React           from 'react'
+import { FC }          from 'react'
+import { useState }    from 'react'
 
-import { Condition } from '@ui/condition'
-import { Layout }    from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Column }    from '@ui/layout'
-import { Box }       from '@ui/layout'
+import { Layout }      from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Box }         from '@ui/layout'
+import { Text }        from '@ui/text'
+import { Button }      from '@ui/button'
+import { Video }       from '@ui/video'
+import { FormPopover } from '@fragments/form-popover'
 
-import { HeroProps } from './landing-hero.interface'
-import { useData }   from './data'
+import { messages }    from './messages'
+import { HeroProps }   from './landing-hero.interface'
+import { useData }     from './data'
+
+const getContentByLanguage = (object) => (
+  <>
+    <Layout>
+      <Text
+        color='text.white'
+        fontSize={['massive', 'massive', 'huge']}
+        fontWeight='slim'
+        textAlign={['center', 'center', 'start']}
+      >
+        {object?.title}
+      </Text>
+    </Layout>
+    <Layout flexBasis={32} />
+    <Layout maxWidth={400}>
+      <Text
+        color='text.white'
+        fontSize='regular'
+        lineHeight='primary'
+        textAlign={['center', 'center', 'start']}
+      >
+        {object?.content}
+      </Text>
+    </Layout>
+  </>
+)
 
 const LandingHero: FC<HeroProps> = ({ language }) => {
-  const [EN, RU] = useData()
+  const { EN, RU, Desktop, Mobile, Mobile2 } = useData()
+  const [visible, setVisible] = useState<boolean>(false)
 
   return (
-    <Box px={['32px', '32px', '0px']} height={903} border='1px solid blue'>
-      <Column width='100%' alignItems='center' justifyContent='center'>
-        <Layout width='100%' maxWidth={1280}>
-          <Row>
-            <Column width='100%' alignItems='flex-start'>
-              <Box height={90} width={90} border='1px solid black'>
-                <Column>
-                  <Condition match={language === 'RU'}>
-                    {RU?.title}
-                    <br />
-                    {RU?.content}
-                  </Condition>
-                  <Condition match={language === 'EN'}>
-                    {EN?.title}
-                    <br />
-                    {EN?.content}
-                  </Condition>
-                  <button type='button'>Оставить заявку</button>
+    <Box
+      height={['auto', 'auto', '92vh']}
+      minHeight={['92vh', '92vh', 'auto']}
+      position='relative'
+      overflow='hidden'
+    >
+      <Column width='100%' justifyContent='center'>
+        <FormPopover language={language} visible={visible} setVisible={setVisible} />
+        <Video
+          autoPlay
+          muted
+          loop
+          playsInline
+          src={Desktop.link}
+          mime={Desktop.mimeType}
+          display={['none', 'none', 'flex']}
+          top='50%'
+        />
+        <Video
+          autoPlay
+          muted
+          loop
+          playsInline
+          // @ts-ignore
+          src={[Mobile2.link, Mobile.link]}
+          // @ts-ignore
+          mime={[Mobile2.mimeType, Mobile.mimeType]}
+          display={['flex', 'flex', 'none']}
+          top='auto'
+        />
+        <Layout flexBasis={[340, 340, 0]} />
+        <Box
+          display={['flex', 'flex', 'none']}
+          height={80}
+          background='linear-gradient(180deg, rgba(23, 35, 68, 0) 0%, #172344 100%)'
+        />
+        <Box
+          height='100%'
+          py={['48px', '48px', 0]}
+          width='100%'
+          backgroundColor={['background.darkBlue', 'background.darkBlue', 'transparent']}
+        >
+          <Column width='100%' alignItems='center' justifyContent='center'>
+            <Layout width='100%' maxWidth={1280}>
+              <Row>
+                <Column width='100%'>
+                  <Layout maxWidth={500}>
+                    <Column>
+                      {getContentByLanguage(language === 'RU' ? RU : EN)}
+                      <Layout flexBasis={32} />
+                      <Layout width='100%' justifyContent={['center', 'center', 'flex-start']}>
+                        <Button onClick={() => setVisible(true)}>
+                          {messages.contactUs[language]}
+                        </Button>
+                      </Layout>
+                    </Column>
+                  </Layout>
                 </Column>
-              </Box>
-            </Column>
-          </Row>
-        </Layout>
+              </Row>
+            </Layout>
+          </Column>
+        </Box>
       </Column>
     </Box>
   )

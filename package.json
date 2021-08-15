@@ -2,17 +2,21 @@
   "private": true,
   "scripts": {
     "landing:build": "yarn workspace @landing/app build",
-    "rezip": "rm -rf dt-next.zip && zip -r dt-next.zip dt-next",
-    "prepare": "yarn landing:build && yarn rezip"
+    "rezip": "rm -rf dt-next.zip && zip -r dream-team.zip dream-team",
+    "prepare": "yarn workspace @landing/app prepack && yarn rezip",
+    "postinstall": "yarn workspace @ui/icons build"
   },
   "resolutions": {
-    "@types/node": "14.17.6"
+    "@types/node": "14.17.6",
+    "next": "^10.2.3",
+    "@apollo/client": "3.3.21"
   },
   "devDependencies": {
     "@atls/actl-cli": "^0.4.48",
     "@types/node": "14.17.6",
     "@types/react": "^17.0.15",
-    "@types/react-dom": "^17.0.9"
+    "@types/react-dom": "^17.0.9",
+    "typescript": "^4.3.5"
   },
   "workspaces": [
     "frontend/**/*"

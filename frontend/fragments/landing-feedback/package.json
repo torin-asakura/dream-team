@@ -2,14 +2,23 @@
   "name": "@fragments/landing-feedback",
   "main": "src/index.ts",
   "dependencies": {
-    "@apollo/client": "^3.3.21",
+    "@ui/button": "workspace:frontend/ui/button",
+    "@ui/form": "workspace:frontend/ui/form",
+    "@ui/image": "workspace:frontend/ui/image",
+    "@ui/input": "workspace:frontend/ui/input",
     "@ui/layout": "workspace:frontend/ui/layout",
+    "@ui/link": "workspace:frontend/ui/link",
+    "@ui/text": "workspace:frontend/ui/text",
     "graphql": "^15.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@apollo/client": "^3.4.7",
     "@types/react": "^17",
     "@types/react-dom": "^17"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*"
   }
 }

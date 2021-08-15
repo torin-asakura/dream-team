@@ -1,8 +1,8 @@
 import { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
 import { LayoutProps }                    from 'styled-system'
 
-type ButtonColors = 'primary' | 'secondary' | 'transparent'
-type ButtonSizes = 'normal' | 'small'
+type ButtonColors = 'primary' | 'secondary' | 'tertiary' | 'transparent' | 'clipboard'
+type ButtonSizes = 'normal' | 'big'
 
 export interface ButtonProps extends BaseButtonProps, LayoutProps {
   divider?: number
@@ -11,4 +11,5 @@ export interface ButtonProps extends BaseButtonProps, LayoutProps {
   colors?: ButtonColors
   size?: ButtonSizes
   dotted?: boolean
+  active?: boolean
 }

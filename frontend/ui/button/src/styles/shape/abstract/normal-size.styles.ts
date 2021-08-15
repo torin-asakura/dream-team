@@ -3,10 +3,10 @@ import { styleFn }           from 'styled-system'
 
 const getNormalSizeStyles = (theme): styleFn => {
   const normalSizeStyles = createShapeStyles({
-    size: 48,
-    fontSize: 16,
-    rounding: 8,
-    fontWeight: 500,
+    size: 44,
+    fontSize: theme.fontSizes.semiRegular,
+    rounding: theme.radii.huge,
+    fontWeight: theme.fontWeights.medium,
     fontFamily: theme.fonts.primary,
   })
 

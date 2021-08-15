@@ -10,6 +10,9 @@ const GET_REVIEWS = gql`
         title
         content
         menuOrder
+        language {
+          code
+        }
         review {
           respondent
           companylink

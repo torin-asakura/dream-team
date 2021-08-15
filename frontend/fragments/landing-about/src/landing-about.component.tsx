@@ -18,10 +18,15 @@ const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
   const { costs, timeFrame, howWeDo, whyUs } = useData()
 
   return (
-    <Box px={['32px', '32px', '0px']} border='1px solid black'>
-      <Column width='100%' justifyContent='center' alignItems='center'>
+    <Box px={['32px', '32px', '0px']}>
+      <Column
+        width='100%'
+        height={['auto', 'auto', '100%']}
+        justifyContent='center'
+        alignItems='center'
+      >
         <Layout width='100%' maxWidth={1280}>
-          <Column width='100%'>
+          <Column width='100%' height={['auto', 'auto', '100%']}>
             <Layout flexBasis={160} />
             <Item contentObject={getContentByLanguage(whyUs, language)} />
             <Layout flexBasis={160} />

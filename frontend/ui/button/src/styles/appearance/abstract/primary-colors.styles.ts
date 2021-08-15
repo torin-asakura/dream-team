@@ -1,7 +1,7 @@
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 import { styleFn }                from 'styled-system'
 
-const getPrimaryColorsStyles = (theme): styleFn => {
+const getPrimaryColorsStyles = (theme, active): styleFn => {
   const primaryDefaultColors = createAppearanceStyles({
     fontColor: theme.colors.button.primary.fontColor,
     backgroundColor: theme.colors.button.primary.default,
@@ -14,7 +14,7 @@ const getPrimaryColorsStyles = (theme): styleFn => {
     borderColor: theme.colors.button.primary.hover,
   })
 
-  const primaryActiveActive = createAppearanceStyles({
+  const primaryActiveColors = createAppearanceStyles({
     fontColor: theme.colors.button.primary.fontColor,
     backgroundColor: theme.colors.button.primary.active,
     borderColor: theme.colors.button.primary.active,
@@ -26,8 +26,9 @@ const getPrimaryColorsStyles = (theme): styleFn => {
       ...primaryHoverColors(),
     },
     '&:active': {
-      ...primaryActiveActive(),
+      ...primaryActiveColors(),
     },
+    ...(active && primaryActiveColors()),
   })
 }
 

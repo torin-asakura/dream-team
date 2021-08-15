@@ -8,10 +8,18 @@ const GET_SKILL_CATEGORIES = gql`
     skillCategories {
       nodes {
         name
+        skillAddons {
+          ikonka {
+            link
+          }
+        }
         skills {
           nodes {
             title
             menuOrder
+            language {
+              code
+            }
           }
         }
       }

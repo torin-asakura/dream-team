@@ -8,6 +8,15 @@ const GET_RECRUITS = gql`
     recruits {
       nodes {
         title
+        featuredImage {
+          node {
+            link
+            title
+          }
+        }
+        language {
+          code
+        }
       }
     }
   }

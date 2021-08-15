@@ -1,10 +1,9 @@
 {
   "name": "@landing/app",
   "scripts": {
-    "prepack": "yarn app renderer build --export",
-    "build": "yarn app renderer build --export && cp -R dist ../../../dt-next",
-    "dev": "yarn app renderer dev",
-    "start": "node index.js"
+    "build": "yarn app renderer build --export",
+    "prepack": "yarn build && cp -R dist ../../../dream-team",
+    "dev": "yarn app renderer dev"
   },
   "main": "src/index.ts",
   "dependencies": {
@@ -12,15 +11,21 @@
     "@apollo/react-ssr": "^4.0.0",
     "@atls/next-app-with-apollo": "^0.2.70",
     "@atls/next-config-with-pnp-workspaces": "^0.0.1",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@fragments/navigation": "workspace:frontend/fragments/navigation",
+    "@landing/contacts-page": "workspace:frontend/landing/contacts",
     "@landing/index-page": "workspace:frontend/landing/index",
+    "@landing/privacy-policy-page": "workspace:frontend/landing/privacy-policy",
     "@providers/next-app-with-emotion": "workspace:frontend/providers/next-app-with-emotion",
     "@providers/next-config-with-aliases": "workspace:frontend/providers/next-config-with-aliases",
     "@providers/next-config-with-future-webpack-5": "workspace:frontend/providers/next-config-with-future-webpack-5",
     "@providers/next-document-with-emotion": "workspace:frontend/providers/next-document-with-emotion",
     "@ui/theme": "workspace:frontend/ui/theme",
+    "events": "^3.3.0",
     "express": "^4.17.1",
     "graphql": "^15.5.1",
-    "next": "10.0.5",
+    "next": "^10.2.3",
     "next-compose-plugins": "^2.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -29,6 +34,7 @@
   },
   "devDependencies": {
     "@atls/actl-cli": "^0.4.48",
+    "@types/events": "^3",
     "@types/express": "^4",
     "@types/node": "14",
     "@types/react": "^17",

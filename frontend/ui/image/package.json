@@ -1,0 +1,19 @@
+{
+  "name": "@ui/image",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@emotion/styled": "^11.3.0",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@types/styled-system": "^5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}
