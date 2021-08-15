@@ -1,7 +1,10 @@
 name: Deploy
 
 on:
-  workflow_dispatch:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
 
 jobs:
   web-deploy:
@@ -22,5 +25,6 @@ jobs:
         with:
           server: 37.140.192.245
           username: u1055818_dt
-          local-dir: "./dt-next"
+          local-dir: "./dream-team/"
+          server-dir: "./wp-content/themes/"
           password: ${{ secrets.ftp_password }}
