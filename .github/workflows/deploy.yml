@@ -25,5 +25,5 @@ jobs:
         with:
           server: 37.140.192.245
           username: u1055818_dt
-          local-dir: "./wp-content/themes/dream-team"
+          local-dir: "./wp-content/"
           password: ${{ secrets.ftp_password }}
