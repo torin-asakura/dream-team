@@ -28,7 +28,7 @@ const Item: FC<ItemProps> = ({ category, language }) => (
       <Layout flexBasis={32} />
       <Row>
         <Layout width={56} height={56}>
-          <Image url={category.skillAddons.ikonka.link} />
+          <Image src={category?.skillAddons?.ikonka?.link || ''} />
         </Layout>
       </Row>
       <Layout flexBasis={24} />

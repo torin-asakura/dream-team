@@ -3,8 +3,8 @@ import { Language } from '../landing-work-directions.interface'
 export interface Category {
   name: string
   skillAddons: {
-    ikonka: {
-      link: string
+    ikonka?: {
+      link?: string
     }
   }
   skills: {

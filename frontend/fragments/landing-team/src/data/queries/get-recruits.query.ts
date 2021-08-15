@@ -11,6 +11,7 @@ const GET_RECRUITS = gql`
         featuredImage {
           node {
             link
+            title
           }
         }
         language {

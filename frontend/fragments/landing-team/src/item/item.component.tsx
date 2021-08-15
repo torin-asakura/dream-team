@@ -16,7 +16,7 @@ const Item: FC<ItemProps> = ({ recruit, image, language }) => (
     <Column width='100%'>
       <Row justifyContent='center'>
         <Box borderRadius='100%' width={280} height={280} overflow='hidden'>
-          <Image url={image.node.link} />
+          <Image alt={image.node.title} src={image.node.link} />
         </Box>
       </Row>
       <Layout flexBasis={32} />

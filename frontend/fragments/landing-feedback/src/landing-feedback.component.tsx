@@ -16,7 +16,6 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
   const { asset, ...content } = useData()
 
   return (
-    <Image url={asset.link}>
       <Box
         px={['20px', '20px', '0px']}
         py={['48px', '48px', '120px']}
@@ -24,7 +23,9 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
         width='100%'
         justifyContent='center'
         backgroundColor='background.transparentBlue'
+        position='relative'
       >
+        <Image alt='Contact us' src={asset.link} background />
         <Layout width='100%' maxWidth={1280}>
           <Column width='100%'>
             <Row flexWrap='wrap' justifyContent='space-between'>
@@ -51,7 +52,6 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
           </Column>
         </Layout>
       </Box>
-    </Image>
   )
 }
 

@@ -44,10 +44,9 @@ const getContentByLanguage = (object) => (
 )
 
 const LandingHero: FC<HeroProps> = ({ language }) => {
-  const { EN, RU, Desktop, Mobile } = useData()
+  const { EN, RU, Desktop, Mobile, Mobile2 } = useData()
   const [visible, setVisible] = useState<boolean>(false)
-  const videoNode = useRef(null)
-  const { height: videoHeight } = useVideoShape(videoNode)
+  // const { height: videoHeight } = useVideoShape(videoNode)
 
   return (
     <Box
@@ -58,16 +57,27 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
     >
       <Column width='100%' justifyContent='center'>
         <FormPopover language={language} visible={visible} setVisible={setVisible} />
-        <Video autoPlay muted loop src={Desktop.link} display={['none', 'none', 'flex']} />
         <Video
           autoPlay
           muted
           loop
-          src={Mobile.link}
-          display={['flex', 'flex', 'none']}
-          ref={videoNode}
+          playsInline
+          src={Desktop.link}
+          mime={Desktop.mimeType}
+          display={['none', 'none', 'flex']}
+          top='50%'
         />
-        <Layout flexBasis={[videoHeight - 80, videoHeight - 80, 0]} />
+        <Video
+          autoPlay
+          muted
+          loop
+          playsInline
+          src={[Mobile2.link, Mobile.link]}
+          mime={[Mobile2.mimeType, Mobile.mimeType]}
+          display={['flex', 'flex', 'none']}
+          top='auto'
+        />
+        <Layout flexBasis={[340, 340, 0]} />
         <Box
           display={['flex', 'flex', 'none']}
           height={80}

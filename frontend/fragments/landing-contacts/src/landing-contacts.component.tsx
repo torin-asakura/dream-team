@@ -77,15 +77,20 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
   }
 
   return (
-    <Box height={['auto', 'auto', '92vh']} width='100%'>
-      <Image url={asset.link}>
+    <Box
+      height={['auto', 'auto', '92vh']}
+      width='100%'
+      position='relative'
+      overflow='hidden'
+      backgroundColor='background.transparentBlue'
+    >
+      <Image alt='Contact us' src={asset.link} background />
         <Box
           px={['20px', '20px', '0px']}
           py={['48px', '48px', '120px']}
           height={['auto', 'auto', '100%']}
           width='100%'
           justifyContent='center'
-          backgroundColor='background.transparentBlue'
         >
           <Layout width='100%' maxWidth={1280}>
             <Column width='100%' justifyContent='center'>
@@ -184,7 +189,6 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
             </Column>
           </Layout>
         </Box>
-      </Image>
     </Box>
   )
 }

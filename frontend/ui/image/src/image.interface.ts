@@ -1,5 +1,4 @@
-import { BackgroundProps } from 'styled-system'
-
-export interface ImageProps extends BackgroundProps {
-  url: string
+export interface ImageProps {
+  contain?: boolean
+  background?: boolean
 }

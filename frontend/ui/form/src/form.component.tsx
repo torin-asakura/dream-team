@@ -28,10 +28,10 @@ const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () =>
   const getError = (field: string) => {
     if (data && data.errors) {
       const nameToIdMap = {
-        name: 12,
-        email: 13,
-        type: 20,
-        requisites: 15,
+        name: 11,
+        email: 12,
+        type: 13,
+        requisites: 14,
       }
 
       const message = data?.errors[0]?.fieldId === nameToIdMap[field] ? data.errors[0].message : ''

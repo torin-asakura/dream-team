@@ -5,6 +5,7 @@ export interface ItemProps {
   image: {
     node: {
       link: string
+      title: string
     }
   }
   language: Language

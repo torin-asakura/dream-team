@@ -7,4 +7,8 @@ export const messages = {
     EN: 'EN',
     RU: 'РУ',
   },
+  contacts: {
+    EN: 'Contacts',
+    RU: 'Контакты',
+  },
 }

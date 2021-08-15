@@ -14,23 +14,23 @@ import { useMutation } from '@apollo/client'
 
 /** Prod * */
 
-// formId: 3
+// formId: 4
 // data: [
-//   { id: 7, value: $name }
-//   { id: 8, value: $email }
-//   { id: 9, value: $type }
-//   { id: 10, value: $requisites }
+//   { id: 11, value: $name }
+//   { id: 12, value: $email }
+//   { id: 13, value: $type }
+//   { id: 14, value: $requisites }
 
 const SUBMIT_FORM = gql`
   mutation SubmitForm($name: String!, $email: String!, $type: String!, $requisites: String!) {
     submitForm(
       input: {
-        formId: 3
+        formId: 4
         data: [
-          { id: 12, value: $name }
-          { id: 13, value: $email }
-          { id: 20, value: $type }
-          { id: 15, value: $requisites }
+          { id: 11, value: $name }
+          { id: 12, value: $email }
+          { id: 13, value: $type }
+          { id: 14, value: $requisites }
         ]
       }
     ) {
