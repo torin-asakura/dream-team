@@ -1,21 +1,19 @@
-import React             from 'react'
-import { FC }            from 'react'
-import { useState }      from 'react'
-import { useRef }        from 'react'
+import React           from 'react'
+import { FC }          from 'react'
+import { useState }    from 'react'
 
-import { Layout }        from '@ui/layout'
-import { Row }           from '@ui/layout'
-import { Column }        from '@ui/layout'
-import { Box }           from '@ui/layout'
-import { Text }          from '@ui/text'
-import { Button }        from '@ui/button'
-import { Video }         from '@ui/video'
-import { useVideoShape } from '@ui/video'
-import { FormPopover }   from '@fragments/form-popover'
+import { Layout }      from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Box }         from '@ui/layout'
+import { Text }        from '@ui/text'
+import { Button }      from '@ui/button'
+import { Video }       from '@ui/video'
+import { FormPopover } from '@fragments/form-popover'
 
-import { messages }      from './messages'
-import { HeroProps }     from './landing-hero.interface'
-import { useData }       from './data'
+import { messages }    from './messages'
+import { HeroProps }   from './landing-hero.interface'
+import { useData }     from './data'
 
 const getContentByLanguage = (object) => (
   <>
@@ -46,7 +44,6 @@ const getContentByLanguage = (object) => (
 const LandingHero: FC<HeroProps> = ({ language }) => {
   const { EN, RU, Desktop, Mobile, Mobile2 } = useData()
   const [visible, setVisible] = useState<boolean>(false)
-  // const { height: videoHeight } = useVideoShape(videoNode)
 
   return (
     <Box
@@ -72,7 +69,9 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
           muted
           loop
           playsInline
+          // @ts-ignore
           src={[Mobile2.link, Mobile.link]}
+          // @ts-ignore
           mime={[Mobile2.mimeType, Mobile.mimeType]}
           display={['flex', 'flex', 'none']}
           top='auto'

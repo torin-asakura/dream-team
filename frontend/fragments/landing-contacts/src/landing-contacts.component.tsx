@@ -85,110 +85,110 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
       backgroundColor='background.transparentBlue'
     >
       <Image alt='Contact us' src={asset.link} background />
-        <Box
-          px={['20px', '20px', '0px']}
-          py={['48px', '48px', '120px']}
-          height={['auto', 'auto', '100%']}
-          width='100%'
-          justifyContent='center'
-        >
-          <Layout width='100%' maxWidth={1280}>
-            <Column width='100%' justifyContent='center'>
-              <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
-                <Layout maxWidth={580}>
-                  <Column width='100%'>
-                    <Row>
-                      <Text fontSize='medium' color='text.accent' fontWeight='bold'>
-                        {contacts[language].title}
-                      </Text>
-                    </Row>
-                    <Layout flexBasis={32} />
-                    <Row>
-                      <Text fontSize='big' color='text.white' fontWeight='slim'>
-                        {contacts[language].content}
-                      </Text>
-                    </Row>
-                    <Layout flexGrow={1} />
-                    <Row alignItems='center'>
-                      <Column>
-                        <Layout flexBasis={[48, 48, 0]} />
-                        <Layout>
-                          <Text
-                            fontSize='increased'
-                            fontWeight='slim'
-                            color='text.white'
-                            id='emailContent'
-                          >
-                            {feedbackEmail.content}
-                          </Text>
-                        </Layout>
-                      </Column>
-                      <Layout flexBasis={16} />
-                      <Layout display={['none', 'none', 'flex']}>
-                        <Box width={40} height={40}>
-                          <Button
-                            width='100%'
-                            colors='clipboard'
-                            onClick={() => {
-                              copy(feedbackEmail.content)
-                              setEmail(true)
-                            }}
-                          >
-                            <Layout>
-                              <CopyIcon width={15} height={18} />
-                            </Layout>
-                          </Button>
-                        </Box>
-                      </Layout>
-                      <Layout flexBasis={10} />
-                      <Copied target={email} setTarget={setEmail} />
-                    </Row>
-                    <Layout flexBasis={32} />
-                    <Row alignItems='center'>
+      <Box
+        px={['20px', '20px', '0px']}
+        py={['48px', '48px', '120px']}
+        height={['auto', 'auto', '100%']}
+        width='100%'
+        justifyContent='center'
+      >
+        <Layout width='100%' maxWidth={1280}>
+          <Column width='100%' justifyContent='center'>
+            <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
+              <Layout maxWidth={580}>
+                <Column width='100%'>
+                  <Row>
+                    <Text fontSize='medium' color='text.accent' fontWeight='bold'>
+                      {contacts[language].title}
+                    </Text>
+                  </Row>
+                  <Layout flexBasis={32} />
+                  <Row>
+                    <Text fontSize='big' color='text.white' fontWeight='slim'>
+                      {contacts[language].content}
+                    </Text>
+                  </Row>
+                  <Layout flexGrow={1} />
+                  <Row alignItems='center'>
+                    <Column>
+                      <Layout flexBasis={[48, 48, 0]} />
                       <Layout>
-                        <Text fontSize='increased' color='text.white' fontWeight='slim'>
-                          {feedbackPhone.content}
+                        <Text
+                          fontSize='increased'
+                          fontWeight='slim'
+                          color='text.white'
+                          id='emailContent'
+                        >
+                          {feedbackEmail.content}
                         </Text>
                       </Layout>
-                      <Layout flexBasis={16} />
-                      <Layout display={['none', 'none', 'flex']}>
-                        <Box width={40} height={40}>
-                          <Button
-                            width='100%'
-                            colors='clipboard'
-                            onClick={() => {
-                              copy(feedbackPhone.content)
-                              setPhone(true)
-                            }}
-                          >
-                            <Layout>
-                              <CopyIcon width={15} height={18} />
-                            </Layout>
-                          </Button>
-                        </Box>
-                      </Layout>
-                      <Layout flexBasis={10} />
-                      <Copied target={phone} setTarget={setPhone} />
-                    </Row>
+                    </Column>
                     <Layout flexBasis={16} />
-                    <Layout>
-                      <Column height='auto'>
-                        <Layout>
-                          <Text fontSize='regular' color='text.lightGray'>
-                            {workingHours[language].content}
-                          </Text>
-                        </Layout>
-                        <Layout flexBasis={[48, 48, 0]} />
-                      </Column>
+                    <Layout display={['none', 'none', 'flex']}>
+                      <Box width={40} height={40}>
+                        <Button
+                          width='100%'
+                          colors='clipboard'
+                          onClick={() => {
+                            copy(feedbackEmail.content)
+                            setEmail(true)
+                          }}
+                        >
+                          <Layout>
+                            <CopyIcon width={15} height={18} />
+                          </Layout>
+                        </Button>
+                      </Box>
                     </Layout>
-                  </Column>
-                </Layout>
-                <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
-                <Form language={language} />
-              </Row>
-            </Column>
-          </Layout>
-        </Box>
+                    <Layout flexBasis={10} />
+                    <Copied target={email} setTarget={setEmail} />
+                  </Row>
+                  <Layout flexBasis={32} />
+                  <Row alignItems='center'>
+                    <Layout>
+                      <Text fontSize='increased' color='text.white' fontWeight='slim'>
+                        {feedbackPhone.content}
+                      </Text>
+                    </Layout>
+                    <Layout flexBasis={16} />
+                    <Layout display={['none', 'none', 'flex']}>
+                      <Box width={40} height={40}>
+                        <Button
+                          width='100%'
+                          colors='clipboard'
+                          onClick={() => {
+                            copy(feedbackPhone.content)
+                            setPhone(true)
+                          }}
+                        >
+                          <Layout>
+                            <CopyIcon width={15} height={18} />
+                          </Layout>
+                        </Button>
+                      </Box>
+                    </Layout>
+                    <Layout flexBasis={10} />
+                    <Copied target={phone} setTarget={setPhone} />
+                  </Row>
+                  <Layout flexBasis={16} />
+                  <Layout>
+                    <Column height='auto'>
+                      <Layout>
+                        <Text fontSize='regular' color='text.lightGray'>
+                          {workingHours[language].content}
+                        </Text>
+                      </Layout>
+                      <Layout flexBasis={[48, 48, 0]} />
+                    </Column>
+                  </Layout>
+                </Column>
+              </Layout>
+              <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
+              <Form language={language} />
+            </Row>
+          </Column>
+        </Layout>
+      </Box>
     </Box>
   )
 }

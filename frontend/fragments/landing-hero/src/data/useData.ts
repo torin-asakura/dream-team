@@ -4,7 +4,7 @@ import { HERO_CONTENT_EN } from './constants'
 import { HERO_CONTENT_RU } from './constants'
 import { VIDEO_DESKTOP }   from './constants'
 import { VIDEO_MOBILE }    from './constants'
-import { VIDEO_MOBILE_2 }    from './constants'
+import { VIDEO_MOBILE_2 }  from './constants'
 
 const useData = () => {
   const EN = useFragmentById(HERO_CONTENT_EN)
@@ -18,7 +18,7 @@ const useData = () => {
     RU,
     Desktop,
     Mobile,
-    Mobile2
+    Mobile2,
   }
 }
 

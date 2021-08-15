@@ -8,9 +8,10 @@ export const baseStyles: styleFn = ({ contain = false }) => ({
   objectFit: contain ? 'contain' : 'cover',
 })
 
-export const absoluteStyles: styleFn = ({ background = false }) => background && ({
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  zIndex: -1
-})
+export const absoluteStyles: styleFn = ({ background = false }) =>
+  background && {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: -1,
+  }
