@@ -8,8 +8,8 @@
   },
   "resolutions": {
     "next": "^10.2.3",
-    "@types/node": "14.17.6",
-    "@apollo/client": "3.3.21"
+    "@apollo/client": "3.3.21",
+    "@types/node": "14.17.6"
   },
   "devDependencies": {
     "@atls/actl-cli": "^0.4.48",
