@@ -18,4 +18,4 @@ const ContactsPage: FC = () => {
   )
 }
 
-export default ContactsPage
+export { ContactsPage }

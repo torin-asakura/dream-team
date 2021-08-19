@@ -1,6 +1,6 @@
 {
   "name": "@landing/contacts-page",
-  "main": "src/index.ts",
+  "main": "src/index.tsx",
   "dependencies": {
     "@fragments/landing-contacts": "workspace:frontend/fragments/landing-contacts",
     "@fragments/navigation": "workspace:frontend/fragments/navigation",
@@ -10,9 +10,12 @@
   "devDependencies": {
     "@apollo/client": "^3.4.7",
     "@types/react": "^17",
-    "@types/react-dom": "^17"
+    "@types/react-dom": "^17",
+    "@types/react-helmet": "^6",
+    "react-helmet": "^6.1.0"
   },
   "peerDependencies": {
-    "@apollo/client": "*"
+    "@apollo/client": "*",
+    "react-helmet": "*"
   }
 }

@@ -2100,10 +2100,13 @@ __metadata:
     "@fragments/navigation": "workspace:frontend/fragments/navigation"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@types/react-helmet": ^6
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
   peerDependencies:
     "@apollo/client": "*"
+    react-helmet: "*"
   languageName: unknown
   linkType: soft
 
@@ -2141,10 +2144,13 @@ __metadata:
     "@fragments/privacy-policy": "workspace:frontend/fragments/privacy-policy"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@types/react-helmet": ^6
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
   peerDependencies:
     "@apollo/client": "*"
+    react-helmet: "*"
   languageName: unknown
   linkType: soft
 
