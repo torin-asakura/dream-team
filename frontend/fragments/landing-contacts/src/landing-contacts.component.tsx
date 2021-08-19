@@ -116,7 +116,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                       <Layout>
                         <Link
                           href={`mailto:${feedbackEmail.content}`}
-                          title='Contact us via email'
+                          title={messages.viaEmail[language]}
                           rel='contact'
                           fontSize='increased'
                           fontWeight='slim'
@@ -153,7 +153,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                       <Link
                         href={`tel:${feedbackPhone.content}`}
                         rel='contact'
-                        title='Contact us via phone'
+                        title={messages.viaPhone[language]}
                         fontSize='increased'
                         color='text.white'
                         fontWeight='slim'

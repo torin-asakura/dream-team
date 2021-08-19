@@ -13,6 +13,7 @@ import { Space }        from '@ui/text'
 
 import { useData }      from './data'
 import { LandingProps } from './landing-footer.interface'
+import { messages }     from './messages'
 
 const LandingFooter: FC<LandingProps> = ({ language }) => {
   const { workingHoursRu, workingHoursEn, feedbackPhone, feedbackEmail, by } = useData()
@@ -31,7 +32,7 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                     href='https://torinasakura.name/'
                     target='_blank'
                     rel='me'
-                    title='Site author'
+                    title={messages.siteAuthor[language]}
                   >
                     <Text fontSize='regular' color='text.lightGray'>
                       {by.title}
@@ -49,7 +50,7 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                   <Link
                     href={`mailto:${feedbackEmail.content}`}
                     rel='contact'
-                    title='Contact us via email'
+                    title={messages.viaEmail[language]}
                     fontSize='large'
                     color='text.black'
                     fontWeight='slim'
@@ -62,7 +63,7 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                   <Link
                     href={`tel:${feedbackPhone.content}`}
                     rel='contact'
-                    title='Contact us via phone'
+                    title={messages.viaPhone[language]}
                     fontSize='large'
                     color='text.black'
                     fontWeight='slim'
@@ -89,7 +90,7 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                 <Link
                   href={`mailto:${feedbackEmail.content}`}
                   rel='contact'
-                  title='Contact us via email'
+                  title={messages.viaEmail[language]}
                   fontSize='large'
                   color='text.black'
                   fontWeight='slim'
@@ -102,7 +103,7 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                 <Link
                   href={`tel:${feedbackPhone.content}`}
                   rel='contact'
-                  title='Contact us via phone'
+                  title={messages.viaPhone[language]}
                   fontSize='large'
                   color='text.black'
                   fontWeight='slim'
@@ -125,7 +126,7 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                   href='https://torinasakura.name/'
                   target='_blank'
                   rel='me'
-                  title='Site author'
+                  title={messages.siteAuthor[language]}
                 >
                   <Text fontSize='regular' color='text.lightGray'>
                     {by.title}

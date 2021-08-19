@@ -44,7 +44,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
               textTransform='uppercase'
               href='/contacts'
               rel='contact'
-              title='Contacts page'
+              title={messages.contactsPage[language]}
             >
               {messages.contacts[language]}
             </NextLink>

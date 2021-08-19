@@ -1,7 +1,7 @@
-export const messages = {
-  copied: {
-    EN: 'Copied',
-    RU: 'Скопировано',
+const messages = {
+  siteAuthor: {
+    EN: 'Site author',
+    RU: 'Автор сайта',
   },
   viaEmail: {
     EN: 'Contact us via email',
@@ -12,3 +12,5 @@ export const messages = {
     RU: 'Связаться с нами по телефону',
   },
 }
+
+export { messages }

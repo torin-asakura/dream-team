@@ -11,4 +11,8 @@ export const messages = {
     EN: 'Contacts',
     RU: 'Контакты',
   },
+  contactsPage: {
+    EN: 'Contacts page',
+    RU: 'Страница с контактами',
+  },
 }
