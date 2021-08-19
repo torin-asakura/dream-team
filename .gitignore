@@ -53,7 +53,7 @@ node_modules
 # build files
 build
 dist
-.next
+.next/
 frontend/ui/icons/src
 
 # env vars

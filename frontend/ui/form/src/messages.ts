@@ -27,4 +27,8 @@ export const messages = {
     EN: 'The field is filled in incorrectly',
     RU: 'Поле заполнено неверно',
   },
+  privacyPolicyPage: {
+    EN: 'Privacy policy page',
+    RU: 'Страница с условиями пользовательского соглашения и политикой конфиденциальности ',
+  },
 }

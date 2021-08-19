@@ -1,6 +1,7 @@
 import App               from 'next/app'
 import compose           from 'recompose/compose'
 import { withApollo }    from '@atls/next-app-with-apollo'
+import { withHelmet }    from '@atls/next-app-with-helmet'
 import { withEmotion }   from '@providers/next-app-with-emotion'
 import { ThemeProvider } from '@ui/theme'
 
@@ -17,7 +18,8 @@ export const withProviders = compose(
   }),
   withEmotion({
     Provider: ThemeProvider,
-  })
+  }),
+  withHelmet()
 )
 
 export default withProviders(App)

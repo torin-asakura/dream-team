@@ -525,10 +525,51 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls/next-app-with-helmet@npm:^0.2.64":
+  version: 0.2.64
+  resolution: "@atls/next-app-with-helmet@npm:0.2.64"
+  peerDependencies:
+    react: ^16.12.0
+    react-helmet: ^6.0.0
+  checksum: 2fd3b283517e53bf70ab1c8a804b016d2a35e39e66f1d9e894f52f08402f0d2928518d44d5c7521b930830663b8dd47c3a226d542b45761cf92c71be1c5f6450
+  languageName: node
+  linkType: hard
+
 "@atls/next-config-with-pnp-workspaces@npm:^0.0.1":
   version: 0.0.1
   resolution: "@atls/next-config-with-pnp-workspaces@npm:0.0.1"
   checksum: f91fab47ea2c2f50429244221dff10e1894b459b1361b219dc0bdf15052aafa2265ae82c86ba2d22b4e0b2087c8e03c3c630af03566b0ca2254fb0ea1f566c6d
+  languageName: node
+  linkType: hard
+
+"@atls/next-document-with-helmet@npm:^0.2.64":
+  version: 0.2.64
+  resolution: "@atls/next-document-with-helmet@npm:0.2.64"
+  peerDependencies:
+    next: ^9.1.2
+    react: ^16.12.0
+    react-helmet: ^6.0.0
+  checksum: 83b8242c15d6d77f563ad56e799d40c955e439b11a41130d28773fdf5b3f9e2cb0abcc82650438ced0667baf08b8f853b6cc11fac3916a2f0dd58b5f25d23afb
+  languageName: node
+  linkType: hard
+
+"@atls/next-document-with-icons@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@atls/next-document-with-icons@npm:0.0.2"
+  peerDependencies:
+    next: ^9.1.2
+    react: ^16.12.0
+  checksum: eee7722681c188087810ec6a8c332ed5ac793806f6297ffd051720492ff9c2aa78ded09ca8b3a69c33487394990df795ba0845971a5fb41708bb9e77bc1f0e4b
+  languageName: node
+  linkType: hard
+
+"@atls/next-document-with-opengraph@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@atls/next-document-with-opengraph@npm:0.0.2"
+  peerDependencies:
+    next: ^9.1.2
+    react: ^16.12.0
+  checksum: 94e71712599d678d990dd38bb5449e78f531e56ab293670043e1dbe9e4251c0e6b41bc8556ddfd6b647699464e355cb5875ca16c67ad8990fc05c5d73941912a
   languageName: node
   linkType: hard
 
@@ -1608,8 +1649,9 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:frontend/ui/condition"
-    "@ui/icons": "workspace:frontend/ui/icons"
     "@ui/layout": "workspace:frontend/ui/layout"
+    "@ui/link": "workspace:frontend/ui/link"
+    "@ui/logo": "workspace:frontend/ui/logo"
     "@ui/text": "workspace:frontend/ui/text"
     graphql: ^15.5.1
     react: ^17.0.2
@@ -2013,7 +2055,11 @@ __metadata:
     "@apollo/react-ssr": ^4.0.0
     "@atls/actl-cli": ^0.4.48
     "@atls/next-app-with-apollo": ^0.2.70
+    "@atls/next-app-with-helmet": ^0.2.64
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
+    "@atls/next-document-with-helmet": ^0.2.64
+    "@atls/next-document-with-icons": ^0.0.2
+    "@atls/next-document-with-opengraph": ^0.0.2
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@fragments/navigation": "workspace:frontend/fragments/navigation"
@@ -2029,6 +2075,7 @@ __metadata:
     "@types/node": 14
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@types/react-helmet": ^6
     "@types/recompose": ^0
     "@ui/theme": "workspace:frontend/ui/theme"
     events: ^3.3.0
@@ -2038,6 +2085,7 @@ __metadata:
     next-compose-plugins: ^2.2.0
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
     recompose: ^0.30.0
     typescript: ^4.3.5
   languageName: unknown
@@ -2052,10 +2100,13 @@ __metadata:
     "@fragments/navigation": "workspace:frontend/fragments/navigation"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@types/react-helmet": ^6
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
   peerDependencies:
     "@apollo/client": "*"
+    react-helmet: "*"
   languageName: unknown
   linkType: soft
 
@@ -2073,10 +2124,13 @@ __metadata:
     "@fragments/navigation": "workspace:frontend/fragments/navigation"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@types/react-helmet": ^6
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
   peerDependencies:
     "@apollo/client": "*"
+    react-helmet: "*"
   languageName: unknown
   linkType: soft
 
@@ -2090,10 +2144,13 @@ __metadata:
     "@fragments/privacy-policy": "workspace:frontend/fragments/privacy-policy"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@types/react-helmet": ^6
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
   peerDependencies:
     "@apollo/client": "*"
+    react-helmet: "*"
   languageName: unknown
   linkType: soft
 
@@ -2826,6 +2883,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-helmet@npm:^6":
+  version: 6.1.2
+  resolution: "@types/react-helmet@npm:6.1.2"
+  dependencies:
+    "@types/react": "*"
+  checksum: ee66a7b950ba9f1013fd25de32ba6322bf5206fe5de56b9556a5151c76522b892b0cc5566cc8dfd0b54cb76fedb17ed21b6b2e6577849b791c168eaed5aad5f3
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*, @types/react@npm:^17, @types/react@npm:^17.0.15":
   version: 17.0.15
   resolution: "@types/react@npm:17.0.15"
@@ -3197,9 +3263,11 @@ __metadata:
   dependencies:
     "@atls-ui-parts/link": ^0.0.2
     "@emotion/styled": ^11.3.0
+    "@types/styled-system": ^5
     next: ^11.0.1
     react: ^17.0.2
     react-dom: ^17.0.2
+    styled-system: ^5.1.5
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -11533,6 +11601,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-fast-compare@npm:^3.1.1":
+  version: 3.2.0
+  resolution: "react-fast-compare@npm:3.2.0"
+  checksum: 8ef272c825ae329f61633ce4ce7f15aa5b84e5214d88bc0823880236e03e985a13195befa2c7a4eda7db3b017dc7985729152d88445823f652403cf36c2b86aa
+  languageName: node
+  linkType: hard
+
+"react-helmet@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "react-helmet@npm:6.1.0"
+  dependencies:
+    object-assign: ^4.1.1
+    prop-types: ^15.7.2
+    react-fast-compare: ^3.1.1
+    react-side-effect: ^2.1.0
+  peerDependencies:
+    react: ">=16.3.0"
+  checksum: a4998479dab7fc1c2799eddefb1870a9d881b5f71cfdf97979a9882e42f4bb50402d55335f308f461e735e01a06f46b16cc7b4e6bcb22c7a4a6f85a753c5c106
+  languageName: node
+  linkType: hard
+
 "react-is@npm:16.13.1, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -11583,6 +11672,15 @@ __metadata:
   peerDependencies:
     react: ^16.3.0
   checksum: 61833bdb1f48cf7dbf54e7483f1e7b4b18617b2c356d1388f60d5c32b5befeea407601f8e4980ba43f910d6b08dc89b8f2e67cfee4c7a99d03073e72b43dec92
+  languageName: node
+  linkType: hard
+
+"react-side-effect@npm:^2.1.0":
+  version: 2.1.1
+  resolution: "react-side-effect@npm:2.1.1"
+  peerDependencies:
+    react: ^16.3.0 || ^17.0.0
+  checksum: 324511ea8f6669555e166b4af280cdf46034bf0e33c486711e3ce17f88f6f21fed17055098408be1347657d0cbcd614bca944cf9f8e4ecfa96a21d13893fe9fc
   languageName: node
   linkType: hard
 

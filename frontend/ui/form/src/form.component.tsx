@@ -169,6 +169,8 @@ const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () =>
             </Text>
             <NextLink
               fontSize='semiMedium'
+              title={messages.privacyPolicyPage[language]}
+              rel='license'
               href='/privacy-policy'
               color='text.accent'
               textAlign='center'

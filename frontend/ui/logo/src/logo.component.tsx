@@ -11,7 +11,7 @@ import { LogoProps }           from './logo.interface'
 
 const Logo: FC<LogoProps> = ({ mobile = false }) => (
   <Layout>
-    <NextLink href='/'>
+    <NextLink href='/' rel='up' title='Home page'>
       <Layout width={[103, 103, 203]} height={26}>
         <Condition match={!mobile}>
           <DreamTeamIcon width='100%' height='100%' />

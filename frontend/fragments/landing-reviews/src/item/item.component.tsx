@@ -74,7 +74,7 @@ const Item: FC<ItemProps> = ({ review, language }) => {
           </Layout>
           <Layout flexBasis={16} />
           <Layout overflow='hidden'>
-            <TextEllipsis fontSize='regular' color='text.gray' lineClamp={7}>
+            <TextEllipsis fontSize='regular' color='text.gray' lineClamp={6}>
               {review.content}
             </TextEllipsis>
           </Layout>

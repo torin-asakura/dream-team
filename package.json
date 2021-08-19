@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "landing:build": "yarn workspace @landing/app build",
-    "rezip": "rm -rf dt-next.zip && zip -r dream-team.zip wp-content/themes/dream-team",
+    "rezip": "rm -rf dream-team.zip && zip -r dream-team.zip .ignore/wp-content/themes/dream-team",
     "prepare": "yarn workspace @landing/app prepack && yarn rezip",
     "postinstall": "yarn workspace @ui/icons build"
   },
