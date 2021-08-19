@@ -27,7 +27,12 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                 <Logo />
                 <Layout flexBasis={60} />
                 <Layout>
-                  <Link href='https://torinasakura.name/'>
+                  <Link
+                    href='https://torinasakura.name/'
+                    target='_blank'
+                    rel='me'
+                    title='Site author'
+                  >
                     <Text fontSize='regular' color='text.lightGray'>
                       {by.title}
                     </Text>
@@ -43,6 +48,8 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                 <Layout>
                   <Link
                     href={`mailto:${feedbackEmail.content}`}
+                    rel='contact'
+                    title='Contact us via email'
                     fontSize='large'
                     color='text.black'
                     fontWeight='slim'
@@ -54,6 +61,8 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                 <Layout>
                   <Link
                     href={`tel:${feedbackPhone.content}`}
+                    rel='contact'
+                    title='Contact us via phone'
                     fontSize='large'
                     color='text.black'
                     fontWeight='slim'
@@ -79,6 +88,8 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
               <Layout>
                 <Link
                   href={`mailto:${feedbackEmail.content}`}
+                  rel='contact'
+                  title='Contact us via email'
                   fontSize='large'
                   color='text.black'
                   fontWeight='slim'
@@ -90,6 +101,8 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
               <Layout>
                 <Link
                   href={`tel:${feedbackPhone.content}`}
+                  rel='contact'
+                  title='Contact us via phone'
                   fontSize='large'
                   color='text.black'
                   fontWeight='slim'
@@ -108,7 +121,12 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
               <Box height='1px' width='100%' backgroundColor='background.lightGray' />
               <Layout flexBasis={16} />
               <Layout>
-                <Link href='https://torinasakura.name/'>
+                <Link
+                  href='https://torinasakura.name/'
+                  target='_blank'
+                  rel='me'
+                  title='Site author'
+                >
                   <Text fontSize='regular' color='text.lightGray'>
                     {by.title}
                   </Text>

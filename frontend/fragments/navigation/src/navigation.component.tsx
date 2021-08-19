@@ -43,6 +43,8 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
               fontSize='semiRegular'
               textTransform='uppercase'
               href='/contacts'
+              rel='contact'
+              title='Contacts page'
             >
               {messages.contacts[language]}
             </NextLink>
