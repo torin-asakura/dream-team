@@ -2,7 +2,7 @@
   "name": "@landing/app",
   "scripts": {
     "build": "yarn app renderer build --export",
-    "prepack": "yarn build && cp -R dist ../../../.ignore/wp-content/themes/dream-team",
+    "prepack": "yarn build && cp -R dist ../../../wp-content/themes/dream-team",
     "dev": "yarn app renderer dev"
   },
   "main": "src/index.ts",

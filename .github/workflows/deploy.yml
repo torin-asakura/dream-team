@@ -25,6 +25,6 @@ jobs:
         with:
           server: 37.140.192.245
           username: u1055818_dt
-          local-dir: "./.ignore/wp-content/themes"
-          server-dir: "./wp-content/themes"
+          local-dir: "./wp-content/"
+          server-dir: "./wp-content/"
           password: ${{ secrets.ftp_password }}
