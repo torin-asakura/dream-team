@@ -15,6 +15,9 @@ const getTertiaryColorsStyles = (theme, active): styleFn => {
   return () => ({
     ...tertiaryDefaultColors(),
     ...(active && tertiaryActiveColors()),
+    '&:hover': {
+      ...tertiaryActiveColors(),
+    },
     '&:active': {
       ...tertiaryActiveColors(),
     },

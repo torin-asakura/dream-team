@@ -10,6 +10,7 @@ import { Layout }               from '@ui/layout'
 import { Row }                  from '@ui/layout'
 import { Column }               from '@ui/layout'
 import { Box }                  from '@ui/layout'
+import { Link }                 from '@ui/link'
 import { Image }                from '@ui/image'
 import { Text }                 from '@ui/text'
 import { CopyIcon }             from '@ui/icons'
@@ -113,14 +114,15 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                     <Column>
                       <Layout flexBasis={[48, 48, 0]} />
                       <Layout>
-                        <Text
+                        <Link
+                          href={`mailto:${feedbackEmail.content}`}
                           fontSize='increased'
                           fontWeight='slim'
                           color='text.white'
                           id='emailContent'
                         >
                           {feedbackEmail.content}
-                        </Text>
+                        </Link>
                       </Layout>
                     </Column>
                     <Layout flexBasis={16} />
@@ -146,9 +148,14 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                   <Layout flexBasis={32} />
                   <Row alignItems='center'>
                     <Layout>
-                      <Text fontSize='increased' color='text.white' fontWeight='slim'>
+                      <Link
+                        href={`tel:${feedbackPhone.content}`}
+                        fontSize='increased'
+                        color='text.white'
+                        fontWeight='slim'
+                      >
                         {feedbackPhone.content}
-                      </Text>
+                      </Link>
                     </Layout>
                     <Layout flexBasis={16} />
                     <Layout display={['none', 'none', 'flex']}>

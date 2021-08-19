@@ -1,17 +1,18 @@
-import React             from 'react'
-import { FC }            from 'react'
+import React            from 'react'
+import { FC }           from 'react'
 
-import { Condition }     from '@ui/condition'
-import { Layout }        from '@ui/layout'
-import { Row }           from '@ui/layout'
-import { Column }        from '@ui/layout'
-import { Box }           from '@ui/layout'
-import { DreamTeamIcon } from '@ui/icons'
-import { Text }          from '@ui/text'
-import { Space }         from '@ui/text'
+import { Condition }    from '@ui/condition'
+import { Layout }       from '@ui/layout'
+import { Row }          from '@ui/layout'
+import { Column }       from '@ui/layout'
+import { Box }          from '@ui/layout'
+import { Link }         from '@ui/link'
+import { Logo }         from '@ui/logo'
+import { Text }         from '@ui/text'
+import { Space }        from '@ui/text'
 
-import { useData }       from './data'
-import { LandingProps }  from './landing-footer.interface'
+import { useData }      from './data'
+import { LandingProps } from './landing-footer.interface'
 
 const LandingFooter: FC<LandingProps> = ({ language }) => {
   const { workingHoursRu, workingHoursEn, feedbackPhone, feedbackEmail, by } = useData()
@@ -23,32 +24,42 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
           <Layout display={['none', 'none', 'flex']} width='100%'>
             <Row>
               <Column width='100%'>
-                <Layout>
-                  <DreamTeamIcon width={233} height={30} />
-                </Layout>
+                <Logo />
                 <Layout flexBasis={60} />
                 <Layout>
-                  <Text fontSize='regular' color='text.lightGray'>
-                    {by.title}
-                  </Text>
-                  <Space />
-                  <Text fontSize='regular' color='text.lightGray' fontWeight='bold'>
-                    {by.content}
-                  </Text>
+                  <Link href='https://torinasakura.name/'>
+                    <Text fontSize='regular' color='text.lightGray'>
+                      {by.title}
+                    </Text>
+                    <Space />
+                    <Text fontSize='regular' color='text.lightGray' fontWeight='bold'>
+                      {by.content}
+                    </Text>
+                  </Link>
                 </Layout>
               </Column>
               <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
               <Column width='100%' alignItems='flex-end'>
                 <Layout>
-                  <Text fontSize='large' color='text.black' fontWeight='slim'>
+                  <Link
+                    href={`mailto:${feedbackEmail.content}`}
+                    fontSize='large'
+                    color='text.black'
+                    fontWeight='slim'
+                  >
                     {feedbackEmail.content}
-                  </Text>
+                  </Link>
                 </Layout>
                 <Layout flexBasis={24} />
                 <Layout>
-                  <Text fontSize='large' color='text.black' fontWeight='slim'>
+                  <Link
+                    href={`tel:${feedbackPhone.content}`}
+                    fontSize='large'
+                    color='text.black'
+                    fontWeight='slim'
+                  >
                     {feedbackPhone.content}
-                  </Text>
+                  </Link>
                 </Layout>
                 <Layout flexBasis={16} />
                 <Layout>
@@ -63,20 +74,28 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
           <Layout display={['flex', 'flex', 'none']} width='100%'>
             <Column width='100%' justifyContent='center' alignItems='center'>
               <Layout flexBasis={36} />
-              <Layout>
-                <DreamTeamIcon width={233} height={30} />
-              </Layout>
+              <Logo />
               <Layout flexBasis={28} />
               <Layout>
-                <Text fontSize='large' color='text.black' fontWeight='slim'>
+                <Link
+                  href={`mailto:${feedbackEmail.content}`}
+                  fontSize='large'
+                  color='text.black'
+                  fontWeight='slim'
+                >
                   {feedbackEmail.content}
-                </Text>
+                </Link>
               </Layout>
               <Layout flexBasis={24} />
               <Layout>
-                <Text fontSize='large' color='text.black' fontWeight='slim'>
+                <Link
+                  href={`tel:${feedbackPhone.content}`}
+                  fontSize='large'
+                  color='text.black'
+                  fontWeight='slim'
+                >
                   {feedbackPhone.content}
-                </Text>
+                </Link>
               </Layout>
               <Layout flexBasis={8} />
               <Layout>
@@ -89,13 +108,15 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
               <Box height='1px' width='100%' backgroundColor='background.lightGray' />
               <Layout flexBasis={16} />
               <Layout>
-                <Text fontSize='regular' color='text.lightGray'>
-                  {by.title}
-                </Text>
-                <Space />
-                <Text fontSize='regular' color='text.lightGray' fontWeight='bold'>
-                  {by.content}
-                </Text>
+                <Link href='https://torinasakura.name/'>
+                  <Text fontSize='regular' color='text.lightGray'>
+                    {by.title}
+                  </Text>
+                  <Space />
+                  <Text fontSize='regular' color='text.lightGray' fontWeight='bold'>
+                    {by.content}
+                  </Text>
+                </Link>
               </Layout>
               <Layout flexBasis={16} />
             </Column>

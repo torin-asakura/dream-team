@@ -18,7 +18,7 @@ exports.modules = {
 
 /***/ }),
 
-/***/ 1154:
+/***/ 7862:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36,8 +36,8 @@ var jsx_runtime_ = __webpack_require__(5282);
 var external_react_ = __webpack_require__(9297);
 // EXTERNAL MODULE: external "@apollo/client"
 var client_ = __webpack_require__(8074);
-// EXTERNAL MODULE: ../../../../.yarn/__virtual__/@fragments-navigation-virtual-dc349beb3f/1/frontend/fragments/navigation/src/index.ts + 4 modules
-var src = __webpack_require__(1704);
+// EXTERNAL MODULE: ../../../../.yarn/__virtual__/@fragments-navigation-virtual-dc349beb3f/1/frontend/fragments/navigation/src/index.ts + 2 modules
+var src = __webpack_require__(7308);
 // EXTERNAL MODULE: ../../../../.yarn/__virtual__/@ui-layout-virtual-731a96f19a/1/frontend/ui/layout/src/index.ts
 var layout_src = __webpack_require__(5770);
 // EXTERNAL MODULE: ../../../../.yarn/__virtual__/@ui-text-virtual-c51c168599/1/frontend/ui/text/src/index.ts
@@ -129,8 +129,8 @@ const useVideoShape = videoRef => {
 ;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@ui-video-virtual-84460127bc/1/frontend/ui/video/src/index.ts
 
 
-// EXTERNAL MODULE: ../../../fragments/form-popover/src/index.ts + 56 modules
-var form_popover_src = __webpack_require__(7751);
+// EXTERNAL MODULE: ../../../fragments/form-popover/src/index.ts + 61 modules
+var form_popover_src = __webpack_require__(9151);
 ;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@fragments-landing-hero-virtual-bd34588229/1/frontend/fragments/landing-hero/src/messages.ts
 const messages = {
   contactUs: {
@@ -234,18 +234,18 @@ const useAssetById = id => {
 
 ;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@fragments-landing-hero-virtual-bd34588229/1/frontend/fragments/landing-hero/src/data/constants.ts
 /** Local * */
-// export const HERO_CONTENT_EN = 'cG9zdDo0ODM='
+const HERO_CONTENT_EN = 'cG9zdDo0ODM=';
+const HERO_CONTENT_RU = 'cG9zdDo0ODE=';
+const VIDEO_DESKTOP = 'cG9zdDo0NDA=';
+const VIDEO_MOBILE = 'cG9zdDo0NDY=';
+const VIDEO_MOBILE_2 = 'cG9zdDo2Mzc=';
+/** Prod * */
+// export const HERO_CONTENT_EN = 'cG9zdDo0OTQ='
 // export const HERO_CONTENT_RU = 'cG9zdDo0ODE='
 //
 // export const VIDEO_DESKTOP = 'cG9zdDo0NDA='
 // export const VIDEO_MOBILE = 'cG9zdDo0NDY='
-
-/** Prod * */
-const HERO_CONTENT_EN = 'cG9zdDo0OTQ=';
-const HERO_CONTENT_RU = 'cG9zdDo0ODE=';
-const VIDEO_DESKTOP = 'cG9zdDo0NDA=';
-const VIDEO_MOBILE = 'cG9zdDo0NDY=';
-const VIDEO_MOBILE_2 = 'cG9zdDo3NjQ=';
+// export const VIDEO_MOBILE_2 = 'cG9zdDo3NjQ='
 ;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@fragments-landing-hero-virtual-bd34588229/1/frontend/fragments/landing-hero/src/data/useData.ts
 
 
@@ -326,8 +326,7 @@ const LandingHero = ({
   const {
     0: visible,
     1: setVisible
-  } = (0,external_react_.useState)(false); // const { height: videoHeight } = useVideoShape(videoNode)
-
+  } = (0,external_react_.useState)(false);
   return /*#__PURE__*/jsx_runtime_.jsx(layout_src.Box, {
     height: ['auto', 'auto', '92vh'],
     minHeight: ['92vh', '92vh', 'auto'],
@@ -353,8 +352,10 @@ const LandingHero = ({
         autoPlay: true,
         muted: true,
         loop: true,
-        playsInline: true,
-        src: [Mobile2.link, Mobile.link],
+        playsInline: true // @ts-ignore
+        ,
+        src: [Mobile2.link, Mobile.link] // @ts-ignore
+        ,
         mime: [Mobile2.mimeType, Mobile.mimeType],
         display: ['flex', 'flex', 'none'],
         top: "auto"
@@ -428,7 +429,6 @@ var image_src = __webpack_require__(7719);
 
 
 
-
 const filterByLanguage = language => ({
   language: lang
 }) => lang ? lang.code === language : true;
@@ -473,35 +473,31 @@ const Item = ({
       }), /*#__PURE__*/jsx_runtime_.jsx(layout_src.Layout, {
         flexBasis: 32
       }), /*#__PURE__*/jsx_runtime_.jsx(layout_src.Row, {
-        children: /*#__PURE__*/jsx_runtime_.jsx(layout_src.Layout, {
-          width: "100%",
-          flexWrap: "wrap",
-          children: category.skills.nodes.filter(filterByLanguage(language)).map(({
-            title
-          }) => /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+        flexWrap: "wrap",
+        children: category.skills.nodes.filter(filterByLanguage(language)).map(({
+          title
+        }) => /*#__PURE__*/(0,jsx_runtime_.jsxs)(layout_src.Layout, {
+          children: [/*#__PURE__*/(0,jsx_runtime_.jsxs)(layout_src.Column, {
             children: [/*#__PURE__*/jsx_runtime_.jsx(layout_src.Layout, {
-              children: /*#__PURE__*/(0,jsx_runtime_.jsxs)(layout_src.Column, {
-                children: [/*#__PURE__*/jsx_runtime_.jsx(layout_src.Layout, {
-                  flexBasis: 8
-                }), /*#__PURE__*/jsx_runtime_.jsx(layout_src.Box, {
-                  px: "12px",
-                  py: "8px",
-                  border: "1px solid",
-                  borderColor: "border.lightGray",
-                  borderRadius: "normal",
-                  children: /*#__PURE__*/jsx_runtime_.jsx(text_src.Text, {
-                    color: "text.black",
-                    fontSize: "regular",
-                    whiteSpace: "nowrap",
-                    children: title
-                  })
-                })]
-              })
-            }), /*#__PURE__*/jsx_runtime_.jsx(layout_src.Layout, {
               flexBasis: 8
+            }), /*#__PURE__*/jsx_runtime_.jsx(layout_src.Box, {
+              px: "12px",
+              py: "8px",
+              border: "1px solid",
+              borderColor: "border.lightGray",
+              borderRadius: "normal",
+              children: /*#__PURE__*/jsx_runtime_.jsx(text_src.Text, {
+                color: "text.black",
+                fontSize: "regular",
+                whiteSpace: "nowrap",
+                children: title
+              })
             })]
-          }))
-        })
+          }), /*#__PURE__*/jsx_runtime_.jsx(layout_src.Box, {
+            width: "8px",
+            display: "block"
+          })]
+        }))
       }), /*#__PURE__*/jsx_runtime_.jsx(layout_src.Layout, {
         flexBasis: 32
       })]
@@ -766,24 +762,23 @@ const useCardByID = id => {
 
 ;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@fragments-landing-about-virtual-d3d1833663/1/frontend/fragments/landing-about/src/data/constants.ts
 /** Local * */
-// export const COSTS_EN = 'cG9zdDo0OTM='
-// export const COSTS_RU = 'cG9zdDo0OTI='
-// export const TIME_FRAME_EN = 'cG9zdDo0OTE='
-// export const TIME_FRAME_RU = 'cG9zdDo0OTA='
-// export const HOW_WE_DO_EN = 'cG9zdDo0ODY='
-// export const HOW_WE_DO_RU = 'cG9zdDo0ODk='
-// export const WHY_US_EN = 'cG9zdDo0ODU='
-// export const WHY_US_RU = 'cG9zdDo0ODQ='
-
-/** Prod * */
-const COSTS_EN = 'cG9zdDo1MDE=';
-const COSTS_RU = 'cG9zdDo1MDA=';
+const COSTS_EN = 'cG9zdDo0OTM=';
+const COSTS_RU = 'cG9zdDo0OTI=';
 const TIME_FRAME_EN = 'cG9zdDo0OTE=';
-const TIME_FRAME_RU = 'cG9zdDo0OTk=';
-const HOW_WE_DO_EN = 'cG9zdDo0OTc=';
-const HOW_WE_DO_RU = 'cG9zdDo0OTg=';
-const WHY_US_EN = 'cG9zdDo0OTY=';
-const WHY_US_RU = 'cG9zdDo0OTU=';
+const TIME_FRAME_RU = 'cG9zdDo0OTA=';
+const HOW_WE_DO_EN = 'cG9zdDo0ODY=';
+const HOW_WE_DO_RU = 'cG9zdDo0ODk=';
+const WHY_US_EN = 'cG9zdDo0ODU=';
+const WHY_US_RU = 'cG9zdDo0ODQ=';
+/** Prod * */
+// export const COSTS_EN = 'cG9zdDo1MDE='
+// export const COSTS_RU = 'cG9zdDo1MDA='
+// export const TIME_FRAME_EN = 'cG9zdDo0OTE='
+// export const TIME_FRAME_RU = 'cG9zdDo0OTk='
+// export const HOW_WE_DO_EN = 'cG9zdDo0OTc='
+// export const HOW_WE_DO_RU = 'cG9zdDo0OTg='
+// export const WHY_US_EN = 'cG9zdDo0OTY='
+// export const WHY_US_RU = 'cG9zdDo0OTU='
 ;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@fragments-landing-about-virtual-d3d1833663/1/frontend/fragments/landing-about/src/data/useData.ts
 
 
@@ -1378,7 +1373,7 @@ const src_item_item_component_Item = ({
           children: /*#__PURE__*/jsx_runtime_.jsx(text_src.TextEllipsis, {
             fontSize: "regular",
             color: "text.gray",
-            lineClamp: 7,
+            lineClamp: 6,
             children: review.content
           })
         }), /*#__PURE__*/jsx_runtime_.jsx(layout_src.Layout, {
@@ -1898,20 +1893,19 @@ const asset_by_id_query_useAssetById = id => {
 
 ;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@fragments-landing-feedback-virtual-2f6d77d955/1/frontend/fragments/landing-feedback/src/data/constants.ts
 /** Local * */
+const CONTACT_US_RU = 'cG9zdDo2Mjk=';
+const CONTACT_US_EN = 'cG9zdDo2MzA=';
+const FORM_RU = 'TmluamFGb3JtOjM=';
+const FORM_EN = 'TmluamFGb3JtOjI=';
+const ASSET = 'cG9zdDoyOTM=';
+/** Prod * */
 // export const CONTACT_US_RU = 'cG9zdDo2Mjk='
 // export const CONTACT_US_EN = 'cG9zdDo2MzA='
 //
-// export const FORM_RU = 'TmluamFGb3JtOjM='
-// export const FORM_EN = 'TmluamFGb3JtOjI='
+// export const FORM_RU = 'TmluamFGb3JtOjU='
+// export const FORM_EN = 'TmluamFGb3JtOjQ='
 //
 // export const ASSET = 'cG9zdDoyOTM='
-
-/** Prod * */
-const CONTACT_US_RU = 'cG9zdDo2Mjk=';
-const CONTACT_US_EN = 'cG9zdDo2MzA=';
-const FORM_RU = 'TmluamFGb3JtOjU=';
-const FORM_EN = 'TmluamFGb3JtOjQ=';
-const ASSET = 'cG9zdDoyOTM=';
 ;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@fragments-landing-feedback-virtual-2f6d77d955/1/frontend/fragments/landing-feedback/src/data/useData.ts
 
 
@@ -2067,9 +2061,76 @@ const Index = () => {
 };
 
 
-;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@landing-index-page-virtual-5d675a7e97/1/frontend/landing/index/src/index.ts
+;// CONCATENATED MODULE: external "react-helmet"
+var external_react_helmet_namespaceObject = require("react-helmet");;
+var external_react_helmet_default = /*#__PURE__*/__webpack_require__.n(external_react_helmet_namespaceObject);
+;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@landing-index-page-virtual-5d675a7e97/1/frontend/landing/index/src/seo.data.ts
+const title = 'Dream Team';
+const descriptionRu = 'Рекрутинг в IT и GameDev';
+const descriptionEn = 'IT & GameDev Recruitment';
+;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@landing-index-page-virtual-5d675a7e97/1/frontend/landing/index/src/seo.component.tsx
 
-/* harmony default export */ var index_src = (Index);
+
+
+
+
+
+
+const Seo = () => /*#__PURE__*/jsx_runtime_.jsx((external_react_helmet_default()), {
+  title: title,
+  meta: [{
+    name: 'description',
+    lang: 'ru',
+    content: descriptionRu
+  }, {
+    name: 'description',
+    lang: 'en',
+    content: descriptionEn
+  }, {
+    property: 'og:title',
+    content: title
+  }, {
+    property: 'og:description',
+    lang: 'ru',
+    content: descriptionRu
+  }, {
+    property: 'og:description',
+    lang: 'en',
+    content: descriptionEn
+  }, {
+    property: 'og:type',
+    content: 'website'
+  }, {
+    name: 'twitter:card',
+    content: 'summary'
+  }, {
+    name: 'twitter:title',
+    content: title
+  }, {
+    name: 'twitter:description',
+    lang: 'ru',
+    content: descriptionRu
+  }, {
+    name: 'twitter:description',
+    lang: 'en',
+    content: descriptionEn
+  }]
+});
+
+
+;// CONCATENATED MODULE: ../../../../.yarn/__virtual__/@landing-index-page-virtual-5d675a7e97/1/frontend/landing/index/src/index.tsx
+
+
+
+
+
+
+
+const IndexPage = () => /*#__PURE__*/(0,jsx_runtime_.jsxs)(jsx_runtime_.Fragment, {
+  children: [/*#__PURE__*/jsx_runtime_.jsx(Seo, {}), /*#__PURE__*/jsx_runtime_.jsx(Index, {})]
+});
+
+/* harmony default export */ var index_src = (IndexPage);
 ;// CONCATENATED MODULE: ./pages/index.ts
 
 
@@ -2130,7 +2191,7 @@ module.exports = require("react/jsx-runtime");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, [691,630,726,662,641,730,91], function() { return __webpack_exec__(1154); });
+var __webpack_exports__ = __webpack_require__.X(0, [691,630,726,662,699,730,91], function() { return __webpack_exec__(7862); });
 module.exports = __webpack_exports__;
 
 })();

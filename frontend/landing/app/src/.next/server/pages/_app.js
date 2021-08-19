@@ -4,7 +4,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 2846:
+/***/ 7575:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -48,6 +48,8 @@ var compose_ = __webpack_require__(6859);
 var compose_default = /*#__PURE__*/__webpack_require__.n(compose_);
 ;// CONCATENATED MODULE: external "@atls/next-app-with-apollo"
 var next_app_with_apollo_namespaceObject = require("@atls/next-app-with-apollo");;
+;// CONCATENATED MODULE: external "@atls/next-app-with-helmet"
+var next_app_with_helmet_namespaceObject = require("@atls/next-app-with-helmet");;
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(5282);
 // EXTERNAL MODULE: external "react"
@@ -395,19 +397,20 @@ const theme_provider_ThemeProvider = ({
 
 
 
+
 const withProviders = compose_default()((0,next_app_with_apollo_namespaceObject.withApollo)({
   /** Local * */
-  // uri: 'http://localhost:8080/index.php?graphql',
+  uri: 'http://localhost:8080/index.php?graphql',
 
   /** Prod * */
-  uri: 'https://dream-team.tech/graphql',
+  // uri: 'https://dream-team.tech/graphql',
   onUnauthenticated: () => {
     // eslint-disable-next-line
     console.log('Unauthenticated');
   }
 }), withEmotion({
   Provider: theme_provider_ThemeProvider
-}));
+}), (0,next_app_with_helmet_namespaceObject.withHelmet)());
 /* harmony default export */ var _app = (withProviders(app.default));
 
 /***/ }),
@@ -451,7 +454,7 @@ module.exports = require("recompose/compose");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, [185,330], function() { return __webpack_exec__(2846); });
+var __webpack_exports__ = __webpack_require__.X(0, [185,330], function() { return __webpack_exec__(7575); });
 module.exports = __webpack_exports__;
 
 })();

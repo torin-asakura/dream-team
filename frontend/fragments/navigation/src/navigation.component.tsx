@@ -42,7 +42,6 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
               fontWeight='medium'
               fontSize='semiRegular'
               textTransform='uppercase'
-              hoverColor='accent'
               href='/contacts'
             >
               {messages.contacts[language]}

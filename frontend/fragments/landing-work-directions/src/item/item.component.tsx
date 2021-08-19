@@ -40,30 +40,26 @@ const Item: FC<ItemProps> = ({ category, language }) => (
         </Layout>
       </Row>
       <Layout flexBasis={32} />
-      <Row>
-        <Layout width='100%' flexWrap='wrap'>
-          {category.skills.nodes.filter(filterByLanguage(language)).map(({ title }) => (
-            <>
-              <Layout>
-                <Column>
-                  <Layout flexBasis={8} />
-                  <Box
-                    px='12px'
-                    py='8px'
-                    border='1px solid'
-                    borderColor='border.lightGray'
-                    borderRadius='normal'
-                  >
-                    <Text color='text.black' fontSize='regular' whiteSpace='nowrap'>
-                      {title}
-                    </Text>
-                  </Box>
-                </Column>
-              </Layout>
+      <Row flexWrap='wrap'>
+        {category.skills.nodes.filter(filterByLanguage(language)).map(({ title }) => (
+          <Layout>
+            <Column>
               <Layout flexBasis={8} />
-            </>
-          ))}
-        </Layout>
+              <Box
+                px='12px'
+                py='8px'
+                border='1px solid'
+                borderColor='border.lightGray'
+                borderRadius='normal'
+              >
+                <Text color='text.black' fontSize='regular' whiteSpace='nowrap'>
+                  {title}
+                </Text>
+              </Box>
+            </Column>
+            <Box width='8px' display='block' />
+          </Layout>
+        ))}
       </Row>
       <Layout flexBasis={32} />
     </Column>

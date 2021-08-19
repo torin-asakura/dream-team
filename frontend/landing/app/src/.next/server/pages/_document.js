@@ -4,7 +4,7 @@ exports.id = 660;
 exports.ids = [660];
 exports.modules = {
 
-/***/ 7271:
+/***/ 8831:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56,11 +56,22 @@ const withEmotion = () => TargetComponent => class WithEmotion extends TargetCom
 };
 ;// CONCATENATED MODULE: ../../../providers/next-document-with-emotion/src/index.ts
 
+;// CONCATENATED MODULE: external "@atls/next-document-with-opengraph"
+var next_document_with_opengraph_namespaceObject = require("@atls/next-document-with-opengraph");;
+;// CONCATENATED MODULE: external "@atls/next-document-with-icons"
+var next_document_with_icons_namespaceObject = require("@atls/next-document-with-icons");;
+;// CONCATENATED MODULE: external "@atls/next-document-with-helmet"
+var next_document_with_helmet_namespaceObject = require("@atls/next-document-with-helmet");;
 ;// CONCATENATED MODULE: ./pages/_document.tsx
 
 
 
-const withProviders = compose_default()(withEmotion());
+
+
+
+const withProviders = compose_default()(withEmotion(), (0,next_document_with_opengraph_namespaceObject.withOpenGraph)({
+  image: 'https://dream-team.tech/wp-content/uploads/2021/07/cover.jpg'
+}), (0,next_document_with_icons_namespaceObject.withIcons)(), (0,next_document_with_helmet_namespaceObject.withHelmet)());
 /* harmony default export */ var _document = (withProviders(next_document.default));
 
 /***/ }),
@@ -176,7 +187,7 @@ module.exports = require("util");;
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-var __webpack_exports__ = __webpack_require__.X(0, [691,185,176], function() { return __webpack_exec__(7271); });
+var __webpack_exports__ = __webpack_require__.X(0, [691,185,176], function() { return __webpack_exec__(8831); });
 module.exports = __webpack_exports__;
 
 })();
