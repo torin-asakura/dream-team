@@ -4,8 +4,8 @@ export const messages = {
     RU: 'Оставить заявку',
   },
   language: {
-    EN: 'РУ',
-    RU: 'EN',
+    EN: 'EN',
+    RU: 'РУ',
   },
   contacts: {
     EN: 'Contacts',

@@ -61,7 +61,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
                 onClick={switchLanguage(language, languageVar)}
                 width={44}
               >
-                {messages.language[language]}
+                {language === 'RU' ? messages.language.EN : messages.language.RU}
               </Button>
             </Layout>
           </Row>
