@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default } from '@landing/index';","map":{"version":3,"sources":["/Users/darius/workspace/atlantis/dream-team/frontend/landing/app/src/pages/index.ts"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,gBAAxB","sourcesContent":["export { default } from '@landing/index'\n"]},"metadata":{},"sourceType":"module"}
