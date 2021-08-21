@@ -8,9 +8,9 @@ import { ThemeProvider } from '@ui/theme'
 export const withProviders = compose(
   withApollo({
     /** Local * */
-    uri: 'http://localhost:8080/index.php?graphql',
+    // uri: 'http://localhost:8080/index.php?graphql',
     /** Prod * */
-    // uri: 'https://dream-team.tech/graphql',
+    uri: 'https://dream-team.tech/graphql',
     onUnauthenticated: () => {
       // eslint-disable-next-line
       console.log('Unauthenticated')
