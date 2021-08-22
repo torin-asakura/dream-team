@@ -12,4 +12,5 @@ export interface Review {
 export interface ItemProps {
   review: Review
   language: Language
+  onClick: () => any
 }

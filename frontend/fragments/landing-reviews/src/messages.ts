@@ -3,4 +3,12 @@ export const messages = {
     EN: 'Reviews',
     RU: 'Отзывы клиентов',
   },
+  review: {
+    EN: 'Review',
+    RU: 'Отзыв',
+  },
+  of: {
+    EN: 'of',
+    RU: 'из',
+  },
 }
