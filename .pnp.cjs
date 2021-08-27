@@ -1340,6 +1340,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@atls/next-document-with-gtag", [
+        ["npm:0.0.2", {
+          "packageLocation": "./.yarn/cache/@atls-next-document-with-gtag-npm-0.0.2-fa85a0c09a-25df57a759.zip/node_modules/@atls/next-document-with-gtag/",
+          "packageDependencies": [
+            ["@atls/next-document-with-gtag", "npm:0.0.2"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:34b1168cfbf93a6d191b956367b863d48bc4dddd463ac17ac97a87367dfc889917bf7b1e29fc7d48ce174b606b0dc49cdabf9a6bbefa8586fb7e2d25543c1bd0#npm:0.0.2", {
+          "packageLocation": "./.yarn/__virtual__/@atls-next-document-with-gtag-virtual-7d388f8609/0/cache/@atls-next-document-with-gtag-npm-0.0.2-fa85a0c09a-25df57a759.zip/node_modules/@atls/next-document-with-gtag/",
+          "packageDependencies": [
+            ["@atls/next-document-with-gtag", "virtual:34b1168cfbf93a6d191b956367b863d48bc4dddd463ac17ac97a87367dfc889917bf7b1e29fc7d48ce174b606b0dc49cdabf9a6bbefa8586fb7e2d25543c1bd0#npm:0.0.2"],
+            ["@types/next", null],
+            ["@types/react", "npm:17.0.15"],
+            ["next", "virtual:d018974333cd162e46326e4d7e912423c54788c01479244e993c58c9331b879ae185399971c25245d984feaee88a7ead1cdfa0f69eddd79e8855e18b77d51e35#npm:10.2.3"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/next",
+            "@types/react",
+            "next",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@atls/next-document-with-helmet", [
         ["npm:0.2.64", {
           "packageLocation": "./.yarn/cache/@atls-next-document-with-helmet-npm-0.2.64-49c482aaf6-83b8242c15.zip/node_modules/@atls/next-document-with-helmet/",
@@ -3870,6 +3896,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls/next-app-with-apollo", "virtual:34b1168cfbf93a6d191b956367b863d48bc4dddd463ac17ac97a87367dfc889917bf7b1e29fc7d48ce174b606b0dc49cdabf9a6bbefa8586fb7e2d25543c1bd0#npm:0.2.70"],
             ["@atls/next-app-with-helmet", "virtual:34b1168cfbf93a6d191b956367b863d48bc4dddd463ac17ac97a87367dfc889917bf7b1e29fc7d48ce174b606b0dc49cdabf9a6bbefa8586fb7e2d25543c1bd0#npm:0.2.64"],
             ["@atls/next-config-with-pnp-workspaces", "npm:0.0.1"],
+            ["@atls/next-document-with-gtag", "virtual:34b1168cfbf93a6d191b956367b863d48bc4dddd463ac17ac97a87367dfc889917bf7b1e29fc7d48ce174b606b0dc49cdabf9a6bbefa8586fb7e2d25543c1bd0#npm:0.0.2"],
             ["@atls/next-document-with-helmet", "virtual:34b1168cfbf93a6d191b956367b863d48bc4dddd463ac17ac97a87367dfc889917bf7b1e29fc7d48ce174b606b0dc49cdabf9a6bbefa8586fb7e2d25543c1bd0#npm:0.2.64"],
             ["@atls/next-document-with-icons", "virtual:34b1168cfbf93a6d191b956367b863d48bc4dddd463ac17ac97a87367dfc889917bf7b1e29fc7d48ce174b606b0dc49cdabf9a6bbefa8586fb7e2d25543c1bd0#npm:0.0.2"],
             ["@atls/next-document-with-opengraph", "virtual:34b1168cfbf93a6d191b956367b863d48bc4dddd463ac17ac97a87367dfc889917bf7b1e29fc7d48ce174b606b0dc49cdabf9a6bbefa8586fb7e2d25543c1bd0#npm:0.0.2"],

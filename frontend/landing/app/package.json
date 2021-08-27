@@ -12,6 +12,7 @@
     "@atls/next-app-with-apollo": "^0.2.70",
     "@atls/next-app-with-helmet": "^0.2.64",
     "@atls/next-config-with-pnp-workspaces": "^0.0.1",
+    "@atls/next-document-with-gtag": "^0.0.2",
     "@atls/next-document-with-helmet": "^0.2.64",
     "@atls/next-document-with-icons": "^0.0.2",
     "@atls/next-document-with-opengraph": "^0.0.2",
