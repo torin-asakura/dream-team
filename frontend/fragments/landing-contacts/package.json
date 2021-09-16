@@ -4,6 +4,7 @@
   "dependencies": {
     "@ui/button": "workspace:frontend/ui/button",
     "@ui/condition": "workspace:frontend/ui/condition",
+    "@ui/copy": "workspace:frontend/ui/copy",
     "@ui/form": "workspace:frontend/ui/form",
     "@ui/icons": "workspace:frontend/ui/icons",
     "@ui/image": "workspace:frontend/ui/image",
@@ -11,7 +12,6 @@
     "@ui/layout": "workspace:frontend/ui/layout",
     "@ui/link": "workspace:frontend/ui/link",
     "@ui/text": "workspace:frontend/ui/text",
-    "framer-motion": "^4.1.17",
     "graphql": "^15.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
