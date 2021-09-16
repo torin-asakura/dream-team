@@ -111,6 +111,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:frontend/ui/condition"
       },
       {
+        "name": "@ui/copy",
+        "reference": "workspace:frontend/ui/copy"
+      },
+      {
         "name": "@ui/form",
         "reference": "workspace:frontend/ui/form"
       },
@@ -180,6 +184,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@ui/button", ["virtual:1ad9d53f2988c72773196a3e8c7ca48e2838e99479c323cde5c6554b3b5ae937b1be62c10ca1ed64503ec0e297cdc5c06e0b5e887d0f5889babce3ee0b5974a2#workspace:frontend/ui/button", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/button", "workspace:frontend/ui/button"]],
       ["@ui/carousel", ["virtual:75e93cf0753a1558b56e03d9293b6dd76232e891ef70352aca0560934507748cc4394fce3424ff4a2f15e865d7290d952627cdb309b4f3d12358d1173d18ceac#workspace:frontend/ui/carousel", "workspace:frontend/ui/carousel"]],
       ["@ui/condition", ["virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/condition", "virtual:1ad9d53f2988c72773196a3e8c7ca48e2838e99479c323cde5c6554b3b5ae937b1be62c10ca1ed64503ec0e297cdc5c06e0b5e887d0f5889babce3ee0b5974a2#workspace:frontend/ui/condition", "workspace:frontend/ui/condition"]],
+      ["@ui/copy", ["virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/copy", "workspace:frontend/ui/copy"]],
       ["@ui/form", ["virtual:1ad9d53f2988c72773196a3e8c7ca48e2838e99479c323cde5c6554b3b5ae937b1be62c10ca1ed64503ec0e297cdc5c06e0b5e887d0f5889babce3ee0b5974a2#workspace:frontend/ui/form", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/form", "virtual:e0b29dfd4f9d33f4227fb4052dced066233e48d55e6002df04b450ceace6b8b8c18979d7b8bcc3c7728cd5706b3e2e35ea7b77eb2b7d30fc398d4c6dcaa747ba#workspace:frontend/ui/form", "workspace:frontend/ui/form"]],
       ["@ui/icons", ["virtual:1ad9d53f2988c72773196a3e8c7ca48e2838e99479c323cde5c6554b3b5ae937b1be62c10ca1ed64503ec0e297cdc5c06e0b5e887d0f5889babce3ee0b5974a2#workspace:frontend/ui/icons", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/icons", "workspace:frontend/ui/icons"]],
       ["@ui/image", ["virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/image", "workspace:frontend/ui/image"]],
@@ -2975,6 +2980,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:17.0.9"],
             ["@ui/button", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/button"],
             ["@ui/condition", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/condition"],
+            ["@ui/copy", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/copy"],
             ["@ui/form", "virtual:e0b29dfd4f9d33f4227fb4052dced066233e48d55e6002df04b450ceace6b8b8c18979d7b8bcc3c7728cd5706b3e2e35ea7b77eb2b7d30fc398d4c6dcaa747ba#workspace:frontend/ui/form"],
             ["@ui/icons", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/icons"],
             ["@ui/image", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/image"],
@@ -2982,7 +2988,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/layout", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/layout"],
             ["@ui/link", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/link"],
             ["@ui/text", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/text"],
-            ["framer-motion", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#npm:4.1.17"],
             ["graphql", "npm:15.5.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#npm:17.0.2"]
@@ -3003,6 +3008,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:17.0.9"],
             ["@ui/button", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/button"],
             ["@ui/condition", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/condition"],
+            ["@ui/copy", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/copy"],
             ["@ui/form", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/form"],
             ["@ui/icons", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/icons"],
             ["@ui/image", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/image"],
@@ -3010,7 +3016,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/layout", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/layout"],
             ["@ui/link", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/link"],
             ["@ui/text", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/text"],
-            ["framer-motion", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#npm:4.1.17"],
             ["graphql", "npm:15.5.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#npm:17.0.2"]
@@ -3030,6 +3035,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:17.0.9"],
             ["@ui/button", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/button"],
             ["@ui/condition", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/condition"],
+            ["@ui/copy", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/copy"],
             ["@ui/form", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/form"],
             ["@ui/icons", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/icons"],
             ["@ui/image", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/image"],
@@ -3037,7 +3043,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/layout", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/layout"],
             ["@ui/link", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/link"],
             ["@ui/text", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/text"],
-            ["framer-motion", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#npm:4.1.17"],
             ["graphql", "npm:15.5.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#npm:17.0.2"]
@@ -5378,7 +5383,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.15"],
             ["@types/react-dom", "npm:17.0.9"],
             ["@ui/layout", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/layout"],
-            ["framer-motion", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#npm:4.1.17"],
+            ["framer-motion", "virtual:ae76e60819da9e9842709a15d03e7637271141b2e50fc68b38363b52d340b1c6ace03b42742ae41a117d29d2af009333738decb26a2442a7a5ea21e0bd529d2c#npm:4.1.17"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#npm:17.0.2"]
           ],
@@ -5442,6 +5447,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./frontend/ui/condition/",
           "packageDependencies": [
             ["@ui/condition", "workspace:frontend/ui/condition"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:1ad9d53f2988c72773196a3e8c7ca48e2838e99479c323cde5c6554b3b5ae937b1be62c10ca1ed64503ec0e297cdc5c06e0b5e887d0f5889babce3ee0b5974a2#npm:17.0.2"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@ui/copy", [
+        ["virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/copy", {
+          "packageLocation": "./.yarn/__virtual__/@ui-copy-virtual-1d5e35aa55/1/frontend/ui/copy/",
+          "packageDependencies": [
+            ["@ui/copy", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/copy"],
+            ["@types/react", "npm:17.0.15"],
+            ["@types/react-dom", "npm:17.0.9"],
+            ["@ui/button", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/button"],
+            ["@ui/condition", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/condition"],
+            ["@ui/icons", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/icons"],
+            ["@ui/layout", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/layout"],
+            ["react", "npm:17.0.2"],
+            ["react-dom", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react-dom",
+            "@types/react",
+            "react-dom",
+            "react"
+          ],
+          "linkType": "SOFT",
+        }],
+        ["workspace:frontend/ui/copy", {
+          "packageLocation": "./frontend/ui/copy/",
+          "packageDependencies": [
+            ["@ui/copy", "workspace:frontend/ui/copy"],
+            ["@ui/button", "virtual:1ad9d53f2988c72773196a3e8c7ca48e2838e99479c323cde5c6554b3b5ae937b1be62c10ca1ed64503ec0e297cdc5c06e0b5e887d0f5889babce3ee0b5974a2#workspace:frontend/ui/button"],
+            ["@ui/condition", "virtual:1ad9d53f2988c72773196a3e8c7ca48e2838e99479c323cde5c6554b3b5ae937b1be62c10ca1ed64503ec0e297cdc5c06e0b5e887d0f5889babce3ee0b5974a2#workspace:frontend/ui/condition"],
+            ["@ui/icons", "virtual:1ad9d53f2988c72773196a3e8c7ca48e2838e99479c323cde5c6554b3b5ae937b1be62c10ca1ed64503ec0e297cdc5c06e0b5e887d0f5889babce3ee0b5974a2#workspace:frontend/ui/icons"],
+            ["@ui/layout", "virtual:1ad9d53f2988c72773196a3e8c7ca48e2838e99479c323cde5c6554b3b5ae937b1be62c10ca1ed64503ec0e297cdc5c06e0b5e887d0f5889babce3ee0b5974a2#workspace:frontend/ui/layout"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:1ad9d53f2988c72773196a3e8c7ca48e2838e99479c323cde5c6554b3b5ae937b1be62c10ca1ed64503ec0e297cdc5c06e0b5e887d0f5889babce3ee0b5974a2#npm:17.0.2"]
           ],
@@ -5766,7 +5807,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:17.0.9"],
             ["@ui/icons", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#workspace:frontend/ui/icons"],
             ["@ui/layout", "virtual:10de971752d1f8844581e2ee98b52a504999f37df49ec390973987c9c3fb6fff3f5b59f57c8ad54f9d0558ab5c71a091ca0e8fb56f8cd381a8f91c42a70f55c6#workspace:frontend/ui/layout"],
-            ["framer-motion", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#npm:4.1.17"],
+            ["framer-motion", "virtual:ae76e60819da9e9842709a15d03e7637271141b2e50fc68b38363b52d340b1c6ace03b42742ae41a117d29d2af009333738decb26a2442a7a5ea21e0bd529d2c#npm:4.1.17"],
             ["global", "npm:4.4.0"],
             ["nanoid", "npm:3.1.25"],
             ["react", "npm:17.0.2"],
@@ -10947,10 +10988,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#npm:4.1.17", {
-          "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-07a6e27b0c/0/cache/framer-motion-npm-4.1.17-00d2b9950f-f6b5fc8f18.zip/node_modules/framer-motion/",
+        ["virtual:ae76e60819da9e9842709a15d03e7637271141b2e50fc68b38363b52d340b1c6ace03b42742ae41a117d29d2af009333738decb26a2442a7a5ea21e0bd529d2c#npm:4.1.17", {
+          "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-5d609f75d4/0/cache/framer-motion-npm-4.1.17-00d2b9950f-f6b5fc8f18.zip/node_modules/framer-motion/",
           "packageDependencies": [
-            ["framer-motion", "virtual:a7f9c456f5b253acf6836ac94ceb5d2b4f90a5f5da079162848661c54df31b2a7eaca00751210fc00f16a6ed92b514a9c86e3169b8664f619f9cdca7333a6680#npm:4.1.17"],
+            ["framer-motion", "virtual:ae76e60819da9e9842709a15d03e7637271141b2e50fc68b38363b52d340b1c6ace03b42742ae41a117d29d2af009333738decb26a2442a7a5ea21e0bd529d2c#npm:4.1.17"],
             ["@emotion/is-prop-valid", "npm:0.8.8"],
             ["@types/react", "npm:17.0.15"],
             ["@types/react-dom", "npm:17.0.9"],
