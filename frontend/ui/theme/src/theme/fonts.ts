@@ -1,5 +1,5 @@
 const fonts = {
-  primary: 'Gordita, sans-serif',
+  primary: 'Inter',
 }
 
 export { fonts }
