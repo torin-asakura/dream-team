@@ -4,6 +4,7 @@ import { RawInput }                 from '@atls-ui-parts/input'
 import { useChangeValue }           from '@atls-ui-parts/input'
 import { ForwardRefRenderFunction } from 'react'
 import { forwardRef }               from 'react'
+import { useRef }                   from 'react'
 
 import { Text }                     from '@ui/text'
 
@@ -37,8 +38,13 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
 ) => {
   const changeValue = useChangeValue(disabled, onChange, onChangeNative)
 
+  if (!ref) {
+    // eslint-disable-next-line
+    ref = useRef(null)
+  }
+
   return (
-    <Container type={type}>
+    <Container type={type} onClick={() => ref.current.focus()}>
       <InputElement {...props} size={size} error={errorText !== ''}>
         <RawInput
           ref={ref}
