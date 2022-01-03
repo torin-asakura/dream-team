@@ -10,7 +10,7 @@ export const withProviders = compose(
     /** Local * */
     // uri: 'http://localhost:8080/index.php?graphql',
     /** Prod * */
-    uri: 'https://dream-team.tech/graphql',
+    uri: 'https://wp.dream-team.tech/graphql',
     onUnauthenticated: () => {
       // eslint-disable-next-line
       console.log('Unauthenticated')
