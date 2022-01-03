@@ -40,7 +40,12 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
               <Layout maxWidth={580}>
                 <Column width='100%'>
                   <Row>
-                    <Text fontSize='medium' color='text.accent' fontWeight='bold'>
+                    <Text
+                      fontSize='medium'
+                      color='text.accent'
+                      fontWeight='bold'
+                      textTransform='uppercase'
+                    >
                       {contacts[language].title}
                     </Text>
                   </Row>
