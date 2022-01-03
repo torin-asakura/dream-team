@@ -60,6 +60,16 @@ export const Layer: FC<LayerProps> = ({
     return () => document.removeEventListener('click', handleClick)
   }, [handleClick, main])
 
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') close()
+    }
+
+    document.addEventListener('keydown', handleEscape)
+
+    return () => document.removeEventListener('keydown', handleEscape)
+  })
+
   if (visible) {
     return createPortal(
       <ScrollLock>
