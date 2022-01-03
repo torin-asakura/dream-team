@@ -11,8 +11,8 @@ const normalSizeStyles = createShapeStyles({
   size: 48,
   fontSize: 15,
   rounding: 32,
-  paddingLeft: 12,
-  paddingRight: 12,
+  paddingLeft: 20,
+  paddingRight: 20,
 })
 
 export const baseStyles = createBaseStyles()
