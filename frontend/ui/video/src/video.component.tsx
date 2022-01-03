@@ -6,9 +6,9 @@ import { position } from 'styled-system'
 const StyledVideo = styled.video(
   {
     position: 'absolute',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    zIndex: -1,
+    right: 100,
+    transform: 'translate(0, -50%)',
+    zIndex: 1,
   },
   layout,
   position

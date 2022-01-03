@@ -8,7 +8,7 @@ export interface ContentObject extends ContentProps {
   }
   featuredImage: {
     node: {
-      link: string
+      mediaItemUrl: string
     }
   }
 }

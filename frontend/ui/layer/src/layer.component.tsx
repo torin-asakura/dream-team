@@ -11,7 +11,6 @@ import { nanoid }       from 'nanoid'
 import { useAnimation } from 'framer-motion'
 
 import { Box }          from '@ui/layout'
-import { Layout }       from '@ui/layout'
 import { CrossIcon }    from '@ui/icons'
 
 import { Container }    from './container'

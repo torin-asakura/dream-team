@@ -5,7 +5,6 @@ import { Layout }       from '@ui/layout'
 import { Column }       from '@ui/layout'
 import { Box }          from '@ui/layout'
 import { Text }         from '@ui/text'
-import { Space }        from '@ui/text'
 import { TextEllipsis } from '@ui/text'
 import { PlusIcon }     from '@ui/icons'
 
