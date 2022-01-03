@@ -26,7 +26,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
       overflow='hidden'
       backgroundColor='background.transparentBlue'
     >
-      <Image alt='Contact us' src={asset.link} background />
+      <Image alt='Contact us' src={asset.mediaItemUrl} background />
       <Box
         px={['20px', '20px', '0px']}
         py={['48px', '48px', '120px']}

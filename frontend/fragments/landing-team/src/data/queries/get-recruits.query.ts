@@ -10,7 +10,7 @@ const GET_RECRUITS = gql`
         title
         featuredImage {
           node {
-            link
+            mediaItemUrl
             title
           }
         }
