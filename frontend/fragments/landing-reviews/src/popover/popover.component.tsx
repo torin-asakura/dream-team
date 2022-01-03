@@ -40,7 +40,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
           </Column>
         </Row>
         <Layout flexBasis={32} />
-        <Text fontSize='regular' color='text.black'>
+        <Text fontSize='regular' color='text.black' lineHeight='primary'>
           {visible !== null && reviews[visible].content}
         </Text>
         <Layout flexGrow={1} />
