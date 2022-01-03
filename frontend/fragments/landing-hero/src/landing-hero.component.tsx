@@ -59,7 +59,7 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
           muted
           loop
           playsInline
-          src={Desktop.link}
+          src={Desktop.mediaItemUrl}
           mime={Desktop.mimeType}
           display={['none', 'none', 'flex']}
           top='50%'
@@ -70,7 +70,7 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
           loop
           playsInline
           // @ts-ignore
-          src={[Mobile2.link, Mobile.link]}
+          src={[Mobile2.mediaItemUrl, Mobile.mediaItemUrl]}
           // @ts-ignore
           mime={[Mobile2.mimeType, Mobile.mimeType]}
           display={['flex', 'flex', 'none']}
