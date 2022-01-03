@@ -39,6 +39,7 @@ const colors = {
   },
   text: {
     accent: 'rgba(63, 135, 249, 1)',
+    hover: 'rgba(24,97,214,1)',
     black: 'rgba(23, 46, 71, 1)',
     white: 'rgba(255,255,255,1)',
     lightGray: 'rgba(154, 168, 184, 1)',

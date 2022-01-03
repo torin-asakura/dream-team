@@ -173,6 +173,7 @@ const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () =>
               rel='license'
               href='/privacy-policy'
               color='text.accent'
+              hoverColor='hover'
               textAlign='center'
             >
               {messages.policiesPart[language]}

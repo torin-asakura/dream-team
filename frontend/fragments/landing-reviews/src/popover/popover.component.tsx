@@ -49,7 +49,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
             // @ts-ignore
             cursor='pointer'
             onClick={() => {
-              if (visible && visible !== 0) setVisible(visible - 1)
+              if (visible !== null && visible !== 0) setVisible(visible - 1)
             }}
           >
             <ArrowLeftIcon width={8} height={16} color={visible === 0 ? '#D5DBE2' : '#000000'} />
@@ -57,7 +57,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
           <Text fontSize='regular' fontWeight='medium'>
             {messages.review[language]}
             <Space />
-            {visible && visible + 1}
+            {visible !== null && visible + 1}
             <Space />
             {messages.of[language]}
             <Space />
@@ -67,7 +67,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
             // @ts-ignore
             cursor='pointer'
             onClick={() => {
-              if (visible && visible !== reviews.length - 1) setVisible(visible + 1)
+              if (visible !== null && visible !== reviews.length - 1) setVisible(visible + 1)
             }}
           >
             <ArrowRightIcon
