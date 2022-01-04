@@ -12,6 +12,7 @@ import { ArrowLeftIcon }  from '@ui/icons'
 import { ArrowRightIcon } from '@ui/icons'
 
 import { PopoverProps }   from './popover.interface'
+import { Skill }          from './skill'
 import { messages }       from '../messages'
 
 const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) => (
@@ -25,12 +26,23 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
     >
       <Column>
         <Row alignItems='center'>
-          <Column>
-            <Layout>
-              <Text fontSize='large' color='text.black' fontWeight='slim'>
-                {visible !== null && reviews[visible].title}
-              </Text>
-            </Layout>
+          <Column width='100%'>
+            <Row>
+              <Layout>
+                <Text fontSize='large' color='text.black' fontWeight='slim'>
+                  {visible !== null && reviews[visible].title}
+                </Text>
+              </Layout>
+              <Row justifyContent='flex-end'>
+                {visible !== null &&
+                  reviews[visible].review.skills?.map(({ title }) => (
+                    <>
+                      <Layout flexBasis={8} />
+                      <Skill content={title} />
+                    </>
+                  ))}
+              </Row>
+            </Row>
             <Layout flexBasis={4} />
             <Layout>
               <Text color='text.lightGray' fontSize='regular'>

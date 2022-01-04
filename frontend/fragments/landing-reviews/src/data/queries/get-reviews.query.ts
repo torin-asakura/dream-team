@@ -16,6 +16,11 @@ const GET_REVIEWS = gql`
         review {
           respondent
           companylink
+          skills {
+            ... on Skill {
+              title
+            }
+          }
         }
       }
     }
