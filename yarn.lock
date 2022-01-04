@@ -1705,6 +1705,7 @@ __metadata:
     "@ui/layer": "workspace:frontend/ui/layer"
     "@ui/layout": "workspace:frontend/ui/layout"
     "@ui/text": "workspace:frontend/ui/text"
+    "@ui/utils": "workspace:frontend/ui/utils"
     graphql: ^15.5.1
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -3340,6 +3341,19 @@ __metadata:
     "@types/node": ^14.14.41
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/utils@workspace:frontend/ui/utils":
+  version: 0.0.0-use.local
+  resolution: "@ui/utils@workspace:frontend/ui/utils"
+  dependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-laag: ^2.0.3
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -11663,6 +11677,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-laag@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "react-laag@npm:2.0.3"
+  dependencies:
+    tiny-warning: ^1.0.3
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0
+    react-dom: ^16.0.0 || ^17.0.0
+  checksum: 7c7f0f1414858be4da70db029ca6e4e56240a1c67a6b6b253dcabcf0381f502da46d0d046fee61e01984b71294ceec9e198c24d846c5a3b00895ee7def805071
+  languageName: node
+  linkType: hard
+
 "react-lifecycles-compat@npm:^3.0.2":
   version: 3.0.4
   resolution: "react-lifecycles-compat@npm:3.0.4"
@@ -13346,6 +13372,13 @@ resolve@^2.0.0-next.3:
   dependencies:
     setimmediate: ^1.0.4
   checksum: ec37ae299066bef6c464dcac29c7adafba1999e7227a9bdc4e105a459bee0f0b27234a46bfd7ab4041da79619e06a58433472867a913d01c26f8a203f87cee70
+  languageName: node
+  linkType: hard
+
+"tiny-warning@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "tiny-warning@npm:1.0.3"
+  checksum: da62c4acac565902f0624b123eed6dd3509bc9a8d30c06e017104bedcf5d35810da8ff72864400ad19c5c7806fc0a8323c68baf3e326af7cb7d969f846100d71
   languageName: node
   linkType: hard
 

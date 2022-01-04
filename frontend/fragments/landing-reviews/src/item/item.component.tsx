@@ -6,6 +6,7 @@ import { Column }       from '@ui/layout'
 import { Box }          from '@ui/layout'
 import { Text }         from '@ui/text'
 import { TextEllipsis } from '@ui/text'
+import { PlusIcon }     from '@ui/icons'
 
 import { messages }     from './messages'
 import { ItemProps }    from './item.interface'
@@ -34,16 +35,18 @@ const Item: FC<ItemProps> = ({ review, language, onClick }) => (
           {review.review.respondent}
         </Text>
       </Layout>
-      <Layout flexBasis={16} />
+      <Layout flexGrow={1} />
       <Layout overflow='hidden'>
-        <TextEllipsis fontSize='regular' color='text.gray' lineClamp={6}>
+        <TextEllipsis fontSize='regular' color='text.gray' lineClamp={4}>
           {review.content}
         </TextEllipsis>
       </Layout>
       <Layout flexGrow={1} />
-      <Layout>
+      <Layout alignItems='center'>
+        <PlusIcon />
+        <Layout flexBasis={8} />
         <Text color='text.accent' fontSize='regular'>
-          + {messages.details[language]}
+          {messages.details[language]}
         </Text>
       </Layout>
     </Column>

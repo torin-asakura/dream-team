@@ -10,7 +10,7 @@ const GET_SKILL_CATEGORIES = gql`
         name
         skillAddons {
           ikonka {
-            link
+            mediaItemUrl
           }
         }
         skills {

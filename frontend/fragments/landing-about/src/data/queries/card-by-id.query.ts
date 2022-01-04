@@ -14,7 +14,7 @@ const GET_CARD_BY = gql`
       }
       featuredImage {
         node {
-          link
+          mediaItemUrl
         }
       }
     }

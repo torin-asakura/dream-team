@@ -4,7 +4,7 @@ export interface ItemProps {
   recruit: string
   image: {
     node: {
-      link: string
+      mediaItemUrl: string
       title: string
     }
   }

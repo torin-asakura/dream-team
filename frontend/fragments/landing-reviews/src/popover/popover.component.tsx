@@ -12,6 +12,7 @@ import { ArrowLeftIcon }  from '@ui/icons'
 import { ArrowRightIcon } from '@ui/icons'
 
 import { PopoverProps }   from './popover.interface'
+import { Skill }          from './skill'
 import { messages }       from '../messages'
 
 const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) => (
@@ -25,12 +26,23 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
     >
       <Column>
         <Row alignItems='center'>
-          <Column>
-            <Layout>
-              <Text fontSize='large' color='text.black' fontWeight='slim'>
-                {visible !== null && reviews[visible].title}
-              </Text>
-            </Layout>
+          <Column width='100%'>
+            <Row>
+              <Layout>
+                <Text fontSize='large' color='text.black' fontWeight='slim'>
+                  {visible !== null && reviews[visible].title}
+                </Text>
+              </Layout>
+              <Row justifyContent='flex-end'>
+                {visible !== null &&
+                  reviews[visible].review.skills?.map(({ title }) => (
+                    <>
+                      <Layout flexBasis={8} />
+                      <Skill content={title} />
+                    </>
+                  ))}
+              </Row>
+            </Row>
             <Layout flexBasis={4} />
             <Layout>
               <Text color='text.lightGray' fontSize='regular'>
@@ -40,7 +52,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
           </Column>
         </Row>
         <Layout flexBasis={32} />
-        <Text fontSize='regular' color='text.black'>
+        <Text fontSize='regular' color='text.black' lineHeight='primary'>
           {visible !== null && reviews[visible].content}
         </Text>
         <Layout flexGrow={1} />
@@ -49,7 +61,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
             // @ts-ignore
             cursor='pointer'
             onClick={() => {
-              if (visible && visible !== 0) setVisible(visible - 1)
+              if (visible !== null && visible !== 0) setVisible(visible - 1)
             }}
           >
             <ArrowLeftIcon width={8} height={16} color={visible === 0 ? '#D5DBE2' : '#000000'} />
@@ -57,7 +69,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
           <Text fontSize='regular' fontWeight='medium'>
             {messages.review[language]}
             <Space />
-            {visible && visible + 1}
+            {visible !== null && visible + 1}
             <Space />
             {messages.of[language]}
             <Space />
@@ -67,7 +79,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
             // @ts-ignore
             cursor='pointer'
             onClick={() => {
-              if (visible && visible !== reviews.length - 1) setVisible(visible + 1)
+              if (visible !== null && visible !== reviews.length - 1) setVisible(visible + 1)
             }}
           >
             <ArrowRightIcon

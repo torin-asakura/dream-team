@@ -60,6 +60,16 @@ export const Layer: FC<LayerProps> = ({
     return () => document.removeEventListener('click', handleClick)
   }, [handleClick, main])
 
+  useEffect(() => {
+    const handleEscape = (event) => {
+      if (event.key === 'Escape') close()
+    }
+
+    document.addEventListener('keydown', handleEscape)
+
+    return () => document.removeEventListener('keydown', handleEscape)
+  })
+
   if (visible) {
     return createPortal(
       <ScrollLock>
@@ -76,6 +86,9 @@ export const Layer: FC<LayerProps> = ({
         >
           <Box position='absolute' top='20px' left='20px' display={['flex', 'flex', 'none']}>
             <CrossIcon width={16} height={16} cursor='pointer' onClick={close} />
+          </Box>
+          <Box position='absolute' top='30px' right='30px' display={['none', 'none', 'flex']}>
+            <CrossIcon width={16} height={16} cursor='pointer' color='white' onClick={close} />
           </Box>
           <Box
             id={childrenId}

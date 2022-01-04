@@ -1,11 +1,9 @@
 import { styleFn } from 'styled-system'
 
-const createHoverStyles =
-  ({ color }): styleFn =>
-  ({ theme }) => ({
-    '&:hover': {
-      color: theme.colors.text[color] ? theme.colors.text[color] : color,
-    },
-  })
+const hoverStyles: styleFn = ({ theme, hoverColor = 'accent' }) => ({
+  '&:hover': {
+    color: theme.colors.text[hoverColor] ? theme.colors.text[hoverColor] : hoverColor,
+  },
+})
 
-export { createHoverStyles }
+export { hoverStyles }

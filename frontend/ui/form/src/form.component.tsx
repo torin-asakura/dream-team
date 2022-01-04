@@ -67,7 +67,7 @@ const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () =>
     <Box
       borderRadius='normal'
       backgroundColor='white'
-      maxWidth={[335, 335, 515]}
+      width={515}
       height={598}
       padding={['16px', '16px', '32px']}
     >
@@ -164,19 +164,25 @@ const Form: FC<FormProps> = ({ language, onSuccess = () => {}, onFailure = () =>
         <Layout flexBasis={32} />
         <Layout>
           <Column>
-            <Text fontSize='semiMedium' color='text.lightGray' textAlign='center'>
-              {messages.formLetter[language]}
-            </Text>
-            <NextLink
+            <Text
               fontSize='semiMedium'
-              title={messages.privacyPolicyPage[language]}
-              rel='license'
-              href='/privacy-policy'
-              color='text.accent'
+              color='text.lightGray'
               textAlign='center'
+              display='inline-text'
             >
-              {messages.policiesPart[language]}
-            </NextLink>
+              {messages.formLetter[language]}
+              <NextLink
+                fontSize='semiMedium'
+                title={messages.privacyPolicyPage[language]}
+                rel='license'
+                href='/privacy-policy'
+                color='text.accent'
+                hoverColor='hover'
+                textAlign='center'
+              >
+                {messages.policiesPart[language]}
+              </NextLink>
+            </Text>
           </Column>
         </Layout>
       </Column>

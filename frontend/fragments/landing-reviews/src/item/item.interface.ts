@@ -6,6 +6,7 @@ export interface Review {
   review: {
     respondent: string
     companylink: string
+    skills: any[]
   }
 }
 

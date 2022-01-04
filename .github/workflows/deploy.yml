@@ -25,6 +25,6 @@ jobs:
         with:
           server: 37.140.192.245
           username: u1055818_dt
-          local-dir: "./frontend/landing/app/dist/"
-          server-dir: "/"
+          local-dir: './frontend/landing/app/dist/'
+          server-dir: '/'
           password: ${{ secrets.ftp_password }}
