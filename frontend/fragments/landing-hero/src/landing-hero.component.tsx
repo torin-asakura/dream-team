@@ -55,33 +55,38 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
     >
       <Column width='100%'>
         <FormPopover language={language} visible={visible} setVisible={setVisible} />
-        <Video
-          autoPlay
-          muted
-          loop
-          playsInline
-          src={Desktop?.mediaItemUrl}
-          mime={Desktop?.mimeType}
-          display={['none', 'none', 'flex']}
-          top='50%'
-        />
-        <Video
-          autoPlay
-          muted
-          loop
-          playsInline
-          // @ts-ignore
-          src={[Mobile2?.mediaItemUrl, Mobile?.mediaItemUrl]}
-          // @ts-ignore
-          mime={[Mobile2?.mimeType, Mobile?.mimeType]}
-          display={['flex', 'flex', 'none']}
-          width={375}
-          top={200}
-        />
+        <Box>
+          <Video
+            autoPlay
+            muted
+            loop
+            playsInline
+            src={Desktop?.mediaItemUrl}
+            mime={Desktop?.mimeType}
+            display={['none', 'none', 'flex']}
+            top='50%'
+            right='15%'
+          />
+          <Video
+            autoPlay
+            muted
+            loop
+            playsInline
+            // @ts-ignore
+            src={[Mobile2?.mediaItemUrl, Mobile?.mediaItemUrl]}
+            // @ts-ignore
+            mime={[Mobile2?.mimeType, Mobile?.mimeType]}
+            display={['flex', 'flex', 'none']}
+            width={375}
+            top={200}
+          />
+        </Box>
         <Layout flexBasis={[340, 340, 0]} />
         <Box display={['flex', 'flex', 'none']} height={80} />
         <Box
           height='100%'
+          display='flex'
+          alignItems='center'
           py={['48px', '48px', 0]}
           width='100%'
           backgroundColor={['background.hero', 'background.hero', 'transparent']}
