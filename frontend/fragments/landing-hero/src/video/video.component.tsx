@@ -13,9 +13,7 @@ const Video: FC<VideoProps> = ({ src, mimeType }) => (
     playsInline
     src={src as any}
     mime={mimeType as any}
-    top={[200, 200, '50%']}
-    left='1%'
-    position='relative'
+    top={[300, 300, '50%']}
     width={[375, 375, 'auto']}
   />
 )

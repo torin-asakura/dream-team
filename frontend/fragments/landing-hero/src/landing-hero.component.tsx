@@ -22,7 +22,7 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
       backgroundColor='background.hero'
     >
       <Column width='100%' alignItems='center' justifyContent='center'>
-        <Layout flexDirection='row-reverse'>
+        <Layout flexDirection={['column', 'column', 'row-reverse']}>
           <Layout>
             <Video src={Desktop?.mediaItemUrl} mimeType={Desktop?.mimeType} />
           </Layout>

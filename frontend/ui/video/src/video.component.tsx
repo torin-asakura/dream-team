@@ -5,8 +5,7 @@ import { position } from 'styled-system'
 
 const StyledVideo = styled.video(
   {
-    position: 'absolute',
-    right: 100,
+    position: 'relative',
     transform: 'translate(0, -50%)',
     zIndex: 1,
   },
