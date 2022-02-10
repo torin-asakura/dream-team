@@ -53,20 +53,23 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
       overflow='hidden'
       backgroundColor='background.hero'
     >
-      <Column width='100%'>
-        <FormPopover language={language} visible={visible} setVisible={setVisible} />
-        <Box>
-          <Video
-            autoPlay
-            muted
-            loop
-            playsInline
-            src={Desktop?.mediaItemUrl}
-            mime={Desktop?.mimeType}
-            display={['none', 'none', 'flex']}
-            top='50%'
-            right='15%'
-          />
+      <Column width='100%' alignItems='center' justifyContent='center'>
+        <Layout flexDirection='row-reverse'>
+          <FormPopover language={language} visible={visible} setVisible={setVisible} />
+          <Layout>
+            <Video
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={Desktop?.mediaItemUrl}
+              mime={Desktop?.mimeType}
+              display={['none', 'none', 'flex']}
+              top='50%'
+              left='1%'
+              position='relative'
+            />
+          </Layout>
           <Video
             autoPlay
             muted
@@ -80,36 +83,36 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
             width={375}
             top={200}
           />
-        </Box>
-        <Layout flexBasis={[340, 340, 0]} />
-        <Box display={['flex', 'flex', 'none']} height={80} />
-        <Box
-          height='100%'
-          display='flex'
-          alignItems='center'
-          py={['48px', '48px', 0]}
-          width='100%'
-          backgroundColor={['background.hero', 'background.hero', 'transparent']}
-          zIndex={2}
-        >
-          <Column width='100%' alignItems='center' justifyContent='center'>
-            <Layout width='100%' maxWidth={1280} justifyContent='center'>
-              <Column width='100%'>
-                <Layout maxWidth={500}>
-                  <Column alignItems={['center', 'center', 'flex-start']}>
-                    {getContentByLanguage(language === 'RU' ? RU : EN)}
-                    <Layout flexBasis={32} />
-                    <Layout width='100%' justifyContent={['center', 'center', 'flex-start']}>
-                      <Button onClick={() => setVisible(true)}>
-                        {messages.contactUs[language]}
-                      </Button>
-                    </Layout>
-                  </Column>
-                </Layout>
-              </Column>
-            </Layout>
-          </Column>
-        </Box>
+          <Layout flexBasis={[340, 340, 0]} />
+          <Box display={['flex', 'flex', 'none']} height={80} />
+          <Box
+            height='100%'
+            display='flex'
+            alignItems='center'
+            py={['48px', '48px', 0]}
+            width='100%'
+            backgroundColor={['background.hero', 'background.hero', 'transparent']}
+            zIndex={2}
+          >
+            <Column width='100%' alignItems='center' justifyContent='center'>
+              <Layout width='100%' maxWidth={1280} justifyContent='center'>
+                <Column width='100%'>
+                  <Layout maxWidth={500}>
+                    <Column alignItems={['center', 'center', 'flex-start']}>
+                      {getContentByLanguage(language === 'RU' ? RU : EN)}
+                      <Layout flexBasis={32} />
+                      <Layout width='100%' justifyContent={['center', 'center', 'flex-start']}>
+                        <Button onClick={() => setVisible(true)}>
+                          {messages.contactUs[language]}
+                        </Button>
+                      </Layout>
+                    </Column>
+                  </Layout>
+                </Column>
+              </Layout>
+            </Column>
+          </Box>
+        </Layout>
       </Column>
     </Box>
   )
