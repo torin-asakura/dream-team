@@ -14,7 +14,7 @@ const Video: FC<VideoProps> = ({ src, mimeType }) => (
     src={src as any}
     mime={mimeType as any}
     top={[300, 300, '50%']}
-    width={[375, 375, 'auto']}
+    width={[375, 375, 631]}
   />
 )
 

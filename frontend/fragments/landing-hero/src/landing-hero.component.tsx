@@ -26,7 +26,7 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
           <Layout>
             <Video src={Desktop?.mediaItemUrl} mimeType={Desktop?.mimeType} />
           </Layout>
-          <Layout flexBasis={[340, 340, 0]} />
+          <Layout flexBasis={[200, 200, 0]} marginRight='120px' />
           <Layout display={['flex', 'flex', 'none']} height={80} />
           <Content
             title={languages[language]?.title || ''}
