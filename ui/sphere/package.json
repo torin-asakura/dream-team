@@ -1,0 +1,19 @@
+{
+  "name": "@ui/sphere",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@react-three/fiber": "6.0.14",
+    "three": "0.127.0",
+    "webgl-obj-loader": "^2.0.8"
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}

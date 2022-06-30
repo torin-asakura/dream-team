@@ -1,4 +1,5 @@
 import React         from 'react'
+import dynamic       from 'next/dynamic'
 import { FC }        from 'react'
 
 import { Layout }    from '@ui/layout'
@@ -7,11 +8,14 @@ import { Box }       from '@ui/layout'
 
 import { Content }   from './content'
 import { HeroProps } from './landing-hero.interface'
-import { Video }     from './video'
 import { useData }   from './data'
 
+const Sphere = dynamic(() => import('@ui/sphere'), {
+  ssr: false,
+})
+
 const LandingHero: FC<HeroProps> = ({ language }) => {
-  const { Desktop, ...languages } = useData()
+  const { ...languages } = useData()
 
   return (
     <Box
@@ -24,7 +28,7 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
       <Column width='100%' alignItems='center' justifyContent='center'>
         <Layout flexDirection={['column', 'column', 'row-reverse']}>
           <Layout>
-            <Video src={Desktop?.mediaItemUrl} mimeType={Desktop?.mimeType} />
+            <Sphere />
           </Layout>
           <Layout flexBasis={[200, 200, 0]} marginRight='120px' />
           <Layout display={['flex', 'flex', 'none']} height={80} />

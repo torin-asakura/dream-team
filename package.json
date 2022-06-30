@@ -10,6 +10,7 @@
     "postinstall": "yarn workspace @ui/icons build"
   },
   "resolutions": {
+    "@apollo/client": "3.3.21",
     "@types/node": "16",
     "@types/react": "17",
     "@types/react-dom": "17",
