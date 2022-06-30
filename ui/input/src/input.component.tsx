@@ -45,7 +45,6 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
   }
 
   return (
-    // eslint-disable-next-line
     <Container type={type} onClick={() => (ref as any).current.focus()}>
       <InputElement {...props} size={size} error={errorText !== ''}>
         <RawInput
