@@ -1,5 +1,4 @@
 {
-  "include": ["frontend/**/**/*"],
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": false,
@@ -22,7 +21,8 @@
     "resolveJsonModule": true,
     "strict": true,
     "sourceMap": false,
-    "target": "es2019",
+    "target": "es2017",
     "jsx": "react"
-  }
+  },
+  "include": ["landing/**/*", "ui/**/*", "providers/**/*", "fragments/**/*"]
 }
