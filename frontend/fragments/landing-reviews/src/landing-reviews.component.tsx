@@ -19,12 +19,33 @@ import { useData }             from './data'
 import { LandingReviewsProps } from './landing-reviews.interface'
 
 const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
-  const [swipeLeft, swipeRight, Carousel] = useCarousel()
   const [activeItem, setActiveItem] = useState<number | null>(null)
 
   const filterByLanguage = ({ language: { code } }) => code === language
 
   const reviews = useData().filter(filterByLanguage)
+  const carouselChildren = reviews.map((review, index) => (
+    <Item review={review} language={language} onClick={() => setActiveItem(index)} />
+  ))
+
+  const { carousel: desktopCarousel, useControls: useDesktopControls } = useCarousel({
+    children: carouselChildren,
+    spaceBetween: 32,
+    slidesPerView: 3,
+    height: 300,
+    centered: true,
+  })
+
+  const { carousel: mobileCarousel, useControls: useMobileControls } = useCarousel({
+    children: carouselChildren,
+    spaceBetween: 32,
+    slidesPerView: 1,
+    height: 300,
+    centered: true,
+  })
+
+  const { prevProp: desktopPrevProp, nextProp: desktopNextProp } = useDesktopControls()
+  const { prevProp: mobilePrevProp, nextProp: mobileNextProp } = useMobileControls()
 
   return (
     <>
@@ -48,25 +69,40 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
               </Text>
               <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
               <Layout width={128}>
-                <Button colors='transparent' width={44} onClick={swipeLeft}>
-                  <Layout>
-                    <ArrowLeftIcon width={8} height={16} />
-                  </Layout>
-                </Button>
+                <Layout display={['none', 'none', 'flex']}>
+                  <Button colors='transparent' width={44} onClick={desktopPrevProp?.onClick}>
+                    <Layout>
+                      <ArrowLeftIcon width={8} height={16} />
+                    </Layout>
+                  </Button>
+                </Layout>
+                <Layout display={['flex', 'flex', 'none']}>
+                  <Button colors='transparent' width={44} onClick={mobilePrevProp?.onClick}>
+                    <Layout>
+                      <ArrowLeftIcon width={8} height={16} />
+                    </Layout>
+                  </Button>
+                </Layout>
                 <Layout flexBasis={16} />
-                <Button colors='transparent' width={44} onClick={swipeRight}>
-                  <Layout>
-                    <ArrowRightIcon width={8} height={16} />
-                  </Layout>
-                </Button>
+                <Layout display={['none', 'none', 'flex']}>
+                  <Button colors='transparent' width={44} onClick={desktopNextProp?.onClick}>
+                    <Layout>
+                      <ArrowRightIcon width={8} height={16} />
+                    </Layout>
+                  </Button>
+                </Layout>
+                <Layout display={['flex', 'flex', 'none']}>
+                  <Button colors='transparent' width={44} onClick={mobileNextProp?.onClick}>
+                    <Layout>
+                      <ArrowRightIcon width={8} height={16} />
+                    </Layout>
+                  </Button>
+                </Layout>
               </Layout>
             </Row>
             <Layout flexBasis={48} />
-            <Carousel spaceBetween={32}>
-              {reviews.map((review, index) => (
-                <Item review={review} language={language} onClick={() => setActiveItem(index)} />
-              ))}
-            </Carousel>
+            <Layout display={['none', 'none', 'flex']}>{desktopCarousel}</Layout>
+            <Layout display={['flex', 'flex', 'none']}>{mobileCarousel}</Layout>
             <Layout flexBasis={120} />
           </Column>
         </Layout>
