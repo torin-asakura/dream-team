@@ -1,6 +1,13 @@
 version: '3.8'
 
 services:
+  yarn:
+    image: node:16
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn
+
   wordpress:
     image: wordpress
     restart: always
@@ -31,6 +38,22 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
+
+  landing:
+    image: node:16
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    entrypoint: yarn workspace @landing/app dev
+    ports:
+      - 3000:3000
+
+  landing-build:
+    image: node:16
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    entrypoint: yarn workspace @landing/app build
 
 volumes:
   wordpress:
