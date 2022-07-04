@@ -2,6 +2,7 @@ import { useTheme } from '@emotion/react'
 
 /* eslint-disable */
 import React        from 'react'
+
 export const SuccessIcon = (props: any) => {
   const theme: any = useTheme()
   return (
