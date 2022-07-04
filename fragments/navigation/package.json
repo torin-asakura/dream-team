@@ -10,17 +10,18 @@
     "@ui/layout": "workspace:0.0.1",
     "@ui/link": "workspace:0.0.1",
     "@ui/logo": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1",
-    "graphql": "^15.8.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.6.9",
     "@types/react": "^17",
-    "@types/react-dom": "^17"
+    "@types/react-dom": "^17",
+    "react": "17",
+    "react-dom": "17"
   },
   "peerDependencies": {
-    "@apollo/client": "*"
+    "@apollo/client": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }
