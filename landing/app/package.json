@@ -19,13 +19,6 @@
     "@atls/next-document-with-opengraph": "^0.0.2",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@fragments/navigation": "workspace:0.0.1",
-    "@landing/contacts-page": "workspace:0.0.1",
-    "@landing/index-page": "workspace:0.0.1",
-    "@landing/privacy-policy-page": "workspace:0.0.1",
-    "@providers/next-app-with-emotion": "workspace:0.0.1",
-    "@providers/next-config-with-aliases": "workspace:0.0.1",
-    "@ui/theme": "workspace:0.0.1",
     "events": "^3.3.0",
     "express": "^4.17.1",
     "graphql": "^15.8.0",
@@ -34,16 +27,23 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "recompose": "^0.30.0",
-    "typescript": "^4.6.4"
+    "recompose": "^0.30.0"
   },
   "devDependencies": {
+    "@fragments/navigation": "workspace:0.0.1",
+    "@landing/contacts-page": "workspace:0.0.1",
+    "@landing/index-page": "workspace:0.0.1",
+    "@landing/privacy-policy-page": "workspace:0.0.1",
+    "@providers/next-app-with-emotion": "workspace:0.0.1",
+    "@providers/next-config-with-aliases": "workspace:0.0.1",
     "@types/events": "^3",
     "@types/express": "^4",
     "@types/node": "16",
-    "@types/react-dom": "^17",
     "@types/react": "^17",
+    "@types/react-dom": "^17",
     "@types/react-helmet": "^6",
-    "@types/recompose": "^0"
+    "@types/recompose": "^0",
+    "@ui/theme": "workspace:0.0.1",
+    "typescript": "^4.6.4"
   }
 }
