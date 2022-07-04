@@ -1,3 +1,6 @@
+import { ApolloClient }  from '@apollo/client'
+import { InMemoryCache } from '@apollo/client'
+import { gql }           from '@apollo/client'
 import { withGtag }      from '@atls/next-document-with-gtag'
 import { withHelmet }    from '@atls/next-document-with-helmet'
 import { withOpenGraph } from '@atls/next-document-with-opengraph'
@@ -11,16 +14,34 @@ const withIcons = () => (TargetComponent) =>
     static async getInitialProps(context) {
       const props = await super.getInitialProps(context)
 
+      const client = new ApolloClient({
+        uri: 'https://wp.dream-team.tech/graphql',
+        cache: new InMemoryCache(),
+      })
+
+      const faviconResponse = await client.query({
+        query: gql`
+          query GetFavicon {
+            mediaItemBy(uri: "/favicon/") {
+              sourceUrl
+            }
+          }
+        `,
+      })
+
+      const appleTouchIconResponse = await client.query({
+        query: gql`
+          query GetFavicon {
+            mediaItemBy(uri: "/apple_touch_icon/") {
+              sourceUrl
+            }
+          }
+        `,
+      })
+
       props.head.push(
-        <link
-          rel='apple-touch-icon'
-          href='https://wp.dream-team.tech/wp-content/uploads/2022/07/apple_touch_icon.png'
-        />,
-        <link
-          rel='icon'
-          type='image/png'
-          href='https://wp.dream-team.tech/wp-content/uploads/2022/07/favicon.png'
-        />
+        <link rel='apple-touch-icon' href={appleTouchIconResponse.data.mediaItemBy?.sourceUrl} />,
+        <link rel='icon' type='image/png' href={faviconResponse.data.mediaItemBy?.sourceUrl} />
       )
 
       return props
