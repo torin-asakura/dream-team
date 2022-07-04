@@ -2,7 +2,6 @@ import { useTheme } from '@emotion/react'
 
 /* eslint-disable */
 import React        from 'react'
-
 export const ArrowRightIcon = (props: any) => {
   const theme: any = useTheme()
   return (
