@@ -23,6 +23,7 @@ const Copy: FC<CopyProps> = ({ content }) => {
       <Button
         width='100%'
         colors='clipboard'
+        // @ts-ignore
         px={0}
         height='100%'
         onClick={() => {
