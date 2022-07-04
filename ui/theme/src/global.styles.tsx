@@ -18,6 +18,15 @@ export const GlobalStyles = () => (
       #__next {
         height: 100%;
       }
+      
+      @keyframes draw {
+          from {
+            stroke-dashoffset: 1;
+          }
+          to {
+            stroke-dashoffset: 0;
+          }
+        }
     `}
   />
 )
