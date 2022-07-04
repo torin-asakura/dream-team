@@ -9,8 +9,16 @@
     "@ui/icons": "workspace:0.0.1",
     "@ui/layer": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@ui/text": "workspace:0.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "react": "17",
+    "react-dom": "17"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
   }
 }

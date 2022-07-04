@@ -31,9 +31,10 @@ const Copy: FC<CopyProps> = ({ content }) => {
           setSuccess(true)
         }}
       >
-        <Layout>
+        <Layout alignItems='center'>
           <Condition match={!success}>
             <motion.div
+              style={{ display: 'flex' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.2 }}
