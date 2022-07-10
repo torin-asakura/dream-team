@@ -33,7 +33,6 @@
     "@landing/contacts-page": "workspace:0.0.1",
     "@landing/index-page": "workspace:0.0.1",
     "@landing/privacy-policy-page": "workspace:0.0.1",
-    "@providers/next-app-with-emotion": "workspace:0.0.1",
     "@types/events": "^3",
     "@types/express": "^4",
     "@types/node": "16",

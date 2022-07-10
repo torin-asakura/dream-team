@@ -3,8 +3,7 @@
   "workspaces": [
     "ui/**/*",
     "fragments/**/*",
-    "landing/**/*",
-    "providers/**/*"
+    "landing/**/*"
   ],
   "scripts": {
     "postinstall": "yarn workspace @ui/icons build"
