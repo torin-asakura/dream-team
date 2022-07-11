@@ -4,10 +4,10 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js && cp -R src/public/ dist/public/",
+    "cleanup": "rm -rf dist | rm -rf .next | rm -rf src/.next",
     "dev": "yarn next dev src",
     "prepack": "run build",
-    "start": "node dist/index.js",
-    "cleanup": "rm -rf dist | rm -rf .next | rm -rf src/.next"
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",

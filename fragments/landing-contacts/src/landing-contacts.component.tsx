@@ -25,6 +25,8 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
       position='relative'
       overflow='hidden'
       backgroundColor='background.transparentBlue'
+      itemScope
+      itemType=''
     >
       <Image alt='Contact us' src={asset.mediaItemUrl} background />
       <Box
@@ -68,6 +70,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                           fontWeight='slim'
                           color='text.white'
                           id='emailContent'
+                          itemProp='email'
                         >
                           {feedbackEmail.content}
                         </Link>
@@ -90,6 +93,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                         fontSize='increased'
                         color='text.white'
                         fontWeight='slim'
+                        itemProp='telephone'
                       >
                         {feedbackPhone.content}
                       </Link>
