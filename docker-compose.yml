@@ -55,6 +55,15 @@ services:
     working_dir: /workspace
     entrypoint: yarn workspace @landing/app build
 
+  landing-start:
+    image: node:16
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    entrypoint: yarn workspace @landing/app start
+    ports:
+      - 3000:3000
+
 volumes:
   wordpress:
   db:
