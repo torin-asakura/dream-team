@@ -26,7 +26,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
       overflow='hidden'
       backgroundColor='background.transparentBlue'
       itemScope
-      itemType=''
+      itemType='http://schema.org/Organization'
     >
       <Image alt='Contact us' src={asset.mediaItemUrl} background />
       <Box

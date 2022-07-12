@@ -21,6 +21,8 @@ const Item: FC<ItemProps> = ({ category, language }) => (
     border='1px solid'
     borderColor='border.lightGray'
     borderRadius='normal'
+    itemScope
+    itemType='http://schema.org/Thing'
   >
     <Layout flexBasis={32} />
     <Column width='100%'>
@@ -33,7 +35,7 @@ const Item: FC<ItemProps> = ({ category, language }) => (
       <Layout flexBasis={24} />
       <Row>
         <Layout>
-          <Text fontSize='increased' color='text.black' fontWeight='slim'>
+          <Text fontSize='increased' color='text.black' fontWeight='slim' itemProp='name'>
             {category.name}
           </Text>
         </Layout>
