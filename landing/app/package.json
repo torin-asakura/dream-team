@@ -6,6 +6,7 @@
     "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js && cp -R src/public/ dist/public/",
     "cleanup": "rm -rf dist | rm -rf .next | rm -rf src/.next",
     "dev": "yarn next dev src",
+    "gen": "yarn service dev && rm -rf dist",
     "prepack": "run build",
     "start": "node dist/index.js"
   },
@@ -42,6 +43,7 @@
     "@types/react-helmet": "^6",
     "@types/recompose": "^0",
     "@ui/theme": "workspace:0.0.1",
-    "typescript": "^4.6.4"
+    "typescript": "^4.6.4",
+    "xml-js": "^1.6.11"
   }
 }
