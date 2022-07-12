@@ -19,7 +19,12 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
   const { workingHoursRu, workingHoursEn, feedbackPhone, feedbackEmail, by } = useData()
 
   return (
-    <Box px={['32px', '32px', '0px']} height={['auto', 'auto', 248]} itemScope itemType=''>
+    <Box
+      px={['32px', '32px', '0px']}
+      height={['auto', 'auto', 248]}
+      itemScope
+      itemType='http://schema.org/Organization'
+    >
       <Column width='100%' justifyContent='center' alignItems='center'>
         <Layout width='100%' maxWidth={1280}>
           <Layout display={['none', 'none', 'flex']} width='100%'>

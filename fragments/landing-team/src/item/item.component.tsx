@@ -12,7 +12,7 @@ import { ItemProps } from './item.interface'
 import { messages }  from './messages'
 
 const Item: FC<ItemProps> = ({ recruit, image, language }) => (
-  <Box height={380} width='100%'>
+  <Box height={380} width='100%' itemScope itemType='https://schema.org/Person'>
     <Column width='100%'>
       <Row justifyContent='center'>
         <Box borderRadius='100%' width={280} height={280} overflow='hidden'>
@@ -21,13 +21,13 @@ const Item: FC<ItemProps> = ({ recruit, image, language }) => (
       </Row>
       <Layout flexBasis={32} />
       <Row justifyContent='center'>
-        <Text fontSize='large' color='text.black' fontWeight='slim'>
+        <Text fontSize='large' color='text.black' fontWeight='slim' itemProp='givenName'>
           {recruit}
         </Text>
       </Row>
       <Layout flexBasis={12} />
       <Row justifyContent='center'>
-        <Text color='text.lightGray' fontSize='regular'>
+        <Text color='text.lightGray' fontSize='regular' itemProp='jobTitle'>
           {messages.itRecruiter[language]}
         </Text>
       </Row>
