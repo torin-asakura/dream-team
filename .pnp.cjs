@@ -766,17 +766,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@atls/next-document-with-gtag", [\
-        ["npm:0.0.2", {\
-          "packageLocation": "./.yarn/cache/@atls-next-document-with-gtag-npm-0.0.2-fa85a0c09a-25df57a759.zip/node_modules/@atls/next-document-with-gtag/",\
+        ["npm:0.0.4", {\
+          "packageLocation": "./.yarn/cache/@atls-next-document-with-gtag-npm-0.0.4-603d93f571-7a4f668e62.zip/node_modules/@atls/next-document-with-gtag/",\
           "packageDependencies": [\
-            ["@atls/next-document-with-gtag", "npm:0.0.2"]\
+            ["@atls/next-document-with-gtag", "npm:0.0.4"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:0.0.2", {\
-          "packageLocation": "./.yarn/__virtual__/@atls-next-document-with-gtag-virtual-1e698ed282/0/cache/@atls-next-document-with-gtag-npm-0.0.2-fa85a0c09a-25df57a759.zip/node_modules/@atls/next-document-with-gtag/",\
+        ["virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:0.0.4", {\
+          "packageLocation": "./.yarn/__virtual__/@atls-next-document-with-gtag-virtual-a059e2962e/0/cache/@atls-next-document-with-gtag-npm-0.0.4-603d93f571-7a4f668e62.zip/node_modules/@atls/next-document-with-gtag/",\
           "packageDependencies": [\
-            ["@atls/next-document-with-gtag", "virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:0.0.2"],\
+            ["@atls/next-document-with-gtag", "virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:0.0.4"],\
             ["@types/next", null],\
             ["@types/react", "npm:17.0.47"],\
             ["next", "virtual:3d5c3c10846c6528252c96fc0aed3d1cd51f459d5a21e7dce6e84ac00e5b68e1b9c04b72097bfea1bcc9ee9e59ddc0e7ea7e4e2cd08058e73470a4528f8db641#npm:12.1.0"],\
@@ -869,6 +869,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react",\
             "next",\
             "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@atls/next-sitemap-generator", [\
+        ["npm:0.0.2", {\
+          "packageLocation": "./.yarn/cache/@atls-next-sitemap-generator-npm-0.0.2-405546417a-284336f2b6.zip/node_modules/@atls/next-sitemap-generator/",\
+          "packageDependencies": [\
+            ["@atls/next-sitemap-generator", "npm:0.0.2"],\
+            ["xml-js", "npm:1.6.11"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3476,10 +3486,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@apollo/client", "virtual:152213707bbd26643932e8a5722b89dbf1791f4a1e18a87353c3295cfeb05c3521da598209c561d08392f0433f25abc5951b913452ed560517848ce10bacc8fc#npm:3.6.9"],\
             ["@apollo/react-ssr", "virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:4.0.0"],\
             ["@atls/next-app-with-helmet", "virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:0.2.65"],\
-            ["@atls/next-document-with-gtag", "virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:0.0.2"],\
+            ["@atls/next-document-with-gtag", "virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:0.0.4"],\
             ["@atls/next-document-with-helmet", "virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:0.2.66"],\
             ["@atls/next-document-with-icons", "virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:0.0.2"],\
             ["@atls/next-document-with-opengraph", "virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#npm:0.0.2"],\
+            ["@atls/next-sitemap-generator", "npm:0.0.2"],\
             ["@emotion/react", "virtual:f35f8eafc7d2a876347584ac0ce96152c3e981c1e6dd88c5b86a3a889fd20b297d845936a2933756a1079b73abb93cdb8492d013cbc2aec04e2a330a2bdf58be#npm:11.9.3"],\
             ["@emotion/styled", "virtual:f35f8eafc7d2a876347584ac0ce96152c3e981c1e6dd88c5b86a3a889fd20b297d845936a2933756a1079b73abb93cdb8492d013cbc2aec04e2a330a2bdf58be#npm:11.9.3"],\
             ["@fragments/navigation", "virtual:a91d0d8c8cb20e2d440f0f87e74f4e44e9c01728b87d756c6fc8df12d8c966210fa01a48ca0446a0f9ca556912cbead1eb3ad1e0addb71643513d5e9a7a68692#workspace:fragments/navigation"],\

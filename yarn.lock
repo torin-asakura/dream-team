@@ -269,13 +269,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-document-with-gtag@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@atls/next-document-with-gtag@npm:0.0.2"
+"@atls/next-document-with-gtag@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@atls/next-document-with-gtag@npm:0.0.4"
   peerDependencies:
-    next: ^9.1.2
+    next: "*"
     react: ^16.12.0
-  checksum: 25df57a7592c0e2a06480abcf0a57f486683a773f23086db87b93bb3097da3d53dcd00d8cff1ff2197512fa06c6d3b44f1245cdaa9ae23292a03331be164a8fd
+  checksum: 7a4f668e625b92fb530ccf5c57dc5f9a537af4bae37060b8c993e873d2c36bc94a86c8fd2652e89c386ebc11c04ba848dcc1e92f8d9215280217f22c3084090b
   languageName: node
   linkType: hard
 
@@ -307,6 +307,17 @@ __metadata:
     next: ^9.1.2
     react: ^16.12.0
   checksum: 94e71712599d678d990dd38bb5449e78f531e56ab293670043e1dbe9e4251c0e6b41bc8556ddfd6b647699464e355cb5875ca16c67ad8990fc05c5d73941912a
+  languageName: node
+  linkType: hard
+
+"@atls/next-sitemap-generator@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@atls/next-sitemap-generator@npm:0.0.2"
+  dependencies:
+    xml-js: ^1.6.11
+  bin:
+    gen-sitemap: ./dist/index.js
+  checksum: 284336f2b68460603716d0ee39c50fca08486cf3269e364df797b6aa64be343385994b9e7a40ee42144c2356762188fdd4590517bd692dffa4a1ed917f2f9eb7
   languageName: node
   linkType: hard
 
@@ -1916,10 +1927,11 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@apollo/react-ssr": ^4.0.0
     "@atls/next-app-with-helmet": ^0.2.64
-    "@atls/next-document-with-gtag": ^0.0.2
+    "@atls/next-document-with-gtag": ^0.0.4
     "@atls/next-document-with-helmet": ^0.2.64
     "@atls/next-document-with-icons": ^0.0.2
     "@atls/next-document-with-opengraph": ^0.0.2
+    "@atls/next-sitemap-generator": ^0.0.2
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@fragments/navigation": "workspace:0.0.1"
