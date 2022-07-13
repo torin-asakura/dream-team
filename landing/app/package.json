@@ -17,7 +17,7 @@
     "@atls/next-document-with-helmet": "^0.2.64",
     "@atls/next-document-with-icons": "^0.0.2",
     "@atls/next-document-with-opengraph": "^0.0.2",
-    "@atls/next-sitemap-generator": "^0.0.2",
+    "@atls/next-sitemap-generator": "^0.0.3",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "events": "^3.3.0",
