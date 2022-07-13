@@ -6,7 +6,7 @@ import React      from 'react'
 export const GlobalStyles = () => (
   <Global
     styles={css`
-      @import url('https://fonts.googleapis.com/css2?family=Inter');
+      @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
       html,
       body {
