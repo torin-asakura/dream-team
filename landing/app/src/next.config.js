@@ -6,6 +6,9 @@ module.exports = {
     outputStandalone: true,
     esmExternals: 'loose',
   },
+  images: {
+    domains: ['wp.dream-team.tech'],
+  },
   async headers() {
     return [
       {
