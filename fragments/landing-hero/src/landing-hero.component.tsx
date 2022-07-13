@@ -1,17 +1,17 @@
 import React         from 'react'
 import { FC }        from 'react'
 
+import { Image }     from '@ui/image'
 import { Layout }    from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Box }       from '@ui/layout'
 
 import { Content }   from './content'
 import { HeroProps } from './landing-hero.interface'
-import { Video }     from './video'
 import { useData }   from './data'
 
 const LandingHero: FC<HeroProps> = ({ language }) => {
-  const { Desktop, ...languages } = useData()
+  const { sphereUrl, ...languages } = useData()
 
   return (
     <Box
@@ -24,7 +24,7 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
       <Column width='100%' alignItems='center' justifyContent='center'>
         <Layout flexDirection={['column', 'column', 'row-reverse']}>
           <Layout>
-            <Video src={Desktop?.mediaItemUrl} mimeType={Desktop?.mimeType} />
+            <Image alt='sphere' src={sphereUrl} />
           </Layout>
           <Layout flexBasis={[200, 200, 0]} marginRight='120px' />
           <Layout display={['flex', 'flex', 'none']} height={80} />
