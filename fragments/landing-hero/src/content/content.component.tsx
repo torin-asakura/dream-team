@@ -16,7 +16,7 @@ const Content: FC<ContentProps> = ({ title, content, language }) => {
   const [visible, setVisible] = useState<boolean>(false)
 
   return (
-    <Layout maxWidth={[335, 335, 520]} style={{ zIndex: 1 }}>
+    <Layout maxWidth={['100%', '100%', 520]} style={{ zIndex: 1 }}>
       <FormPopover language={language} visible={visible} setVisible={setVisible} />
       <Column justifyContent='center'>
         <Layout>
