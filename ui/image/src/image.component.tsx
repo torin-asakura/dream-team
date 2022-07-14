@@ -4,7 +4,7 @@ import React          from 'react'
 import { ImageProps } from './image.interface'
 
 const Image = ({
-  src = 'https://wp.dream-team.tech/wp-content/uploads/2022/07/sphere.png',
+  src,
   contain = false,
   width = '100%',
   height = '100%',
@@ -12,11 +12,7 @@ const Image = ({
 }: ImageProps & any) => (
   <NextImage
     objectFit={contain ? 'contain' : 'cover'}
-    src={
-      src && JSON.stringify(src) !== JSON.stringify({})
-        ? src
-        : 'https://wp.dream-team.tech/wp-content/uploads/2022/07/sphere.png'
-    }
+    src={src && JSON.stringify(src) !== JSON.stringify({}) ? src : '/sphere.png'}
     width={width}
     height={height}
     {...props}

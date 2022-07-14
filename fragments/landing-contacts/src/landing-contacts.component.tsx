@@ -29,7 +29,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
       itemType='http://schema.org/Organization'
     >
       <Box position='absolute' width='100%' height='100%' left={0} top={0} zIndex={-1}>
-        <Image alt='Contact us' src={asset.mediaItemUrl} width={1920} height={838} />
+        <Image alt={contacts[language].title} src={asset.mediaItemUrl} width={1920} height={838} />
       </Box>
       <Box
         px={['20px', '20px', '0px']}
