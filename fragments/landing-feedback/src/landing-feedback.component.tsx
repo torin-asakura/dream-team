@@ -25,7 +25,9 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
       backgroundColor='background.transparentBlue'
       position='relative'
     >
-      <Image alt='Contact us' src={asset.mediaItemUrl} background />
+      <Box position='absolute' width='100%' height='100%' left={0} top={0} zIndex={-1}>
+        <Image alt={asset.altText} src={asset.mediaItemUrl} layout='fill' />
+      </Box>
       <Layout width='100%' maxWidth={1280}>
         <Column width='100%'>
           <Row flexWrap='wrap' justifyContent='space-between'>

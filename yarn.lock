@@ -310,14 +310,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-sitemap-generator@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@atls/next-sitemap-generator@npm:0.0.2"
+"@atls/next-sitemap-generator@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls/next-sitemap-generator@npm:0.0.3"
   dependencies:
     xml-js: ^1.6.11
   bin:
     gen-sitemap: ./dist/index.js
-  checksum: 284336f2b68460603716d0ee39c50fca08486cf3269e364df797b6aa64be343385994b9e7a40ee42144c2356762188fdd4590517bd692dffa4a1ed917f2f9eb7
+  checksum: da29e4f51905379797c19c921c61e0800de07ac63cb66a4c02dda6a7c11a40063ab13a4c5abadcaea08f8abcdbc952b87a9aec74b9a9b7b272cc6534518831ca
   languageName: node
   linkType: hard
 
@@ -1932,7 +1932,7 @@ __metadata:
     "@atls/next-document-with-helmet": ^0.2.64
     "@atls/next-document-with-icons": ^0.0.2
     "@atls/next-document-with-opengraph": ^0.0.2
-    "@atls/next-sitemap-generator": ^0.0.2
+    "@atls/next-sitemap-generator": ^0.0.3
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@fragments/navigation": "workspace:0.0.1"
@@ -3015,12 +3015,14 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/styled-system": ^5
+    next: 12.1.0
     react: ^17
     react-dom: ^17
     styled-system: ^5.1.5
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown

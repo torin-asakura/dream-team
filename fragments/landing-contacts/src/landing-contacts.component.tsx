@@ -28,7 +28,9 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
       itemScope
       itemType='http://schema.org/Organization'
     >
-      <Image alt='Contact us' src={asset.mediaItemUrl} background />
+      <Box position='absolute' width='100%' height='100%' left={0} top={0} zIndex={-1}>
+        <Image alt={asset.altText} src={asset.mediaItemUrl} layout='fill' />
+      </Box>
       <Box
         px={['20px', '20px', '0px']}
         py={['48px', '48px', '120px']}

@@ -16,20 +16,38 @@ const Item: FC<ItemProps> = ({
   <Box height={['auto', 'auto', 416]} width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>
     <Condition match={!fragments?.reverse}>
       <Row minHeight={350}>
-        <Image alt={title} src={featuredImage?.node?.mediaItemUrl} contain />
+        <Image
+          width={572}
+          height={404}
+          alt={title}
+          src={featuredImage?.node?.mediaItemUrl}
+          contain
+        />
       </Row>
       <Layout flexBasis={64} />
       <Content title={title} content={content} excerpt={excerpt} />
     </Condition>
     <Condition match={fragments?.reverse}>
       <Row minHeight={500} display={['flex', 'flex', 'none']}>
-        <Image alt={title} src={featuredImage?.node?.mediaItemUrl} contain />
+        <Image
+          width={572}
+          height={404}
+          alt={title}
+          src={featuredImage?.node?.mediaItemUrl}
+          contain
+        />
       </Row>
       <Layout flexBasis={64} />
       <Content title={title} content={content} excerpt={excerpt} />
       <Layout flexBasis={64} />
       <Row minHeight={350} display={['none', 'none', 'flex']}>
-        <Image alt={title} src={featuredImage?.node?.mediaItemUrl} contain />
+        <Image
+          width={572}
+          height={404}
+          alt={title}
+          src={featuredImage?.node?.mediaItemUrl}
+          contain
+        />
       </Row>
     </Condition>
   </Box>

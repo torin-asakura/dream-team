@@ -3,7 +3,7 @@ import { Language } from '../landing-work-directions.interface'
 export interface Category {
   name: string
   skillAddons: {
-    ikonka?: {
+    icon?: {
       mediaItemUrl?: string
     }
   }

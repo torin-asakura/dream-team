@@ -11,7 +11,7 @@ import { HeroProps } from './landing-hero.interface'
 import { useData }   from './data'
 
 const LandingHero: FC<HeroProps> = ({ language }) => {
-  const { sphereUrl, ...languages } = useData()
+  const { sphere, ...languages } = useData()
 
   return (
     <Box
@@ -22,11 +22,14 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
       backgroundColor='background.hero'
     >
       <Column width='100%' alignItems='center' justifyContent='center'>
-        <Layout flexDirection={['column', 'column', 'row-reverse']}>
-          <Layout>
-            <Image alt='sphere' src={sphereUrl} />
+        <Layout flexDirection={['column', 'column', 'row-reverse']} alignItems='center'>
+          <Layout display={['none', 'none', 'flex']}>
+            <Image width={600} height={600} alt={sphere?.altText} src={sphere?.sourceUrl} />
           </Layout>
-          <Layout flexBasis={[200, 200, 0]} marginRight='120px' />
+          <Layout width={300} height={300} display={['flex', 'flex', 'none']}>
+            <Image width={300} height={300} alt={sphere?.altText} src={sphere?.sourceUrl} />
+          </Layout>
+          <Layout marginRight='120px' />
           <Layout display={['flex', 'flex', 'none']} height={80} />
           <Content
             title={languages[language]?.title || ''}

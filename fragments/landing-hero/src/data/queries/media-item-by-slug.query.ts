@@ -5,6 +5,7 @@ const GET_MEDIA_ITEM_BY_SLUG = gql`
   query GetMediaItemBySlug($slug: String!) {
     mediaItemBy(uri: $slug) {
       sourceUrl
+      altText
     }
   }
 `
@@ -17,7 +18,7 @@ const useMediaItemBySlug = (slug: string) => {
   }
 
   if (data) {
-    return data.mediaItemBy?.sourceUrl
+    return data.mediaItemBy
   }
 
   return {}

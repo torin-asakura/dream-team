@@ -9,7 +9,7 @@ const GET_SKILL_CATEGORIES = gql`
       nodes {
         name
         skillAddons {
-          ikonka {
+          icon {
             mediaItemUrl
           }
         }

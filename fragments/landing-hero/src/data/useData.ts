@@ -7,12 +7,12 @@ import { useMediaItemBySlug } from './queries'
 const useData = () => {
   const EN = useFragmentById(HERO_CONTENT_EN)
   const RU = useFragmentById(HERO_CONTENT_RU)
-  const sphereUrl = useMediaItemBySlug(SPHERE_SLUG)
+  const sphere = useMediaItemBySlug(SPHERE_SLUG)
 
   return {
     EN,
     RU,
-    sphereUrl,
+    sphere,
   }
 }
 
