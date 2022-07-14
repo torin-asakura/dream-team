@@ -5,6 +5,7 @@ const GET_ASSET_BY_ID = gql`
   query GetAssetById($id: ID!) {
     mediaItem(id: $id) {
       mediaItemUrl
+      altText
     }
   }
 `

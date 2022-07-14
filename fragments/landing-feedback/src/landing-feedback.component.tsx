@@ -26,7 +26,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
       position='relative'
     >
       <Box position='absolute' width='100%' height='100%' left={0} top={0} zIndex={-1}>
-        <Image alt={content[language].title} src={asset.mediaItemUrl} width={1920} height={838} />
+        <Image alt={asset.altText} src={asset.mediaItemUrl} layout='fill' />
       </Box>
       <Layout width='100%' maxWidth={1280}>
         <Column width='100%'>
