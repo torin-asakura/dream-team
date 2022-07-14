@@ -1,0 +1,27 @@
+{
+  "name": "@ui/sphere",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@splinetool/react-spline": "^2.2.1",
+    "@splinetool/runtime": "^0.9.78",
+    "three": "^0.142.0"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "next": "12.1.0",
+    "react": "^17",
+    "react-dom": "^17"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "next": "*",
+    "react": "*",
+    "react-dom": "*"
+  }
+}

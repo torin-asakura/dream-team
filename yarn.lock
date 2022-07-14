@@ -1477,6 +1477,7 @@ __metadata:
     "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/sphere": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/video": "workspace:0.0.1"
     react: 17
@@ -2199,6 +2200,28 @@ __metadata:
   dependencies:
     "@sinonjs/commons": ^1.7.0
   checksum: 7d3aef54e17c1073101cb64d953157c19d62a40e261a30923fa1ee337b049c5f29cc47b1f0c477880f42b5659848ba9ab897607ac8ea4acd5c30ddcfac57fca6
+  languageName: node
+  linkType: hard
+
+"@splinetool/react-spline@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@splinetool/react-spline@npm:2.2.1"
+  dependencies:
+    react-merge-refs: ^1.1.0
+  peerDependencies:
+    "@splinetool/runtime": "*"
+    react: ">=17.0.0"
+    react-dom: ">=17.0.0"
+  checksum: 8223318ab0392a45fc8123c14e1d718efdac239d6cd5a04923097d2597fdfc2e0460caba8cb77b268a1911439b4a17f68340321f912d74387c725fab73871f19
+  languageName: node
+  linkType: hard
+
+"@splinetool/runtime@npm:^0.9.78":
+  version: 0.9.78
+  resolution: "@splinetool/runtime@npm:0.9.78"
+  dependencies:
+    on-change: ^4.0.0
+  checksum: abfe570707532e4a70b27208290e97f4321a50f6745c8a5e6780011f94a0612cca45520b67651ff6690388cef68d53c32e55c54710e7523dccee174afba94997
   languageName: node
   linkType: hard
 
@@ -3139,6 +3162,29 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/sphere@workspace:0.0.1, @ui/sphere@workspace:ui/sphere":
+  version: 0.0.0-use.local
+  resolution: "@ui/sphere@workspace:ui/sphere"
+  dependencies:
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@splinetool/react-spline": ^2.2.1
+    "@splinetool/runtime": ^0.9.78
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    next: 12.1.0
+    react: ^17
+    react-dom: ^17
+    three: ^0.142.0
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -7674,6 +7720,13 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"on-change@npm:^4.0.0":
+  version: 4.0.1
+  resolution: "on-change@npm:4.0.1"
+  checksum: 23038d603859eafcd8e7ecd7ab682551e2c33c6e12e90dc53c83e453dcb263f5b36c24a945d3e91805273804a2bd6b78f9f91c9bb05dd11771fa626a05d8fb18
+  languageName: node
+  linkType: hard
+
 "on-finished@npm:2.4.1":
   version: 2.4.1
   resolution: "on-finished@npm:2.4.1"
@@ -8248,6 +8301,13 @@ fsevents@^2.3.2:
   version: 3.0.4
   resolution: "react-lifecycles-compat@npm:3.0.4"
   checksum: a904b0fc0a8eeb15a148c9feb7bc17cec7ef96e71188280061fc340043fd6d8ee3ff233381f0e8f95c1cf926210b2c4a31f38182c8f35ac55057e453d6df204f
+  languageName: node
+  linkType: hard
+
+"react-merge-refs@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "react-merge-refs@npm:1.1.0"
+  checksum: 90884352999002d868ab9f1bcfe3222fb0f2178ed629f1da7e98e5a9b02a2c96b4aa72800db92aabd69d2483211b4be57a2088e89a11a0b660e7ada744d4ddf7
   languageName: node
   linkType: hard
 
@@ -9163,6 +9223,13 @@ fsevents@^2.3.2:
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: b6937a38c80c7f84d9c11dd75e49d5c44f71d95e810a3250bd1f1797fc7117c57698204adf676b71497acc205d769d65c16ae8fa10afad832ae1322630aef10a
+  languageName: node
+  linkType: hard
+
+"three@npm:^0.142.0":
+  version: 0.142.0
+  resolution: "three@npm:0.142.0"
+  checksum: b920987cab222bea5fd657a498f8203546c6b613cee01d2e1a355c7e044204bbff6ef051641b026743a6d3d5261a988c84285039a94e4c94a959f1b3789ac682
   languageName: node
   linkType: hard
 
