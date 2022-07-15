@@ -3,6 +3,7 @@ import { OrthographicCamera } from '@react-three/drei'
 import { Canvas }             from '@react-three/fiber'
 
 import React                  from 'react'
+import { Suspense }           from 'react'
 
 const Sphere = (props) => {
   const { nodes, materials } = useSpline(
@@ -139,4 +140,8 @@ const Sphere = (props) => {
   )
 }
 
-export default Sphere
+export default () => (
+  <Suspense fallback={null}>
+    <Sphere />
+  </Suspense>
+)
