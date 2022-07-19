@@ -1,1 +1,1 @@
-export * from './useCarousel'
+export * from '@atls-ui-parts/swiper'

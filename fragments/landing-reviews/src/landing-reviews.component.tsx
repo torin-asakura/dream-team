@@ -1,25 +1,31 @@
-import React                   from 'react'
-import { FC }                  from 'react'
-import { useState }            from 'react'
+import React                    from 'react'
+import { FC }                   from 'react'
+import { Children }             from 'react'
+import { Swiper as SwiperCore } from 'swiper'
+import { useState }             from 'react'
 
-import { Button }              from '@ui/button'
-import { ArrowLeftIcon }       from '@ui/icons'
-import { ArrowRightIcon }      from '@ui/icons'
-import { Layout }              from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Box }                 from '@ui/layout'
-import { Text }                from '@ui/text'
-import { useCarousel }         from '@ui/carousel'
+import { Button }               from '@ui/button'
+import { Swiper }               from '@ui/carousel'
+import { SwiperSlide }          from '@ui/carousel'
+import { ArrowLeftIcon }        from '@ui/icons'
+import { ArrowRightIcon }       from '@ui/icons'
+import { Layout }               from '@ui/layout'
+import { Row }                  from '@ui/layout'
+import { Column }               from '@ui/layout'
+import { Box }                  from '@ui/layout'
+import { Text }                 from '@ui/text'
+import { useSwiper }            from '@ui/carousel'
 
-import { Item }                from './item'
-import { LandingReviewsProps } from './landing-reviews.interface'
-import { Popover }             from './popover'
-import { useData }             from './data'
-import { messages }            from './messages'
+import { Item }                 from './item'
+import { LandingReviewsProps }  from './landing-reviews.interface'
+import { Popover }              from './popover'
+import { useData }              from './data'
+import { messages }             from './messages'
 
 const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
   const [activeItem, setActiveItem] = useState<number | null>(null)
+  const [desktopSwiper, setDesktopSwiper] = useState<SwiperCore | null>(null)
+  const [mobileSwiper, setMobileSwiper] = useState<SwiperCore | null>(null)
 
   const filterByLanguage = ({ language: { code } }) => code === language
 
@@ -28,24 +34,13 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
     <Item review={review} language={language} onClick={() => setActiveItem(index)} />
   ))
 
-  const { carousel: desktopCarousel, useControls: useDesktopControls } = useCarousel({
-    children: carouselChildren,
-    spaceBetween: 32,
-    slidesPerView: 3,
-    height: 300,
-    centered: true,
-  })
+  const CarouselControlsExporter = ({ swiper, setSwiper }) => {
+    const swiperInstance = useSwiper()
 
-  const { carousel: mobileCarousel, useControls: useMobileControls } = useCarousel({
-    children: carouselChildren,
-    spaceBetween: 32,
-    slidesPerView: 1,
-    height: 300,
-    centered: true,
-  })
+    if (!swiper) setSwiper(swiperInstance)
 
-  const { prevProp: desktopPrevProp, nextProp: desktopNextProp } = useDesktopControls()
-  const { prevProp: mobilePrevProp, nextProp: mobileNextProp } = useMobileControls()
+    return null
+  }
 
   return (
     <>
@@ -70,14 +65,18 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
               <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
               <Layout width={128}>
                 <Layout display={['none', 'none', 'flex']}>
-                  <Button colors='transparent' width={44} onClick={desktopPrevProp?.onClick}>
+                  <Button
+                    colors='transparent'
+                    width={44}
+                    onClick={() => desktopSwiper?.slidePrev()}
+                  >
                     <Layout>
                       <ArrowLeftIcon width={8} height={16} />
                     </Layout>
                   </Button>
                 </Layout>
                 <Layout display={['flex', 'flex', 'none']}>
-                  <Button colors='transparent' width={44} onClick={mobilePrevProp?.onClick}>
+                  <Button colors='transparent' width={44} onClick={() => mobileSwiper?.slidePrev()}>
                     <Layout>
                       <ArrowLeftIcon width={8} height={16} />
                     </Layout>
@@ -85,14 +84,18 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
                 </Layout>
                 <Layout flexBasis={16} />
                 <Layout display={['none', 'none', 'flex']}>
-                  <Button colors='transparent' width={44} onClick={desktopNextProp?.onClick}>
+                  <Button
+                    colors='transparent'
+                    width={44}
+                    onClick={() => desktopSwiper?.slideNext()}
+                  >
                     <Layout>
                       <ArrowRightIcon width={8} height={16} />
                     </Layout>
                   </Button>
                 </Layout>
                 <Layout display={['flex', 'flex', 'none']}>
-                  <Button colors='transparent' width={44} onClick={mobileNextProp?.onClick}>
+                  <Button colors='transparent' width={44} onClick={() => mobileSwiper?.slideNext()}>
                     <Layout>
                       <ArrowRightIcon width={8} height={16} />
                     </Layout>
@@ -101,8 +104,38 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
               </Layout>
             </Row>
             <Layout flexBasis={48} />
-            <Layout display={['none', 'none', 'flex']}>{desktopCarousel}</Layout>
-            <Layout display={['flex', 'flex', 'none']}>{mobileCarousel}</Layout>
+            <Layout display={['none', 'none', 'flex']}>
+              <Swiper
+                slidesPerView={3}
+                spaceBetween={32}
+                height={300}
+                touchEventsTarget='container'
+                preventClicks={false}
+                loop
+                grabCursor
+              >
+                <CarouselControlsExporter swiper={desktopSwiper} setSwiper={setDesktopSwiper} />
+                {Children.map(carouselChildren, (child) => (
+                  <SwiperSlide>{child}</SwiperSlide>
+                ))}
+              </Swiper>
+            </Layout>
+            <Layout display={['flex', 'flex', 'none']}>
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={72}
+                height={300}
+                touchEventsTarget='container'
+                preventClicks={false}
+                loop
+                grabCursor
+              >
+                <CarouselControlsExporter swiper={mobileSwiper} setSwiper={setMobileSwiper} />
+                {Children.map(carouselChildren, (child) => (
+                  <SwiperSlide>{child}</SwiperSlide>
+                ))}
+              </Swiper>
+            </Layout>
             <Layout flexBasis={120} />
           </Column>
         </Layout>
