@@ -1,32 +1,48 @@
 import React               from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { useState }        from 'react'
+import { useEffect }       from 'react'
 
 import { Condition }       from '@ui/condition'
 import { Layout }          from '@ui/layout'
 
 import { Container }       from './container'
+import { Provider }        from './context'
+import { Listener }        from './context'
 import { Logo }            from './logo'
 import { Progress }        from './progress'
+
+let listeners: Array<Listener> = []
 
 export const Preloader = ({ children }) => {
   const [progress, setProgress] = useState(0)
 
-  if (progress !== 100) {
-    setTimeout(() => {
-      setProgress(progress + 3)
-    }, 100)
+  const addListener = (listener: Listener) => {
+    listeners.push(listener)
   }
 
+  useEffect(() => {
+    if (progress < 100) {
+      setTimeout(() => {
+        setProgress(progress + 5)
+      }, 100)
+    }
+  }, [progress])
+
   return (
-    <>
+    <Provider value={{ addListener, done: progress >= 100 }}>
       <AnimatePresence>
         {progress < 100 && (
           <Container
             key='main'
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.7, delay: 1.3 }}
+            onAnimationComplete={() => {
+              listeners.forEach((listener) => listener())
+
+              listeners = []
+            }}
           >
             <Condition match={progress < 100}>
               <Logo />
@@ -39,6 +55,6 @@ export const Preloader = ({ children }) => {
         )}
       </AnimatePresence>
       {children}
-    </>
+    </Provider>
   )
 }

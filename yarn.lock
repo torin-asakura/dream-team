@@ -86,36 +86,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/carousel@npm:^0.0.5":
-  version: 0.0.5
-  resolution: "@atls-ui-parts/carousel@npm:0.0.5"
-  dependencies:
-    "@atls-ui-parts/styles": 0.0.4
-    framer-motion: 6.3.11
-  peerDependencies:
-    "@emotion/styled": ^11.1.5
-    react: ^17.0.1
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
-  checksum: 586d4ca2744d909f9bd86b7a31b53c8893e632e00bc4396ab4ceeb422a3fb9c2f6710a025fc0187cc4f9b5f51bc289d65220344fbff0ac5b37b201ada86e0422
-  languageName: node
-  linkType: hard
-
 "@atls-ui-parts/conditional-render@npm:^0.0.1":
   version: 0.0.1
   resolution: "@atls-ui-parts/conditional-render@npm:0.0.1"
   peerDependencies:
     react: ^17.0.1
   checksum: f770730caabacacd69cadf0137b44f2ef16be4e6021c431bcc313b1584adebd22652080c28fcbd502459c325de0c4409d22b4489c2dd31e96a102b70eec511a4
-  languageName: node
-  linkType: hard
-
-"@atls-ui-parts/dom@npm:*":
-  version: 0.0.4
-  resolution: "@atls-ui-parts/dom@npm:0.0.4"
-  peerDependencies:
-    react: ^17.0.1
-  checksum: c09d7975f45b5c866ec099b7f66bb9ee00274e6d66fbfc3839d4db40cda6718d6fe40ebe576cf23fa3117f98ea433de29fca55914d72c4598480a4e931948287
   languageName: node
   linkType: hard
 
@@ -177,12 +153,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/styles@npm:0.0.4":
-  version: 0.0.4
-  resolution: "@atls-ui-parts/styles@npm:0.0.4"
+"@atls-ui-parts/swiper@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@atls-ui-parts/swiper@npm:0.0.1"
+  dependencies:
+    swiper: ^8.3.1
   peerDependencies:
-    styled-system: ^5.1.5
-  checksum: f47f1162cb08e138257aa7b26d47fd8b48a4cd3d4c5bc4fdc4797a3dee356fe79e77ddddbf7ac55225c6245e47a20e1c34815d1dc22205dcd6d1f9231c7cbd7e
+    "@emotion/css": "*"
+    react: ^17.0.1
+  checksum: 91bb1b24e5c08729f16c2f6ef3e8e602ce6b059226e62805dce249ce09233e6cbec289a11848965cf1d6465af29577a2d3bf2e2b9f0a2ea89c2c194872496e09
   languageName: node
   linkType: hard
 
@@ -1429,11 +1408,13 @@ __metadata:
     "@ui/input": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react: 17
     react-dom: 17
   peerDependencies:
     "@apollo/client": "*"
+    "@ui/preloader": "workspace:^"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -1495,12 +1476,14 @@ __metadata:
     "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/video": "workspace:0.0.1"
     react: 17
     react-dom: 17
   peerDependencies:
     "@apollo/client": "*"
+    "@ui/preloader": "workspace:^"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -1522,6 +1505,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react: 17
     react-dom: 17
+    swiper: ^8.3.1
   peerDependencies:
     "@apollo/client": "*"
     react: "*"
@@ -1581,11 +1565,13 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/logo": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react: 17
     react-dom: 17
   peerDependencies:
     "@apollo/client": "*"
+    "@ui/preloader": "workspace:^"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -1964,7 +1950,6 @@ __metadata:
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
     "@types/recompose": ^0
-    "@ui/preloader": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
     events: ^3.3.0
     express: ^4.17.1
@@ -1988,10 +1973,12 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@fragments/landing-contacts": "workspace:0.0.1"
+    "@fragments/landing-footer": "workspace:0.0.1"
     "@fragments/navigation": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
+    "@ui/preloader": "workspace:0.0.1"
     react: 17
     react-dom: 17
     react-helmet: ^6.1.0
@@ -1999,6 +1986,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@ui/preloader": "workspace:^"
     react: 17
     react-dom: 17
     react-helmet: "*"
@@ -2022,6 +2010,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
+    "@ui/preloader": "workspace:0.0.1"
     react: 17
     react-dom: 17
     react-helmet: ^6.1.0
@@ -2029,6 +2018,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@ui/preloader": "workspace:^"
     react: 17
     react-dom: 17
     react-helmet: "*"
@@ -2048,6 +2038,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
+    "@ui/preloader": "workspace:0.0.1"
     react: 17
     react-dom: 17
     react-helmet: ^6.1.0
@@ -2055,6 +2046,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@ui/preloader": "workspace:^"
     react: 17
     react-dom: 17
     react-helmet: "*"
@@ -2909,18 +2901,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/carousel@workspace:ui/carousel"
   dependencies:
-    "@atls-ui-parts/carousel": ^0.0.5
+    "@atls-ui-parts/swiper": ^0.0.1
+    "@emotion/css": ^11.9.0
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@types/react": ^17
     "@types/react-dom": ^17
-    "@types/styled-system": ^5
-    "@ui/layout": "workspace:0.0.1"
-    framer-motion: ^6.3.16
     react: ^17
     react-dom: ^17
-    styled-system: ^5.1.5
-    styled-tools: ^1.7.2
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -4971,6 +4959,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom7@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "dom7@npm:4.0.4"
+  dependencies:
+    ssr-window: ^4.0.0
+  checksum: b38604f74e915b4d05b6634f9ff239a708c468180f498a28ff67f2a61233697d9bd7192703b788a24541c3591e7f1a6e83a2cbf70bc871a85e033f82e19abc31
+  languageName: node
+  linkType: hard
+
 "ee-first@npm:1.1.1":
   version: 1.1.1
   resolution: "ee-first@npm:1.1.1"
@@ -5591,26 +5588,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:6.3.11":
-  version: 6.3.11
-  resolution: "framer-motion@npm:6.3.11"
-  dependencies:
-    "@emotion/is-prop-valid": ^0.8.2
-    framesync: 6.0.1
-    hey-listen: ^1.0.8
-    popmotion: 11.0.3
-    style-value-types: 5.0.0
-    tslib: ^2.1.0
-  peerDependencies:
-    react: ">=16.8 || ^17.0.0 || ^18.0.0"
-    react-dom: ">=16.8 || ^17.0.0 || ^18.0.0"
-  dependenciesMeta:
-    "@emotion/is-prop-valid":
-      optional: true
-  checksum: 2333b296a109ec0ef86421453f66a92b63e07930a491102f1007bbe48f40594d8c51a96ca937f8f3f013ba658147049bf1fa9feebc44487b8e7617bb674fb254
-  languageName: node
-  linkType: hard
-
 "framer-motion@npm:^4.1.17":
   version: 4.1.17
   resolution: "framer-motion@npm:4.1.17"
@@ -5631,41 +5608,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^6.3.16":
-  version: 6.3.16
-  resolution: "framer-motion@npm:6.3.16"
-  dependencies:
-    "@emotion/is-prop-valid": ^0.8.2
-    framesync: 6.0.1
-    hey-listen: ^1.0.8
-    popmotion: 11.0.3
-    style-value-types: 5.0.0
-    tslib: ^2.1.0
-  peerDependencies:
-    react: ">=16.8 || ^17.0.0 || ^18.0.0"
-    react-dom: ">=16.8 || ^17.0.0 || ^18.0.0"
-  dependenciesMeta:
-    "@emotion/is-prop-valid":
-      optional: true
-  checksum: f60df0181f4b646700b709c551f505b985399e41cc60ea511ad0d0fe05399ceb36478da360d38481757dd5ef15964f10b6ffbea15cbd58d9698da02c962076f1
-  languageName: node
-  linkType: hard
-
 "framesync@npm:5.3.0":
   version: 5.3.0
   resolution: "framesync@npm:5.3.0"
   dependencies:
     tslib: ^2.1.0
   checksum: 9ebbb2863e6a1cfd2e9dd1b73af427d23caa03c92dd49ea767ebdd208c3a573bba4a1026f67068d856a21704f79adcdf2f750cc852ff73bc1f0e80edaaecded8
-  languageName: node
-  linkType: hard
-
-"framesync@npm:6.0.1":
-  version: 6.0.1
-  resolution: "framesync@npm:6.0.1"
-  dependencies:
-    tslib: ^2.1.0
-  checksum: a23ebe8f7e20a32c0b99c2f8175b6f07af3ec6316aad52a2316316a6d011d717af8d2175dcc2827031c59fabb30232ed3e19a720a373caba7f070e1eae436325
   languageName: node
   linkType: hard
 
@@ -7978,18 +7926,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"popmotion@npm:11.0.3":
-  version: 11.0.3
-  resolution: "popmotion@npm:11.0.3"
-  dependencies:
-    framesync: 6.0.1
-    hey-listen: ^1.0.8
-    style-value-types: 5.0.0
-    tslib: ^2.1.0
-  checksum: 9fe7d03b4ec0e85bfb9dadc23b745147bfe42e16f466ba06e6327197d0e38b72015afc2f918a8051dedc3680310417f346ffdc463be6518e2e92e98f48e30268
-  languageName: node
-  linkType: hard
-
 "popmotion@npm:9.3.5":
   version: 9.3.5
   resolution: "popmotion@npm:9.3.5"
@@ -8830,6 +8766,13 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "ssr-window@npm:4.0.2"
+  checksum: df182600927f4f3225224cf8c02338ea637c9750519505bbfb9a9236741a2a7ec088386fb948bca7b447b8303d9109e7dc7672e3de041c79ac2a0e03665af7d2
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^6.0.1":
   version: 6.0.2
   resolution: "ssri@npm:6.0.2"
@@ -9026,16 +8969,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"style-value-types@npm:5.0.0":
-  version: 5.0.0
-  resolution: "style-value-types@npm:5.0.0"
-  dependencies:
-    hey-listen: ^1.0.8
-    tslib: ^2.1.0
-  checksum: 16d198302cd102edf9dba94e7752a2364c93b1eaa5cc7c32b42b28eef4af4ccb5149a3f16bc2a256adc02616a2404f4612bd15f3081c1e8ca06132cae78be6c0
-  languageName: node
-  linkType: hard
-
 "styled-jsx@npm:5.0.0":
   version: 5.0.0
   resolution: "styled-jsx@npm:5.0.0"
@@ -9133,6 +9066,16 @@ fsevents@^2.3.2:
   version: 2.0.4
   resolution: "svg-parser@npm:2.0.4"
   checksum: b3de6653048212f2ae7afe4a423e04a76ec6d2d06e1bf7eacc618a7c5f7df7faa5105561c57b94579ec831fbbdbf5f190ba56a9205ff39ed13eabdf8ab086ddf
+  languageName: node
+  linkType: hard
+
+"swiper@npm:^8.3.1":
+  version: 8.3.1
+  resolution: "swiper@npm:8.3.1"
+  dependencies:
+    dom7: ^4.0.4
+    ssr-window: ^4.0.2
+  checksum: 3bf9fe039ff356ba9c8849953dfc9677aca0e7e69e0da3d6a64636e83562e33fa7a2bae9885c163e66760014ea8c0416492e59a69671787e4543f5dc6c7bcdd1
   languageName: node
   linkType: hard
 

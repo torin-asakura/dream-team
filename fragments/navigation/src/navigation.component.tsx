@@ -4,11 +4,11 @@ import { useState }        from 'react'
 
 import { FormPopover }     from '@fragments/form-popover'
 import { Button }          from '@ui/button'
-import { Box }             from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Row }             from '@ui/layout'
 import { NextLink }        from '@ui/link'
 import { Logo }            from '@ui/logo'
+import { AnimateOnLoad }   from '@ui/preloader'
 
 import { NavigationProps } from './navigation.interface'
 import { Language }        from './navigation.interface'
@@ -22,16 +22,21 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
   const [visible, setVisible] = useState<boolean>(false)
 
   return (
-    <Box
-      width='100%'
-      height='8vh'
-      justifyContent='center'
-      position='sticky'
-      top={0}
-      px={['20px', '20px', '0px']}
-      backgroundColor='white'
-      zIndex={10}
+    <AnimateOnLoad
+      style={{
+        width: '100%',
+        height: 84,
+        justifyContent: 'center',
+        position: 'fixed',
+        top: 0,
+        backgroundColor: 'white',
+        zIndex: 10,
+      }}
+      animation={{ y: 0 }}
+      initial={{ y: '-100%' }}
+      transition={{ duration: 1 }}
     >
+      <Layout flexBasis={[20, 20, 0]} />
       <FormPopover language={language} visible={visible} setVisible={setVisible} />
       <Layout width='100%' maxWidth={1280} alignItems='center'>
         <Row alignItems='center' justifyContent='space-between'>
@@ -67,7 +72,8 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
           </Row>
         </Row>
       </Layout>
-    </Box>
+      <Layout flexBasis={[20, 20, 0]} />
+    </AnimateOnLoad>
   )
 }
 

@@ -5,9 +5,9 @@ export const AnimatedContainer = ({ children }) => (
   <motion.div
     key='logo'
     style={{ display: 'flex' }}
-    initial={{ y: '100%' }}
+    initial={{ y: '120%' }}
     animate={{ y: 0 }}
-    exit={{ y: '-100%' }}
+    exit={{ y: '-120%' }}
     transition={{ duration: 1 }}
   >
     {children}
