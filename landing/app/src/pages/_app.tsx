@@ -7,7 +7,6 @@ import App                from 'next/app'
 import React              from 'react'
 import compose            from 'recompose/compose'
 
-import { Preloader }      from '@ui/preloader'
 import { ThemeProvider }  from '@ui/theme'
 
 export const withProviders = compose(withHelmet())
@@ -23,9 +22,7 @@ const Bare = ({ Component, pageProps, props }) => {
   return (
     <ApolloProvider client={client}>
       <ThemeProvider>
-        <Preloader>
-          <Composed Component={Component} {...pageProps} {...props} />
-        </Preloader>
+        <Composed Component={Component} {...pageProps} {...props} />
       </ThemeProvider>
     </ApolloProvider>
   )

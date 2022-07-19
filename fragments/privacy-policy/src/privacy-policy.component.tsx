@@ -15,7 +15,7 @@ const PrivacyPolicy: FC<PrivacyPolicyProps> = ({ language }) => {
     <Layout width='100%' height='100%' justifyContent='center' alignItems='center'>
       <Layout height='100%' width='100%' maxWidth={1280} px={['20px', '20px', '0px']}>
         <Column width='100%'>
-          <Layout flexBasis={64} />
+          <Layout flexBasis={104} />
           <Layout>
             <Text fontSize='big' color='text.black' fontWeight='slim'>
               {data[language].title}

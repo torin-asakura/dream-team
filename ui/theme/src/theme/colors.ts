@@ -50,7 +50,7 @@ const colors = {
     transparentBlue: 'rgba(23, 35, 68, 0.75)',
     transparentBlack: 'rgba(0,0,0,0.5)',
     darkBlue: 'rgba(23,35,68,1)',
-    hero: 'rgb(63,65,118)',
+    hero: 'rgba(48, 51, 121, 1)',
     blue: 'rgba(36,114,238,1)',
     white: 'rgba(255,255,255,1)',
   },

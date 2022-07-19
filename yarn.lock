@@ -1429,11 +1429,13 @@ __metadata:
     "@ui/input": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react: 17
     react-dom: 17
   peerDependencies:
     "@apollo/client": "*"
+    "@ui/preloader": "workspace:^"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -1495,12 +1497,14 @@ __metadata:
     "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/video": "workspace:0.0.1"
     react: 17
     react-dom: 17
   peerDependencies:
     "@apollo/client": "*"
+    "@ui/preloader": "workspace:^"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -1581,11 +1585,13 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/logo": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react: 17
     react-dom: 17
   peerDependencies:
     "@apollo/client": "*"
+    "@ui/preloader": "workspace:^"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -1964,7 +1970,6 @@ __metadata:
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
     "@types/recompose": ^0
-    "@ui/preloader": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
     events: ^3.3.0
     express: ^4.17.1
@@ -1988,10 +1993,12 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@fragments/landing-contacts": "workspace:0.0.1"
+    "@fragments/landing-footer": "workspace:0.0.1"
     "@fragments/navigation": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
+    "@ui/preloader": "workspace:0.0.1"
     react: 17
     react-dom: 17
     react-helmet: ^6.1.0
@@ -1999,6 +2006,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@ui/preloader": "workspace:^"
     react: 17
     react-dom: 17
     react-helmet: "*"
@@ -2022,6 +2030,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
+    "@ui/preloader": "workspace:0.0.1"
     react: 17
     react-dom: 17
     react-helmet: ^6.1.0
@@ -2029,6 +2038,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@ui/preloader": "workspace:^"
     react: 17
     react-dom: 17
     react-helmet: "*"
@@ -2048,6 +2058,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
+    "@ui/preloader": "workspace:0.0.1"
     react: 17
     react-dom: 17
     react-helmet: ^6.1.0
@@ -2055,6 +2066,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@ui/preloader": "workspace:^"
     react: 17
     react-dom: 17
     react-helmet: "*"
