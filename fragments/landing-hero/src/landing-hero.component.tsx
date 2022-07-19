@@ -18,9 +18,16 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
     <Box height='100vh' width='100%' overflow='hidden' backgroundColor='background.hero'>
       <Column width='100%' alignItems='center' justifyContent='center'>
         <Layout flexDirection={['column', 'column', 'row-reverse']} alignItems='center'>
-          <Layout display={['none', 'none', 'flex']}>
-            <Image width={600} height={600} alt={sphere?.altText} src={sphere?.sourceUrl} />
-          </Layout>
+          <AnimateOnLoad
+            initial={{ opacity: 0, y: '100%' }}
+            transition={{ duration: 1 }}
+            animation={{ y: 0, opacity: 1 }}
+            delay={600}
+          >
+            <Layout display={['none', 'none', 'flex']}>
+              <Image width={600} height={600} alt={sphere?.altText} src={sphere?.sourceUrl} />
+            </Layout>
+          </AnimateOnLoad>
           <Layout width={300} height={300} display={['flex', 'flex', 'none']}>
             <Image width={300} height={300} alt={sphere?.altText} src={sphere?.sourceUrl} />
           </Layout>
