@@ -15,8 +15,14 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
   const { sphere, ...languages } = useData()
 
   return (
-    <Box height='100vh' width='100%' overflow='hidden' backgroundColor='background.hero'>
+    <Box
+      height={['auto', 'auto', '100vh']}
+      width='100%'
+      overflow='hidden'
+      backgroundColor='background.hero'
+    >
       <Column width='100%' alignItems='center' justifyContent='center'>
+        <Layout flexBasis={[72, 72, 0]} />
         <Layout flexDirection={['column', 'column', 'row-reverse']} alignItems='center'>
           <AnimateOnLoad
             initial={{ opacity: 0, y: '100%' }}
