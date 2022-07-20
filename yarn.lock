@@ -3133,17 +3133,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/logo@workspace:ui/logo"
   dependencies:
+    "@apollo/client": ^3.6.9
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     react: ^17
     react-dom: ^17
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"

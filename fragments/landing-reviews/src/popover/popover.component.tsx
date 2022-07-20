@@ -29,7 +29,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
           <Column width='100%'>
             <Row>
               <Layout>
-                <Text fontSize='large' color='text.black' fontWeight='slim'>
+                <Text fontSize='large' color='text.black' fontWeight='slim' whiteSpace='nowrap'>
                   {visible !== null && reviews[visible].title}
                 </Text>
               </Layout>
