@@ -19,16 +19,16 @@ const Logo: FC<LogoProps> = ({ mobile = false }) => {
     <Layout>
       <NextLink href='/' rel='up' title='Home page'>
         <Row alignItems='center'>
-          <Layout width={[44, 44, 62]} height={[44, 44, 62]}>
+          <Layout width={[44, 44, 49]} height={[44, 44, 44]}>
             <Image src={sphere?.sourceUrl} alt={sphere?.altText} contain />
           </Layout>
           <Layout flexBasis={[8, 8, 24]} />
-          <Layout width={[103, 103, 203]} height={26}>
+          <Layout width={[103, 103, 203]}>
             <Condition match={!mobile}>
               <DreamTeamIcon width='100%' height='100%' />
             </Condition>
             <Condition match={mobile}>
-              <DreamTeamMobileIcon width={68} height={40} />
+              <DreamTeamMobileIcon width='100%' height='100%' />
             </Condition>
           </Layout>
         </Row>

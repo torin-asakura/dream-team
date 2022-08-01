@@ -1,4 +1,5 @@
 const fontSizes = {
+  micro: 11,
   semiMedium: 13,
   medium: 14,
   semiRegular: 15,

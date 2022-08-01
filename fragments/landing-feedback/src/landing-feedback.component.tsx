@@ -17,7 +17,6 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
 
   return (
     <Box
-      px={['20px', '20px', '0px']}
       py={['48px', '48px', '120px']}
       height={['auto', 'auto', 838]}
       width='100%'
@@ -29,6 +28,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
         <Image alt={asset.altText} src={asset.mediaItemUrl} layout='fill' />
       </Box>
       <Layout width='100%' maxWidth={1280}>
+        <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
         <Column width='100%'>
           <Row flexWrap='wrap' justifyContent='space-between'>
             <Layout maxWidth={580}>
@@ -46,12 +46,18 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
                 </Row>
               </Column>
             </Layout>
-            <Column>
+            <Column
+              width={['100%', '100%', 'auto']}
+              height='auto'
+              justifyContent='center'
+              alignItems='center'
+            >
               <Layout flexBasis={[32, 32, 0]} />
               <Form language={language} />
             </Column>
           </Row>
         </Column>
+        <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
       </Layout>
     </Box>
   )

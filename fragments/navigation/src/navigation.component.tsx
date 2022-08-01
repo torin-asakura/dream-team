@@ -1,3 +1,5 @@
+import { useTheme }        from '@emotion/react'
+
 import React               from 'react'
 import { FC }              from 'react'
 import { useState }        from 'react'
@@ -20,6 +22,7 @@ const switchLanguage = (language: Language, languageVar) => () => {
 
 const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
   const [visible, setVisible] = useState<boolean>(false)
+  const { shadows }: any = useTheme()
 
   return (
     <AnimateOnLoad
@@ -30,6 +33,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
         position: 'fixed',
         top: 0,
         backgroundColor: 'white',
+        boxShadow: `${shadows.lightGray}`,
         zIndex: 10,
       }}
       animation={{ y: 0 }}
@@ -40,7 +44,12 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
       <FormPopover language={language} visible={visible} setVisible={setVisible} />
       <Layout width='100%' maxWidth={1280} alignItems='center'>
         <Row alignItems='center' justifyContent='space-between'>
-          <Logo />
+          <Layout display={['none', 'none', 'flex']}>
+            <Logo />
+          </Layout>
+          <Layout display={['flex', 'flex', 'none']}>
+            <Logo mobile />
+          </Layout>
           <Row justifyContent='flex-end' alignItems='center'>
             <NextLink
               color='black'

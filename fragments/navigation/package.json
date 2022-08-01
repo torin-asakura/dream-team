@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@apollo/client": "^3.6.9",
+    "@emotion/react": "^11.9.3",
     "@types/react": "^17",
     "@types/react-dom": "^17",
     "@ui/preloader": "workspace:0.0.1",
@@ -22,6 +23,7 @@
   },
   "peerDependencies": {
     "@apollo/client": "*",
+    "@emotion/react": "*",
     "@ui/preloader": "workspace:^",
     "react": "*",
     "react-dom": "*"
