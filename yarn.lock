@@ -1403,6 +1403,7 @@ __metadata:
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/copy": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
@@ -1410,6 +1411,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/preloader": "workspace:0.0.1"
+    "@ui/social-links": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react: 17
     react-dom: 17
@@ -1451,11 +1453,17 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/logo": "workspace:0.0.1"
+    "@ui/social-links": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react: 17
     react-dom: 17
   peerDependencies:
@@ -2960,6 +2968,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/divider@workspace:0.0.1, @ui/divider@workspace:ui/divider":
+  version: 0.0.0-use.local
+  resolution: "@ui/divider@workspace:ui/divider"
+  dependencies:
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@types/styled-system": ^5
+    "@ui/layout": "workspace:0.0.1"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/form@workspace:0.0.1, @ui/form@workspace:ui/form":
   version: 0.0.0-use.local
   resolution: "@ui/form@workspace:ui/form"
@@ -3179,6 +3207,27 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/social-links@workspace:0.0.1, @ui/social-links@workspace:ui/social-links":
+  version: 0.0.0-use.local
+  resolution: "@ui/social-links@workspace:ui/social-links"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 

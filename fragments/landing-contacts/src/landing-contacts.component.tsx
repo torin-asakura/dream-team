@@ -2,14 +2,15 @@ import React                    from 'react'
 import { FC }                   from 'react'
 
 import { Copy }                 from '@ui/copy'
+import { Divider }              from '@ui/divider'
 import { Form }                 from '@ui/form'
-import { Image }                from '@ui/image'
 import { Layout }               from '@ui/layout'
 import { Row }                  from '@ui/layout'
 import { Column }               from '@ui/layout'
 import { Box }                  from '@ui/layout'
 import { Link }                 from '@ui/link'
 import { AnimateOnLoad }        from '@ui/preloader'
+import { SocialLinks }          from '@ui/social-links'
 import { Text }                 from '@ui/text'
 
 import { LandingContactsProps } from './landing-contacts.interface'
@@ -17,7 +18,7 @@ import { useData }              from './data'
 import { messages }             from './messages'
 
 const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
-  const { contacts, feedbackEmail, feedbackPhone, asset, workingHours } = useData()
+  const { contacts, feedbackEmail, feedbackPhone, workingHours } = useData()
 
   return (
     <Box
@@ -25,13 +26,10 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
       width='100%'
       position='relative'
       overflow='hidden'
-      backgroundColor='background.transparentBlue'
+      backgroundColor='background.lightGray'
       itemScope
       itemType='http://schema.org/Organization'
     >
-      <Box position='absolute' width='100%' height='100%' left={0} top={0} zIndex={-1}>
-        <Image alt={asset.altText} src={asset.mediaItemUrl} layout='fill' />
-      </Box>
       <Box
         px={['20px', '20px', '0px']}
         py={['48px', '48px', '120px']}
@@ -42,7 +40,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
         <Layout width='100%' maxWidth={1280}>
           <Column width='100%' justifyContent='center'>
             <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
-              <Layout maxWidth={580}>
+              <Layout maxWidth={624}>
                 <Column width='100%'>
                   <AnimateOnLoad
                     initial={{ opacity: 0, y: '100%' }}
@@ -68,7 +66,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                     delay={300}
                   >
                     <Row>
-                      <Text fontSize='big' color='text.white' fontWeight='slim'>
+                      <Text fontSize='big' color='text.black' fontWeight='slim'>
                         {contacts[language].content}
                       </Text>
                     </Row>
@@ -90,7 +88,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                             rel='contact'
                             fontSize='increased'
                             fontWeight='slim'
-                            color='text.white'
+                            color='text.black'
                             id='emailContent'
                             itemProp='email'
                           >
@@ -120,7 +118,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                           rel='contact'
                           title={messages.viaPhone[language]}
                           fontSize='increased'
-                          color='text.white'
+                          color='text.black'
                           fontWeight='slim'
                           itemProp='telephone'
                         >
@@ -135,7 +133,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                   </AnimateOnLoad>
                   <Layout flexBasis={16} />
                   <Layout>
-                    <Column height='auto'>
+                    <Column width='100%' height='auto'>
                       <AnimateOnLoad
                         initial={{ opacity: 0, y: '100%' }}
                         transition={{ duration: 1 }}
@@ -148,12 +146,20 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                           </Text>
                         </Layout>
                       </AnimateOnLoad>
-                      <Layout flexBasis={[48, 48, 0]} />
+                      <Layout flexBasis={[24, 24, 32]} />
+                      <Layout>
+                        <Divider backgroundColor='border.lightGray' />
+                      </Layout>
+                      <Layout flexBasis={[24, 24, 32]} />
+                      <Row justifyContent='flex-start'>
+                        <SocialLinks contacts language={language} />
+                      </Row>
+                      <Layout flexBasis={[24, 24, 0]} />
                     </Column>
                   </Layout>
                 </Column>
               </Layout>
-              <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
+              <Layout flexGrow={[0, 0, 1]} flexBasis={[64, 64, 0]} />
               <AnimateOnLoad
                 initial={{ opacity: 0, y: '100%' }}
                 transition={{ duration: 1 }}
