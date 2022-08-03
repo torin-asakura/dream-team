@@ -28,10 +28,10 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
         <Image alt={asset.altText} src={asset.mediaItemUrl} layout='fill' />
       </Box>
       <Layout width='100%' maxWidth={1280}>
-        <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
         <Column width='100%'>
           <Row flexWrap='wrap' justifyContent='space-between'>
             <Layout maxWidth={580}>
+              <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
               <Column width='100%'>
                 <Row width='100%'>
                   <Text fontSize='medium' color='text.accent' fontWeight='bold'>
@@ -45,6 +45,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
                   </Text>
                 </Row>
               </Column>
+              <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
             </Layout>
             <Column
               width={['100%', '100%', 'auto']}
@@ -53,11 +54,14 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
               alignItems='center'
             >
               <Layout flexBasis={[32, 32, 0]} />
-              <Form language={language} />
+              <Row>
+                <Layout flexBasis={[20, 20, 0]} />
+                <Form language={language} />
+                <Layout flexBasis={[20, 20, 0]} />
+              </Row>
             </Column>
           </Row>
         </Column>
-        <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
       </Layout>
     </Box>
   )

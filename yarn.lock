@@ -1398,6 +1398,7 @@ __metadata:
   resolution: "@fragments/landing-contacts@workspace:fragments/landing-contacts"
   dependencies:
     "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.9.3
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -1413,10 +1414,12 @@ __metadata:
     "@ui/preloader": "workspace:0.0.1"
     "@ui/social-links": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react: 17
     react-dom: 17
   peerDependencies:
     "@apollo/client": "*"
+    "@emotion/react": "*"
     "@ui/preloader": "workspace:^"
     react: "*"
     react-dom: "*"
@@ -1603,6 +1606,12 @@ __metadata:
     "@apollo/client": "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@globals/messages@workspace:0.0.1, @globals/messages@workspace:globals/messages":
+  version: 0.0.0-use.local
+  resolution: "@globals/messages@workspace:globals/messages"
   languageName: unknown
   linkType: soft
 
@@ -1936,6 +1945,51 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@landing/404-fragment@workspace:0.0.1, @landing/404-fragment@workspace:fragments/landing-404":
+  version: 0.0.0-use.local
+  resolution: "@landing/404-fragment@workspace:fragments/landing-404"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@globals/messages": "workspace:0.0.1"
+    "@types/styled-system": ^5
+    "@ui/button": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/404-page@workspace:0.0.1, @landing/404-page@workspace:landing/404":
+  version: 0.0.0-use.local
+  resolution: "@landing/404-page@workspace:landing/404"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@fragments/landing-footer": "workspace:0.0.1"
+    "@fragments/navigation": "workspace:0.0.1"
+    "@landing/404-fragment": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
+    react: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    next: "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/app@workspace:landing/app":
   version: 0.0.0-use.local
   resolution: "@landing/app@workspace:landing/app"
@@ -1951,6 +2005,7 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@fragments/navigation": "workspace:0.0.1"
+    "@landing/404-page": "workspace:0.0.1"
     "@landing/contacts-page": "workspace:0.0.1"
     "@landing/index-page": "workspace:0.0.1"
     "@landing/privacy-policy-page": "workspace:0.0.1"
@@ -1984,7 +2039,6 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@fragments/landing-contacts": "workspace:0.0.1"
-    "@fragments/landing-footer": "workspace:0.0.1"
     "@fragments/navigation": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17

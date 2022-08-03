@@ -4,7 +4,6 @@
   "main": "src/index.tsx",
   "dependencies": {
     "@fragments/landing-contacts": "workspace:0.0.1",
-    "@fragments/landing-footer": "workspace:0.0.1",
     "@fragments/navigation": "workspace:0.0.1"
   },
   "devDependencies": {

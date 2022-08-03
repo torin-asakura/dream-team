@@ -74,7 +74,7 @@ const Form: FC<FormProps> = ({ language, onSuccess = doNothing, onFailure = doNo
     <Box
       borderRadius='normal'
       backgroundColor='white'
-      width={['335px', '100%', 515]}
+      width={['100%', '100%', 515]}
       height={['auto', 'auto', 598]}
       padding={['16px', '16px', '32px']}
     >

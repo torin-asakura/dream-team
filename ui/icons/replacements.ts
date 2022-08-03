@@ -17,4 +17,7 @@ export const replacements = {
   FacebookIcon: {
     '#0374F9': '{props.color || "#0374F9"}',
   },
+  WhatsappIcon: {
+    '#172E47': '{props.color || "#172E47"}',
+  },
 }

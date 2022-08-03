@@ -163,7 +163,7 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
         <Layout width='100%'>
           <Divider backgroundColor='border.lightGray' />
         </Layout>
-        <Column width='100%' maxWidth={1280} display={['none', 'none', 'flex']}>
+        <Column width='100%' maxWidth={1280} height='auto' display={['none', 'none', 'flex']}>
           <Layout flexBasis={20} />
           <Layout width='100%' justifyContent='flex-end'>
             <Link
