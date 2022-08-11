@@ -1532,6 +1532,7 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -1551,6 +1552,7 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"

@@ -24,9 +24,9 @@ const Item: FC<ItemProps> = ({ category, language }) => (
     itemScope
     itemType='http://schema.org/Thing'
   >
-    <Layout flexBasis={32} />
+    <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
     <Column width='100%'>
-      <Layout flexBasis={32} />
+      <Layout flexBasis={[20, 20, 32]} />
       <Row>
         <Layout width={56} height={56}>
           <Image src={category?.skillAddons?.icon?.mediaItemUrl} />
@@ -62,9 +62,9 @@ const Item: FC<ItemProps> = ({ category, language }) => (
           </Layout>
         ))}
       </Row>
-      <Layout flexBasis={32} />
+      <Layout flexBasis={[20, 20, 32]} />
     </Column>
-    <Layout flexBasis={32} />
+    <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
   </Box>
 )
 

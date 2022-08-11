@@ -40,7 +40,12 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
                 </Row>
                 <Layout flexBasis={32} />
                 <Row>
-                  <Text fontSize='big' color='text.white' fontWeight='slim'>
+                  <Text
+                    fontSize={['large', 'large', 'big']}
+                    lineHeight={['small', 'extra', 'extra']}
+                    color='text.white'
+                    fontWeight='slim'
+                  >
                     {content[language].content}
                   </Text>
                 </Row>

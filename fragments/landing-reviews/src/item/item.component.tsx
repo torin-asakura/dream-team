@@ -13,7 +13,7 @@ import { messages }     from './messages'
 
 const Item: FC<ItemProps> = ({ review, language, onClick }) => (
   <Box
-    width={405}
+    width={[300, 405, 405]}
     height={276}
     backgroundColor='white'
     borderRadius='normal'

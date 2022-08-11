@@ -162,7 +162,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                       </Layout>
                     </Row>
                   </AnimateOnLoad>
-                  <Layout flexBasis={[8, 8, 16]} />
+                  <Layout flexBasis={[8, 8, 12]} />
                   <Layout>
                     <Column width='100%' height='auto'>
                       <AnimateOnLoad

@@ -10,6 +10,7 @@ export interface ButtonProps extends BaseButtonProps, LayoutProps, SpaceProps {
   divider?: number
   rounded?: boolean
   width?: number | string | number[] | string[]
+  height?: number | string | number[] | string[]
   colors?: ButtonColors
   size?: ButtonSizes
   dotted?: boolean

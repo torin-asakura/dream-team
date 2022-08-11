@@ -18,7 +18,7 @@ const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
   const { costs, timeFrame, howWeDo, whyUs } = useData()
 
   return (
-    <Box px={['32px', '32px', '0px']}>
+    <Box px={['20px', '20px', '0px']}>
       <Column
         width='100%'
         height={['auto', 'auto', '100%']}
@@ -27,17 +27,17 @@ const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
       >
         <Layout width='100%' maxWidth={1280}>
           <Column width='100%' height={['auto', 'auto', '100%']}>
-            <Layout flexBasis={160} />
+            <Layout flexBasis={[64, 64, 160]} />
             <Item contentObject={getContentByLanguage(whyUs, language)} />
-            <Layout flexBasis={160} />
+            <Layout flexBasis={[64, 64, 160]} />
             <Item contentObject={getContentByLanguage(howWeDo, language)} />
-            <Layout flexBasis={160} />
+            <Layout flexBasis={[64, 64, 160]} />
             <LandingWorkDirections language={language} />
-            <Layout flexBasis={160} />
+            <Layout flexBasis={[64, 64, 128]} />
             <Item contentObject={getContentByLanguage(timeFrame, language)} />
-            <Layout flexBasis={160} />
+            <Layout flexBasis={[64, 64, 160]} />
             <Item contentObject={getContentByLanguage(costs, language)} />
-            <Layout flexBasis={160} />
+            <Layout flexBasis={[64, 64, 160]} />
           </Column>
         </Layout>
       </Column>

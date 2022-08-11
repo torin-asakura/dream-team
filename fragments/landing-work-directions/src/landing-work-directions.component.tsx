@@ -1,6 +1,7 @@
 import React                          from 'react'
 import { FC }                         from 'react'
 
+import { Condition }                  from '@ui/condition'
 import { Layout }                     from '@ui/layout'
 import { Row }                        from '@ui/layout'
 import { Column }                     from '@ui/layout'
@@ -32,15 +33,17 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
               </>
             ))}
           </Column>
-          <Layout flexBasis={32} />
+          <Layout flexBasis={32} flexShrink={0} />
           <Column width='100%' height={['auto', 'auto', '100%']}>
-            {rightSide.map((category) => (
+            {rightSide.map((category, index) => (
               <>
                 <Item category={category} language={language} />
-                <Layout flexBasis={32} />
+                <Condition match={rightSide.length - 1 !== index}>
+                  <Layout flexBasis={32} />
+                </Condition>
               </>
             ))}
-            <Layout flexBasis={32} />
+            <Layout flexBasis={[0, 0, 32]} />
           </Column>
         </Row>
       </Column>
