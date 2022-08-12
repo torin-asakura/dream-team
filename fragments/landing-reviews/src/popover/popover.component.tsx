@@ -33,7 +33,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
                   {visible !== null && reviews[visible].title}
                 </Text>
               </Layout>
-              <Row justifyContent='flex-end'>
+              <Row justifyContent='flex-end' display={['none', 'none', 'flex']}>
                 {visible !== null &&
                   reviews[visible].review.skills?.map(({ title }) => (
                     <>
@@ -49,9 +49,23 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
                 {visible !== null && reviews[visible].review.respondent}
               </Text>
             </Layout>
+            <Layout flexBasis={[24, 24, 0]} />
+            <Row justifyContent='flex-start' flexWrap='wrap' display={['flex', 'flex', 'none']}>
+              {visible !== null &&
+                reviews[visible].review.skills?.map(({ title }) => (
+                  <>
+                    <Column height='auto'>
+                      <Layout flexBasis={[0, 0, 8]} />
+                      <Skill content={title} />
+                      <Layout flexBasis={[8, 8, 0]} />
+                    </Column>
+                    <Layout flexBasis={[8, 8, 0]} />
+                  </>
+                ))}
+            </Row>
           </Column>
         </Row>
-        <Layout flexBasis={32} />
+        <Layout flexBasis={[24, 24, 32]} />
         <Text fontSize='regular' color='text.black' lineHeight='primary'>
           {visible !== null && reviews[visible].content}
         </Text>

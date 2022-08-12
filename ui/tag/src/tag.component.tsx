@@ -9,7 +9,7 @@ import { Text }     from '@ui/text'
 import { TagProps } from './tag.interface'
 
 const Tag: FC<TagProps> = ({ title }) => (
-  <Column>
+  <Column height='auto'>
     <Layout flexBasis={8} />
     <Button colors='tag' size='medium'>
       <Text fontSize='regular' lineHeight='small'>
