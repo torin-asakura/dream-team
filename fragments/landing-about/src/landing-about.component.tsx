@@ -6,16 +6,13 @@ import { Condition }             from '@ui/condition'
 import { Layout }                from '@ui/layout'
 import { Column }                from '@ui/layout'
 import { Box }                   from '@ui/layout'
-import { extractObjects }        from '@globals/data'
 
 import { Item }                  from './item'
 import { LandingAboutProps }     from './landing-about.interface'
+import { splitItems }            from './helpers'
 
 const LandingAbout: FC<LandingAboutProps> = ({ language, data }) => {
-  const fragments = extractObjects('lead', 'contentAddons', data[language])
-
-  const topSide = fragments.filter(({ contentAddons }) => contentAddons.order < 3)
-  const bottomSide = fragments.filter(({ contentAddons }) => contentAddons.order > 2)
+  const [topSide, bottomSide] = splitItems(data[language])
 
   return (
     <Box px={['20px', '20px', '0px']}>
