@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@fragments/form-popover": "workspace:0.0.1",
+    "@globals/data": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/image": "workspace:0.0.1",

@@ -1378,6 +1378,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.6.9
     "@fragments/landing-work-directions": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:0.0.1"
@@ -1482,6 +1483,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.6.9
     "@fragments/form-popover": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -1610,6 +1612,19 @@ __metadata:
     "@apollo/client": "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@globals/data@workspace:0.0.1, @globals/data@workspace:globals/data":
+  version: 0.0.0-use.local
+  resolution: "@globals/data@workspace:globals/data"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    graphql: ^15.5.1
+    react: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 
@@ -2009,6 +2024,7 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@fragments/navigation": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@landing/404-page": "workspace:0.0.1"
     "@landing/contacts-page": "workspace:0.0.1"
     "@landing/index-page": "workspace:0.0.1"
@@ -2076,6 +2092,7 @@ __metadata:
     "@fragments/landing-reviews": "workspace:0.0.1"
     "@fragments/landing-team": "workspace:0.0.1"
     "@fragments/navigation": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
@@ -2088,6 +2105,7 @@ __metadata:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     "@ui/preloader": "workspace:^"
+    next: "*"
     react: 17
     react-dom: 17
     react-helmet: "*"
@@ -6093,7 +6111,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"graphql@npm:^15.8.0":
+"graphql@npm:^15.5.1, graphql@npm:^15.8.0":
   version: 15.8.0
   resolution: "graphql@npm:15.8.0"
   checksum: 423325271db8858428641b9aca01699283d1fe5b40ef6d4ac622569ecca927019fce8196208b91dd1d8eb8114f00263fe661d241d0eb40c10e5bfd650f86ec5e
