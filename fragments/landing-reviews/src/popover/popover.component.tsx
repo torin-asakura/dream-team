@@ -8,11 +8,11 @@ import { Box }            from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { Column }         from '@ui/layout'
 import { Row }            from '@ui/layout'
+import { Tag }            from '@ui/tag/src'
 import { Text }           from '@ui/text'
 import { Space }          from '@ui/text'
 
 import { PopoverProps }   from './popover.interface'
-import { Skill }          from './skill'
 import { messages }       from '../messages'
 
 const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) => (
@@ -38,7 +38,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
                   reviews[visible].review.skills?.map(({ title }) => (
                     <>
                       <Layout flexBasis={8} />
-                      <Skill content={title} />
+                      <Tag title={title} variant='secondary' />
                     </>
                   ))}
               </Row>
@@ -56,7 +56,7 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
                   <>
                     <Column height='auto'>
                       <Layout flexBasis={[0, 0, 8]} />
-                      <Skill content={title} />
+                      <Tag title={title} variant='secondary' />
                       <Layout flexBasis={[8, 8, 0]} />
                     </Column>
                     <Layout flexBasis={[8, 8, 0]} />

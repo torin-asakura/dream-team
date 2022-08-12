@@ -11,6 +11,7 @@ type ButtonColors =
   | 'clipboard'
   | 'social'
   | 'tag'
+  | 'greyTag'
 type ButtonSizes = 'normal' | 'big' | 'rounded' | 'medium'
 
 export interface ButtonProps extends BaseButtonProps, LayoutProps, SpaceProps {

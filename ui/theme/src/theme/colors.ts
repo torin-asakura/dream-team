@@ -47,6 +47,14 @@ const colors = {
       border: 'rgba(15, 76, 139, 0.08)',
       background: 'transparent',
     },
+    greyTag: {
+      default: 'rgba(255, 255, 255, 1)',
+      hover: 'rgba(63, 135, 249, 1)',
+      active: 'rgba(63, 135, 249, 1)',
+      fontColor: 'rgba(23, 46, 71, 1)',
+      border: 'transparent',
+      background: 'rgba(15, 76, 139, 0.05)',
+    },
   },
   border: {
     lightGray: 'rgba(15,76,139,0.08)',
