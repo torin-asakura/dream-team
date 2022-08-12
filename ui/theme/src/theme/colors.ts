@@ -39,6 +39,14 @@ const colors = {
       borderColor: 'transparent',
       fontColor: 'rgba(255,255,255,1)',
     },
+    tag: {
+      default: 'rgba(255, 255, 255, 1)',
+      hover: 'rgba(36, 114, 238, 1)',
+      active: 'rgba(24, 97, 214, 1)',
+      fontColor: 'rgba(23, 46, 71, 1)',
+      border: 'rgba(15, 76, 139, 0.08)',
+      background: 'transparent',
+    },
   },
   border: {
     lightGray: 'rgba(15,76,139,0.08)',

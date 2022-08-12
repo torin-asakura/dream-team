@@ -62,7 +62,7 @@ const withOpenGraph = () => (TargetComponent) =>
       const coverResponse = await client.query({
         query: gql`
           query GetCover {
-            mediaItemBy(uri: "/cover/") {
+            mediaItemBy(uri: "/main-cover/") {
               sourceUrl
             }
           }
@@ -70,13 +70,7 @@ const withOpenGraph = () => (TargetComponent) =>
       })
 
       props.head.push(
-        <meta
-          property='og:image'
-          content={
-            coverResponse.data.mediaItemBy?.sourceUrl ||
-            'https://wp.dream-team.tech/wp-content/uploads/2022/07/cover.jpg'
-          }
-        />
+        <meta property='og:image' content={coverResponse.data.mediaItemBy?.sourceUrl} />
       )
 
       return props
