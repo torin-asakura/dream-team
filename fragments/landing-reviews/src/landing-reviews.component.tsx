@@ -103,6 +103,7 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
                 slidesPerView={3}
                 spaceBetween={32}
                 height={300}
+                threshold={5}
                 touchEventsTarget='container'
                 preventClicks={false}
                 loop
