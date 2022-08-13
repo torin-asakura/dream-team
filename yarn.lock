@@ -1513,6 +1513,7 @@ __metadata:
     "@ui/icons": "workspace:0.0.1"
     "@ui/layer": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/tag": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     react: 17
@@ -1555,6 +1556,7 @@ __metadata:
     "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/tag": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react: 17
     react-dom: 17
@@ -3282,6 +3284,24 @@ __metadata:
     react-dom: ^17.0.2
   peerDependencies:
     "@apollo/client": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/tag@workspace:0.0.1, @ui/tag@workspace:ui/tag":
+  version: 0.0.0-use.local
+  resolution: "@ui/tag@workspace:ui/tag"
+  dependencies:
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react: ^17
+    react-dom: ^17
+  peerDependencies:
     react: "*"
     react-dom: "*"
   languageName: unknown
