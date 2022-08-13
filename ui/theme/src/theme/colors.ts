@@ -28,9 +28,16 @@ const colors = {
     clipboard: {
       default: 'rgba(255, 255, 255, 0.3)',
       hover: 'rgba(255, 255, 255, 0.5)',
-      active: 'rgba(255,255,255,1)',
+      active: 'rgba(63, 135, 249, 1)',
       fontColor: 'rgba(255,255,255,1)',
-      background: 'transparent',
+      background: 'rgba(15, 76, 139, 0.05)',
+    },
+    social: {
+      default: 'rgba(15, 76, 139, 0.05)',
+      hover: 'rgba(36, 114, 238, 1)',
+      active: 'rgba(24, 97, 214, 1)',
+      borderColor: 'transparent',
+      fontColor: 'rgba(255,255,255,1)',
     },
   },
   border: {
@@ -41,6 +48,7 @@ const colors = {
     accent: 'rgba(63, 135, 249, 1)',
     hover: 'rgba(24,97,214,1)',
     black: 'rgba(23, 46, 71, 1)',
+    lightBlue: 'rgba(63, 135, 249, 0.32)',
     white: 'rgba(255,255,255,1)',
     lightGray: 'rgba(154, 168, 184, 1)',
     gray: 'rgba(98, 112, 127, 1)',

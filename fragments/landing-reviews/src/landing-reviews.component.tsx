@@ -51,32 +51,32 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
         language={language}
       />
       <Box
-        px={['32px', '32px', '0px']}
+        pl={['20px', '20px', '0px']}
         backgroundColor='background.lightGray'
         justifyContent='center'
       >
         <Layout width='100%' maxWidth={1280}>
           <Column justifyContent='center' width='100%'>
-            <Layout flexBasis={120} />
-            <Row alignItems='center'>
-              <Text color='text.black' fontWeight='slim' fontSize='massive'>
-                {messages.reviews[language]}
-              </Text>
-              <Layout flexGrow={1} flexBasis={[64, 64, 0]} />
+            <Layout flexBasis={[48, 48, 120]} />
+            <Row width='100%' alignItems='center'>
+              <Layout minWidth={['100%', 'auto', 'auto']}>
+                <Text
+                  color='text.black'
+                  fontWeight='slim'
+                  fontSize={['increased', 'increased', 'massive']}
+                >
+                  {messages.reviews[language]}
+                </Text>
+              </Layout>
+              <Layout flexGrow={1} />
               <Layout width={128}>
                 <Layout display={['none', 'none', 'flex']}>
                   <Button
                     colors='transparent'
-                    width={44}
+                    width={56}
+                    height={56}
                     onClick={() => desktopSwiper?.slidePrev()}
                   >
-                    <Layout>
-                      <ArrowLeftIcon width={8} height={16} />
-                    </Layout>
-                  </Button>
-                </Layout>
-                <Layout display={['flex', 'flex', 'none']}>
-                  <Button colors='transparent' width={44} onClick={() => mobileSwiper?.slidePrev()}>
                     <Layout>
                       <ArrowLeftIcon width={8} height={16} />
                     </Layout>
@@ -86,7 +86,8 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
                 <Layout display={['none', 'none', 'flex']}>
                   <Button
                     colors='transparent'
-                    width={44}
+                    width={56}
+                    height={56}
                     onClick={() => desktopSwiper?.slideNext()}
                   >
                     <Layout>
@@ -94,16 +95,9 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
                     </Layout>
                   </Button>
                 </Layout>
-                <Layout display={['flex', 'flex', 'none']}>
-                  <Button colors='transparent' width={44} onClick={() => mobileSwiper?.slideNext()}>
-                    <Layout>
-                      <ArrowRightIcon width={8} height={16} />
-                    </Layout>
-                  </Button>
-                </Layout>
               </Layout>
             </Row>
-            <Layout flexBasis={48} />
+            <Layout flexBasis={[24, 24, 48]} />
             <Layout display={['none', 'none', 'flex']}>
               <Swiper
                 slidesPerView={3}
@@ -120,10 +114,10 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
                 ))}
               </Swiper>
             </Layout>
-            <Layout display={['flex', 'flex', 'none']}>
+            <Layout display={['flex', 'none', 'none']}>
               <Swiper
-                slidesPerView={1}
-                spaceBetween={72}
+                slidesPerView={2}
+                spaceBetween={270}
                 height={300}
                 touchEventsTarget='container'
                 preventClicks={false}
@@ -136,7 +130,23 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
                 ))}
               </Swiper>
             </Layout>
-            <Layout flexBasis={120} />
+            <Layout display={['none', 'flex', 'none']}>
+              <Swiper
+                slidesPerView={2}
+                spaceBetween={100}
+                height={300}
+                touchEventsTarget='container'
+                preventClicks={false}
+                loop
+                grabCursor
+              >
+                <CarouselControlsExporter swiper={mobileSwiper} setSwiper={setMobileSwiper} />
+                {Children.map(carouselChildren, (child) => (
+                  <SwiperSlide>{child}</SwiperSlide>
+                ))}
+              </Swiper>
+            </Layout>
+            <Layout flexBasis={[60, 60, 120]} />
           </Column>
         </Layout>
       </Box>

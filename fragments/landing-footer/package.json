@@ -3,11 +3,17 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
+    "@ui/divider": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/link": "workspace:0.0.1",
     "@ui/logo": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1"
+    "@ui/social-links": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.6.9",

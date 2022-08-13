@@ -153,15 +153,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/swiper@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@atls-ui-parts/swiper@npm:0.0.1"
+"@atls-ui-parts/swiper@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@atls-ui-parts/swiper@npm:0.0.2"
   dependencies:
+    nanoid: ^4.0.0
     swiper: ^8.3.1
   peerDependencies:
     "@emotion/css": "*"
     react: ^17.0.1
-  checksum: 91bb1b24e5c08729f16c2f6ef3e8e602ce6b059226e62805dce249ce09233e6cbec289a11848965cf1d6465af29577a2d3bf2e2b9f0a2ea89c2c194872496e09
+  checksum: ab5803f29db857d47f3b81432a7218b8dde03a3361ea8ee3f9aa34b70a9af96693c7c2fd576ba28f5b9244f5e7b14f6134dbaee617df1742991773817586176a
   languageName: node
   linkType: hard
 
@@ -1397,11 +1398,13 @@ __metadata:
   resolution: "@fragments/landing-contacts@workspace:fragments/landing-contacts"
   dependencies:
     "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.9.3
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/copy": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
@@ -1409,11 +1412,14 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/preloader": "workspace:0.0.1"
+    "@ui/social-links": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react: 17
     react-dom: 17
   peerDependencies:
     "@apollo/client": "*"
+    "@emotion/react": "*"
     "@ui/preloader": "workspace:^"
     react: "*"
     react-dom: "*"
@@ -1450,11 +1456,17 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/logo": "workspace:0.0.1"
+    "@ui/social-links": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react: 17
     react-dom: 17
   peerDependencies:
@@ -1520,6 +1532,7 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -1539,6 +1552,7 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
@@ -1556,6 +1570,7 @@ __metadata:
   resolution: "@fragments/navigation@workspace:fragments/navigation"
   dependencies:
     "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.9.3
     "@fragments/form-popover": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -1571,6 +1586,7 @@ __metadata:
     react-dom: 17
   peerDependencies:
     "@apollo/client": "*"
+    "@emotion/react": "*"
     "@ui/preloader": "workspace:^"
     react: "*"
     react-dom: "*"
@@ -1592,6 +1608,12 @@ __metadata:
     "@apollo/client": "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@globals/messages@workspace:0.0.1, @globals/messages@workspace:globals/messages":
+  version: 0.0.0-use.local
+  resolution: "@globals/messages@workspace:globals/messages"
   languageName: unknown
   linkType: soft
 
@@ -1925,6 +1947,51 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@landing/404-fragment@workspace:0.0.1, @landing/404-fragment@workspace:fragments/landing-404":
+  version: 0.0.0-use.local
+  resolution: "@landing/404-fragment@workspace:fragments/landing-404"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@globals/messages": "workspace:0.0.1"
+    "@types/styled-system": ^5
+    "@ui/button": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/404-page@workspace:0.0.1, @landing/404-page@workspace:landing/404":
+  version: 0.0.0-use.local
+  resolution: "@landing/404-page@workspace:landing/404"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@fragments/landing-footer": "workspace:0.0.1"
+    "@fragments/navigation": "workspace:0.0.1"
+    "@landing/404-fragment": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
+    react: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    next: "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@landing/app@workspace:landing/app":
   version: 0.0.0-use.local
   resolution: "@landing/app@workspace:landing/app"
@@ -1940,6 +2007,7 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@fragments/navigation": "workspace:0.0.1"
+    "@landing/404-page": "workspace:0.0.1"
     "@landing/contacts-page": "workspace:0.0.1"
     "@landing/index-page": "workspace:0.0.1"
     "@landing/privacy-policy-page": "workspace:0.0.1"
@@ -1973,7 +2041,6 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@fragments/landing-contacts": "workspace:0.0.1"
-    "@fragments/landing-footer": "workspace:0.0.1"
     "@fragments/navigation": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -2901,7 +2968,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/carousel@workspace:ui/carousel"
   dependencies:
-    "@atls-ui-parts/swiper": ^0.0.1
+    "@atls-ui-parts/swiper": ^0.0.2
     "@emotion/css": ^11.9.0
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
@@ -2957,6 +3024,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/divider@workspace:0.0.1, @ui/divider@workspace:ui/divider":
+  version: 0.0.0-use.local
+  resolution: "@ui/divider@workspace:ui/divider"
+  dependencies:
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@types/styled-system": ^5
+    "@ui/layout": "workspace:0.0.1"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/form@workspace:0.0.1, @ui/form@workspace:ui/form":
   version: 0.0.0-use.local
   resolution: "@ui/form@workspace:ui/form"
@@ -2967,6 +3054,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
     "@ui/input": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
@@ -3154,9 +3242,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/preloader@workspace:0.0.1, @ui/preloader@workspace:ui/preoader":
+"@ui/preloader@workspace:0.0.1, @ui/preloader@workspace:ui/preloader":
   version: 0.0.0-use.local
-  resolution: "@ui/preloader@workspace:ui/preoader"
+  resolution: "@ui/preloader@workspace:ui/preloader"
   dependencies:
     "@emotion/css": ^11.9.0
     "@emotion/react": ^11.9.3
@@ -3175,6 +3263,27 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/social-links@workspace:0.0.1, @ui/social-links@workspace:ui/social-links":
+  version: 0.0.0-use.local
+  resolution: "@ui/social-links@workspace:ui/social-links"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -7448,6 +7557,15 @@ fsevents@^2.3.2:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "nanoid@npm:4.0.0"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 7d5946df5c6d383694195b781ae7b5067c149d164ec71e910d6b06676309c3459b68af570b944fb5ecd5065d19df464f05700d141d70bb712ff8ca06642fd8df
   languageName: node
   linkType: hard
 

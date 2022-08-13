@@ -1,4 +1,5 @@
 import { CONTACTS_EN }      from './constants'
+import { WHATSAPP }         from './constants'
 import { CONTACTS_RU }      from './constants'
 import { FEEDBACK_EMAIL }   from './constants'
 import { FEEDBACK_PHONE }   from './constants'
@@ -6,6 +7,7 @@ import { WORKING_HOURS_EN } from './constants'
 import { WORKING_HOURS_RU } from './constants'
 import { ASSET }            from './constants'
 import { useFragmentById }  from './queries'
+import { useMessengerById } from './queries'
 import { useAssetById }     from './queries'
 
 const useData = () => {
@@ -16,6 +18,7 @@ const useData = () => {
   const workingHoursEn = useFragmentById(WORKING_HOURS_EN)
   const workingHoursRu = useFragmentById(WORKING_HOURS_RU)
   const asset = useAssetById(ASSET)
+  const whatsapp = useMessengerById(WHATSAPP)
 
   return {
     contacts: {
@@ -29,6 +32,7 @@ const useData = () => {
     asset,
     feedbackEmail,
     feedbackPhone,
+    whatsapp,
   }
 }
 

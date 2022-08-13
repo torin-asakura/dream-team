@@ -21,3 +21,5 @@ export const FEEDBACK_PHONE = 'cG9zdDo2MzM='
 export const FEEDBACK_EMAIL = 'cG9zdDo2MzI='
 
 export const ASSET = 'cG9zdDoyOTM='
+
+export const WHATSAPP = 'cG9zdDo5NjQ='

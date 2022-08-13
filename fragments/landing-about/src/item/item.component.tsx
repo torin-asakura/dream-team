@@ -13,9 +13,9 @@ import { ItemProps } from './item.interface'
 const Item: FC<ItemProps> = ({
   contentObject: { title, content, excerpt, fragments, featuredImage },
 }) => (
-  <Box height={['auto', 'auto', 416]} width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>
+  <Box height={['auto', 'auto', 444]} width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>
     <Condition match={!fragments?.reverse}>
-      <Row minHeight={350}>
+      <Row minHeight={350} display={['none', 'none', 'flex']}>
         <Image
           width={572}
           height={404}
@@ -24,22 +24,23 @@ const Item: FC<ItemProps> = ({
           contain
         />
       </Row>
-      <Layout flexBasis={64} />
-      <Content title={title} content={content} excerpt={excerpt} />
+      <Layout flexBasis={32} flexShrink={0} />
+      <Content
+        title={title}
+        imageUrl={featuredImage?.node?.mediaItemUrl}
+        content={content}
+        excerpt={excerpt}
+      />
     </Condition>
     <Condition match={fragments?.reverse}>
-      <Row minHeight={500} display={['flex', 'flex', 'none']}>
-        <Image
-          width={572}
-          height={404}
-          alt={title}
-          src={featuredImage?.node?.mediaItemUrl}
-          contain
-        />
-      </Row>
-      <Layout flexBasis={64} />
-      <Content title={title} content={content} excerpt={excerpt} />
-      <Layout flexBasis={64} />
+      <Layout flexBasis={[64, 64, 0]} />
+      <Content
+        title={title}
+        imageUrl={featuredImage?.node?.mediaItemUrl}
+        content={content}
+        excerpt={excerpt}
+      />
+      <Layout flexBasis={32} flexShrink={0} />
       <Row minHeight={350} display={['none', 'none', 'flex']}>
         <Image
           width={572}

@@ -17,8 +17,8 @@ const getClipboardColorsStyles = (theme, active): styleFn => {
 
   const clipboardActiveColors = createAppearanceStyles({
     fontColor: theme.colors.button.clipboard.fontColor,
-    borderColor: theme.colors.button.clipboard.active,
-    backgroundColor: theme.colors.button.clipboard.background,
+    borderColor: theme.colors.button.clipboard.default,
+    backgroundColor: theme.colors.button.clipboard.active,
   })
 
   return () => ({

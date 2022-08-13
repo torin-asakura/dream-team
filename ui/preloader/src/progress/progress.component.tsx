@@ -6,9 +6,10 @@ import { Path } from './path.component'
 
 interface Props {
   progress: number
+  seconds: number
 }
 
-export const Progress: FC<Props> = ({ progress }) => (
+export const Progress: FC<Props & any> = ({ progress, seconds, ...props }) => (
   <Path
     key='progress'
     initial={{ width: 0 }}
@@ -16,6 +17,11 @@ export const Progress: FC<Props> = ({ progress }) => (
     exit={{ width: 0 }}
     transition={{ duration: 1 }}
   >
-    <Line progress={progress} />
+    <Line
+      initial={{ width: 0 }}
+      animate={{ width: '100%' }}
+      transition={{ duration: seconds }}
+      {...props}
+    />
   </Path>
 )

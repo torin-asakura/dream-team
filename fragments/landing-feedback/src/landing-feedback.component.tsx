@@ -17,7 +17,6 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
 
   return (
     <Box
-      px={['20px', '20px', '0px']}
       py={['48px', '48px', '120px']}
       height={['auto', 'auto', 838]}
       width='100%'
@@ -32,6 +31,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
         <Column width='100%'>
           <Row flexWrap='wrap' justifyContent='space-between'>
             <Layout maxWidth={580}>
+              <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
               <Column width='100%'>
                 <Row width='100%'>
                   <Text fontSize='medium' color='text.accent' fontWeight='bold'>
@@ -40,15 +40,30 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
                 </Row>
                 <Layout flexBasis={32} />
                 <Row>
-                  <Text fontSize='big' color='text.white' fontWeight='slim'>
+                  <Text
+                    fontSize={['large', 'large', 'big']}
+                    lineHeight={['small', 'extra', 'extra']}
+                    color='text.white'
+                    fontWeight='slim'
+                  >
                     {content[language].content}
                   </Text>
                 </Row>
               </Column>
+              <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
             </Layout>
-            <Column>
+            <Column
+              width={['100%', '100%', 'auto']}
+              height='auto'
+              justifyContent='center'
+              alignItems='center'
+            >
               <Layout flexBasis={[32, 32, 0]} />
-              <Form language={language} />
+              <Row>
+                <Layout flexBasis={[20, 20, 0]} />
+                <Form language={language} />
+                <Layout flexBasis={[20, 20, 0]} />
+              </Row>
             </Column>
           </Row>
         </Column>
