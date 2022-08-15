@@ -1400,6 +1400,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.9.3
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -1432,6 +1433,7 @@ __metadata:
   resolution: "@fragments/landing-feedback@workspace:fragments/landing-feedback"
   dependencies:
     "@apollo/client": ^3.6.9
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -1576,6 +1578,7 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.9.3
     "@fragments/form-popover": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -2060,6 +2063,7 @@ __metadata:
     "@emotion/styled": ^11.9.3
     "@fragments/landing-contacts": "workspace:0.0.1"
     "@fragments/navigation": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
@@ -2122,6 +2126,7 @@ __metadata:
     "@fragments/landing-footer": "workspace:0.0.1"
     "@fragments/navigation": "workspace:0.0.1"
     "@fragments/privacy-policy": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6

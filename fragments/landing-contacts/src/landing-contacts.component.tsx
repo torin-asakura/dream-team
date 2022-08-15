@@ -16,16 +16,26 @@ import { Link }                 from '@ui/link'
 import { AnimateOnLoad }        from '@ui/preloader'
 import { SocialLinks }          from '@ui/social-links'
 import { Text }                 from '@ui/text'
+import { extractObject }        from '@globals/data'
 import { useHover }             from '@ui/utils'
 
 import { LandingContactsProps } from './landing-contacts.interface'
 import { useData }              from './data'
 import { messages }             from './messages'
 
-const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
-  const { contacts, feedbackEmail, feedbackPhone, workingHours, whatsapp } = useData()
+const LandingContacts: FC<LandingContactsProps> = ({ language, data }) => {
+  const { feedbackPhone, whatsapp } = useData()
   const theme: any = useTheme()
   const [hover, hoverProps] = useHover()
+
+  const objLead = extractObject('contentAddons', 'lead', data[language])
+  const objWorkingHours = extractObject('contentAddons', 'working-hours', data[language])
+  const objEmail = extractObject('contentAddons', 'email', data[language])
+
+  const { title } = objLead
+  const { content } = objLead
+  const workingHours = objWorkingHours.title
+  const email = objEmail.content
 
   return (
     <Box
@@ -61,7 +71,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                         fontWeight='bold'
                         textTransform='uppercase'
                       >
-                        {contacts[language].title}
+                        {title}
                       </Text>
                     </Row>
                   </AnimateOnLoad>
@@ -74,7 +84,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                   >
                     <Row>
                       <Text fontSize='big' color='text.black' fontWeight='slim'>
-                        {contacts[language].content}
+                        {content}
                       </Text>
                     </Row>
                   </AnimateOnLoad>
@@ -90,7 +100,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                         <Layout flexBasis={[48, 48, 0]} />
                         <Layout>
                           <Link
-                            href={`mailto:${feedbackEmail.content}`}
+                            href={`mailto:${email}`}
                             title={messages.viaEmail[language]}
                             rel='contact'
                             fontSize={['semiLarge', 'semiLarge', 'increased']}
@@ -99,13 +109,13 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                             id='emailContent'
                             itemProp='email'
                           >
-                            {feedbackEmail.content}
+                            {email}
                           </Link>
                         </Layout>
                       </Column>
                       <Layout flexBasis={16} />
                       <Layout>
-                        <Copy content={feedbackEmail.content} />
+                        <Copy content={email} />
                       </Layout>
                     </Row>
                   </AnimateOnLoad>
@@ -173,7 +183,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
                       >
                         <Layout>
                           <Text fontSize='regular' color='text.lightGray'>
-                            {workingHours[language].content}
+                            {workingHours}
                           </Text>
                         </Layout>
                       </AnimateOnLoad>

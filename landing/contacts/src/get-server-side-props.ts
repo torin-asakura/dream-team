@@ -1,10 +1,8 @@
-import { getClient }        from '@globals/data'
+import { getClient }                         from '@globals/data'
 
-import { GET_INDEX_SEO }    from './queries'
-import { runFeedbackQuery } from './queries'
-import { runReviewsQuery }  from './queries'
-import { runHeroQuery }     from './queries'
-import { runAboutQuery }    from './queries'
+import { GET_CONTACTS_SEO }                   from './queries'
+
+import { runContactsQuery } from './queries'
 
 export const getServerSideProps = async () => {
   const client = getClient()
@@ -12,7 +10,7 @@ export const getServerSideProps = async () => {
   let SEO
 
   const { data: seoData } = await client.query({
-    query: GET_INDEX_SEO,
+    query: GET_CONTACTS_SEO,
   })
 
   if (seoData) {
@@ -22,12 +20,7 @@ export const getServerSideProps = async () => {
     }
   } else SEO = { RU: {}, EN: {} }
 
-  const queryPromises: Array<Promise<any>> = [
-    runHeroQuery(),
-    runAboutQuery(),
-    runReviewsQuery(),
-    runFeedbackQuery(),
-  ]
+  const queryPromises: Array<Promise<any>> = [runContactsQuery()]
 
   const retrievedData = await Promise.all(queryPromises)
 

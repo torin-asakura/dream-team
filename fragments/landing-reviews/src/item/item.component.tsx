@@ -9,6 +9,7 @@ import { Text }         from '@ui/text'
 import { TextEllipsis } from '@ui/text'
 
 import { ItemProps }    from './item.interface'
+import { formatString } from '../data'
 import { messages }     from './messages'
 
 const Item: FC<ItemProps> = ({ review, language, onClick }) => (
@@ -26,19 +27,19 @@ const Item: FC<ItemProps> = ({ review, language, onClick }) => (
     <Column>
       <Layout>
         <Text fontWeight='slim' fontSize='large' color='text.black'>
-          {review.title}
+          {formatString(review.title)}
         </Text>
       </Layout>
       <Layout flexBasis={4} />
       <Layout>
         <Text fontSize='regular' color='text.lightGray'>
-          {review.review.respondent}
+          {formatString(review.review.respondent)}
         </Text>
       </Layout>
       <Layout flexGrow={1} />
       <Layout overflow='hidden'>
         <TextEllipsis fontSize='regular' color='text.gray' lineClamp={4}>
-          {review.content}
+          {formatString(review.content)}
         </TextEllipsis>
       </Layout>
       <Layout flexGrow={1} />

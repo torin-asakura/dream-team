@@ -15,6 +15,7 @@ import { AnimateOnLoad }   from '@ui/preloader'
 
 import { NavigationProps } from './navigation.interface'
 import { Language }        from './navigation.interface'
+import { useNavigation }   from './data'
 import { messages }        from './messages'
 
 const switchLanguage = (language: Language, languageVar) => () => {
@@ -24,6 +25,7 @@ const switchLanguage = (language: Language, languageVar) => () => {
 const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
   const [visible, setVisible] = useState<boolean>(false)
   const { shadows }: any = useTheme()
+  const { navigation } = useNavigation()
 
   return (
     <AnimateOnLoad
@@ -51,18 +53,22 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
               <Logo mobile />
             </Layout>
             <Row justifyContent='flex-end' alignItems='center'>
-              <NextLink
-                color='black'
-                fontWeight='medium'
-                fontSize='semiRegular'
-                textTransform='uppercase'
-                href='/contacts'
-                rel='contact'
-                title={messages.contactsPage[language]}
-              >
-                {messages.contacts[language]}
-              </NextLink>
-              <Layout flexBasis={32} />
+              {navigation[language].map(({ contentAddons: { title, content } }) => (
+                <>
+                  <NextLink
+                    color='black'
+                    fontWeight='medium'
+                    fontSize='semiRegular'
+                    textTransform='uppercase'
+                    href={content}
+                    rel={title}
+                    title={title}
+                  >
+                    {title}
+                  </NextLink>
+                  <Layout flexBasis={32} />
+                </>
+              ))}
               <Layout display={['none', 'none', 'flex']}>
                 <Button width='100%' onClick={() => setVisible(true)}>
                   {messages.contactUs[language]}

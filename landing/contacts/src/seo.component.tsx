@@ -1,15 +1,7 @@
-import { useReactiveVar } from '@apollo/client'
+import React  from 'react'
+import Helmet from 'react-helmet'
 
-import React              from 'react'
-import Helmet             from 'react-helmet'
-
-import { useSeo }         from './seo.data'
-import { languageVar }    from './store'
-
-const Seo = () => {
-  const SEO = useSeo()
-  const language = useReactiveVar(languageVar)
-
+const Seo = ({ SEO, language }) => {
   const { title } = SEO[language]
 
   return (

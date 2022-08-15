@@ -21,7 +21,10 @@ interface Props {
   SEO: any
 }
 
-const IndexPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data: { hero, about } }) => {
+const IndexPage: FC<Props> = ({
+  SEO = { RU: {}, EN: {} },
+  data: { hero, about, reviews, feedback },
+}) => {
   const language = useReactiveVar<Language>(languageVar)
 
   return (
@@ -30,9 +33,9 @@ const IndexPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data: { hero, about } 
       <Navigation language={language} languageVar={languageVar} />
       <LandingHero language={language} data={hero} />
       <LandingAbout language={language} data={about} />
-      <LandingReviews language={language} />
+      <LandingReviews language={language} data={reviews} />
       <LandingTeam language={language} />
-      <LandingFeedback language={language} />
+      <LandingFeedback language={language} data={feedback} />
       <LandingFooter language={language} />
     </Preloader>
   )

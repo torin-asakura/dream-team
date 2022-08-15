@@ -19,18 +19,14 @@ import { useSwiper }            from '@ui/carousel'
 import { Item }                 from './item'
 import { LandingReviewsProps }  from './landing-reviews.interface'
 import { Popover }              from './popover'
-import { useData }              from './data'
 import { messages }             from './messages'
 
-const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
+const LandingReviews: FC<LandingReviewsProps> = ({ language, data }) => {
   const [activeItem, setActiveItem] = useState<number | null>(null)
   const [desktopSwiper, setDesktopSwiper] = useState<SwiperCore | null>(null)
   const [mobileSwiper, setMobileSwiper] = useState<SwiperCore | null>(null)
 
-  const filterByLanguage = ({ language: { code } }) => code === language
-
-  const reviews = useData().filter(filterByLanguage)
-  const carouselChildren = reviews.map((review, index) => (
+  const carouselChildren = data[language].map((review, index) => (
     <Item review={review} language={language} onClick={() => setActiveItem(index)} />
   ))
 
@@ -47,7 +43,7 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language }) => {
       <Popover
         visible={activeItem}
         setVisible={setActiveItem}
-        reviews={reviews}
+        reviews={data[language]}
         language={language}
       />
       <Box

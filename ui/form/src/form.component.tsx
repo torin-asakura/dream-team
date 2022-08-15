@@ -14,8 +14,8 @@ import { Text }                   from '@ui/text'
 
 import { FormProps }              from './form.interface'
 import { Type }                   from './form.interface'
-import { useData }                from './data'
-import { useAction }              from './data'
+import { useForms }               from './data'
+import { useActionHook }          from './data'
 import { messages }               from './messages'
 import { getFieldDataByLanguage } from './utils'
 import { formatRequisitesField }  from './utils'
@@ -29,8 +29,8 @@ const Form: FC<FormProps> = ({ language, onSuccess = doNothing, onFailure = doNo
   const [email, setEmail] = useState<string>('')
   const [type, setType] = useState<Type>('phone')
   const [requisites, setRequisites] = useState<string>('')
-  const [submitForm, data, error] = useAction()
-  const forms = useData()
+  const [submitForm, data, error] = useActionHook()
+  const forms = useForms()
 
   const getError = (field: string) => {
     if (data && data.errors) {
