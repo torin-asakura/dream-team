@@ -1,7 +1,6 @@
-import { getClient }                         from '@globals/data'
+import { getClient }        from '@globals/data'
 
-import { GET_CONTACTS_SEO }                   from './queries'
-
+import { GET_CONTACTS_SEO } from './queries'
 import { runContactsQuery } from './queries'
 
 export const getServerSideProps = async () => {

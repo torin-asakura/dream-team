@@ -4,12 +4,15 @@ import { FC }                 from 'react'
 import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
 import { Text }               from '@ui/text'
+import { extractObject }      from '@globals/data'
 
 import { PrivacyPolicyProps } from './privacy-policy.interface'
-import { useData }            from './data'
 
-const PrivacyPolicy: FC<PrivacyPolicyProps> = ({ language }) => {
-  const data = useData()
+const PrivacyPolicy: FC<PrivacyPolicyProps> = ({ language, data }) => {
+  const policyObj = extractObject('contentAddons', 'lead', data[language])
+
+  const policyContent = policyObj.content
+  const policyTitle = policyObj.title
 
   return (
     <Layout width='100%' height='100%' justifyContent='center' alignItems='center'>
@@ -18,12 +21,12 @@ const PrivacyPolicy: FC<PrivacyPolicyProps> = ({ language }) => {
           <Layout flexBasis={104} />
           <Layout>
             <Text fontSize='big' color='text.black' fontWeight='slim'>
-              {data[language].title}
+              {policyTitle}
             </Text>
           </Layout>
           <Layout flexBasis={32} />
           <Column width='100%'>
-            {(data[language]?.content || []).map((paragraph) => (
+            {policyContent.split('|n|').map((paragraph) => (
               <>
                 <Text fontSize='regular' color='text.black' lineHeight='primary'>
                   {paragraph}

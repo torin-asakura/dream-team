@@ -1,6 +1,7 @@
 import { getClient }              from '@globals/data'
 
 import { GET_PRIVACY_POLICY_SEO } from './queries'
+import { runPrivacyPolicyQuery }  from './queries'
 
 export const getServerSideProps = async () => {
   const client = getClient()
@@ -18,5 +19,11 @@ export const getServerSideProps = async () => {
     }
   } else SEO = { RU: {}, EN: {} }
 
-  return { props: { SEO } }
+  const queryPromises: Array<Promise<any>> = [runPrivacyPolicyQuery()]
+
+  const retrievedData = await Promise.all(queryPromises)
+
+  const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
+
+  return { props: { SEO, data } }
 }

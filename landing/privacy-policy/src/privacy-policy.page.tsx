@@ -14,16 +14,17 @@ import { languageVar }    from './store'
 
 interface Props {
   SEO: any
+  data: any
 }
 
-const PrivacyPolicyPage: FC<Props> = ({ SEO = { RU: {}, EN: {} } }) => {
+const PrivacyPolicyPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data: { privacyPolicy } }) => {
   const language = useReactiveVar<Language>(languageVar)
 
   return (
     <Preloader>
       <Seo SEO={SEO} language={language} />
       <Navigation language={language} languageVar={languageVar} />
-      <PrivacyPolicy language={language} />
+      <PrivacyPolicy language={language} data={privacyPolicy} />
       <LandingFooter language={language} />
     </Preloader>
   )

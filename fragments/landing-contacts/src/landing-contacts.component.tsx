@@ -20,22 +20,24 @@ import { extractObject }        from '@globals/data'
 import { useHover }             from '@ui/utils'
 
 import { LandingContactsProps } from './landing-contacts.interface'
-import { useData }              from './data'
 import { messages }             from './messages'
 
 const LandingContacts: FC<LandingContactsProps> = ({ language, data }) => {
-  const { feedbackPhone, whatsapp } = useData()
   const theme: any = useTheme()
   const [hover, hoverProps] = useHover()
 
   const objLead = extractObject('contentAddons', 'lead', data[language])
   const objWorkingHours = extractObject('contentAddons', 'working-hours', data[language])
   const objEmail = extractObject('contentAddons', 'email', data[language])
+  const objWhatsapp = extractObject('contentAddons', 'whatsapp', data[language])
+  const objPhone = extractObject('contentAddons', 'phone', data[language])
 
   const { title } = objLead
   const { content } = objLead
   const workingHours = objWorkingHours.title
   const email = objEmail.content
+  const whatsapp = objWhatsapp.title
+  const phone = objPhone.title
 
   return (
     <Box
@@ -129,7 +131,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language, data }) => {
                     <Row alignItems='center'>
                       <Layout>
                         <Link
-                          href={`tel:${feedbackPhone.content}`}
+                          href={`tel:${phone}`}
                           rel='contact'
                           title={messages.viaPhone[language]}
                           fontSize={['semiLarge', 'semiLarge', 'increased']}
@@ -137,12 +139,12 @@ const LandingContacts: FC<LandingContactsProps> = ({ language, data }) => {
                           fontWeight='slim'
                           itemProp='telephone'
                         >
-                          {feedbackPhone.content}
+                          {phone}
                         </Link>
                       </Layout>
                       <Layout flexBasis={16} />
                       <Layout>
-                        <Link href={whatsapp.content} target='_blank'>
+                        <Link href={whatsapp} target='_blank'>
                           <Box width={[36, 36, 40]} height={[36, 36, 40]} {...hoverProps}>
                             <Button
                               width='100%'
@@ -168,7 +170,7 @@ const LandingContacts: FC<LandingContactsProps> = ({ language, data }) => {
                       </Layout>
                       <Layout flexBasis={16} />
                       <Layout>
-                        <Copy content={feedbackPhone.content} />
+                        <Copy content={phone} />
                       </Layout>
                     </Row>
                   </AnimateOnLoad>

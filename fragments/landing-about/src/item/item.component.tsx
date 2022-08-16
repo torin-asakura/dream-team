@@ -11,7 +11,7 @@ import { Content }   from './content'
 import { ItemProps } from './item.interface'
 
 const Item: FC<ItemProps> = ({ title, content, excerpt, image, index }) => (
-  <Box height={['auto', 'auto', 444]} width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>
+  <Box height={['auto', 'auto', 416]} width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>
     <Condition match={index % 2 === 0}>
       <Row minHeight={350} display={['none', 'none', 'flex']}>
         <Image width={572} height={404} alt={title} src={image.sourceUrl} contain />

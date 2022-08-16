@@ -9,7 +9,7 @@ import { Text }         from '@ui/text'
 import { TextEllipsis } from '@ui/text'
 
 import { ItemProps }    from './item.interface'
-import { formatString } from '../data'
+import { formatString } from '../helpers'
 import { messages }     from './messages'
 
 const Item: FC<ItemProps> = ({ review, language, onClick }) => (
