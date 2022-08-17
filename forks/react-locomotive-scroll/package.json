@@ -1,0 +1,18 @@
+{
+  "name": "@forks/react-locomotive-scroll",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "use-debounce": "6.0.1",
+    "use-resize-observer": "6.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.1",
+    "locomotive-scroll": "^4.1.4"
+  },
+  "peerDependencies": {
+    "locomotive-scroll": "^4.1.4",
+    "react": "^18.0.2"
+  }
+}

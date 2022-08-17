@@ -1,1 +1,1 @@
-export { default } from '@landing/contacts-page'
+export { default, getServerSideProps } from '@landing/contacts-page'

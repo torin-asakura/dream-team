@@ -8,12 +8,17 @@ import { Row }                  from '@ui/layout'
 import { Column }               from '@ui/layout'
 import { Box }                  from '@ui/layout'
 import { Text }                 from '@ui/text'
+import { extractObject }        from '@globals/data'
 
 import { LandingFeedbackProps } from './landing-feedback.interface'
-import { useData }              from './data'
 
-const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
-  const { asset, ...content } = useData()
+const LandingFeedback: FC<LandingFeedbackProps> = ({ language, data }) => {
+  const obj = extractObject('contentAddons', 'lead', data[language])
+
+  const imageUrl = obj.image.sourceUrl
+  const imageAltText = obj.image.altText
+  const { title } = obj
+  const { content } = obj
 
   return (
     <Box
@@ -25,7 +30,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
       position='relative'
     >
       <Box position='absolute' width='100%' height='100%' left={0} top={0} zIndex={-1}>
-        <Image alt={asset.altText} src={asset.mediaItemUrl} layout='fill' />
+        <Image alt={imageAltText} src={imageUrl} layout='fill' />
       </Box>
       <Layout width='100%' maxWidth={1280}>
         <Column width='100%'>
@@ -35,7 +40,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
               <Column width='100%'>
                 <Row width='100%'>
                   <Text fontSize='medium' color='text.accent' fontWeight='bold'>
-                    {content[language].title}
+                    {title}
                   </Text>
                 </Row>
                 <Layout flexBasis={32} />
@@ -46,7 +51,7 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
                     color='text.white'
                     fontWeight='slim'
                   >
-                    {content[language].content}
+                    {content}
                   </Text>
                 </Row>
               </Column>

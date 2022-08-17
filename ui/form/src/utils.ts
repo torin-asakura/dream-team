@@ -7,7 +7,7 @@ export const fieldToLabelMap = {
 }
 
 export const getFieldDataByLanguage = (content, language: Language, field: string): string =>
-  content[language].filter(({ label }) => fieldToLabelMap[field].includes(label))[0]?.label
+  content[language]?.filter(({ label }) => fieldToLabelMap[field].includes(label))[0]?.label
 
 export const formatRequisitesField = (batch, state) =>
   batch &&

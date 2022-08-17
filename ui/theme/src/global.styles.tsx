@@ -16,7 +16,7 @@ export const GlobalStyles = () => (
       }
 
       #__next {
-        height: 100%;
+        height: 0;
       }
       
       @keyframes draw {

@@ -20,7 +20,7 @@ const Content: FC<ContentProps> = ({ title, excerpt, content, imageUrl }) => (
       <Layout flexBasis={[24, 24, 32]} />
       <Layout>
         <Text color='text.black' fontSize={['large', 'large', 'big']} fontWeight='slim'>
-          {excerpt}
+          {content}
         </Text>
       </Layout>
       <Layout flexBasis={26} display={['flex', 'flex', 'none']} />
@@ -30,7 +30,7 @@ const Content: FC<ContentProps> = ({ title, excerpt, content, imageUrl }) => (
       <Layout flexBasis={[26, 26, 32]} />
       <Layout>
         <Text color='text.black' fontSize='regular' lineHeight='primary'>
-          {content}
+          {excerpt}
         </Text>
       </Layout>
     </Column>

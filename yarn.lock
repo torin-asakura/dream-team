@@ -1351,6 +1351,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@forks/react-locomotive-scroll@workspace:0.0.1, @forks/react-locomotive-scroll@workspace:forks/react-locomotive-scroll":
+  version: 0.0.0-use.local
+  resolution: "@forks/react-locomotive-scroll@workspace:forks/react-locomotive-scroll"
+  dependencies:
+    "@types/react": 17.0.1
+    locomotive-scroll: ^4.1.4
+    use-debounce: 6.0.1
+    use-resize-observer: 6.1.0
+  peerDependencies:
+    locomotive-scroll: ^4.1.4
+    react: ^18.0.2
+  languageName: unknown
+  linkType: soft
+
 "@fragments/form-popover@workspace:0.0.1, @fragments/form-popover@workspace:fragments/form-popover":
   version: 0.0.0-use.local
   resolution: "@fragments/form-popover@workspace:fragments/form-popover"
@@ -1378,6 +1392,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.6.9
     "@fragments/landing-work-directions": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:0.0.1"
@@ -1399,6 +1414,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.9.3
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -1431,6 +1447,7 @@ __metadata:
   resolution: "@fragments/landing-feedback@workspace:fragments/landing-feedback"
   dependencies:
     "@apollo/client": ^3.6.9
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -1454,6 +1471,7 @@ __metadata:
   resolution: "@fragments/landing-footer@workspace:fragments/landing-footer"
   dependencies:
     "@apollo/client": ^3.6.9
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -1482,6 +1500,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.6.9
     "@fragments/form-popover": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -1574,6 +1593,7 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.9.3
     "@fragments/form-popover": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -1600,6 +1620,7 @@ __metadata:
   resolution: "@fragments/privacy-policy@workspace:fragments/privacy-policy"
   dependencies:
     "@apollo/client": ^3.6.9
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/layout": "workspace:0.0.1"
@@ -1610,6 +1631,19 @@ __metadata:
     "@apollo/client": "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@globals/data@workspace:0.0.1, @globals/data@workspace:globals/data":
+  version: 0.0.0-use.local
+  resolution: "@globals/data@workspace:globals/data"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    graphql: ^15.5.1
+    react: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 
@@ -2009,6 +2043,7 @@ __metadata:
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@fragments/navigation": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@landing/404-page": "workspace:0.0.1"
     "@landing/contacts-page": "workspace:0.0.1"
     "@landing/index-page": "workspace:0.0.1"
@@ -2042,12 +2077,15 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@fragments/landing-contacts": "workspace:0.0.1"
     "@fragments/navigation": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
     "@ui/preloader": "workspace:0.0.1"
+    locomotive-scroll: ^4.1.4
     react: 17
     react-dom: 17
     react-helmet: ^6.1.0
@@ -2069,6 +2107,7 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@fragments/landing-about": "workspace:0.0.1"
     "@fragments/landing-feedback": "workspace:0.0.1"
     "@fragments/landing-footer": "workspace:0.0.1"
@@ -2076,10 +2115,12 @@ __metadata:
     "@fragments/landing-reviews": "workspace:0.0.1"
     "@fragments/landing-team": "workspace:0.0.1"
     "@fragments/navigation": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
     "@ui/preloader": "workspace:0.0.1"
+    locomotive-scroll: ^4.1.4
     react: 17
     react-dom: 17
     react-helmet: ^6.1.0
@@ -2088,6 +2129,7 @@ __metadata:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     "@ui/preloader": "workspace:^"
+    next: "*"
     react: 17
     react-dom: 17
     react-helmet: "*"
@@ -2101,13 +2143,16 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@fragments/landing-footer": "workspace:0.0.1"
     "@fragments/navigation": "workspace:0.0.1"
     "@fragments/privacy-policy": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
     "@ui/preloader": "workspace:0.0.1"
+    locomotive-scroll: ^4.1.4
     react: 17
     react-dom: 17
     react-helmet: ^6.1.0
@@ -3273,6 +3318,7 @@ __metadata:
   resolution: "@ui/social-links@workspace:ui/social-links"
   dependencies:
     "@apollo/client": ^3.6.9
+    "@globals/data": "workspace:0.0.1"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
@@ -4380,10 +4426,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bezier-easing@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "bezier-easing@npm:2.1.0"
+  checksum: ec22666b5385979b3e7a63eaf2631395b1be5beb3aed4f14cc70ae9eb09032082584f7e3eec045e4c122466987ed7e159f5b39f82b8a9870cd55e75b0d55a7d5
+  languageName: node
+  linkType: hard
+
 "big.js@npm:^5.2.2":
   version: 5.2.2
   resolution: "big.js@npm:5.2.2"
   checksum: b89b6e8419b097a8fb4ed2399a1931a68c612bce3cfd5ca8c214b2d017531191070f990598de2fc6f3f993d91c0f08aa82697717f6b3b8732c9731866d233c9e
+  languageName: node
+  linkType: hard
+
+"bindall-standalone@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "bindall-standalone@npm:1.0.5"
+  checksum: 670a96a55a2609cbcf7f6a7066641e988d89467dbe479d1385fe12f3863253e81b7aab19d479fe718d81f8cd84fb40886bbe5b4b065e8220930f0fccc58465c0
   languageName: node
   linkType: hard
 
@@ -6093,7 +6153,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"graphql@npm:^15.8.0":
+"graphql@npm:^15.5.1, graphql@npm:^15.8.0":
   version: 15.8.0
   resolution: "graphql@npm:15.8.0"
   checksum: 423325271db8858428641b9aca01699283d1fe5b40ef6d4ac622569ecca927019fce8196208b91dd1d8eb8114f00263fe661d241d0eb40c10e5bfd650f86ec5e
@@ -7140,6 +7200,13 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"lethargy@npm:^1.0.2":
+  version: 1.0.9
+  resolution: "lethargy@npm:1.0.9"
+  checksum: 2ca67fe57752cb86224b6799b87e8819e0d7636eafe16c59a596c9e1125ac6ee9f17eb5e92ef853926137cc70fa9798396e7aa38563751a75109450de9979fb8
+  languageName: node
+  linkType: hard
+
 "leven@npm:^3.1.0":
   version: 3.1.0
   resolution: "leven@npm:3.1.0"
@@ -7197,6 +7264,17 @@ fsevents@^2.3.2:
   dependencies:
     p-locate: ^5.0.0
   checksum: 72eb661788a0368c099a184c59d2fee760b3831c9c1c33955e8a19ae4a21b4116e53fa736dc086cdeb9fce9f7cc508f2f92d2d3aae516f133e16a2bb59a39f5a
+  languageName: node
+  linkType: hard
+
+"locomotive-scroll@npm:^4.1.4":
+  version: 4.1.4
+  resolution: "locomotive-scroll@npm:4.1.4"
+  dependencies:
+    bezier-easing: ^2.1.0
+    smoothscroll-polyfill: ^0.4.4
+    virtual-scroll: ^1.5.2
+  checksum: 28ee6ca336dd8e72c7d97d9f8a551900f0535fc51a86b650034ec04acecc1e1554d1c5936f95cfd460a6571a9ee5af354bc3bd1a6c7aecd1b1063a4c8ab68eba
   languageName: node
   linkType: hard
 
@@ -7793,7 +7871,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"object-assign@npm:^4.1.0, object-assign@npm:^4.1.1":
+"object-assign@npm:^4.0.1, object-assign@npm:^4.1.0, object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
   checksum: fcc6e4ea8c7fe48abfbb552578b1c53e0d194086e2e6bbbf59e0a536381a292f39943c6e9628af05b5528aa5e3318bb30d6b2e53cadaf5b8fe9e12c4b69af23f
@@ -8496,6 +8574,13 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"resize-observer-polyfill@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "resize-observer-polyfill@npm:1.5.1"
+  checksum: 57e7f79489867b00ba43c9c051524a5c8f162a61d5547e99333549afc23e15c44fd43f2f318ea0261ea98c0eb3158cca261e6f48d66e1ed1cd1f340a43977094
+  languageName: node
+  linkType: hard
+
 "resolve-alpn@npm:^1.0.0":
   version: 1.2.0
   resolution: "resolve-alpn@npm:1.2.0"
@@ -8789,6 +8874,13 @@ fsevents@^2.3.2:
   version: 4.1.0
   resolution: "smart-buffer@npm:4.1.0"
   checksum: 1db847dcf92c06b36e96aace965e00aec5caccd65c8fd60e0c284c5ad9dabe7f16ef4a60a34dd3c4ccc245a8393071e646fc94fc95f111c25e8513fd9efa6ed5
+  languageName: node
+  linkType: hard
+
+"smoothscroll-polyfill@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "smoothscroll-polyfill@npm:0.4.4"
+  checksum: b99ff7d91689d563ec69cb1d29713b332a24c88ac3dc4ef9ef9fbe4137305336e67253211067c5f786478dbdabd2aa6c2033709d4d8feca327b09eca8d5a0e7b
   languageName: node
   linkType: hard
 
@@ -9332,6 +9424,13 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"tiny-emitter@npm:^1.0.0":
+  version: 1.2.0
+  resolution: "tiny-emitter@npm:1.2.0"
+  checksum: f21f76da7c1c7fbc60c4ff32c43db8ef601aa98ffc79b75ab1e2d6308c0695d9aa5bd0c941e3a234d8e49ca994ab574692754d5617bd7d2b48b880857e0e3154
+  languageName: node
+  linkType: hard
+
 "tiny-warning@npm:^1.0.3":
   version: 1.0.3
   resolution: "tiny-warning@npm:1.0.3"
@@ -9623,6 +9722,27 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"use-debounce@npm:6.0.1":
+  version: 6.0.1
+  resolution: "use-debounce@npm:6.0.1"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 9f811075652712b418dd0f6b09de62a37b0e1bb65295d3b6f797aed0eb2267188def0039e820f67aa5b6cb866a00f02da9bcf680e098a524d22e7d33438e4935
+  languageName: node
+  linkType: hard
+
+"use-resize-observer@npm:6.1.0":
+  version: 6.1.0
+  resolution: "use-resize-observer@npm:6.1.0"
+  dependencies:
+    resize-observer-polyfill: ^1.5.1
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: a4135446ed1c022f89c8ed21bc98aad96db823489cd9ca8a7c69b99e0bbd81d804adec5ab4418cddc6512e6f2fa974541da54acb1f93af5579cd19457de2ea7c
+  languageName: node
+  linkType: hard
+
 "use-subscription@npm:1.5.1":
   version: 1.5.1
   resolution: "use-subscription@npm:1.5.1"
@@ -9670,6 +9790,18 @@ fsevents@^2.3.2:
   version: 1.1.2
   resolution: "vary@npm:1.1.2"
   checksum: ae0123222c6df65b437669d63dfa8c36cee20a504101b2fcd97b8bf76f91259c17f9f2b4d70a1e3c6bbcee7f51b28392833adb6b2770b23b01abec84e369660b
+  languageName: node
+  linkType: hard
+
+"virtual-scroll@npm:^1.5.2":
+  version: 1.5.2
+  resolution: "virtual-scroll@npm:1.5.2"
+  dependencies:
+    bindall-standalone: ^1.0.5
+    lethargy: ^1.0.2
+    object-assign: ^4.0.1
+    tiny-emitter: ^1.0.0
+  checksum: ea1064a2f77b168c24cf71052a54ecbc88eb4efd4f2043a81d1f699a61f83e4600aadb6db30ddc66bce78e67b67afa7217f9d75fa485bf6121a6399c382ec1ee
   languageName: node
   linkType: hard
 

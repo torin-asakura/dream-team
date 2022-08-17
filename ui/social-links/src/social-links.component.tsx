@@ -1,22 +1,26 @@
-import React                from 'react'
-import { FC }               from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
 
-import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
-import { TelegramIcon }     from '@ui/icons'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Link }             from '@ui/link'
-import { Text }             from '@ui/text'
-import { useHover }         from '@ui/utils'
+import { Button }            from '@ui/button'
+import { Condition }         from '@ui/condition'
+import { TelegramIcon }      from '@ui/icons'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Link }              from '@ui/link'
+import { Text }              from '@ui/text'
+import { extractObject }     from '@globals/data'
+import { useHover }          from '@ui/utils'
 
-import { SocialLinksProps } from './social-links.interface'
-import { useData }          from './data'
-import { messages }         from './messages'
+import { SocialLinksProps }  from './social-links.interface'
+import { useSocialNetworks } from './data'
+import { messages }          from './messages'
 
 const SocialLinks: FC<SocialLinksProps> = ({ language, contacts = false }) => {
   const [hoverTelegram, hoverTelegramProps] = useHover()
-  const { telegram } = useData()
+
+  const { data } = useSocialNetworks()
+
+  const telegram = extractObject('contentAddons', 'telegram', data)
 
   return (
     <Row
@@ -41,7 +45,7 @@ const SocialLinks: FC<SocialLinksProps> = ({ language, contacts = false }) => {
       </Condition>
       <Layout flexBasis={24} />
       <Layout {...hoverTelegramProps}>
-        <Link href={telegram.content} target='_blank' title={telegram.title}>
+        <Link href={telegram?.content} target='_blank' title={telegram?.title}>
           <Button colors='social' size='rounded'>
             <TelegramIcon color={hoverTelegram ? 'white' : ''} width={24} height={24} />
           </Button>

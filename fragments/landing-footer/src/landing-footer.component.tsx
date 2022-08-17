@@ -1,7 +1,6 @@
 import React                   from 'react'
 import { FC }                  from 'react'
 
-import { Condition }           from '@ui/condition'
 import { Divider }             from '@ui/divider'
 import { DreamTeamIcon }       from '@ui/icons'
 import { DreamTeamMobileIcon } from '@ui/icons'
@@ -14,15 +13,21 @@ import { Link }                from '@ui/link'
 import { SocialLinks }         from '@ui/social-links'
 import { Text }                from '@ui/text'
 import { Space }               from '@ui/text'
+import { extractObject }       from '@globals/data'
 import { useSphere }           from '@ui/logo'
 
 import { LandingProps }        from './landing-footer.interface'
-import { useData }             from './data'
+import { useFooter }           from './data'
 import { messages }            from './messages'
 
 const LandingFooter: FC<LandingProps> = ({ language }) => {
   const sphere = useSphere()
-  const { workingHoursRu, workingHoursEn, feedbackPhone, feedbackEmail, by } = useData()
+  const data = useFooter()
+
+  const workingHours = extractObject('contentAddons', 'working-hours', data[language])
+  const by = extractObject('contentAddons', 'by', data[language])
+  const email = extractObject('contentAddons', 'email', data[language])
+  const phone = extractObject('contentAddons', 'phone', data[language])
 
   return (
     <Box itemScope itemType='http://schema.org/Organization'>
@@ -50,7 +55,7 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
               <Column width='100%' alignItems='flex-end'>
                 <Layout>
                   <Link
-                    href={`mailto:${feedbackEmail.content}`}
+                    href={`mailto:${email?.content}`}
                     rel='contact'
                     title={messages.viaEmail[language]}
                     fontSize='large'
@@ -58,13 +63,13 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                     fontWeight='slim'
                     itemProp='email'
                   >
-                    {feedbackEmail.content}
+                    {email?.content}
                   </Link>
                 </Layout>
                 <Layout flexBasis={24} />
                 <Layout>
                   <Link
-                    href={`tel:${feedbackPhone.content}`}
+                    href={`tel:${phone?.content}`}
                     rel='contact'
                     title={messages.viaPhone[language]}
                     fontSize='large'
@@ -72,14 +77,13 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                     fontWeight='slim'
                     itemProp='telephone'
                   >
-                    {feedbackPhone.content}
+                    {phone?.content}
                   </Link>
                 </Layout>
                 <Layout flexBasis={16} />
                 <Layout>
                   <Text fontSize='regular' color='text.lightGray'>
-                    <Condition match={language === 'RU'}>{workingHoursRu.content}</Condition>
-                    <Condition match={language === 'EN'}>{workingHoursEn.content}</Condition>
+                    {workingHours?.title}
                   </Text>
                 </Layout>
               </Column>
@@ -104,7 +108,7 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
               <Layout flexBasis={32} />
               <Layout>
                 <Link
-                  href={`mailto:${feedbackEmail.content}`}
+                  href={`mailto:${phone?.content}`}
                   rel='contact'
                   title={messages.viaEmail[language]}
                   fontSize='large'
@@ -112,13 +116,13 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                   fontWeight='slim'
                   itemProp='email'
                 >
-                  {feedbackEmail.content}
+                  {phone?.content}
                 </Link>
               </Layout>
               <Layout flexBasis={24} />
               <Layout>
                 <Link
-                  href={`tel:${feedbackPhone.content}`}
+                  href={`tel:${phone?.content}`}
                   rel='contact'
                   title={messages.viaPhone[language]}
                   fontSize='large'
@@ -126,14 +130,13 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
                   fontWeight='slim'
                   itemProp='telephone'
                 >
-                  {feedbackPhone.content}
+                  {phone?.content}
                 </Link>
               </Layout>
               <Layout flexBasis={8} />
               <Layout>
                 <Text fontSize='regular' color='text.lightGray'>
-                  <Condition match={language === 'RU'}>{workingHoursRu.content}</Condition>
-                  <Condition match={language === 'EN'}>{workingHoursEn.content}</Condition>
+                  {workingHours?.title}
                 </Text>
               </Layout>
               <Layout flexBasis={32} />
@@ -141,17 +144,17 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
               <Layout flexBasis={16} />
               <Layout>
                 <Link
-                  href='https://torinasakura.name/'
+                  href={by?.excerpt}
                   target='_blank'
                   rel='me'
                   title={messages.siteAuthor[language]}
                 >
                   <Text fontSize='regular' color='text.lightGray'>
-                    {by.title}
+                    {by?.title}
                   </Text>
                   <Space />
                   <Text fontSize='regular' color='text.lightGray' fontWeight='bold'>
-                    {by.content}
+                    {by?.content}
                   </Text>
                 </Link>
               </Layout>
@@ -166,18 +169,13 @@ const LandingFooter: FC<LandingProps> = ({ language }) => {
         <Column width='100%' maxWidth={1280} height='auto' display={['none', 'none', 'flex']}>
           <Layout flexBasis={20} />
           <Layout width='100%' justifyContent='flex-end'>
-            <Link
-              href='https://torinasakura.name/'
-              target='_blank'
-              rel='me'
-              title={messages.siteAuthor[language]}
-            >
+            <Link href={by?.excerpt} target='_blank' rel='me' title={messages.siteAuthor[language]}>
               <Text fontSize='regular' color='text.lightGray'>
-                {by.title}
+                {by?.title}
               </Text>
               <Space />
               <Text fontSize='regular' color='text.lightGray' fontWeight='bold'>
-                {by.content}
+                {by?.content}
               </Text>
             </Link>
           </Layout>
