@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@fragments/landing-about": "workspace:0.0.1",
     "@fragments/landing-feedback": "workspace:0.0.1",
     "@fragments/landing-footer": "workspace:0.0.1",
     "@fragments/landing-hero": "workspace:0.0.1",
     "@fragments/landing-reviews": "workspace:0.0.1",
     "@fragments/landing-team": "workspace:0.0.1",
-    "@fragments/navigation": "workspace:0.0.1"
+    "@fragments/navigation": "workspace:0.0.1",
+    "locomotive-scroll": "^4.1.4"
   },
   "devDependencies": {
     "@apollo/client": "^3.6.9",

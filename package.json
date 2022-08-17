@@ -4,7 +4,8 @@
     "ui/**/*",
     "fragments/**/*",
     "landing/**/*",
-    "globals/**/*"
+    "globals/**/*",
+    "forks/**/*"
   ],
   "scripts": {
     "postinstall": "yarn workspace @ui/icons build"
