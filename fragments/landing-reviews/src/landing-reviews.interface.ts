@@ -1,17 +1,17 @@
 export type Language = 'RU' | 'EN'
 
-type Skills = {
+interface Skills {
   title: string
 }
 
-type ContentData = {
+interface ContentData {
   content: string
   menuOrder: number
   title: string
   review: {
     respondent: string
     companylink: string
-    skills: Skills[]
+    skills: Array<Skills>
   }
   language: {
     code: string
@@ -19,8 +19,8 @@ type ContentData = {
 }
 
 interface Data {
-  ['RU']: ContentData[]
-  ['EN']: ContentData[]
+  RU: Array<ContentData>
+  EN: Array<ContentData>
 }
 
 export interface LandingReviewsProps {

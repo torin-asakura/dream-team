@@ -1,6 +1,6 @@
 export type Language = 'RU' | 'EN'
 
-type ContentData = {
+interface ContentData {
   contentAddons: {
     title: string
     role: string
@@ -12,8 +12,8 @@ type ContentData = {
 }
 
 interface Data {
-  ['RU']: ContentData[]
-  ['EN']: ContentData[]
+  RU: Array<ContentData>
+  EN: Array<ContentData>
 }
 
 export interface PrivacyPolicyProps {
