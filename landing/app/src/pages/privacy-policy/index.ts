@@ -1,1 +1,1 @@
-export { default } from '@landing/privacy-policy-page'
+export { default, getServerSideProps } from '@landing/privacy-policy-page'

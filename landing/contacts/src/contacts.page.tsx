@@ -1,26 +1,50 @@
-import { useReactiveVar }  from '@apollo/client'
+import { useReactiveVar }           from '@apollo/client'
 
-import React               from 'react'
-import { FC }              from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
+import { useRef }                   from 'react'
 
-import { LandingContacts } from '@fragments/landing-contacts'
-import { LandingFooter }   from '@fragments/landing-footer'
-import { Navigation }      from '@fragments/navigation'
-import { Preloader }       from '@ui/preloader'
+import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { LandingContacts }          from '@fragments/landing-contacts'
+import { Navigation }               from '@fragments/navigation'
+import { Preloader }                from '@ui/preloader'
 
-import { Language }        from './store'
-import { languageVar }     from './store'
+import { Seo }                      from './seo.component'
+import { Language }                 from './store'
+import { languageVar }              from './store'
 
-const ContactsPage: FC = () => {
+interface Props {
+  SEO: any
+  data: any
+}
+
+const ContactsPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data: { contacts } }) => {
   const language = useReactiveVar<Language>(languageVar)
+  const containerRef = useRef(null)
 
   return (
     <Preloader>
+      <Seo SEO={SEO} language={language} />
       <Navigation language={language} languageVar={languageVar} />
-      <LandingContacts language={language} />
-      <LandingFooter language={language} />
+      <LocomotiveScrollProvider
+        options={{
+          smooth: true,
+          smartphone: {
+            smooth: true,
+          },
+          tablet: {
+            smooth: true,
+          },
+        }}
+        containerRef={containerRef}
+        watch={[]}
+      >
+        <main data-scroll-container ref={containerRef}>
+          <LandingContacts language={language} data={contacts} />
+        </main>
+      </LocomotiveScrollProvider>
     </Preloader>
   )
 }
 
-export { ContactsPage }
+export default ContactsPage

@@ -10,44 +10,21 @@ import { Box }       from '@ui/layout'
 import { Content }   from './content'
 import { ItemProps } from './item.interface'
 
-const Item: FC<ItemProps> = ({
-  contentObject: { title, content, excerpt, fragments, featuredImage },
-}) => (
+const Item: FC<ItemProps> = ({ title, content, excerpt, image, index }) => (
   <Box height={['auto', 'auto', 416]} width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>
-    <Condition match={!fragments?.reverse}>
-      <Row minHeight={350}>
-        <Image
-          width={572}
-          height={404}
-          alt={title}
-          src={featuredImage?.node?.mediaItemUrl}
-          contain
-        />
-      </Row>
-      <Layout flexBasis={64} />
-      <Content title={title} content={content} excerpt={excerpt} />
-    </Condition>
-    <Condition match={fragments?.reverse}>
-      <Row minHeight={500} display={['flex', 'flex', 'none']}>
-        <Image
-          width={572}
-          height={404}
-          alt={title}
-          src={featuredImage?.node?.mediaItemUrl}
-          contain
-        />
-      </Row>
-      <Layout flexBasis={64} />
-      <Content title={title} content={content} excerpt={excerpt} />
-      <Layout flexBasis={64} />
+    <Condition match={index % 2 === 0}>
       <Row minHeight={350} display={['none', 'none', 'flex']}>
-        <Image
-          width={572}
-          height={404}
-          alt={title}
-          src={featuredImage?.node?.mediaItemUrl}
-          contain
-        />
+        <Image width={572} height={404} alt={title} src={image.sourceUrl} contain />
+      </Row>
+      <Layout flexBasis={32} flexShrink={0} />
+      <Content title={title} imageUrl={image.sourceUrl} content={content} excerpt={excerpt} />
+    </Condition>
+    <Condition match={index % 2 !== 0}>
+      <Layout flexBasis={[64, 64, 0]} />
+      <Content title={title} imageUrl={image.sourceUrl} content={content} excerpt={excerpt} />
+      <Layout flexBasis={32} flexShrink={0} />
+      <Row minHeight={350} display={['none', 'none', 'flex']}>
+        <Image width={572} height={404} alt={title} src={image.sourceUrl} contain />
       </Row>
     </Condition>
   </Box>

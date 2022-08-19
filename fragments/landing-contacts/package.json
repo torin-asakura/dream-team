@@ -6,16 +6,21 @@
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/copy": "workspace:0.0.1",
+    "@ui/divider": "workspace:0.0.1",
     "@ui/form": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/image": "workspace:0.0.1",
     "@ui/input": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/link": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1"
+    "@ui/social-links": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.6.9",
+    "@emotion/react": "^11.9.3",
+    "@globals/data": "workspace:0.0.1",
     "@types/react": "^17",
     "@types/react-dom": "^17",
     "@ui/preloader": "workspace:0.0.1",
@@ -24,6 +29,7 @@
   },
   "peerDependencies": {
     "@apollo/client": "*",
+    "@emotion/react": "*",
     "@ui/preloader": "workspace:^",
     "react": "*",
     "react-dom": "*"

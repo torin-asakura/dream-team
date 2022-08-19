@@ -1,3 +1,5 @@
+import { useTheme }        from '@emotion/react'
+
 import React               from 'react'
 import { FC }              from 'react'
 import { motion }          from 'framer-motion'
@@ -15,14 +17,20 @@ import { copy }            from './copy.helper'
 
 const Copy: FC<CopyProps> = ({ content }) => {
   const [success, setSuccess] = useState<boolean>(false)
+  const theme: any = useTheme()
 
   if (success) setTimeout(() => setSuccess(false), 3000)
 
   return (
-    <Box width={40} height={40}>
+    <Box width={[36, 36, 40]} height={[36, 36, 40]}>
       <Button
         width='100%'
         colors='clipboard'
+        style={{
+          backgroundColor: success
+            ? `${theme.colors.button.clipboard.active}`
+            : `${theme.colors.button.clipboard.background}`,
+        }}
         // @ts-ignore
         px={0}
         height='100%'
@@ -43,7 +51,7 @@ const Copy: FC<CopyProps> = ({ content }) => {
             </motion.div>
           </Condition>
           <Condition match={success}>
-            <CopySuccessIcon />
+            <CopySuccessIcon color={success ? 'white' : ''} />
           </Condition>
         </Layout>
       </Button>

@@ -8,11 +8,11 @@ import { Box }            from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { Column }         from '@ui/layout'
 import { Row }            from '@ui/layout'
+import { Tag }            from '@ui/tag/src'
 import { Text }           from '@ui/text'
 import { Space }          from '@ui/text'
 
 import { PopoverProps }   from './popover.interface'
-import { Skill }          from './skill'
 import { messages }       from '../messages'
 
 const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) => (
@@ -29,16 +29,16 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
           <Column width='100%'>
             <Row>
               <Layout>
-                <Text fontSize='large' color='text.black' fontWeight='slim'>
+                <Text fontSize='large' color='text.black' fontWeight='slim' whiteSpace='nowrap'>
                   {visible !== null && reviews[visible].title}
                 </Text>
               </Layout>
-              <Row justifyContent='flex-end'>
+              <Row justifyContent='flex-end' display={['none', 'none', 'flex']}>
                 {visible !== null &&
                   reviews[visible].review.skills?.map(({ title }) => (
                     <>
                       <Layout flexBasis={8} />
-                      <Skill content={title} />
+                      <Tag title={title} variant='secondary' />
                     </>
                   ))}
               </Row>
@@ -49,9 +49,23 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
                 {visible !== null && reviews[visible].review.respondent}
               </Text>
             </Layout>
+            <Layout flexBasis={[24, 24, 0]} />
+            <Row justifyContent='flex-start' flexWrap='wrap' display={['flex', 'flex', 'none']}>
+              {visible !== null &&
+                reviews[visible].review.skills?.map(({ title }) => (
+                  <>
+                    <Column height='auto'>
+                      <Layout flexBasis={[0, 0, 8]} />
+                      <Tag title={title} variant='secondary' />
+                      <Layout flexBasis={[8, 8, 0]} />
+                    </Column>
+                    <Layout flexBasis={[8, 8, 0]} />
+                  </>
+                ))}
+            </Row>
           </Column>
         </Row>
-        <Layout flexBasis={32} />
+        <Layout flexBasis={[24, 24, 32]} />
         <Text fontSize='regular' color='text.black' lineHeight='primary'>
           {visible !== null && reviews[visible].content}
         </Text>

@@ -3,17 +3,19 @@ import { FC }                     from 'react'
 import { useState }               from 'react'
 
 import { Button }                 from '@ui/button'
+import { Condition }              from '@ui/condition'
 import { Input }                  from '@ui/input'
 import { Box }                    from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Layout }                 from '@ui/layout'
 import { NextLink }               from '@ui/link'
+import { Space }                  from '@ui/text'
 import { Text }                   from '@ui/text'
 
 import { FormProps }              from './form.interface'
 import { Type }                   from './form.interface'
-import { useData }                from './data'
-import { useAction }              from './data'
+import { useForms }               from './data'
+import { useActionHook }          from './data'
 import { messages }               from './messages'
 import { getFieldDataByLanguage } from './utils'
 import { formatRequisitesField }  from './utils'
@@ -27,8 +29,8 @@ const Form: FC<FormProps> = ({ language, onSuccess = doNothing, onFailure = doNo
   const [email, setEmail] = useState<string>('')
   const [type, setType] = useState<Type>('phone')
   const [requisites, setRequisites] = useState<string>('')
-  const [submitForm, data, error] = useAction()
-  const forms = useData()
+  const [submitForm, data, error] = useActionHook()
+  const forms = useForms()
 
   const getError = (field: string) => {
     if (data && data.errors) {
@@ -73,7 +75,7 @@ const Form: FC<FormProps> = ({ language, onSuccess = doNothing, onFailure = doNo
       borderRadius='normal'
       backgroundColor='white'
       width={['100%', '100%', 515]}
-      height={598}
+      height={['auto', 'auto', 598]}
       padding={['16px', '16px', '32px']}
     >
       <Column width='100%'>
@@ -164,23 +166,32 @@ const Form: FC<FormProps> = ({ language, onSuccess = doNothing, onFailure = doNo
         >
           {messages.send[language]}
         </Button>
-        <Layout flexBasis={24} />
-        <Layout>{data && data.errors?.message}</Layout>
-        <Layout flexBasis={32} />
+        <Condition match={!(data && data.errors?.message)}>
+          <Layout flexBasis={20} />
+        </Condition>
+        <Condition match={data && data.errors?.message}>
+          <Layout flexBasis={24} />
+          <Layout>{data && data.errors?.message}</Layout>
+          <Layout flexBasis={32} />
+        </Condition>
         <Layout>
           <Column>
             <Text
-              fontSize='semiMedium'
+              fontSize={['micro', 'micro', 'semiMedium']}
               color='text.lightGray'
+              lineHeight='medium'
               textAlign='center'
-              display='inline-text'
+              display='inline'
             >
               {messages.formLetter[language]}
+              <Space />
               <NextLink
-                fontSize='semiMedium'
+                display='inline'
+                fontSize={['micro', 'micro', 'semiMedium']}
                 title={messages.privacyPolicyPage[language]}
                 rel='license'
                 href='/privacy-policy'
+                lineHeight='medium'
                 color='text.accent'
                 hoverColor='hover'
                 textAlign='center'
