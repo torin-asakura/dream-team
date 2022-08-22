@@ -1,22 +1,24 @@
-import { useTheme }        from '@emotion/react'
+import { useTheme }            from '@emotion/react'
 
-import React               from 'react'
-import { FC }              from 'react'
-import { useState }        from 'react'
+import React                   from 'react'
+import { FC }                  from 'react'
+import { useState }            from 'react'
+import { useEffect }           from 'react'
 
-import { FormPopover }     from '@fragments/form-popover'
-import { Button }          from '@ui/button'
-import { Layout }          from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Box }             from '@ui/layout'
-import { NextLink }        from '@ui/link'
-import { Logo }            from '@ui/logo'
-import { AnimateOnLoad }   from '@ui/preloader'
+import { FormPopover }         from '@fragments/form-popover'
+import { Button }              from '@ui/button'
+import { Layout }              from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Box }                 from '@ui/layout'
+import { NextLink }            from '@ui/link'
+import { Logo }                from '@ui/logo'
+import { AnimateOnLoad }       from '@ui/preloader'
+import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
 
-import { NavigationProps } from './navigation.interface'
-import { Language }        from './navigation.interface'
-import { useNavigation }   from './data'
-import { messages }        from './messages'
+import { NavigationProps }     from './navigation.interface'
+import { Language }            from './navigation.interface'
+import { useNavigation }       from './data'
+import { messages }            from './messages'
 
 const switchLanguage = (language: Language, languageVar) => () => {
   languageVar(language === 'RU' ? 'EN' : 'RU')
@@ -24,8 +26,24 @@ const switchLanguage = (language: Language, languageVar) => () => {
 
 const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
   const [visible, setVisible] = useState<boolean>(false)
+  const [isNavVisible, setIsNavVisible] = useState<boolean>(true)
+  const { scroll } = useLocomotiveScroll()
   const { shadows }: any = useTheme()
   const { navigation } = useNavigation()
+
+  useEffect(() => {
+    if (scroll) {
+      scroll.on('scroll', (instance) => {
+        if (instance.delta.y > instance.scroll.y && isNavVisible) {
+          setIsNavVisible(false)
+        }
+
+        if (instance.delta.y < instance.scroll.y && !isNavVisible) {
+          setIsNavVisible(true)
+        }
+      })
+    }
+  }, [scroll, isNavVisible, setIsNavVisible])
 
   return (
     <AnimateOnLoad
@@ -40,6 +58,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
       animation={{ y: 0 }}
       initial={{ y: '-100%' }}
       transition={{ duration: 1 }}
+      active={isNavVisible}
     >
       <Box width='100%' height={[72, 72, 84]} justifyContent='center'>
         <Layout flexBasis={[20, 20, 0]} />

@@ -1592,6 +1592,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.9.3
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@fragments/form-popover": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
