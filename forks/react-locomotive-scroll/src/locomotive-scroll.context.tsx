@@ -55,8 +55,8 @@ export const LocomotiveScrollProvider = ({
         LocomotiveScrollRef.current = new LocomotiveScroll({
           el: dataScrollContainer ?? undefined,
           ...options,
-          lerp: 0.2,
-          multiplier: 0.2,
+          lerp: 0.1,
+          multiplier: 0.5,
         })
 
         setIsReady(true) // Re-render the context

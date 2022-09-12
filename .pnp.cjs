@@ -7590,7 +7590,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-dom", "npm:17.0.17"],\
             ["react", "npm:17.0.2"],\
-            ["react-dom", "virtual:33d0468d59ea1eb339b4b7a361c04a28d29cbe7e42d78859aebea677fbb74cd44fc32060856fe2637cc9290bc093220abc8f9c13807562c79cc48055fc9fdcbf#npm:17.0.2"]\
+            ["react-dom", "virtual:33d0468d59ea1eb339b4b7a361c04a28d29cbe7e42d78859aebea677fbb74cd44fc32060856fe2637cc9290bc093220abc8f9c13807562c79cc48055fc9fdcbf#npm:17.0.2"],\
+            ["seamless-scroll-polyfill", "npm:2.2.0"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -7614,7 +7615,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-dom", "npm:17.0.17"],\
             ["react", "npm:17.0.2"],\
-            ["react-dom", "virtual:33d0468d59ea1eb339b4b7a361c04a28d29cbe7e42d78859aebea677fbb74cd44fc32060856fe2637cc9290bc093220abc8f9c13807562c79cc48055fc9fdcbf#npm:17.0.2"]\
+            ["react-dom", "virtual:33d0468d59ea1eb339b4b7a361c04a28d29cbe7e42d78859aebea677fbb74cd44fc32060856fe2637cc9290bc093220abc8f9c13807562c79cc48055fc9fdcbf#npm:17.0.2"],\
+            ["seamless-scroll-polyfill", "npm:2.2.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -14320,6 +14322,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/json-schema", "npm:7.0.8"],\
             ["ajv", "npm:6.12.6"],\
             ["ajv-keywords", "virtual:8704647575acf2f5b19fccfcb0acebacd9c94259ebe9afcfaf4c053812fd896f10775930ee5a5949e20833a61503d2cd22aa259cbe69729f6a192de4bf43dc00#npm:3.5.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["seamless-scroll-polyfill", [\
+        ["npm:2.2.0", {\
+          "packageLocation": "./.yarn/cache/seamless-scroll-polyfill-npm-2.2.0-3af6031c89-8845d3ff0b.zip/node_modules/seamless-scroll-polyfill/",\
+          "packageDependencies": [\
+            ["seamless-scroll-polyfill", "npm:2.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
