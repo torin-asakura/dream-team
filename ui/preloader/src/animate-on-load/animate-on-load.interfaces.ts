@@ -10,5 +10,6 @@ export interface AnimateOnLoadProps {
   initial: MotionStyle & any
   transition: Transition
   delay?: number
+  active?: boolean
   style?: CSSProperties | StyleFunc
 }

@@ -23,10 +23,18 @@ interface Props {
   SEO: any
 }
 
-const IndexPage: FC<Props> = ({
-  SEO = { RU: {}, EN: {} },
-  data: { hero, about, reviews, feedback },
-}) => {
+const Fragments = ({ language, data: { hero, about, reviews, feedback } }) => (
+  <>
+    <LandingHero language={language} data={hero} />
+    <LandingAbout language={language} data={about} />
+    <LandingReviews language={language} data={reviews} />
+    <LandingTeam language={language} />
+    <LandingFeedback language={language} data={feedback} />
+    <LandingFooter language={language} />
+  </>
+)
+
+const IndexPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
 
@@ -48,12 +56,7 @@ const IndexPage: FC<Props> = ({
         <Navigation language={language} languageVar={languageVar} />
         <Seo language={language} SEO={SEO} />
         <main data-scroll-container ref={containerRef}>
-          <LandingHero language={language} data={hero} />
-          <LandingAbout language={language} data={about} />
-          <LandingReviews language={language} data={reviews} />
-          <LandingTeam language={language} />
-          <LandingFeedback language={language} data={feedback} />
-          <LandingFooter language={language} />
+          <Fragments language={language} data={data} />
         </main>
       </LocomotiveScrollProvider>
     </Preloader>

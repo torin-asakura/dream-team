@@ -1592,6 +1592,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.9.3
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@fragments/form-popover": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
@@ -3383,6 +3384,7 @@ __metadata:
     "@types/react-dom": ^17
     react: ^17
     react-dom: ^17
+    seamless-scroll-polyfill: ^2.2.0
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -8736,6 +8738,13 @@ fsevents@^2.3.2:
     ajv: ^6.12.5
     ajv-keywords: ^3.5.2
   checksum: fb73f3d759d43ba033c877628fe9751620a26879f6301d3dbeeb48cf2a65baec5cdf99da65d1bf3b4ff5444b2e59cbe4f81c2456b5e0d2ba7d7fd4aed5da29ce
+  languageName: node
+  linkType: hard
+
+"seamless-scroll-polyfill@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "seamless-scroll-polyfill@npm:2.2.0"
+  checksum: 8845d3ff0b71b8afdc5ff4337559bfa973c5ad823b227cda85a21f3f84edcfb28e2aba15affc1cfdfa5654567b912c8f27084edf3edaabed2049f4eeb71d67ef
   languageName: node
   linkType: hard
 

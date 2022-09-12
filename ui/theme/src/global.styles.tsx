@@ -1,22 +1,32 @@
-import { Global } from '@emotion/react'
-import { css }    from '@emotion/react'
+import { Global }    from '@emotion/react'
+import { css }       from '@emotion/react'
 
-import React      from 'react'
+import React         from 'react'
+import { useEffect } from 'react'
+import { polyfill }  from 'seamless-scroll-polyfill'
 
-export const GlobalStyles = () => (
-  <Global
-    styles={css`
+export const GlobalStyles = () => {
+  useEffect(() => {
+    polyfill()
+  }, [])
+
+  return (
+    <Global
+      styles={css`
       @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
       html,
-      body {
+      body,
+      #__next {
+        height: 0;
         margin: 0;
         -webkit-font-smoothing: antialiased;
         -webkit-overflow-scrolling: touch;
       }
 
       #__next {
-        height: 0;
+        display: flex;
+        flex-direction: column;
       }
       
       @keyframes draw {
@@ -28,5 +38,6 @@ export const GlobalStyles = () => (
           }
         }
     `}
-  />
-)
+    />
+  )
+}
