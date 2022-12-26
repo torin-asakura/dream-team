@@ -8,6 +8,7 @@ import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
 import { LandingContacts }          from '@fragments/landing-contacts'
 import { Navigation }               from '@fragments/navigation'
 import { Preloader }                from '@ui/preloader'
+import { ScrollContainer }          from '@ui/scroll'
 
 import { Seo }                      from './seo.component'
 import { Language }                 from './store'
@@ -39,9 +40,9 @@ const ContactsPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data: { contacts } 
         containerRef={containerRef}
         watch={[]}
       >
-        <main data-scroll-container ref={containerRef}>
+        <ScrollContainer data-scroll-container ref={containerRef}>
           <LandingContacts language={language} data={contacts} />
-        </main>
+        </ScrollContainer>
       </LocomotiveScrollProvider>
     </Preloader>
   )

@@ -9,6 +9,7 @@ import { LandingFooter }            from '@fragments/landing-footer'
 import { Navigation }               from '@fragments/navigation'
 import { PrivacyPolicy }            from '@fragments/privacy-policy'
 import { Preloader }                from '@ui/preloader'
+import { ScrollContainer }          from '@ui/scroll'
 
 import { Seo }                      from './seo.component'
 import { Language }                 from './store'
@@ -40,10 +41,10 @@ const PrivacyPolicyPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data: { privac
         containerRef={containerRef}
         watch={[]}
       >
-        <main data-scroll-container ref={containerRef}>
+        <ScrollContainer data-scroll-container ref={containerRef}>
           <PrivacyPolicy language={language} data={privacyPolicy} />
           <LandingFooter language={language} />
-        </main>
+        </ScrollContainer>
       </LocomotiveScrollProvider>
     </Preloader>
   )

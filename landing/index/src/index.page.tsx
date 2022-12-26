@@ -13,6 +13,7 @@ import { LandingReviews }           from '@fragments/landing-reviews'
 import { LandingTeam }              from '@fragments/landing-team'
 import { Navigation }               from '@fragments/navigation'
 import { Preloader }                from '@ui/preloader'
+import { ScrollContainer }          from '@ui/scroll'
 
 import { Seo }                      from './seo.component'
 import { Language }                 from './store'
@@ -55,9 +56,9 @@ const IndexPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data }) => {
       >
         <Navigation language={language} languageVar={languageVar} />
         <Seo language={language} SEO={SEO} />
-        <main data-scroll-container ref={containerRef}>
+        <ScrollContainer data-scroll-container ref={containerRef}>
           <Fragments language={language} data={data} />
-        </main>
+        </ScrollContainer>
       </LocomotiveScrollProvider>
     </Preloader>
   )
