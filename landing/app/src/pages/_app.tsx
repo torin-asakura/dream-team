@@ -1,3 +1,5 @@
+import 'locomotive-scroll/dist/locomotive-scroll.css'
+
 import { ApolloProvider } from '@apollo/client'
 
 import React              from 'react'

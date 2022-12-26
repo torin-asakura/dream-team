@@ -2060,6 +2060,7 @@ __metadata:
     events: ^3.3.0
     express: ^4.17.1
     graphql: ^15.8.0
+    locomotive-scroll: ^4.1.4
     next: ^12.2.0
     next-compose-plugins: ^2.2.0
     react: ^17.0.2
@@ -2086,6 +2087,7 @@ __metadata:
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
     "@ui/preloader": "workspace:0.0.1"
+    "@ui/scroll": "workspace:0.0.1"
     locomotive-scroll: ^4.1.4
     react: 17
     react-dom: 17
@@ -2121,6 +2123,7 @@ __metadata:
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
     "@ui/preloader": "workspace:0.0.1"
+    "@ui/scroll": "workspace:0.0.1"
     locomotive-scroll: ^4.1.4
     react: 17
     react-dom: 17
@@ -2153,6 +2156,7 @@ __metadata:
     "@types/react-dom": ^17
     "@types/react-helmet": ^6
     "@ui/preloader": "workspace:0.0.1"
+    "@ui/scroll": "workspace:0.0.1"
     locomotive-scroll: ^4.1.4
     react: 17
     react-dom: 17
@@ -3311,6 +3315,26 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/scroll@workspace:0.0.1, @ui/scroll@workspace:ui/scroll":
+  version: 0.0.0-use.local
+  resolution: "@ui/scroll@workspace:ui/scroll"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    react: ^17
+    react-dom: ^17
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 

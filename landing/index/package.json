@@ -22,6 +22,7 @@
     "@types/react-dom": "^17",
     "@types/react-helmet": "^6",
     "@ui/preloader": "workspace:0.0.1",
+    "@ui/scroll": "workspace:0.0.1",
     "react": "17",
     "react-dom": "17",
     "react-helmet": "^6.1.0"
