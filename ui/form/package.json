@@ -9,7 +9,8 @@
     "@ui/input": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/link": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1",
+    "react-google-recaptcha": "^2.1.0"
   },
   "devDependencies": {
     "@apollo/client": "^3.6.9",
@@ -17,6 +18,7 @@
     "@emotion/styled": "^11.9.3",
     "@types/react": "^17",
     "@types/react-dom": "^17",
+    "@types/react-google-recaptcha": "^2",
     "graphql": "^15.8.0",
     "react": "^17",
     "react-dom": "^17"

@@ -1,5 +1,8 @@
 import React                      from 'react'
+import ReCaptcha                  from 'react-google-recaptcha'
 import { FC }                     from 'react'
+import { useCallback }            from 'react'
+import { useRef }                 from 'react'
 import { useState }               from 'react'
 
 import { Button }                 from '@ui/button'
@@ -24,6 +27,8 @@ const doNothing = () => {
   // do nothing
 }
 
+const sitekey = '6LePbqMkAAAAAHotvykGzpirhT1YFNnaNYqfKDQo'
+
 const Form: FC<FormProps> = ({ language, onSuccess = doNothing, onFailure = doNothing }) => {
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
@@ -31,6 +36,8 @@ const Form: FC<FormProps> = ({ language, onSuccess = doNothing, onFailure = doNo
   const [requisites, setRequisites] = useState<string>('')
   const [submitForm, data, error] = useActionHook()
   const forms = useForms()
+
+  const recaptchaRef = useRef()
 
   const getError = (field: string) => {
     if (data && data.errors) {
@@ -70,12 +77,21 @@ const Form: FC<FormProps> = ({ language, onSuccess = doNothing, onFailure = doNo
     }
   }
 
+  const executeCaptcha = useCallback(
+    (event) => {
+      event.preventDefault()
+      // @ts-ignore
+      recaptchaRef?.current?.execute()
+    },
+    [recaptchaRef]
+  )
+
   return (
     <Box
       borderRadius='normal'
       backgroundColor='white'
       width={['100%', '100%', 515]}
-      height={['auto', 'auto', 598]}
+      height='auto'
       padding={['16px', '16px', '32px']}
     >
       <Column width='100%'>
@@ -149,21 +165,7 @@ const Form: FC<FormProps> = ({ language, onSuccess = doNothing, onFailure = doNo
           />
         </Layout>
         <Layout flexBasis={32} />
-        <Button
-          width='100%'
-          onClick={() => {
-            submitForm({
-              variables: {
-                name,
-                email,
-                type,
-                requisites,
-              },
-            }).then(({ data: res }) => {
-              handleSubmit(res.submitForm)
-            })
-          }}
-        >
+        <Button width='100%' onClick={executeCaptcha}>
           {messages.send[language]}
         </Button>
         <Condition match={!(data && data.errors?.message)}>
@@ -174,6 +176,26 @@ const Form: FC<FormProps> = ({ language, onSuccess = doNothing, onFailure = doNo
           <Layout>{data && data.errors?.message}</Layout>
           <Layout flexBasis={32} />
         </Condition>
+        <Layout justifyContent='center'>
+          <ReCaptcha
+            ref={recaptchaRef as any}
+            sitekey={sitekey}
+            onChange={() => {
+              submitForm({
+                variables: {
+                  name,
+                  email,
+                  type,
+                  requisites,
+                },
+              }).then(({ data: res }) => {
+                handleSubmit(res.submitForm)
+              })
+            }}
+            size='normal'
+          />
+        </Layout>
+        <Layout flexBasis={16} />
         <Layout>
           <Column>
             <Text
