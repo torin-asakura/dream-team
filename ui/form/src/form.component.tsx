@@ -2,7 +2,7 @@ import React                       from 'react'
 import { FC }                      from 'react'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
 
-import { FormContent }             from './form-content/form-content.component'
+import { FormContent }             from './form-content'
 import { FormProps }               from './form.interface'
 
 const doNothing = () => {

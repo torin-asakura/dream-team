@@ -2,7 +2,6 @@
   "private": true,
   "workspaces": [
     "ui/**/*",
-    "fragments/**/*",
     "landing/**/*",
     "globals/**/*",
     "forks/**/*"

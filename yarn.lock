@@ -1365,276 +1365,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/form-popover@workspace:0.0.1, @fragments/form-popover@workspace:fragments/form-popover":
-  version: 0.0.0-use.local
-  resolution: "@fragments/form-popover@workspace:fragments/form-popover"
-  dependencies:
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/form": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/layer": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/landing-about@workspace:0.0.1, @fragments/landing-about@workspace:fragments/landing-about":
-  version: 0.0.0-use.local
-  resolution: "@fragments/landing-about@workspace:fragments/landing-about"
-  dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@fragments/landing-work-directions": "workspace:0.0.1"
-    "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/image": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-  peerDependencies:
-    "@apollo/client": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/landing-contacts@workspace:0.0.1, @fragments/landing-contacts@workspace:fragments/landing-contacts":
-  version: 0.0.0-use.local
-  resolution: "@fragments/landing-contacts@workspace:fragments/landing-contacts"
-  dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@emotion/react": "npm:^11.9.3"
-    "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/copy": "workspace:0.0.1"
-    "@ui/divider": "workspace:0.0.1"
-    "@ui/form": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/image": "workspace:0.0.1"
-    "@ui/input": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/link": "workspace:0.0.1"
-    "@ui/preloader": "workspace:0.0.1"
-    "@ui/social-links": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/utils": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-  peerDependencies:
-    "@apollo/client": "*"
-    "@emotion/react": "*"
-    "@ui/preloader": "workspace:^"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/landing-feedback@workspace:0.0.1, @fragments/landing-feedback@workspace:fragments/landing-feedback":
-  version: 0.0.0-use.local
-  resolution: "@fragments/landing-feedback@workspace:fragments/landing-feedback"
-  dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/form": "workspace:0.0.1"
-    "@ui/image": "workspace:0.0.1"
-    "@ui/input": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/link": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-  peerDependencies:
-    "@apollo/client": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/landing-footer@workspace:0.0.1, @fragments/landing-footer@workspace:fragments/landing-footer":
-  version: 0.0.0-use.local
-  resolution: "@fragments/landing-footer@workspace:fragments/landing-footer"
-  dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/divider": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/image": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/link": "workspace:0.0.1"
-    "@ui/logo": "workspace:0.0.1"
-    "@ui/social-links": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/utils": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-  peerDependencies:
-    "@apollo/client": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/landing-hero@workspace:0.0.1, @fragments/landing-hero@workspace:fragments/landing-hero":
-  version: 0.0.0-use.local
-  resolution: "@fragments/landing-hero@workspace:fragments/landing-hero"
-  dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@fragments/form-popover": "workspace:0.0.1"
-    "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/image": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/preloader": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/video": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-  peerDependencies:
-    "@apollo/client": "*"
-    "@ui/preloader": "workspace:^"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/landing-reviews@workspace:0.0.1, @fragments/landing-reviews@workspace:fragments/landing-reviews":
-  version: 0.0.0-use.local
-  resolution: "@fragments/landing-reviews@workspace:fragments/landing-reviews"
-  dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/carousel": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/layer": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/tag": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/utils": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-    swiper: "npm:^8.3.1"
-  peerDependencies:
-    "@apollo/client": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/landing-team@workspace:0.0.1, @fragments/landing-team@workspace:fragments/landing-team":
-  version: 0.0.0-use.local
-  resolution: "@fragments/landing-team@workspace:fragments/landing-team"
-  dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/image": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-  peerDependencies:
-    "@apollo/client": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/landing-work-directions@workspace:0.0.1, @fragments/landing-work-directions@workspace:fragments/landing-work-directions":
-  version: 0.0.0-use.local
-  resolution: "@fragments/landing-work-directions@workspace:fragments/landing-work-directions"
-  dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/image": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/tag": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-  peerDependencies:
-    "@apollo/client": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/navigation@workspace:0.0.1, @fragments/navigation@workspace:fragments/navigation":
-  version: 0.0.0-use.local
-  resolution: "@fragments/navigation@workspace:fragments/navigation"
-  dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@emotion/react": "npm:^11.9.3"
-    "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@fragments/form-popover": "workspace:0.0.1"
-    "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/link": "workspace:0.0.1"
-    "@ui/logo": "workspace:0.0.1"
-    "@ui/preloader": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-  peerDependencies:
-    "@apollo/client": "*"
-    "@emotion/react": "*"
-    "@ui/preloader": "workspace:^"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/privacy-policy@workspace:0.0.1, @fragments/privacy-policy@workspace:fragments/privacy-policy":
-  version: 0.0.0-use.local
-  resolution: "@fragments/privacy-policy@workspace:fragments/privacy-policy"
-  dependencies:
-    "@apollo/client": "npm:^3.6.9"
-    "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    react: "npm:17"
-    react-dom: "npm:17"
-  peerDependencies:
-    "@apollo/client": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
 "@globals/data@workspace:0.0.1, @globals/data@workspace:globals/data":
   version: 0.0.0-use.local
   resolution: "@globals/data@workspace:globals/data"
@@ -1984,9 +1714,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@landing/404-fragment@workspace:0.0.1, @landing/404-fragment@workspace:fragments/landing-404":
+"@landing/404-fragment@workspace:0.0.1, @landing/404-fragment@workspace:landing/fragments/landing-404":
   version: 0.0.0-use.local
-  resolution: "@landing/404-fragment@workspace:fragments/landing-404"
+  resolution: "@landing/404-fragment@workspace:landing/fragments/landing-404"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.9.3"
@@ -2011,14 +1741,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/404-page@workspace:0.0.1, @landing/404-page@workspace:landing/404":
+"@landing/404-page@workspace:0.0.1, @landing/404-page@workspace:landing/pages/404-page":
   version: 0.0.0-use.local
-  resolution: "@landing/404-page@workspace:landing/404"
+  resolution: "@landing/404-page@workspace:landing/pages/404-page"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
-    "@fragments/landing-footer": "workspace:0.0.1"
-    "@fragments/navigation": "workspace:0.0.1"
     "@landing/404-fragment": "workspace:0.0.1"
+    "@landing/footer-fragment": "workspace:0.0.1"
+    "@landing/navigation-fragment": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/preloader": "workspace:0.0.1"
     react: "npm:^17.0.2"
@@ -2029,9 +1759,313 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/app@workspace:landing/app":
+"@landing/about-fragment@workspace:0.0.1, @landing/about-fragment@workspace:landing/fragments/landing-about":
   version: 0.0.0-use.local
-  resolution: "@landing/app@workspace:landing/app"
+  resolution: "@landing/about-fragment@workspace:landing/fragments/landing-about"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@globals/data": "workspace:0.0.1"
+    "@landing/work-directions-fragment": "workspace:0.0.1"
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react: "npm:17"
+    react-dom: "npm:17"
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/contacts-fragment@workspace:0.0.1, @landing/contacts-fragment@workspace:landing/fragments/landing-contacts":
+  version: 0.0.0-use.local
+  resolution: "@landing/contacts-fragment@workspace:landing/fragments/landing-contacts"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@emotion/react": "npm:^11.9.3"
+    "@globals/data": "workspace:0.0.1"
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/copy": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/input": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
+    "@ui/social-links": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react: "npm:17"
+    react-dom: "npm:17"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@ui/preloader": "workspace:^"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/contacts-page@workspace:0.0.1, @landing/contacts-page@workspace:landing/pages/contacts-page":
+  version: 0.0.0-use.local
+  resolution: "@landing/contacts-page@workspace:landing/pages/contacts-page"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@emotion/react": "npm:^11.9.3"
+    "@emotion/styled": "npm:^11.9.3"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
+    "@landing/contacts-fragment": "workspace:0.0.1"
+    "@landing/navigation-fragment": "workspace:0.0.1"
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@types/react-helmet": "npm:^6"
+    "@ui/preloader": "workspace:0.0.1"
+    "@ui/scroll": "workspace:0.0.1"
+    locomotive-scroll: "npm:^4.1.4"
+    react: "npm:17"
+    react-dom: "npm:17"
+    react-helmet: "npm:^6.1.0"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@ui/preloader": "workspace:^"
+    react: 17
+    react-dom: 17
+    react-helmet: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/feedback-fragment@workspace:0.0.1, @landing/feedback-fragment@workspace:landing/fragments/landing-feedback":
+  version: 0.0.0-use.local
+  resolution: "@landing/feedback-fragment@workspace:landing/fragments/landing-feedback"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@globals/data": "workspace:0.0.1"
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/input": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react: "npm:17"
+    react-dom: "npm:17"
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/footer-fragment@workspace:0.0.1, @landing/footer-fragment@workspace:landing/fragments/landing-footer":
+  version: 0.0.0-use.local
+  resolution: "@landing/footer-fragment@workspace:landing/fragments/landing-footer"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@globals/data": "workspace:0.0.1"
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/logo": "workspace:0.0.1"
+    "@ui/social-links": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react: "npm:17"
+    react-dom: "npm:17"
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/form-popover-fragment@workspace:0.0.1, @landing/form-popover-fragment@workspace:landing/fragments/landing-form-popover":
+  version: 0.0.0-use.local
+  resolution: "@landing/form-popover-fragment@workspace:landing/fragments/landing-form-popover"
+  dependencies:
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/form": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layer": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react: "npm:17"
+    react-dom: "npm:17"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/hero-fragment@workspace:0.0.1, @landing/hero-fragment@workspace:landing/fragments/landing-hero":
+  version: 0.0.0-use.local
+  resolution: "@landing/hero-fragment@workspace:landing/fragments/landing-hero"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@globals/data": "workspace:0.0.1"
+    "@landing/form-popover-fragment": "workspace:0.0.1"
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/video": "workspace:0.0.1"
+    react: "npm:17"
+    react-dom: "npm:17"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@ui/preloader": "workspace:^"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/index-page@workspace:0.0.1, @landing/index-page@workspace:landing/pages/index-page":
+  version: 0.0.0-use.local
+  resolution: "@landing/index-page@workspace:landing/pages/index-page"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@emotion/react": "npm:^11.9.3"
+    "@emotion/styled": "npm:^11.9.3"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
+    "@landing/about-fragment": "workspace:0.0.1"
+    "@landing/feedback-fragment": "workspace:0.0.1"
+    "@landing/footer-fragment": "workspace:0.0.1"
+    "@landing/hero-fragment": "workspace:0.0.1"
+    "@landing/navigation-fragment": "workspace:0.0.1"
+    "@landing/reviews-fragment": "workspace:0.0.1"
+    "@landing/team-fragment": "workspace:0.0.1"
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@types/react-helmet": "npm:^6"
+    "@ui/preloader": "workspace:0.0.1"
+    "@ui/scroll": "workspace:0.0.1"
+    locomotive-scroll: "npm:^4.1.4"
+    react: "npm:17"
+    react-dom: "npm:17"
+    react-helmet: "npm:^6.1.0"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@ui/preloader": "workspace:^"
+    next: "*"
+    react: 17
+    react-dom: 17
+    react-helmet: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/navigation-fragment@workspace:0.0.1, @landing/navigation-fragment@workspace:landing/fragments/landing-navigation":
+  version: 0.0.0-use.local
+  resolution: "@landing/navigation-fragment@workspace:landing/fragments/landing-navigation"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@emotion/react": "npm:^11.9.3"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
+    "@landing/form-popover-fragment": "workspace:0.0.1"
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/logo": "workspace:0.0.1"
+    "@ui/preloader": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react: "npm:17"
+    react-dom: "npm:17"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@ui/preloader": "workspace:^"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/privacy-policy-fragment@workspace:0.0.1, @landing/privacy-policy-fragment@workspace:landing/fragments/landing-privacy-policy":
+  version: 0.0.0-use.local
+  resolution: "@landing/privacy-policy-fragment@workspace:landing/fragments/landing-privacy-policy"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@globals/data": "workspace:0.0.1"
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    react: "npm:17"
+    react-dom: "npm:17"
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/privacy-policy-page@workspace:0.0.1, @landing/privacy-policy-page@workspace:landing/pages/privacy-policy-page":
+  version: 0.0.0-use.local
+  resolution: "@landing/privacy-policy-page@workspace:landing/pages/privacy-policy-page"
+  dependencies:
+    "@apollo/client": "npm:^3.6.9"
+    "@emotion/react": "npm:^11.9.3"
+    "@emotion/styled": "npm:^11.9.3"
+    "@forks/react-locomotive-scroll": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
+    "@landing/footer-fragment": "workspace:0.0.1"
+    "@landing/navigation-fragment": "workspace:0.0.1"
+    "@landing/privacy-policy-fragment": "workspace:0.0.1"
+    "@types/react": "npm:^17"
+    "@types/react-dom": "npm:^17"
+    "@types/react-helmet": "npm:^6"
+    "@ui/preloader": "workspace:0.0.1"
+    "@ui/scroll": "workspace:0.0.1"
+    locomotive-scroll: "npm:^4.1.4"
+    react: "npm:17"
+    react-dom: "npm:17"
+    react-helmet: "npm:^6.1.0"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@ui/preloader": "workspace:^"
+    react: 17
+    react-dom: 17
+    react-helmet: "*"
+  languageName: unknown
+  linkType: soft
+
+"@landing/renderer-entrypoint@workspace:landing/entrypoints/renderer":
+  version: 0.0.0-use.local
+  resolution: "@landing/renderer-entrypoint@workspace:landing/entrypoints/renderer"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
     "@apollo/react-ssr": "npm:^4.0.0"
@@ -2043,7 +2077,6 @@ __metadata:
     "@atls/next-sitemap-generator": "npm:^0.0.3"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@fragments/navigation": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
     "@landing/404-page": "workspace:0.0.1"
     "@landing/contacts-page": "workspace:0.0.1"
@@ -2072,103 +2105,69 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@landing/contacts-page@workspace:0.0.1, @landing/contacts-page@workspace:landing/contacts":
+"@landing/reviews-fragment@workspace:0.0.1, @landing/reviews-fragment@workspace:landing/fragments/landing-reviews":
   version: 0.0.0-use.local
-  resolution: "@landing/contacts-page@workspace:landing/contacts"
+  resolution: "@landing/reviews-fragment@workspace:landing/fragments/landing-reviews"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
-    "@emotion/react": "npm:^11.9.3"
-    "@emotion/styled": "npm:^11.9.3"
-    "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@fragments/landing-contacts": "workspace:0.0.1"
-    "@fragments/navigation": "workspace:0.0.1"
-    "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:^17"
     "@types/react-dom": "npm:^17"
-    "@types/react-helmet": "npm:^6"
-    "@ui/preloader": "workspace:0.0.1"
-    "@ui/scroll": "workspace:0.0.1"
-    locomotive-scroll: "npm:^4.1.4"
+    "@ui/button": "workspace:0.0.1"
+    "@ui/carousel": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layer": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/tag": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react: "npm:17"
     react-dom: "npm:17"
-    react-helmet: "npm:^6.1.0"
+    swiper: "npm:^8.3.1"
   peerDependencies:
     "@apollo/client": "*"
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    "@ui/preloader": "workspace:^"
-    react: 17
-    react-dom: 17
-    react-helmet: "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
-"@landing/index-page@workspace:0.0.1, @landing/index-page@workspace:landing/index":
+"@landing/team-fragment@workspace:0.0.1, @landing/team-fragment@workspace:landing/fragments/landing-team":
   version: 0.0.0-use.local
-  resolution: "@landing/index-page@workspace:landing/index"
+  resolution: "@landing/team-fragment@workspace:landing/fragments/landing-team"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
-    "@emotion/react": "npm:^11.9.3"
-    "@emotion/styled": "npm:^11.9.3"
-    "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@fragments/landing-about": "workspace:0.0.1"
-    "@fragments/landing-feedback": "workspace:0.0.1"
-    "@fragments/landing-footer": "workspace:0.0.1"
-    "@fragments/landing-hero": "workspace:0.0.1"
-    "@fragments/landing-reviews": "workspace:0.0.1"
-    "@fragments/landing-team": "workspace:0.0.1"
-    "@fragments/navigation": "workspace:0.0.1"
-    "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:^17"
     "@types/react-dom": "npm:^17"
-    "@types/react-helmet": "npm:^6"
-    "@ui/preloader": "workspace:0.0.1"
-    "@ui/scroll": "workspace:0.0.1"
-    locomotive-scroll: "npm:^4.1.4"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
     react: "npm:17"
     react-dom: "npm:17"
-    react-helmet: "npm:^6.1.0"
   peerDependencies:
     "@apollo/client": "*"
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    "@ui/preloader": "workspace:^"
-    next: "*"
-    react: 17
-    react-dom: 17
-    react-helmet: "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
-"@landing/privacy-policy-page@workspace:0.0.1, @landing/privacy-policy-page@workspace:landing/privacy-policy":
+"@landing/work-directions-fragment@workspace:0.0.1, @landing/work-directions-fragment@workspace:landing/fragments/landing-work-directions":
   version: 0.0.0-use.local
-  resolution: "@landing/privacy-policy-page@workspace:landing/privacy-policy"
+  resolution: "@landing/work-directions-fragment@workspace:landing/fragments/landing-work-directions"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
-    "@emotion/react": "npm:^11.9.3"
-    "@emotion/styled": "npm:^11.9.3"
-    "@forks/react-locomotive-scroll": "workspace:0.0.1"
-    "@fragments/landing-footer": "workspace:0.0.1"
-    "@fragments/navigation": "workspace:0.0.1"
-    "@fragments/privacy-policy": "workspace:0.0.1"
-    "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:^17"
     "@types/react-dom": "npm:^17"
-    "@types/react-helmet": "npm:^6"
-    "@ui/preloader": "workspace:0.0.1"
-    "@ui/scroll": "workspace:0.0.1"
-    locomotive-scroll: "npm:^4.1.4"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/tag": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
     react: "npm:17"
     react-dom: "npm:17"
-    react-helmet: "npm:^6.1.0"
   peerDependencies:
     "@apollo/client": "*"
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    "@ui/preloader": "workspace:^"
-    react: 17
-    react-dom: 17
-    react-helmet: "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
