@@ -1,0 +1,20 @@
+{
+  "name": "@ui/sphere",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@react-three/fiber": "7.0.29",
+    "three": "0.157.0"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.15",
+    "@types/react-dom": "17.0.9",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  }
+}
