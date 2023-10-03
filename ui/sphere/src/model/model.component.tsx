@@ -5,37 +5,61 @@ import { FC }       from 'react'
 import { Mesh }     from 'three'
 import { useRef }   from 'react'
 
-import fragment     from './shaders/fragment.glsl'
-import vertex       from './shaders/vertex.glsl'
+import vertexPars from './shaders/vertex_pars.glsl';
+import vertexMain from './shaders/vertex_main.glsl';
+import fragmentPars from './shaders/fragment_pars.glsl';
+import fragmentMain from './shaders/fragment_main.glsl';
+
+const parsVertexString = `#include <displacementmap_pars_vertex>`;
+const mainVertexString = `#include <displacementmap_vertex>`;
+const mainFragmentString = `#include <normal_fragment_maps>`;
+const parsFragmentString = `#include <bumpmap_pars_fragment>`;
+
+const animationSpeed = 0.1
 
 export const Model: FC = () => {
   const mesh = useRef<Mesh>(null)
 
   useFrame((state) => {
-    const { clock } = state
+    const { clock } = state;
 
-    if (mesh.current) {
-      const shaderMaterial = mesh.current.material as any
+    if (mesh.current && mesh.current.userData.shader) {
+      const shaderMaterial = mesh.current.userData.shader;
 
-      shaderMaterial.uniforms.uTime.value = clock.getElapsedTime()
+      shaderMaterial.uniforms.uTime.value = animationSpeed * clock.getElapsedTime();
     }
-  })
-
+  });
   return (
     <mesh ref={mesh} position={[0, 0, 0]}>
-      <icosahedronGeometry args={[1, 30]} />
-      <shaderMaterial
-        uniforms={{
-          uTime: { value: 0 },
-          uSpeed: { value: 0.3 },
-          uNoiseDensity: { value: 1.7 },
-          uNoiseStrength: { value: 0.15 },
-          uFrequency: { value: 2 },
-          uAmplitude: { value: 5.0 },
-          uIntensity: { value: 1 },
+      <icosahedronGeometry args={[1, 300]} />
+      <meshStandardMaterial
+        onBeforeCompile={(shader) => {
+          shader.uniforms.uTime = { value: 0 };
+
+          shader.vertexShader = shader.vertexShader.replace(
+            parsVertexString,
+            `${parsVertexString} \n ${vertexPars}`,
+          );
+
+          shader.vertexShader = shader.vertexShader.replace(
+            mainVertexString,
+            `${mainVertexString} \n ${vertexMain}`,
+          );
+
+          shader.fragmentShader = shader.fragmentShader.replace(
+            parsFragmentString,
+            `${parsFragmentString} \n ${fragmentPars}`,
+          );
+
+          shader.fragmentShader = shader.fragmentShader.replace(
+            mainFragmentString,
+            `${mainFragmentString} \n ${fragmentMain}`,
+          );
+
+          if (mesh.current) {
+            mesh.current.userData.shader = shader;
+          }
         }}
-        vertexShader={vertex}
-        fragmentShader={fragment}
       />
     </mesh>
   )

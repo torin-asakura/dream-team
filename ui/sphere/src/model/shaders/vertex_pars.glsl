@@ -1,37 +1,16 @@
-varying float vDistort;
 
 uniform float uTime;
-uniform float uSpeed;
-uniform float uNoiseDensity;
-uniform float uNoiseStrength;
-uniform float uFrequency;
-uniform float uAmplitude;
+varying float vDisplacement;
 
-vec3 mod289(vec3 x) {
-  return x - floor(x * (1.0 / 289.0)) * 289.0;
-}
+vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
+vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
+vec3 fade(vec3 t) {return t*t*t*(t*(t*6.0-15.0)+10.0);}
 
-vec4 mod289(vec4 x) {
-  return x - floor(x * (1.0 / 289.0)) * 289.0;
-}
-
-vec4 permute(vec4 x) {
-  return mod289(((x*34.0)+1.0)*x);
-}
-
-vec4 taylorInvSqrt(vec4 r) {
-  return 1.79284291400159 - 0.85373472095314 * r;
-}
-
-vec3 fade(vec3 t) {
-  return t*t*t*(t*(t*6.0-15.0)+10.0);
-}
-
-float pnoise(vec3 P, vec3 rep) {
-  vec3 Pi0 = mod(floor(P), rep);
-  vec3 Pi1 = mod(Pi0 + vec3(1.0), rep);
-  Pi0 = mod289(Pi0);
-  Pi1 = mod289(Pi1);
+float noise(vec3 P){
+  vec3 Pi0 = floor(P);
+  vec3 Pi1 = Pi0 + vec3(1.0);
+  Pi0 = mod(Pi0, 289.0);
+  Pi1 = mod(Pi1, 289.0);
   vec3 Pf0 = fract(P);
   vec3 Pf1 = Pf0 - vec3(1.0);
   vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
@@ -43,16 +22,16 @@ float pnoise(vec3 P, vec3 rep) {
   vec4 ixy0 = permute(ixy + iz0);
   vec4 ixy1 = permute(ixy + iz1);
 
-  vec4 gx0 = ixy0 * (1.0 / 7.0);
-  vec4 gy0 = fract(floor(gx0) * (1.0 / 7.0)) - 0.5;
+  vec4 gx0 = ixy0 / 7.0;
+  vec4 gy0 = fract(floor(gx0) / 7.0) - 0.5;
   gx0 = fract(gx0);
   vec4 gz0 = vec4(0.5) - abs(gx0) - abs(gy0);
   vec4 sz0 = step(gz0, vec4(0.0));
   gx0 -= sz0 * (step(0.0, gx0) - 0.5);
   gy0 -= sz0 * (step(0.0, gy0) - 0.5);
 
-  vec4 gx1 = ixy1 * (1.0 / 7.0);
-  vec4 gy1 = fract(floor(gx1) * (1.0 / 7.0)) - 0.5;
+  vec4 gx1 = ixy1 / 7.0;
+  vec4 gy1 = fract(floor(gx1) / 7.0) - 0.5;
   gx1 = fract(gx1);
   vec4 gz1 = vec4(0.5) - abs(gx1) - abs(gy1);
   vec4 sz1 = step(gz1, vec4(0.0));
@@ -91,34 +70,21 @@ float pnoise(vec3 P, vec3 rep) {
   vec3 fade_xyz = fade(Pf0);
   vec4 n_z = mix(vec4(n000, n100, n010, n110), vec4(n001, n101, n011, n111), fade_xyz.z);
   vec2 n_yz = mix(n_z.xy, n_z.zw, fade_xyz.y);
-  float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x);
+  float n_xyz = mix(n_yz.x, n_yz.y, fade_xyz.x); 
   return 2.2 * n_xyz;
 }
-
-mat3 rotation3dY(float angle) {
-  float s = sin(angle);
-  float c = cos(angle);
-
-  return mat3(
-    c, 0.0, -s,
-    0.0, 1.0, 0.0,
-    s, 0.0, c
-  );
+float smoothMod(float axis, float amp, float rad){
+  float top = cos(PI * (axis / amp)) * sin(PI * (axis / amp));
+  float bottom = pow(sin(PI * (axis / amp)), 2.0) + pow(rad, 2.0);
+  float at = atan(top / bottom);
+  return amp * (1.0 / 2.0) - (1.0 / PI) * at;
 }
 
-vec3 rotateY(vec3 v, float angle) {
-  return rotation3dY(angle) * v;
-}  
-
-void main() {
-  float t = uTime * uSpeed;
-  float distortion = pnoise((normal + t) * uNoiseDensity, vec3(2.0)) * uNoiseStrength;
-
-  vec3 pos = position + (normal * distortion);
-  float angle = sin(uv.y * uFrequency + t) * uAmplitude;
-  pos = rotateY(pos, angle);    
-  
-  vDistort = distortion;
-
-  gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.);
+float fit(float unscaled, float originalMin, float originalMax, float minAllowed, float maxAllowed) {
+  return (maxAllowed - minAllowed) * (unscaled - originalMin) / (originalMax - originalMin) + minAllowed;
 }
+
+float wave(vec3 position) {
+  return fit(smoothMod(position.y * 6.0, 1.0, 1.5), 0.35, 0.6, 0.0, 1.0);
+}
+
