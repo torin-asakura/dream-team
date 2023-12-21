@@ -1,67 +1,71 @@
-import { useFrame } from '@react-three/fiber'
+import { useAnimations } from '@react-three/drei'
+import { useGLTF }       from '@react-three/drei'
 
-import React        from 'react'
-import { FC }       from 'react'
-import { Mesh }     from 'three'
-import { useRef }   from 'react'
+import React             from 'react'
+import { FC }            from 'react'
+import { Group }         from 'three'
+import { useEffect }     from 'react'
+import { useRef }        from 'react'
 
-import fragmentMain from './shaders/fragment_main.glsl'
-import fragmentPars from './shaders/fragment_pars.glsl'
-import vertexMain   from './shaders/vertex_main.glsl'
-import vertexPars   from './shaders/vertex_pars.glsl'
+import { SphereGLTF }    from '../sphere-gltf'
+import { GLTFResult }    from './model.interfaces'
+import { ModelProps }    from './model.interfaces'
 
-const parsVertexString = `#include <displacementmap_pars_vertex>`
-const mainVertexString = `#include <displacementmap_vertex>`
-const mainFragmentString = `#include <normal_fragment_maps>`
-const parsFragmentString = `#include <bumpmap_pars_fragment>`
+export const Model: FC<ModelProps> = (props) => {
+  const group = useRef<Group>(null)
+  const { nodes, materials, animations } = useGLTF(SphereGLTF) as unknown as GLTFResult
+  const { actions } = useAnimations(animations, group)
 
-const animationSpeed = 0.1
+  useEffect(() => {
+    actions.KeyAction?.play()
+  }, [actions])
 
-export const Model: FC = () => {
-  const mesh = useRef<Mesh>(null)
-
-  useFrame((state) => {
-    const { clock } = state
-
-    if (mesh.current && mesh.current.userData.shader) {
-      const shaderMaterial = mesh.current.userData.shader
-
-      shaderMaterial.uniforms.uTime.value = animationSpeed * clock.getElapsedTime()
-    }
-  })
   return (
-    <mesh ref={mesh} position={[0, 0, 0]}>
-      <icosahedronGeometry args={[1, 300]} />
-      <meshStandardMaterial
-        onBeforeCompile={(shader) => {
-          /* eslint-disable no-param-reassign */
-          shader.uniforms.uTime = { value: 0 }
-
-          shader.vertexShader = shader.vertexShader.replace(
-            parsVertexString,
-            `${parsVertexString} \n ${vertexPars}`
-          )
-
-          shader.vertexShader = shader.vertexShader.replace(
-            mainVertexString,
-            `${mainVertexString} \n ${vertexMain}`
-          )
-
-          shader.fragmentShader = shader.fragmentShader.replace(
-            parsFragmentString,
-            `${parsFragmentString} \n ${fragmentPars}`
-          )
-
-          shader.fragmentShader = shader.fragmentShader.replace(
-            mainFragmentString,
-            `${mainFragmentString} \n ${fragmentMain}`
-          )
-
-          if (mesh.current) {
-            mesh.current.userData.shader = shader
-          }
-        }}
-      />
-    </mesh>
+    <group ref={group} {...props} dispose={null}>
+      <group name='Scene'>
+        <mesh
+          name='Sphere'
+          castShadow
+          receiveShadow
+          geometry={nodes.Sphere.geometry}
+          material={materials['Material.001']}
+          morphTargetDictionary={nodes.Sphere.morphTargetDictionary}
+          morphTargetInfluences={nodes.Sphere.morphTargetInfluences}
+          rotation={[-1.359, -0.046, -0.073]}
+        />
+        <mesh
+          name='Sphere001'
+          castShadow
+          receiveShadow
+          geometry={nodes.Sphere001.geometry}
+          material={materials['Material.002']}
+          scale={0.964}
+        />
+        <group
+          name='Area'
+          position={[5.793, 6.449, 8.961]}
+          rotation={[-Math.PI, 0.996, 0.999]}
+          scale={-11.858}
+        />
+        <group
+          name='Area001'
+          position={[3.488, 6.267, -6.024]}
+          rotation={[0.046, 0.988, 2.081]}
+          scale={-11.858}
+        />
+        <group
+          name='Area002'
+          position={[7.068, -7.785, 1.371]}
+          rotation={[-1.551, 0.777, 1.55]}
+          scale={-11.858}
+        />
+        <group
+          name='Area003'
+          position={[11.711, -3.164, -0.411]}
+          rotation={[-1.556, 0.301, 1.56]}
+          scale={-11.858}
+        />
+      </group>
+    </group>
   )
 }

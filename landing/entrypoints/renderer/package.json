@@ -23,6 +23,7 @@
     "@emotion/styled": "^11.9.3",
     "events": "^3.3.0",
     "express": "^4.17.1",
+    "gltf-loader": "1.0.0",
     "graphql": "^15.8.0",
     "locomotive-scroll": "^4.1.4",
     "next": "^12.2.0",

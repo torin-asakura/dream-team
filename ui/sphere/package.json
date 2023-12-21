@@ -4,17 +4,21 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
+    "@react-three/drei": "8.20.2",
     "@react-three/fiber": "7.0.29",
-    "three": "0.157.0"
+    "@ui/condition": "workspace:0.0.1",
+    "three": "0.159.0",
+    "three-stdlib": "2.8.9"
   },
   "devDependencies": {
     "@types/react": "17.0.15",
     "@types/react-dom": "17.0.9",
+    "@types/three": "0.159.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "peerDependencies": {
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react": "*",
+    "react-dom": "*"
   }
 }
