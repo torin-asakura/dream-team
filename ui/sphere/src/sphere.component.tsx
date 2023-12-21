@@ -8,15 +8,9 @@ import { Model }       from './model'
 import { SphereProps } from './sphere.interfaces'
 
 export const Sphere = memo<SphereProps>(({ style }) => (
-  <Canvas
-    style={style}
-    camera={{
-      fov: 50,
-      position: [0.0, 0.0, 8.0],
-    }}
-  >
-    <ambientLight color='#fffff' intensity={0.3} />
-    <directionalLight color='#ffffff' position={[2, 2, 3]} intensity={2.5} />
+  <Canvas style={style} camera={{ position: [10, 0, 0], fov: 30 }}>
+    <ambientLight color='#ffffff' intensity={0.3} />
+    <directionalLight color='#ffffff' position={[10, 3, 3]} intensity={2.5} />
     <Loader>
       <Model />
     </Loader>
