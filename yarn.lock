@@ -3158,7 +3158,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/three@npm:*, @types/three@npm:0.159.0":
+"@types/three@npm:0.159.0":
   version: 0.159.0
   resolution: "@types/three@npm:0.159.0"
   dependencies:
@@ -10004,7 +10004,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three@npm:*, three@npm:0.159.0":
+"three@npm:0.159.0":
   version: 0.159.0
   resolution: "three@npm:0.159.0"
   checksum: 16716a9c4ac21ef05cf8d4037d604805c55d3e1e4e6a016d4f18111597f32959ed53fe18c7d0b762bca3b7c43c80336b37f103c24f951efbae5ed184999e0665
