@@ -9,12 +9,13 @@ import { useRef }        from 'react'
 
 import { SphereGLTF }    from '../sphere-gltf'
 import { GLTFResult }    from './model.interfaces'
+import { GLTFAction }    from './model.interfaces'
 import { ModelProps }    from './model.interfaces'
 
 export const Model: FC<ModelProps> = (props) => {
   const group = useRef<Group>(null)
-  const { nodes, materials, animations } = useGLTF(SphereGLTF) as unknown as GLTFResult
-  const { actions } = useAnimations(animations, group)
+  const { nodes, materials, animations } = useGLTF(SphereGLTF, true) as unknown as GLTFResult
+  const { actions } = useAnimations<GLTFAction>(animations, group)
 
   useEffect(() => {
     actions.KeyAction?.play()

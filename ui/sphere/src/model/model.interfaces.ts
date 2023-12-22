@@ -1,8 +1,13 @@
+import { AnimationClip }        from 'three'
 import { Mesh }                 from 'three'
 import { MeshStandardMaterial } from 'three'
 import { GLTF }                 from 'three-stdlib'
 
 export type ModelProps = JSX.IntrinsicElements['group']
+
+export interface GLTFAction extends AnimationClip {
+  name: 'KeyAction'
+}
 
 export interface GLTFResult extends GLTF {
   nodes: {
@@ -13,4 +18,5 @@ export interface GLTFResult extends GLTF {
     ['Material.002']: MeshStandardMaterial
     ['Material.001']: MeshStandardMaterial
   }
+  animations: GLTFAction[]
 }
