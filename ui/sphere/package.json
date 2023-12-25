@@ -4,7 +4,7 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "@react-three/drei": "8.20.2",
+    "@react-three/drei": "patch:@react-three/drei@npm%3A8.20.2#~/.yarn/patches/@react-three-drei-npm-8.20.2-c18668bc6a.patch",
     "@react-three/fiber": "7.0.29",
     "@ui/condition": "workspace:0.0.1",
     "three": "0.159.0",

@@ -2398,7 +2398,40 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: e44798835726bc39c1ca305f58c60517e6298bdd7b0c71e0b82f39f48ded0d1ae06a6a5061a970a011b9d76137a1631294b8d10f71d535b1b481a1880b9e0dda
+  checksum: eba236ce4cc635aac8de233be072e21213b4eef5e8ab416448747bc28d408568efb344539f82948d8db98c30a994677927d5e4da411ed2d80b6fce7b9d1c3904
+  languageName: node
+  linkType: hard
+
+"@react-three/drei@patch:@react-three/drei@npm%3A8.20.2#~/.yarn/patches/@react-three-drei-npm-8.20.2-c18668bc6a.patch":
+  version: 8.20.2
+  resolution: "@react-three/drei@patch:@react-three/drei@npm%3A8.20.2#~/.yarn/patches/@react-three-drei-npm-8.20.2-c18668bc6a.patch::version=8.20.2&hash=9528bd"
+  dependencies:
+    "@babel/runtime": "npm:^7.11.2"
+    "@react-spring/three": "npm:^9.3.1"
+    "@use-gesture/react": "npm:^10.2.0"
+    detect-gpu: "npm:^4.0.14"
+    glsl-noise: "npm:^0.0.0"
+    lodash.omit: "npm:^4.5.0"
+    lodash.pick: "npm:^4.4.0"
+    meshline: "npm:^2.0.4"
+    react-composer: "npm:^5.0.2"
+    react-merge-refs: "npm:^1.1.0"
+    stats.js: "npm:^0.17.0"
+    suspend-react: "npm:^0.0.8"
+    three-mesh-bvh: "npm:^0.5.7"
+    three-stdlib: "npm:^2.8.9"
+    troika-three-text: "npm:^0.46.3"
+    utility-types: "npm:^3.10.0"
+    zustand: "npm:^3.5.13"
+  peerDependencies:
+    "@react-three/fiber": ">=6.0"
+    react: ">=17.0"
+    react-dom: ">=17.0"
+    three: ">=0.137"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+  checksum: be6c616474c7aee48b1c671d5693e4856a93f5cb0c3bce29ac7a81a73d3395993886273afa3e305ea7818c6d29dc1021e2918abe60204db1f717fb4dbd7d8c18
   languageName: node
   linkType: hard
 
@@ -3523,7 +3556,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/sphere@workspace:ui/sphere"
   dependencies:
-    "@react-three/drei": "npm:8.20.2"
+    "@react-three/drei": "patch:@react-three/drei@npm%3A8.20.2#~/.yarn/patches/@react-three-drei-npm-8.20.2-c18668bc6a.patch"
     "@react-three/fiber": "npm:7.0.29"
     "@types/react": "npm:17.0.15"
     "@types/react-dom": "npm:17.0.9"
