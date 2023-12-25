@@ -1,0 +1,39 @@
+diff --git a/animation/MMDPhysics.d.ts b/animation/MMDPhysics.d.ts
+index eb3f20e27e4d6dd990fd1557bb9a5a828665b4f9..f73aa23dd11153f3872f9a78e9e73a9938f717f7 100644
+--- a/animation/MMDPhysics.d.ts
++++ b/animation/MMDPhysics.d.ts
+@@ -1,4 +1,4 @@
+-import { Bone, Euler, Matrix4, Object3D, Quaternion, SkinnedMesh, Vector3 } from 'three'
++import { Bone, Euler, Matrix4, Object3D, Quaternion, SkinnedMesh, Vector3, MeshBasicMaterial } from 'three'
+ 
+ export interface MMDPhysicsParameter {
+   unitStep?: number | undefined
+@@ -110,10 +110,10 @@ export class Constraint {
+ }
+ 
+ export class MMDPhysicsHelper extends Object3D {
+-  mesh: THREE.SkinnedMesh
++  mesh: SkinnedMesh
+   physics: MMDPhysics
+-  materials: [THREE.MeshBasicMaterial, THREE.MeshBasicMaterial, THREE.MeshBasicMaterial]
++  materials: [MeshBasicMaterial, MeshBasicMaterial, MeshBasicMaterial]
+ 
+-  constructor(mesh: THREE.SkinnedMesh, physics: MMDPhysics)
++  constructor(mesh: SkinnedMesh, physics: MMDPhysics)
+   dispose(): void
+ }
+diff --git a/utils/RoughnessMipmapper.d.ts b/utils/RoughnessMipmapper.d.ts
+index 80c0f29226f2816f0de9333682821780817fefec..8d724dee5f0967807b781b4d202db3194836906d 100644
+--- a/utils/RoughnessMipmapper.d.ts
++++ b/utils/RoughnessMipmapper.d.ts
+@@ -1,8 +1,8 @@
+-import { WebGLRenderer } from 'three'
++import { WebGLRenderer, Material } from 'three'
+ 
+ export class RoughnessMipmapper {
+   constructor(renderer: WebGLRenderer)
+ 
+-  generateMipmaps(material: THREE.Material): void
++  generateMipmaps(material: Material): void
+   dispose(): void
+ }
