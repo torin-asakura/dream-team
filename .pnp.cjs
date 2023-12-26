@@ -248,7 +248,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:17.0.25"],\
           ["eslint", "npm:8.17.0"],\
           ["husky", "npm:8.0.3"],\
-          ["typescript", "patch:typescript@npm%3A4.4.4#optional!builtin<compat/typescript>::version=4.4.4&hash=bbeadb"]\
+          ["typescript", "patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -951,7 +951,7 @@ const RAW_RUNTIME_STATE =
           ["find-up", "npm:5.0.0"],\
           ["string-replace-loader", "virtual:d0bd9cb3c89d147fe478c21055049b03d85619041e1ace95d2cb1ea7da57cb2780b9340287d5f28a70bcee617f2c0e582e7925074575feb1b4b492101882ca34#npm:3.1.0"],\
           ["ts-loader", "virtual:d0bd9cb3c89d147fe478c21055049b03d85619041e1ace95d2cb1ea7da57cb2780b9340287d5f28a70bcee617f2c0e582e7925074575feb1b4b492101882ca34#npm:9.5.1"],\
-          ["typescript", "patch:typescript@npm%3A4.4.4#optional!builtin<compat/typescript>::version=4.4.4&hash=bbeadb"],\
+          ["typescript", "patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>::version=4.6.4&hash=5d3a66"],\
           ["webpack", "virtual:687efeee7bf930f30b703428582d9cdaf5d9d0d27091f33e56339ce192e31e2777d25a6c4c2caf77238495962f1a355645bb01cc373f3e6ca5683e0b8f27ad75#npm:5.89.0"],\
           ["webpack-chain", "npm:6.5.1"]\
         ],\
@@ -4157,7 +4157,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:17.0.2"],\
           ["react-helmet", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:6.1.0"],\
           ["recompose", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:0.30.0"],\
-          ["typescript", "patch:typescript@npm%3A4.4.4#optional!builtin<compat/typescript>::version=4.4.4&hash=bbeadb"],\
+          ["typescript", "patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>::version=4.6.4&hash=5d3a66"],\
           ["xml-js", "npm:1.6.11"]\
         ],\
         "linkType": "SOFT"\
@@ -12613,7 +12613,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/import-sort-parser-typescript-npm-6.0.0-97a472ec0a-b8d2001b23.zip/node_modules/import-sort-parser-typescript/",\
         "packageDependencies": [\
           ["import-sort-parser-typescript", "npm:6.0.0"],\
-          ["typescript", "patch:typescript@npm%3A4.4.4#optional!builtin<compat/typescript>::version=4.4.4&hash=bbeadb"]\
+          ["typescript", "patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -15628,7 +15628,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:17.0.25"],\
           ["eslint", "npm:8.17.0"],\
           ["husky", "npm:8.0.3"],\
-          ["typescript", "patch:typescript@npm%3A4.4.4#optional!builtin<compat/typescript>::version=4.4.4&hash=bbeadb"]\
+          ["typescript", "patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -16837,7 +16837,7 @@ const RAW_RUNTIME_STATE =
           ["micromatch", "npm:4.0.5"],\
           ["semver", "npm:7.5.4"],\
           ["source-map", "npm:0.7.4"],\
-          ["typescript", "patch:typescript@npm%3A4.4.4#optional!builtin<compat/typescript>::version=4.4.4&hash=bbeadb"],\
+          ["typescript", "patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>::version=4.6.4&hash=5d3a66"],\
           ["webpack", "virtual:687efeee7bf930f30b703428582d9cdaf5d9d0d27091f33e56339ce192e31e2777d25a6c4c2caf77238495962f1a355645bb01cc373f3e6ca5683e0b8f27ad75#npm:5.89.0"]\
         ],\
         "packagePeers": [\
@@ -17044,10 +17044,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["typescript", [\
-      ["patch:typescript@npm%3A4.4.4#optional!builtin<compat/typescript>::version=4.4.4&hash=bbeadb", {\
-        "packageLocation": "./.yarn/cache/typescript-patch-005793e6fa-aad326b217.zip/node_modules/typescript/",\
+      ["patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>::version=4.6.4&hash=5d3a66", {\
+        "packageLocation": "./.yarn/cache/typescript-patch-2e900486ed-0ee0e98dae.zip/node_modules/typescript/",\
         "packageDependencies": [\
-          ["typescript", "patch:typescript@npm%3A4.4.4#optional!builtin<compat/typescript>::version=4.4.4&hash=bbeadb"]\
+          ["typescript", "patch:typescript@npm%3A4.6.4#optional!builtin<compat/typescript>::version=4.6.4&hash=5d3a66"]\
         ],\
         "linkType": "HARD"\
       }]\
