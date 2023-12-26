@@ -7,7 +7,7 @@ import { PropsWithChildren } from 'react'
 
 import { Condition }         from '@ui/condition'
 
-import { SphereGLTF }        from '../sphere-gltf'
+import { spherePath }        from '../sphere.constants'
 
 export const Loader: FC<PropsWithChildren<{}>> = ({ children }) => {
   const { active } = useProgress()
@@ -15,4 +15,4 @@ export const Loader: FC<PropsWithChildren<{}>> = ({ children }) => {
   return <Condition match={!active}>{children}</Condition>
 }
 
-useGLTF.preload(SphereGLTF)
+useGLTF.preload(spherePath)
