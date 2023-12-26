@@ -1088,7 +1088,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@forks/react-locomotive-scroll@workspace:forks/react-locomotive-scroll"
   dependencies:
-    "@types/react": "npm:17.0.1"
+    "@types/react": "npm:17.0.73"
     locomotive-scroll: "npm:^4.1.4"
     use-debounce: "npm:6.0.1"
     use-resize-observer: "npm:6.1.0"
@@ -1513,8 +1513,8 @@ __metadata:
     "@apollo/client": "npm:^3.6.9"
     "@globals/data": "workspace:0.0.1"
     "@landing/work-directions-fragment": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -1535,8 +1535,8 @@ __metadata:
     "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.9.3"
     "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/copy": "workspace:0.0.1"
@@ -1573,8 +1573,8 @@ __metadata:
     "@globals/data": "workspace:0.0.1"
     "@landing/contacts-fragment": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@types/react-helmet": "npm:^6"
     "@ui/preloader": "workspace:0.0.1"
     "@ui/scroll": "workspace:0.0.1"
@@ -1599,8 +1599,8 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:^3.6.9"
     "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
@@ -1623,8 +1623,8 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:^3.6.9"
     "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/divider": "workspace:0.0.1"
@@ -1649,8 +1649,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@landing/form-popover-fragment@workspace:landing/fragments/landing-form-popover"
   dependencies:
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/form": "workspace:0.0.1"
@@ -1673,8 +1673,8 @@ __metadata:
     "@apollo/client": "npm:^3.6.9"
     "@globals/data": "workspace:0.0.1"
     "@landing/form-popover-fragment": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
@@ -1709,8 +1709,8 @@ __metadata:
     "@landing/navigation-fragment": "workspace:0.0.1"
     "@landing/reviews-fragment": "workspace:0.0.1"
     "@landing/team-fragment": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@types/react-helmet": "npm:^6"
     "@ui/preloader": "workspace:0.0.1"
     "@ui/scroll": "workspace:0.0.1"
@@ -1739,8 +1739,8 @@ __metadata:
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
     "@landing/form-popover-fragment": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
@@ -1766,8 +1766,8 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:^3.6.9"
     "@globals/data": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react: "npm:17"
@@ -1791,8 +1791,8 @@ __metadata:
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"
     "@landing/privacy-policy-fragment": "workspace:0.0.1"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@types/react-helmet": "npm:^6"
     "@ui/preloader": "workspace:0.0.1"
     "@ui/scroll": "workspace:0.0.1"
@@ -1833,8 +1833,8 @@ __metadata:
     "@types/events": "npm:^3"
     "@types/express": "npm:^4"
     "@types/node": "npm:16"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@types/react-helmet": "npm:^6"
     "@types/recompose": "npm:^0"
     "@ui/theme": "workspace:0.0.1"
@@ -1843,7 +1843,7 @@ __metadata:
     gltf-loader: "npm:1.0.0"
     graphql: "npm:^15.8.0"
     locomotive-scroll: "npm:^4.1.4"
-    next: "npm:^12.2.0"
+    next: "npm:12.3.4"
     next-compose-plugins: "npm:^2.2.0"
     react: "npm:^17.0.2"
     react-dom: "npm:^17.0.2"
@@ -1859,8 +1859,8 @@ __metadata:
   resolution: "@landing/reviews-fragment@workspace:landing/fragments/landing-reviews"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"
     "@ui/carousel": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
@@ -1884,8 +1884,8 @@ __metadata:
   resolution: "@landing/team-fragment@workspace:landing/fragments/landing-team"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -1904,8 +1904,8 @@ __metadata:
   resolution: "@landing/work-directions-fragment@workspace:landing/fragments/landing-work-directions"
   dependencies:
     "@apollo/client": "npm:^3.6.9"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/condition": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -1927,86 +1927,100 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/env@npm:12.1.0"
-  checksum: 2a2d105e78c5be177a5df32d339eb797492e2d17b0960bc6242ad3685453ae3ed3f91ce9406d52169d87a20babdf439a814ddef036a830ebb3494d1581d59bc5
+"@next/env@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/env@npm:12.3.4"
+  checksum: 9a88f54bd2e92c246e6362a5b15d7d4b33f5874be9c52618db0344dd8fb8ef46321509c834164689dc98b9d36c49347697c0880241f16245417e42fd5679e998
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm64@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-android-arm64@npm:12.1.0"
+"@next/swc-android-arm-eabi@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-android-arm-eabi@npm:12.3.4"
+  conditions: os=android & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@next/swc-android-arm64@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-android-arm64@npm:12.3.4"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-darwin-arm64@npm:12.1.0"
+"@next/swc-darwin-arm64@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-darwin-arm64@npm:12.3.4"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-darwin-x64@npm:12.1.0"
+"@next/swc-darwin-x64@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-darwin-x64@npm:12.3.4"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm-gnueabihf@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.1.0"
+"@next/swc-freebsd-x64@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-freebsd-x64@npm:12.3.4"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-arm-gnueabihf@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.3.4"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-linux-arm64-gnu@npm:12.1.0"
-  conditions: os=linux & cpu=arm64
+"@next/swc-linux-arm64-gnu@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-linux-arm64-gnu@npm:12.3.4"
+  conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-linux-arm64-musl@npm:12.1.0"
-  conditions: os=linux & cpu=arm64
+"@next/swc-linux-arm64-musl@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-linux-arm64-musl@npm:12.3.4"
+  conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-linux-x64-gnu@npm:12.1.0"
-  conditions: os=linux & cpu=x64
+"@next/swc-linux-x64-gnu@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-linux-x64-gnu@npm:12.3.4"
+  conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-linux-x64-musl@npm:12.1.0"
-  conditions: os=linux & cpu=x64
+"@next/swc-linux-x64-musl@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-linux-x64-musl@npm:12.3.4"
+  conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-win32-arm64-msvc@npm:12.1.0"
+"@next/swc-win32-arm64-msvc@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-win32-arm64-msvc@npm:12.3.4"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-win32-ia32-msvc@npm:12.1.0"
+"@next/swc-win32-ia32-msvc@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-win32-ia32-msvc@npm:12.3.4"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:12.1.0":
-  version: 12.1.0
-  resolution: "@next/swc-win32-x64-msvc@npm:12.1.0"
+"@next/swc-win32-x64-msvc@npm:12.3.4":
+  version: 12.3.4
+  resolution: "@next/swc-win32-x64-msvc@npm:12.3.4"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2477,6 +2491,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/helpers@npm:0.4.11":
+  version: 0.4.11
+  resolution: "@swc/helpers@npm:0.4.11"
+  dependencies:
+    tslib: "npm:^2.4.0"
+  checksum: beb0124de3b8e1108325e81f46d85b987118a804e7fb347d6fdc28a4be0df80dff57e7031ce75cc8ac0411644ffd93d352cb73ed9c32ec057438c06cf2d98e9b
+  languageName: node
+  linkType: hard
+
 "@szmarczak/http-timer@npm:^4.0.5":
   version: 4.0.6
   resolution: "@szmarczak/http-timer@npm:4.0.6"
@@ -2826,7 +2849,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17":
+"@types/react-dom@npm:17.0.25":
   version: 17.0.25
   resolution: "@types/react-dom@npm:17.0.25"
   dependencies:
@@ -2853,7 +2876,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17":
+"@types/react@npm:17.0.73":
   version: 17.0.73
   resolution: "@types/react@npm:17.0.73"
   dependencies:
@@ -3094,8 +3117,8 @@ __metadata:
     "@atls-ui-parts/button": "npm:^0.0.4"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     react: "npm:^17"
     react-dom: "npm:^17"
     styled-system: "npm:^5.1.5"
@@ -3116,8 +3139,8 @@ __metadata:
     "@emotion/css": "npm:^11.9.0"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     react: "npm:^17"
     react-dom: "npm:^17"
   peerDependencies:
@@ -3134,8 +3157,8 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     react: "npm:^17"
     react-dom: "npm:^17"
   peerDependencies:
@@ -3152,8 +3175,8 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -3195,8 +3218,8 @@ __metadata:
     "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/input": "workspace:0.0.1"
@@ -3228,8 +3251,8 @@ __metadata:
     "@svgr/core": "npm:5.5.0"
     "@types/glob": "npm:^7"
     "@types/prettier": "npm:^2"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     camelcase: "npm:6.0.0"
     fs-extra-promise: "npm:1.0.1"
     glob: "npm:^7.1.7"
@@ -3252,10 +3275,10 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@types/styled-system": "npm:^5"
-    next: "npm:12.1.0"
+    next: "npm:12.3.4"
     react: "npm:^17"
     react-dom: "npm:^17"
     styled-system: "npm:^5.1.5"
@@ -3278,8 +3301,8 @@ __metadata:
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
     "@types/node": "npm:^14.14.41"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/text": "workspace:0.0.1"
     react: "npm:^17"
     react-dom: "npm:^17"
@@ -3299,8 +3322,8 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     framer-motion: "npm:^4.1.17"
@@ -3326,8 +3349,8 @@ __metadata:
     "@atls-ui-parts/layout": "npm:^0.0.2"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@types/styled-system": "npm:^5"
     react: "npm:^17"
     react-dom: "npm:^17"
@@ -3347,10 +3370,10 @@ __metadata:
     "@atls-ui-parts/link": "npm:^0.0.2"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@types/styled-system": "npm:^5"
-    next: "npm:^12.2.0"
+    next: "npm:12.3.4"
     react: "npm:^17"
     react-dom: "npm:^17"
     styled-system: "npm:^5.1.5"
@@ -3369,8 +3392,8 @@ __metadata:
     "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/condition": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
@@ -3418,8 +3441,8 @@ __metadata:
     "@apollo/client": "npm:^3.6.9"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     react: "npm:^17"
     react-dom: "npm:^17"
   peerDependencies:
@@ -3459,8 +3482,8 @@ __metadata:
   dependencies:
     "@react-three/drei": "patch:@react-three/drei@npm%3A8.20.2#~/.yarn/patches/@react-three-drei-npm-8.20.2-c18668bc6a.patch"
     "@react-three/fiber": "npm:7.0.29"
-    "@types/react": "npm:17.0.15"
-    "@types/react-dom": "npm:17.0.9"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/condition": "workspace:0.0.1"
     react: "npm:17.0.2"
     react-dom: "npm:17.0.2"
@@ -3476,8 +3499,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/tag@workspace:ui/tag"
   dependencies:
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
@@ -3497,8 +3520,8 @@ __metadata:
     "@atls-ui-parts/text": "npm:^0.0.5"
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     react: "npm:^17"
     react-dom: "npm:^17"
   peerDependencies:
@@ -3516,8 +3539,8 @@ __metadata:
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
     "@types/node": "npm:^14.14.41"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     react: "npm:^17"
     react-dom: "npm:^17"
     seamless-scroll-polyfill: "npm:^2.2.0"
@@ -3535,8 +3558,8 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     react: "npm:^17"
     react-dom: "npm:^17"
     react-laag: "npm:^2.0.3"
@@ -3554,8 +3577,8 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:^11.9.3"
     "@emotion/styled": "npm:^11.9.3"
-    "@types/react": "npm:^17"
-    "@types/react-dom": "npm:^17"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     "@types/styled-system": "npm:^5"
     react: "npm:^17"
     react-dom: "npm:^17"
@@ -4931,7 +4954,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001283, caniuse-lite@npm:^1.0.30001565":
+"caniuse-lite@npm:^1.0.30001406, caniuse-lite@npm:^1.0.30001565":
   version: 1.0.30001571
   resolution: "caniuse-lite@npm:1.0.30001571"
   checksum: 98a4f82bc969e7037ddafd1d9a8683b14b611b4e471d09e1e5825b0dbe9ea38460aa53538e830912f15f3ed43ce5f3e24133537bbd38ea9a36f263a46ec969b9
@@ -8368,7 +8391,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.25, nanoid@npm:^3.1.30, nanoid@npm:^3.3.7":
+"nanoid@npm:^3.1.25, nanoid@npm:^3.3.4, nanoid@npm:^3.3.7":
   version: 3.3.7
   resolution: "nanoid@npm:3.3.7"
   bin:
@@ -8414,26 +8437,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:12.1.0":
-  version: 12.1.0
-  resolution: "next@npm:12.1.0"
+"next@npm:12.3.4":
+  version: 12.3.4
+  resolution: "next@npm:12.3.4"
   dependencies:
-    "@next/env": "npm:12.1.0"
-    "@next/swc-android-arm64": "npm:12.1.0"
-    "@next/swc-darwin-arm64": "npm:12.1.0"
-    "@next/swc-darwin-x64": "npm:12.1.0"
-    "@next/swc-linux-arm-gnueabihf": "npm:12.1.0"
-    "@next/swc-linux-arm64-gnu": "npm:12.1.0"
-    "@next/swc-linux-arm64-musl": "npm:12.1.0"
-    "@next/swc-linux-x64-gnu": "npm:12.1.0"
-    "@next/swc-linux-x64-musl": "npm:12.1.0"
-    "@next/swc-win32-arm64-msvc": "npm:12.1.0"
-    "@next/swc-win32-ia32-msvc": "npm:12.1.0"
-    "@next/swc-win32-x64-msvc": "npm:12.1.0"
-    caniuse-lite: "npm:^1.0.30001283"
-    postcss: "npm:8.4.5"
-    styled-jsx: "npm:5.0.0"
-    use-subscription: "npm:1.5.1"
+    "@next/env": "npm:12.3.4"
+    "@next/swc-android-arm-eabi": "npm:12.3.4"
+    "@next/swc-android-arm64": "npm:12.3.4"
+    "@next/swc-darwin-arm64": "npm:12.3.4"
+    "@next/swc-darwin-x64": "npm:12.3.4"
+    "@next/swc-freebsd-x64": "npm:12.3.4"
+    "@next/swc-linux-arm-gnueabihf": "npm:12.3.4"
+    "@next/swc-linux-arm64-gnu": "npm:12.3.4"
+    "@next/swc-linux-arm64-musl": "npm:12.3.4"
+    "@next/swc-linux-x64-gnu": "npm:12.3.4"
+    "@next/swc-linux-x64-musl": "npm:12.3.4"
+    "@next/swc-win32-arm64-msvc": "npm:12.3.4"
+    "@next/swc-win32-ia32-msvc": "npm:12.3.4"
+    "@next/swc-win32-x64-msvc": "npm:12.3.4"
+    "@swc/helpers": "npm:0.4.11"
+    caniuse-lite: "npm:^1.0.30001406"
+    postcss: "npm:8.4.14"
+    styled-jsx: "npm:5.0.7"
+    use-sync-external-store: "npm:1.2.0"
   peerDependencies:
     fibers: ">= 3.1.0"
     node-sass: ^6.0.0 || ^7.0.0
@@ -8441,11 +8467,15 @@ __metadata:
     react-dom: ^17.0.2 || ^18.0.0-0
     sass: ^1.3.0
   dependenciesMeta:
+    "@next/swc-android-arm-eabi":
+      optional: true
     "@next/swc-android-arm64":
       optional: true
     "@next/swc-darwin-arm64":
       optional: true
     "@next/swc-darwin-x64":
+      optional: true
+    "@next/swc-freebsd-x64":
       optional: true
     "@next/swc-linux-arm-gnueabihf":
       optional: true
@@ -8472,7 +8502,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 72143ac2e411c998024f5116eaddacd0b404bdb822c357846956a1f1ec56d56c690a6dfb63d66b913ece57ad935252ece50d0bb94df997aee0c3ce4e048aea6d
+  checksum: 529695d4c83872ea5d3eb7fdbb9b22d49221d4dd5f14b97a42c55226655d1b06e477320a0956530950e662f05d14a8c2213c3ae5c934eecd31bc10d78025a15a
   languageName: node
   linkType: hard
 
@@ -8885,14 +8915,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.5":
-  version: 8.4.5
-  resolution: "postcss@npm:8.4.5"
+"postcss@npm:8.4.14":
+  version: 8.4.14
+  resolution: "postcss@npm:8.4.14"
   dependencies:
-    nanoid: "npm:^3.1.30"
+    nanoid: "npm:^3.3.4"
     picocolors: "npm:^1.0.0"
-    source-map-js: "npm:^1.0.1"
-  checksum: f316cc222005ee37abb8685e95ab33d784239201ff71bce1f1d7e142f398d7e5a6cfe3ff11425a50c79d4b22aebf983eb5eeee0c6494cbac82587b94743527c9
+    source-map-js: "npm:^1.0.2"
+  checksum: 1e1e4a4cc235674bea79da18dd3e02ea8ffcd51546c7ddf1fc7ba4de5e89154a83988bb8c1b30bd9566df56fc0077dce6e620d8f9ce6ababf60f659ffc53f72c
   languageName: node
   linkType: hard
 
@@ -9468,8 +9498,8 @@ __metadata:
     "@types/eslint": "npm:8"
     "@types/jest": "npm:^28.1.3"
     "@types/node": "npm:16"
-    "@types/react": "npm:^17.0.15"
-    "@types/react-dom": "npm:^17.0.9"
+    "@types/react": "npm:17.0.73"
+    "@types/react-dom": "npm:17.0.25"
     eslint: "npm:^8.18.0"
     husky: "npm:^8.0.1"
     typescript: "npm:^4.6.4"
@@ -9486,7 +9516,7 @@ __metadata:
       unplugged: true
     "@next/swc-linux-x64-gnu@12.3.4":
       unplugged: true
-    next@12.1.0:
+    next@12.3.4:
       unplugged: true
   languageName: unknown
   linkType: soft
@@ -9777,7 +9807,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.1, source-map-js@npm:^1.0.2":
+"source-map-js@npm:^1.0.2":
   version: 1.0.2
   resolution: "source-map-js@npm:1.0.2"
   checksum: 4496d29f371909dbc27dfb302f31cadc70b6f1591b2b433337daf923fac30e9632523e169494b40d06b53228166a577875a3610bce3412de8bb600152f748a9c
@@ -10048,17 +10078,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-jsx@npm:5.0.0":
-  version: 5.0.0
-  resolution: "styled-jsx@npm:5.0.0"
+"styled-jsx@npm:5.0.7":
+  version: 5.0.7
+  resolution: "styled-jsx@npm:5.0.7"
   peerDependencies:
-    react: ">= 16.8.0 || 17.x.x || 18.x.x"
+    react: ">= 16.8.0 || 17.x.x || ^18.0.0-0"
   peerDependenciesMeta:
     "@babel/core":
       optional: true
     babel-plugin-macros:
       optional: true
-  checksum: c6165d02523c8fcecb7c696ee026ff0e385fcd9187cf5fb8f6e511485c3d09cc0b5519475b56e759cc70b2ea4a9d62a3ac11b09bbf082523fb734eabd85484de
+  checksum: 49b7105bb77180f4c75c43b4038ebb07d4393dc8be82877cd9f19771e475b51a12332e1ac188260b8998d7d51afde9212b87e11009410a55d3b4351149c9da91
   languageName: node
   linkType: hard
 
@@ -10521,7 +10551,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0, tslib@npm:^2.3.0":
+"tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: e5654691294dfbc49d7f37c8476b11a90ab8a0af4ad8cc968af1d013600e84ecfcd9a68e1cb89f5dcfe5c88872e3fbacea830d237cfa063498115a88f4bd2de6
@@ -10759,14 +10789,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-subscription@npm:1.5.1":
-  version: 1.5.1
-  resolution: "use-subscription@npm:1.5.1"
-  dependencies:
-    object-assign: "npm:^4.1.1"
+"use-sync-external-store@npm:1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
   peerDependencies:
-    react: ^16.8.0 || ^17.0.0
-  checksum: 354f2153743077bf40b98b78428b88f7c1ae59d7eb3299e5734046d1c17c7f9cf3002266edc93070a6d971791dfcf547bd6e0c6ac8f12ee14490a1cf5ea83711
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: bed3d1f68ca3dd33647035dbeb9d3a5ece12fced0245cb0fa831426192e52e4948b0fc6e9187d9d4dce9f58269af605f8feeeda100d2928f8b865f9cd9cc4a4a
   languageName: node
   linkType: hard
 
