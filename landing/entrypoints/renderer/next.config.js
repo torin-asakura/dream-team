@@ -5,6 +5,7 @@ module.exports = {
     workerThreads: true,
     esmExternals: 'loose',
   },
+  output: 'standalone',
   images: {
     domains: ['wp.dream-team.tech'],
   },
