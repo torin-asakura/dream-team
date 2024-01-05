@@ -9,12 +9,13 @@
     "@ui/layout": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@apollo/client": "^3.6.9",
+    "@apollo/client": "3.6.9",
     "@ui/preloader": "workspace:0.0.1",
-    "react": "^17.0.2"
+    "react": "17.0.2"
   },
   "peerDependencies": {
     "@apollo/client": "*",
+    "graphql": "*",
     "next": "*",
     "react": "*"
   }

@@ -6,15 +6,15 @@
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
-    "framer-motion": "^4.1.17"
+    "framer-motion": "4.1.17"
   },
   "devDependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@types/react": "^17",
-    "@types/react-dom": "^17",
-    "react": "^17",
-    "react-dom": "^17"
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
+    "@types/react": "17.0.73",
+    "@types/react-dom": "17.0.25",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "peerDependencies": {
     "@emotion/react": "*",

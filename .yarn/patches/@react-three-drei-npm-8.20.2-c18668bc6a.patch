@@ -1,0 +1,527 @@
+diff --git a/core/CameraShake.d.ts b/core/CameraShake.d.ts
+index d615536d1873de0d066e5c38cd8c39bd1b9ddb6e..36b7610a170537921a82a46aa5dcc9c8236d4d65 100644
+--- a/core/CameraShake.d.ts
++++ b/core/CameraShake.d.ts
+@@ -1,4 +1,5 @@
+ import * as React from 'react';
++import * as THREE from 'three';
+ export interface ShakeController {
+     getIntensity: () => number;
+     setIntensity: (val: number) => void;
+diff --git a/core/Clone.d.ts b/core/Clone.d.ts
+index 953061a137eeb9f81fdb83dab7b4230688da6a33..8ee3fbe55f02e149e917fc363162455f6721d954 100644
+--- a/core/Clone.d.ts
++++ b/core/Clone.d.ts
+@@ -1,4 +1,5 @@
+ import * as React from 'react';
++import * as THREE from 'three';
+ import { MeshProps } from '@react-three/fiber';
+ export declare const Clone: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").GroupProps, "children"> & {
+     object: THREE.Object3D | THREE.Object3D[];
+diff --git a/core/Detailed.d.ts b/core/Detailed.d.ts
+index e6ccd9b1752cd6334e176bf4a4df4cceab38c3ff..9691839adc04c378786bc35c355bb73eedc0485d 100644
+--- a/core/Detailed.d.ts
++++ b/core/Detailed.d.ts
+@@ -1,24 +1,3 @@
+ import * as React from 'react';
+-import { LOD, Object3D } from 'three';
+-export declare const Detailed: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").Node<LOD, typeof LOD>, import("@react-three/fiber").NonFunctionKeys<{
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-}>> & {
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-} & import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers & {
+-    children: React.ReactElement<Object3D>[];
+-    distances: number[];
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "objects" | "update" | "autoUpdate" | "levels" | "isLOD" | "addLevel" | "getCurrentLevel" | "getObjectForDistance" | "distances"> & React.RefAttributes<unknown>>;
++
++export declare const Detailed: React.ForwardRefExoticComponent<any>;
+diff --git a/core/DeviceOrientationControls.d.ts b/core/DeviceOrientationControls.d.ts
+index 2bdc9fddec43f15420bcfb718df29b7b11981244..9e27b14a1d144c37c2187b8054841b42670ca68b 100644
+--- a/core/DeviceOrientationControls.d.ts
++++ b/core/DeviceOrientationControls.d.ts
+@@ -6,4 +6,4 @@ export declare type DeviceOrientationControlsProps = ReactThreeFiber.Object3DNod
+     camera?: THREE.Camera;
+     onChange?: (e?: THREE.Event) => void;
+ };
+-export declare const DeviceOrientationControls: React.ForwardRefExoticComponent<Pick<DeviceOrientationControlsProps, "object" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "onChange" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "camera" | "enabled" | "update" | "connect" | "disconnect" | "deviceOrientation" | "screenOrientation" | "alphaOffset"> & React.RefAttributes<DeviceOrientationControlsImp>>;
++export declare const DeviceOrientationControls: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/Effects.d.ts b/core/Effects.d.ts
+index 76368b73b7a72adf59e65f05decc4d83b0a0573b..da252bf6d7219db64fc768e5bd2c3ab7d5247f70 100644
+--- a/core/Effects.d.ts
++++ b/core/Effects.d.ts
+@@ -12,9 +12,4 @@ declare global {
+     }
+ }
+ export declare const isWebGL2Available: () => boolean;
+-export declare const Effects: React.ForwardRefExoticComponent<Pick<Omit<Partial<EffectComposer<WebGLRenderTarget>>, ReactThreeFiber.NonFunctionKeys<ReactThreeFiber.NodeProps<EffectComposer<WebGLRenderTarget>, typeof EffectComposer>>> & ReactThreeFiber.NodeProps<EffectComposer<WebGLRenderTarget>, typeof EffectComposer> & {
+-    multisamping?: number | undefined;
+-    renderIndex?: number | undefined;
+-    disableGamma?: boolean | undefined;
+-    disableRenderPass?: boolean | undefined;
+-}, "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | keyof EffectComposer<WebGLRenderTarget> | "multisamping" | "renderIndex" | "disableGamma" | "disableRenderPass"> & React.RefAttributes<unknown>>;
++export declare const Effects: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/Environment.d.ts b/core/Environment.d.ts
+index 96c3d7ba73811356917d235621f9811e66c48771..e403fe5f0a09d7bac18a2c3192882ff778454014 100644
+--- a/core/Environment.d.ts
++++ b/core/Environment.d.ts
+@@ -1,5 +1,6 @@
+ import * as React from 'react';
+ import { Scene, Loader } from 'three';
++import * as THREE from 'three';
+ import { PresetsType } from '../helpers/environment-assets';
+ declare type Props = {
+     children?: React.ReactNode;
+diff --git a/core/FirstPersonControls.d.ts b/core/FirstPersonControls.d.ts
+index 0bd32c21dcd2c826f91fce9fbdeb4285f714e967..d51604474576070a6386175c4e96920f1cfba859 100644
+--- a/core/FirstPersonControls.d.ts
++++ b/core/FirstPersonControls.d.ts
+@@ -2,4 +2,4 @@ import * as React from 'react';
+ import { Object3DNode } from '@react-three/fiber';
+ import { FirstPersonControls as FirstPersonControlImpl } from 'three-stdlib';
+ export declare type FirstPersonControlsProps = Object3DNode<FirstPersonControlImpl, typeof FirstPersonControlImpl>;
+-export declare const FirstPersonControls: React.ForwardRefExoticComponent<Pick<FirstPersonControlsProps, "object" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "lookAt" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "enabled" | "update" | "connect" | "domElement" | "movementSpeed" | "autoForward" | "handleResize" | "lookSpeed" | "lookVertical" | "activeLook" | "heightSpeed" | "heightCoef" | "heightMin" | "heightMax" | "constrainVertical" | "verticalMin" | "verticalMax" | "mouseDragOn"> & React.RefAttributes<FirstPersonControlImpl>>;
++export declare const FirstPersonControls: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/FlyControls.d.ts b/core/FlyControls.d.ts
+index 6c9edede4f0fb6d13c0f3b879167c050080d3f22..5577f9e57edf5a1196ba6a251bb43834433005bd 100644
+--- a/core/FlyControls.d.ts
++++ b/core/FlyControls.d.ts
+@@ -5,4 +5,4 @@ import { FlyControls as FlyControlsImpl } from 'three-stdlib';
+ export declare type FlyControlsProps = ReactThreeFiber.Object3DNode<FlyControlsImpl, typeof FlyControlsImpl> & {
+     onChange?: (e?: THREE.Event) => void;
+ };
+-export declare const FlyControls: React.ForwardRefExoticComponent<Pick<FlyControlsProps, "object" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "onChange" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "update" | "domElement" | "movementSpeed" | "rollSpeed" | "dragToLook" | "autoForward"> & React.RefAttributes<FlyControlsImpl>>;
++export declare const FlyControls: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/Image.d.ts b/core/Image.d.ts
+index f995173aefb7b50eb34f9afd1cd32361fa243b28..f859120a55ed6163387915e3c1a9c865f6ea3aa7 100644
+--- a/core/Image.d.ts
++++ b/core/Image.d.ts
+@@ -25,31 +25,5 @@ declare global {
+         }
+     }
+ }
+-export declare const Image: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").Node<THREE.Mesh<THREE.BufferGeometry, THREE.Material | THREE.Material[]>, typeof THREE.Mesh>, import("@react-three/fiber").NonFunctionKeys<{
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-}>> & {
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-} & import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers & {
+-    segments?: number | undefined;
+-    scale?: number | [number, number] | undefined;
+-    color?: Color | undefined;
+-    zoom?: number | undefined;
+-    grayscale?: number | undefined;
+-    toneMapped?: boolean | undefined;
+-    url: string;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "color" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "zoom" | "material" | "url" | "toneMapped" | "geometry" | "morphTargetInfluences" | "morphTargetDictionary" | "isMesh" | "updateMorphTargets" | "segments" | "grayscale"> & React.RefAttributes<THREE.Mesh<THREE.BufferGeometry, THREE.Material | THREE.Material[]>>>;
++export declare const Image: React.ForwardRefExoticComponent<any>
+ export {};
+diff --git a/core/Instances.d.ts b/core/Instances.d.ts
+index 443eb7aee3c8bbbf95bce04a9f54c82295424a56..8d540d0935dc4e0a0621bc6d682df18afd0068a6 100644
+--- a/core/Instances.d.ts
++++ b/core/Instances.d.ts
+@@ -14,28 +14,8 @@ declare type InstancedMesh = Omit<THREE.InstancedMesh, 'instanceMatrix' | 'insta
+     instanceMatrix: THREE.InstancedBufferAttribute;
+     instanceColor: THREE.InstancedBufferAttribute;
+ };
+-declare const Instance: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").Node<Position, typeof Position>, import("@react-three/fiber").NonFunctionKeys<{
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-}>> & {
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-} & import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers & {
+-    context?: React.Context<Api> | undefined;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "isGroup" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "color" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "geometry" | "context" | "instance" | "instanceKey"> & React.RefAttributes<unknown>>;
+-declare const Instances: React.ForwardRefExoticComponent<Pick<InstancesProps, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "range" | "material" | "geometry" | "morphTargetInfluences" | "morphTargetDictionary" | "isMesh" | "updateMorphTargets" | "instanceMatrix" | "count" | "frames" | "instanceColor" | "isInstancedMesh" | "getColorAt" | "getMatrixAt" | "setColorAt" | "setMatrixAt" | "limit"> & React.RefAttributes<InstancedMesh>>;
++declare const Instance: React.ForwardRefExoticComponent<any>;
++declare const Instances: React.ForwardRefExoticComponent<any>;
+ declare function Merged({ meshes, children, ...props }: {
+     [x: string]: any;
+     meshes: any;
+diff --git a/core/Lightformer.d.ts b/core/Lightformer.d.ts
+index d5f8da1d261f45b780599c6771725a0328cb61ab..67e30c320c2b3c323ff1648306f8ddf388fcd29e 100644
+--- a/core/Lightformer.d.ts
++++ b/core/Lightformer.d.ts
+@@ -11,31 +11,4 @@ export declare type LightProps = JSX.IntrinsicElements['mesh'] & {
+     intensity?: number;
+     target?: [number, number, number] | THREE.Vector3;
+ };
+-export declare const Lightformer: React.ForwardRefExoticComponent<Pick<Omit<ReactThreeFiber.Node<THREE.Mesh<THREE.BufferGeometry, THREE.Material | THREE.Material[]>, typeof THREE.Mesh>, ReactThreeFiber.NonFunctionKeys<{
+-    position?: ReactThreeFiber.Vector3 | undefined;
+-    up?: ReactThreeFiber.Vector3 | undefined;
+-    scale?: ReactThreeFiber.Vector3 | undefined;
+-    rotation?: ReactThreeFiber.Euler | undefined;
+-    matrix?: ReactThreeFiber.Matrix4 | undefined;
+-    quaternion?: ReactThreeFiber.Quaternion | undefined;
+-    layers?: ReactThreeFiber.Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-}>> & {
+-    position?: ReactThreeFiber.Vector3 | undefined;
+-    up?: ReactThreeFiber.Vector3 | undefined;
+-    scale?: ReactThreeFiber.Vector3 | undefined;
+-    rotation?: ReactThreeFiber.Euler | undefined;
+-    matrix?: ReactThreeFiber.Matrix4 | undefined;
+-    quaternion?: ReactThreeFiber.Quaternion | undefined;
+-    layers?: ReactThreeFiber.Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-} & import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers & {
+-    args?: any[] | undefined;
+-    map?: THREE.Texture | undefined;
+-    toneMapped?: boolean | undefined;
+-    color?: ReactThreeFiber.Color | undefined;
+-    form?: 'circle' | 'ring' | 'rect' | any;
+-    scale?: number | [number, number] | [number, number, number] | undefined;
+-    intensity?: number | undefined;
+-    target?: THREE.Vector3 | [number, number, number] | undefined;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "color" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "form" | "map" | "material" | "target" | "toneMapped" | "geometry" | "morphTargetInfluences" | "morphTargetDictionary" | "isMesh" | "updateMorphTargets" | "intensity"> & React.RefAttributes<unknown>>;
++export declare const Lightformer: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/Line.d.ts b/core/Line.d.ts
+index 500a16f368b22b781a9cb751528e0a229c69ce93..f7003d56e719707892ff75c2b90d298d1db2fe30 100644
+--- a/core/Line.d.ts
++++ b/core/Line.d.ts
+@@ -6,4 +6,4 @@ export declare type LineProps = {
+     points: Array<Vector3 | [number, number, number]>;
+     vertexColors?: Array<Color | [number, number, number]>;
+ } & LineMaterialParameters & Omit<ReactThreeFiber.Object3DNode<Line2, typeof Line2>, 'args'> & Omit<ReactThreeFiber.Object3DNode<LineMaterial, [LineMaterialParameters]>, 'color' | 'vertexColors' | 'resolution' | 'args'>;
+-export declare const Line: React.ForwardRefExoticComponent<Pick<LineProps, "attach" | "attachArray" | "attachObject" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "color" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "dashed" | "points" | "material" | "alphaWrite" | "isMaterial" | "needsUpdate" | "version" | "onBeforeCompile" | "customProgramCacheKey" | "setValues" | "isLine2" | "computeLineDistances" | "geometry" | "morphTargetInfluences" | "morphTargetDictionary" | "isMesh" | "updateMorphTargets" | "lineWidth" | "dashScale" | "dashOffset" | "dashSize" | "resolution" | "derivatives" | "defaultAttributeValues" | "index0AttributeName" | "uniformsNeedUpdate" | "isShaderMaterial" | "gapSize" | keyof import("three").ShaderMaterialParameters> & React.RefAttributes<Line2>>;
++export declare const Line: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/MapControls.d.ts b/core/MapControls.d.ts
+index 9e04e0f4962d05bdfba7507c5090cc6ae26bd1f3..caaf51981b32914498ae1cb0c44981e53ff2d709 100644
+--- a/core/MapControls.d.ts
++++ b/core/MapControls.d.ts
+@@ -9,4 +9,4 @@ export declare type MapControlsProps = ReactThreeFiber.Overwrite<ReactThreeFiber
+     onStart?: (e?: THREE.Event) => void;
+     onEnd?: (e?: THREE.Event) => void;
+ }>;
+-export declare const MapControls: React.ForwardRefExoticComponent<Pick<MapControlsProps, "object" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "onChange" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "camera" | "reset" | "enabled" | "update" | "onStart" | "keys" | "target" | "touches" | "connect" | "domElement" | "minDistance" | "maxDistance" | "minZoom" | "maxZoom" | "minPolarAngle" | "maxPolarAngle" | "minAzimuthAngle" | "maxAzimuthAngle" | "enableDamping" | "dampingFactor" | "enableZoom" | "zoomSpeed" | "enableRotate" | "rotateSpeed" | "enablePan" | "panSpeed" | "screenSpacePanning" | "keyPanSpeed" | "autoRotate" | "autoRotateSpeed" | "reverseOrbit" | "mouseButtons" | "target0" | "position0" | "zoom0" | "_domElementKeyEvents" | "getPolarAngle" | "getAzimuthalAngle" | "setPolarAngle" | "setAzimuthalAngle" | "getDistance" | "listenToKeyEvents" | "saveState" | "onEnd"> & React.RefAttributes<MapControlsImpl>>;
++export declare const MapControls: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/MeshDistortMaterial.d.ts b/core/MeshDistortMaterial.d.ts
+index ac60a4182181d872d7732a4aba7b1f48fc519073..ccd752c20e14500e367ebd7065da83b084b0cbf5 100644
+--- a/core/MeshDistortMaterial.d.ts
++++ b/core/MeshDistortMaterial.d.ts
+@@ -12,14 +12,5 @@ declare global {
+         }
+     }
+ }
+-export declare const MeshDistortMaterial: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").Node<MeshPhysicalMaterial, [MeshPhysicalMaterialParameters]>, "color" | undefined> & {
+-    color?: import("@react-three/fiber").Color | undefined;
+-} & {
+-    time?: number | undefined;
+-    distort?: number | undefined;
+-    radius?: number | undefined;
+-} & {
+-    speed?: number | undefined;
+-    factor?: number | undefined;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "dispose" | "type" | "id" | "uuid" | "name" | "userData" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "color" | "map" | "time" | "transparent" | "fog" | "opacity" | "speed" | "precision" | "alphaTest" | "alphaToCoverage" | "alphaWrite" | "blendDst" | "blendDstAlpha" | "blendEquation" | "blendEquationAlpha" | "blending" | "blendSrc" | "blendSrcAlpha" | "clipIntersection" | "clippingPlanes" | "clipShadows" | "colorWrite" | "defines" | "depthFunc" | "depthTest" | "depthWrite" | "stencilWrite" | "stencilFunc" | "stencilRef" | "stencilWriteMask" | "stencilFuncMask" | "stencilFail" | "stencilZFail" | "stencilZPass" | "isMaterial" | "needsUpdate" | "polygonOffset" | "polygonOffsetFactor" | "polygonOffsetUnits" | "premultipliedAlpha" | "dithering" | "side" | "shadowSide" | "toneMapped" | "vertexColors" | "version" | "onBeforeCompile" | "customProgramCacheKey" | "setValues" | "wireframe" | "wireframeLinewidth" | "emissive" | "emissiveIntensity" | "emissiveMap" | "lightMap" | "lightMapIntensity" | "aoMap" | "aoMapIntensity" | "alphaMap" | "envMap" | "reflectivity" | "refractionRatio" | "wireframeLinecap" | "wireframeLinejoin" | "clearcoat" | "clearcoatMap" | "clearcoatRoughness" | "clearcoatRoughnessMap" | "clearcoatNormalScale" | "clearcoatNormalMap" | "ior" | "sheen" | "sheenColor" | "sheenColorMap" | "sheenRoughness" | "sheenRoughnessMap" | "transmission" | "transmissionMap" | "thickness" | "thicknessMap" | "attenuationDistance" | "attenuationColor" | "specularIntensity" | "specularColor" | "specularIntensityMap" | "specularColorMap" | "roughness" | "metalness" | "bumpMap" | "bumpScale" | "normalMap" | "normalMapType" | "normalScale" | "displacementMap" | "displacementScale" | "displacementBias" | "roughnessMap" | "metalnessMap" | "envMapIntensity" | "flatShading" | "isMeshStandardMaterial" | "radius" | "distort" | "factor"> & React.RefAttributes<unknown>>;
++export declare const MeshDistortMaterial: React.ForwardRefExoticComponent<any>;
+ export {};
+diff --git a/core/MeshWobbleMaterial.d.ts b/core/MeshWobbleMaterial.d.ts
+index a9af2fbb5384022762c35f565c0ca817dc390df2..ee72a33d82425d531ba50c0c129e1866e383b10b 100644
+--- a/core/MeshWobbleMaterial.d.ts
++++ b/core/MeshWobbleMaterial.d.ts
+@@ -12,14 +12,5 @@ declare global {
+         }
+     }
+ }
+-export declare const MeshWobbleMaterial: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").Node<MeshStandardMaterial, [MeshStandardMaterialParameters]>, "color" | undefined> & {
+-    color?: import("@react-three/fiber").Color | undefined;
+-} & {
+-    time?: number | undefined;
+-    factor?: number | undefined;
+-    speed?: number | undefined;
+-} & {
+-    speed?: number | undefined;
+-    factor?: number | undefined;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "dispose" | "type" | "id" | "uuid" | "name" | "userData" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "color" | "map" | "time" | "transparent" | "fog" | "opacity" | "speed" | "precision" | "alphaTest" | "alphaToCoverage" | "alphaWrite" | "blendDst" | "blendDstAlpha" | "blendEquation" | "blendEquationAlpha" | "blending" | "blendSrc" | "blendSrcAlpha" | "clipIntersection" | "clippingPlanes" | "clipShadows" | "colorWrite" | "defines" | "depthFunc" | "depthTest" | "depthWrite" | "stencilWrite" | "stencilFunc" | "stencilRef" | "stencilWriteMask" | "stencilFuncMask" | "stencilFail" | "stencilZFail" | "stencilZPass" | "isMaterial" | "needsUpdate" | "polygonOffset" | "polygonOffsetFactor" | "polygonOffsetUnits" | "premultipliedAlpha" | "dithering" | "side" | "shadowSide" | "toneMapped" | "vertexColors" | "version" | "onBeforeCompile" | "customProgramCacheKey" | "setValues" | "wireframe" | "wireframeLinewidth" | "emissive" | "emissiveIntensity" | "emissiveMap" | "lightMap" | "lightMapIntensity" | "aoMap" | "aoMapIntensity" | "alphaMap" | "envMap" | "refractionRatio" | "wireframeLinecap" | "wireframeLinejoin" | "roughness" | "metalness" | "bumpMap" | "bumpScale" | "normalMap" | "normalMapType" | "normalScale" | "displacementMap" | "displacementScale" | "displacementBias" | "roughnessMap" | "metalnessMap" | "envMapIntensity" | "flatShading" | "isMeshStandardMaterial" | "factor"> & React.RefAttributes<unknown>>;
++export declare const MeshWobbleMaterial: React.ForwardRefExoticComponent<any>
+ export {};
+diff --git a/core/OrthographicCamera.d.ts b/core/OrthographicCamera.d.ts
+index c98734efefcd9769a4332abc5bed40953fd53601..6f4e20a4d1e977a7aea6003750005690f4f52223 100644
+--- a/core/OrthographicCamera.d.ts
++++ b/core/OrthographicCamera.d.ts
+@@ -1,25 +1,3 @@
+ import * as React from 'react';
+ import { OrthographicCamera as OrthographicCameraImpl } from 'three';
+-export declare const OrthographicCamera: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").Node<OrthographicCameraImpl, typeof OrthographicCameraImpl>, import("@react-three/fiber").NonFunctionKeys<{
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-}>> & {
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-} & import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers & {
+-    makeDefault?: boolean | undefined;
+-    manual?: boolean | undefined;
+-    children?: React.ReactNode;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "left" | "right" | "bottom" | "top" | "manual" | "zoom" | "view" | "isOrthographicCamera" | "near" | "far" | "updateProjectionMatrix" | "setViewOffset" | "clearViewOffset" | "matrixWorldInverse" | "projectionMatrix" | "projectionMatrixInverse" | "isCamera" | "makeDefault"> & React.RefAttributes<unknown>>;
++export declare const OrthographicCamera: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/PerspectiveCamera.d.ts b/core/PerspectiveCamera.d.ts
+index 172f77b137de4b288e3003333d6b2e2109b8621d..00725f0537790438a0b83f5615f87cf1ea507d4e 100644
+--- a/core/PerspectiveCamera.d.ts
++++ b/core/PerspectiveCamera.d.ts
+@@ -1,25 +1,3 @@
+ import * as React from 'react';
+ import { PerspectiveCamera as PerspectiveCameraImpl } from 'three';
+-export declare const PerspectiveCamera: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").Node<PerspectiveCameraImpl, typeof PerspectiveCameraImpl>, import("@react-three/fiber").NonFunctionKeys<{
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-}>> & {
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-} & import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers & {
+-    makeDefault?: boolean | undefined;
+-    manual?: boolean | undefined;
+-    children?: React.ReactNode;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "manual" | "zoom" | "view" | "focus" | "near" | "far" | "updateProjectionMatrix" | "setViewOffset" | "clearViewOffset" | "matrixWorldInverse" | "projectionMatrix" | "projectionMatrixInverse" | "isCamera" | "makeDefault" | "isPerspectiveCamera" | "fov" | "aspect" | "filmGauge" | "filmOffset" | "setFocalLength" | "getFocalLength" | "getEffectiveFOV" | "getFilmWidth" | "getFilmHeight" | "setLens"> & React.RefAttributes<unknown>>;
++export declare const PerspectiveCamera: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/PointerLockControls.d.ts b/core/PointerLockControls.d.ts
+index 7b395c0227f6c879ecd0b611cc5d22b948fe3c81..eb419818f7bd3cc4048822e66f6fd0786b3b3d91 100644
+--- a/core/PointerLockControls.d.ts
++++ b/core/PointerLockControls.d.ts
+@@ -11,4 +11,4 @@ export declare type PointerLockControlsProps = ReactThreeFiber.Object3DNode<Poin
+     onLock?: (e?: THREE.Event) => void;
+     onUnlock?: (e?: THREE.Event) => void;
+ };
+-export declare const PointerLockControls: React.ForwardRefExoticComponent<Pick<PointerLockControlsProps, "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "onChange" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "camera" | "enabled" | "connect" | "disconnect" | "domElement" | "minPolarAngle" | "maxPolarAngle" | "isLocked" | "getDirection" | "moveForward" | "moveRight" | "lock" | "unlock" | "selector" | "onLock" | "onUnlock"> & React.RefAttributes<PointerLockControlsImpl>>;
++export declare const PointerLockControls: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/PositionalAudio.d.ts b/core/PositionalAudio.d.ts
+index b50121d9fc8879c35ad10fd35b73045d4d38e823..837f55e8988791c12bfaf22b38393d4ca70a4dc5 100644
+--- a/core/PositionalAudio.d.ts
++++ b/core/PositionalAudio.d.ts
+@@ -1,25 +1,3 @@
+ import * as React from 'react';
+ import { PositionalAudio as PositionalAudioImpl } from 'three';
+-export declare const PositionalAudio: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").Node<PositionalAudioImpl, typeof PositionalAudioImpl>, import("@react-three/fiber").NonFunctionKeys<{
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-}>> & {
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-} & import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers & {
+-    url: string;
+-    distance?: number | undefined;
+-    loop?: boolean | undefined;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "onEnded" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "source" | "stop" | "url" | "load" | "pause" | "play" | "distance" | "offset" | "loop" | "duration" | "panner" | "getOutput" | "setRefDistance" | "getRefDistance" | "setRolloffFactor" | "getRolloffFactor" | "setDistanceModel" | "getDistanceModel" | "setMaxDistance" | "getMaxDistance" | "setDirectionalCone" | "listener" | "context" | "gain" | "autoplay" | "buffer" | "detune" | "loopStart" | "loopEnd" | "playbackRate" | "isPlaying" | "hasPlaybackControl" | "sourceType" | "filters" | "setNodeSource" | "setMediaElementSource" | "setMediaStreamSource" | "setBuffer" | "connect" | "disconnect" | "setDetune" | "getDetune" | "getFilters" | "setFilters" | "getFilter" | "setFilter" | "setPlaybackRate" | "getPlaybackRate" | "getLoop" | "setLoop" | "setLoopStart" | "setLoopEnd" | "getVolume" | "setVolume"> & React.RefAttributes<unknown>>;
++export declare const PositionalAudio: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/Shadow.d.ts b/core/Shadow.d.ts
+index 756c6e58f713a79983da5055ce480550f8149ca1..67a5517ffb4455bf1153b422fcdbce6227a9fc95 100644
+--- a/core/Shadow.d.ts
++++ b/core/Shadow.d.ts
+@@ -1,26 +1,3 @@
+ import * as React from 'react';
+ import { Mesh, Color } from 'three';
+-export declare const Shadow: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").Node<Mesh<import("three").BufferGeometry, import("three").Material | import("three").Material[]>, typeof Mesh>, import("@react-three/fiber").NonFunctionKeys<{
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-}>> & {
+-    position?: import("@react-three/fiber").Vector3 | undefined;
+-    up?: import("@react-three/fiber").Vector3 | undefined;
+-    scale?: import("@react-three/fiber").Vector3 | undefined;
+-    rotation?: import("@react-three/fiber").Euler | undefined;
+-    matrix?: import("@react-three/fiber").Matrix4 | undefined;
+-    quaternion?: import("@react-three/fiber").Quaternion | undefined;
+-    layers?: import("@react-three/fiber").Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-} & import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers & {
+-    colorStop?: number | undefined;
+-    fog?: boolean | undefined;
+-    color?: string | number | Color | undefined;
+-    opacity?: number | undefined;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "color" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "material" | "fog" | "opacity" | "geometry" | "morphTargetInfluences" | "morphTargetDictionary" | "isMesh" | "updateMorphTargets" | "colorStop"> & React.RefAttributes<unknown>>;
++export declare const Shadow: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/SpotLight.d.ts b/core/SpotLight.d.ts
+index 5a5b414ae7bee703e57b08965a1df2f1352543cc..e4ae3a99f992ef779fd9cbc096c26f959c75243f 100644
+--- a/core/SpotLight.d.ts
++++ b/core/SpotLight.d.ts
+@@ -1,14 +1,3 @@
+ import * as React from 'react';
+ import { DepthTexture, SpotLight as SpotLightImpl } from 'three';
+-declare const SpotLight: React.ForwardRefExoticComponent<Pick<Omit<import("@react-three/fiber").Object3DNode<SpotLightImpl, typeof SpotLightImpl>, "color" | undefined> & {
+-    color?: import("@react-three/fiber").Color | undefined;
+-} & {
+-    depthBuffer?: DepthTexture | undefined;
+-    attenuation?: number | undefined;
+-    anglePower?: number | undefined;
+-    radiusTop?: number | undefined;
+-    radiusBottom?: number | undefined;
+-    opacity?: number | undefined;
+-    color?: string | number | undefined;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "color" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "distance" | "opacity" | "decay" | "target" | "angle" | "attenuation" | "penumbra" | "intensity" | "isLight" | "shadow" | "shadowCameraFov" | "shadowCameraLeft" | "shadowCameraRight" | "shadowCameraTop" | "shadowCameraBottom" | "shadowCameraNear" | "shadowCameraFar" | "shadowBias" | "shadowMapWidth" | "shadowMapHeight" | "power" | "depthBuffer" | "isSpotLight" | "anglePower" | "radiusTop" | "radiusBottom"> & React.RefAttributes<SpotLightImpl>>;
+-export { SpotLight };
++declare const SpotLight: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/Text.d.ts b/core/Text.d.ts
+index ce07b1df8057c25885aaf8bd1e18b1fc4996f764..04c3a5115e87efa50106264e2076e051ddfd299c 100644
+--- a/core/Text.d.ts
++++ b/core/Text.d.ts
+@@ -1,50 +1,3 @@
+ import * as React from 'react';
+ import { ReactThreeFiber } from '@react-three/fiber';
+-export declare const Text: React.ForwardRefExoticComponent<Pick<Omit<ReactThreeFiber.Node<import("three").Mesh<import("three").BufferGeometry, import("three").Material | import("three").Material[]>, typeof import("three").Mesh>, ReactThreeFiber.NonFunctionKeys<{
+-    position?: ReactThreeFiber.Vector3 | undefined;
+-    up?: ReactThreeFiber.Vector3 | undefined;
+-    scale?: ReactThreeFiber.Vector3 | undefined;
+-    rotation?: ReactThreeFiber.Euler | undefined;
+-    matrix?: ReactThreeFiber.Matrix4 | undefined;
+-    quaternion?: ReactThreeFiber.Quaternion | undefined;
+-    layers?: ReactThreeFiber.Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-}>> & {
+-    position?: ReactThreeFiber.Vector3 | undefined;
+-    up?: ReactThreeFiber.Vector3 | undefined;
+-    scale?: ReactThreeFiber.Vector3 | undefined;
+-    rotation?: ReactThreeFiber.Euler | undefined;
+-    matrix?: ReactThreeFiber.Matrix4 | undefined;
+-    quaternion?: ReactThreeFiber.Quaternion | undefined;
+-    layers?: ReactThreeFiber.Layers | undefined;
+-    dispose?: (() => void) | null | undefined;
+-} & import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers & {
+-    children: React.ReactNode;
+-    characters?: string | undefined;
+-    color?: ReactThreeFiber.Color | undefined;
+-    fontSize?: number | undefined;
+-    maxWidth?: number | undefined;
+-    lineHeight?: number | undefined;
+-    letterSpacing?: number | undefined;
+-    textAlign?: "center" | "left" | "right" | "justify" | undefined;
+-    font?: string | undefined;
+-    anchorX?: number | "center" | "left" | "right" | undefined;
+-    anchorY?: number | "bottom" | "top" | "middle" | "top-baseline" | "bottom-baseline" | undefined;
+-    clipRect?: [number, number, number, number] | undefined;
+-    depthOffset?: number | undefined;
+-    direction?: "auto" | "ltr" | "rtl" | undefined;
+-    overflowWrap?: "normal" | "break-word" | undefined;
+-    whiteSpace?: "normal" | "overflowWrap" | undefined;
+-    outlineWidth?: string | number | undefined;
+-    outlineOffsetX?: string | number | undefined;
+-    outlineOffsetY?: string | number | undefined;
+-    outlineBlur?: string | number | undefined;
+-    outlineColor?: ReactThreeFiber.Color | undefined;
+-    outlineOpacity?: number | undefined;
+-    strokeWidth?: string | number | undefined;
+-    strokeColor?: ReactThreeFiber.Color | undefined;
+-    strokeOpacity?: number | undefined;
+-    fillOpacity?: number | undefined;
+-    debugSDF?: boolean | undefined;
+-    onSync?: ((troika: TextMeshImpl) => void) | undefined;
+-}, "visible" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "type" | "id" | "uuid" | "name" | "parent" | "modelViewMatrix" | "normalMatrix" | "matrixWorld" | "matrixAutoUpdate" | "matrixWorldNeedsUpdate" | "castShadow" | "receiveShadow" | "frustumCulled" | "renderOrder" | "animations" | "userData" | "customDepthMaterial" | "customDistanceMaterial" | "isObject3D" | "onBeforeRender" | "onAfterRender" | "applyMatrix4" | "applyQuaternion" | "setRotationFromAxisAngle" | "setRotationFromEuler" | "setRotationFromMatrix" | "setRotationFromQuaternion" | "rotateOnAxis" | "rotateOnWorldAxis" | "rotateX" | "rotateY" | "rotateZ" | "translateOnAxis" | "translateX" | "translateY" | "translateZ" | "localToWorld" | "worldToLocal" | "lookAt" | "add" | "remove" | "removeFromParent" | "clear" | "getObjectById" | "getObjectByName" | "getObjectByProperty" | "getWorldPosition" | "getWorldQuaternion" | "getWorldScale" | "getWorldDirection" | "raycast" | "traverse" | "traverseVisible" | "traverseAncestors" | "updateMatrix" | "updateMatrixWorld" | "updateWorldMatrix" | "toJSON" | "clone" | "copy" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "color" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "font" | "material" | "direction" | "fontSize" | "letterSpacing" | "lineHeight" | "maxWidth" | "outlineColor" | "outlineWidth" | "overflowWrap" | "textAlign" | "whiteSpace" | "fillOpacity" | "strokeOpacity" | "strokeWidth" | "geometry" | "morphTargetInfluences" | "morphTargetDictionary" | "isMesh" | "updateMorphTargets" | "anchorX" | "anchorY" | "characters" | "onSync" | "clipRect" | "depthOffset" | "outlineOffsetX" | "outlineOffsetY" | "outlineBlur" | "outlineOpacity" | "strokeColor" | "debugSDF"> & React.RefAttributes<unknown>>;
++export declare const Text: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/TrackballControls.d.ts b/core/TrackballControls.d.ts
+index 2b20618e353753e8b3067b51f35cdfc0997b8001..ae3c9a0dd11f391a5acb493bbecfb4364a580e3e 100644
+--- a/core/TrackballControls.d.ts
++++ b/core/TrackballControls.d.ts
+@@ -12,4 +12,4 @@ export declare type TrackballControlsProps = ReactThreeFiber.Overwrite<ReactThre
+     onStart?: (e?: THREE.Event) => void;
+     onEnd?: (e?: THREE.Event) => void;
+ }>;
+-export declare const TrackballControls: React.ForwardRefExoticComponent<Pick<TrackballControlsProps, "object" | "attach" | "attachArray" | "attachObject" | "args" | "children" | "key" | "onUpdate" | "position" | "up" | "scale" | "rotation" | "matrix" | "quaternion" | "layers" | "dispose" | "addEventListener" | "hasEventListener" | "removeEventListener" | "dispatchEvent" | "onChange" | keyof import("@react-three/fiber/dist/declarations/src/core/events").EventHandlers | "camera" | "screen" | "reset" | "enabled" | "update" | "onStart" | "keys" | "target" | "connect" | "makeDefault" | "domElement" | "minDistance" | "maxDistance" | "zoomSpeed" | "rotateSpeed" | "panSpeed" | "mouseButtons" | "onEnd" | "regress" | "noRotate" | "noZoom" | "noPan" | "staticMoving" | "dynamicDampingFactor" | "cursorZoom" | "handleResize"> & React.RefAttributes<TrackballControlsImpl>>;
++export declare const TrackballControls: React.ForwardRefExoticComponent<any>
+\ No newline at end of file
+diff --git a/core/useIntersect.d.ts b/core/useIntersect.d.ts
+index 4b996316972efb925e9b14440d6fb3133e1e9bb8..e6d13cf2c4fdb7205f1ebbee4449583a56da3976 100644
+--- a/core/useIntersect.d.ts
++++ b/core/useIntersect.d.ts
+@@ -1,2 +1,3 @@
+ import * as React from 'react';
++import * as THREE from 'three';
+ export declare function useIntersect<T extends THREE.Object3D>(onChange: (visible: boolean) => void): React.MutableRefObject<T>;
+diff --git a/core/useMatcapTexture.d.ts b/core/useMatcapTexture.d.ts
+index 75654e04b6511134ca35fdd80d71aed3508720ba..90e9592e0bf7f213b9c9b4fd694894236781d43d 100644
+--- a/core/useMatcapTexture.d.ts
++++ b/core/useMatcapTexture.d.ts
+@@ -1 +1,2 @@
++import * as THREE from 'three';
+ export declare function useMatcapTexture(id?: number | string, format?: number): [THREE.Texture, string, number];

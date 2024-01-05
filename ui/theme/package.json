@@ -4,16 +4,16 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "seamless-scroll-polyfill": "^2.2.0"
+    "seamless-scroll-polyfill": "2.2.0"
   },
   "devDependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@types/node": "^14.14.41",
-    "@types/react": "^17",
-    "@types/react-dom": "^17",
-    "react": "^17",
-    "react-dom": "^17"
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
+    "@types/node": "18.19.3",
+    "@types/react": "17.0.73",
+    "@types/react-dom": "17.0.25",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "peerDependencies": {
     "@emotion/react": "*",

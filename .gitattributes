@@ -1,0 +1,2 @@
+ui/sphere/src/sphere-gltf/sphere_data.bin filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text

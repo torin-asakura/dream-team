@@ -1,0 +1,23 @@
+{
+  "name": "@ui/sphere",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@react-three/drei": "patch:@react-three/drei@npm%3A8.20.2#~/.yarn/patches/@react-three-drei-npm-8.20.2-c18668bc6a.patch",
+    "@react-three/fiber": "7.0.29",
+    "@ui/condition": "workspace:0.0.1",
+    "three": "0.159.0",
+    "three-stdlib": "patch:three-stdlib@npm%3A2.28.9#~/.yarn/patches/three-stdlib-npm-2.28.9-598c595c00.patch"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.73",
+    "@types/react-dom": "17.0.25",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}

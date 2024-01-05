@@ -11,18 +11,19 @@
     "@ui/link": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@apollo/client": "^3.6.9",
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@types/react": "^17",
-    "@types/react-dom": "^17",
-    "react": "^17",
-    "react-dom": "^17"
+    "@apollo/client": "3.6.9",
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
+    "@types/react": "17.0.73",
+    "@types/react-dom": "17.0.25",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "peerDependencies": {
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "graphql": "*",
     "react": "*",
     "react-dom": "*"
   }

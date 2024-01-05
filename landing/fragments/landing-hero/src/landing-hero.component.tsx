@@ -1,23 +1,24 @@
 import React             from 'react'
 import { FC }            from 'react'
 
-import { Image }         from '@ui/image'
 import { Layout }        from '@ui/layout'
 import { Column }        from '@ui/layout'
 import { Box }           from '@ui/layout'
 import { AnimateOnLoad } from '@ui/preloader'
+import { Sphere }        from '@ui/sphere'
 import { extractObject } from '@globals/data'
 
 import { Content }       from './content'
 import { HeroProps }     from './landing-hero.interface'
+
+const sphereStyleDesktop = { width: 600, height: 600 }
+const sphereStyleMobile = { width: 300, height: 300 }
 
 const LandingHero: FC<HeroProps> = ({ language, data }) => {
   const obj = extractObject('contentAddons', 'lead', data[language])
 
   const { title } = obj
   const { content } = obj
-  const imageAltText = obj.image.altText
-  const imageUrl = obj.image.sourceUrl
 
   return (
     <Box
@@ -36,11 +37,11 @@ const LandingHero: FC<HeroProps> = ({ language, data }) => {
             delay={600}
           >
             <Layout display={['none', 'none', 'flex']}>
-              <Image width={600} height={600} alt={imageAltText} src={imageUrl} />
+              <Sphere style={sphereStyleDesktop} />
             </Layout>
           </AnimateOnLoad>
           <Layout width={300} height={300} display={['flex', 'flex', 'none']}>
-            <Image width={300} height={300} alt={imageAltText} src={imageUrl} />
+            <Sphere style={sphereStyleMobile} />
           </Layout>
           <Layout marginRight='120px' />
           <Layout display={['flex', 'flex', 'none']} height={80} />

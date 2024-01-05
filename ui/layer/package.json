@@ -6,20 +6,20 @@
   "dependencies": {
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "4.1.17",
     "global": "4.4.0",
-    "nanoid": "^3.1.25",
+    "nanoid": "3.1.25",
     "react-scrolllock": "5.0.1",
     "styled-system": "5.1.5",
-    "styled-tools": "^1.7.2"
+    "styled-tools": "1.7.2"
   },
   "devDependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@types/react": "^17",
-    "@types/react-dom": "^17",
-    "react": "^17",
-    "react-dom": "^17"
+    "@emotion/react": "11.9.3",
+    "@emotion/styled": "11.9.3",
+    "@types/react": "17.0.73",
+    "@types/react-dom": "17.0.25",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "peerDependencies": {
     "@emotion/react": "*",
