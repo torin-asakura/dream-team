@@ -15,4 +15,4 @@ services:
     working_dir: /workspace
     entrypoint: yarn workspace @landing/renderer-entrypoint dev
     ports:
-      - "3000:3000"
+      - '3000:3000'
