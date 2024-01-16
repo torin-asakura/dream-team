@@ -4405,7 +4405,6 @@ const RAW_RUNTIME_STATE =
           ["@ui/theme", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:ui/theme"],\
           ["events", "npm:3.3.0"],\
           ["express", "npm:4.17.1"],\
-          ["gltf-loader", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:1.0.0"],\
           ["graphql", "npm:15.8.0"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["next", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:12.3.4"],\
@@ -13080,29 +13079,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["gltf-loader", [\
-      ["npm:1.0.0", {\
-        "packageLocation": "./.yarn/cache/gltf-loader-npm-1.0.0-18840a68a7-8a023cd135.zip/node_modules/gltf-loader/",\
-        "packageDependencies": [\
-          ["gltf-loader", "npm:1.0.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:1.0.0", {\
-        "packageLocation": "./.yarn/__virtual__/gltf-loader-virtual-6a5544464b/0/cache/gltf-loader-npm-1.0.0-18840a68a7-8a023cd135.zip/node_modules/gltf-loader/",\
-        "packageDependencies": [\
-          ["gltf-loader", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:1.0.0"],\
-          ["@types/webpack", null],\
-          ["loader-utils", "npm:3.2.1"],\
-          ["webpack", null]\
-        ],\
-        "packagePeers": [\
-          "@types/webpack",\
-          "webpack"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["gopd", [\
       ["npm:1.0.1", {\
         "packageLocation": "./.yarn/cache/gopd-npm-1.0.1-10c1d0b534-c29f62be06.zip/node_modules/gopd/",\
@@ -14701,13 +14677,6 @@ const RAW_RUNTIME_STATE =
           ["big.js", "npm:5.2.2"],\
           ["emojis-list", "npm:3.0.0"],\
           ["json5", "npm:2.2.3"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:3.2.1", {\
-        "packageLocation": "./.yarn/cache/loader-utils-npm-3.2.1-76ae2fd253-cda2ced4c8.zip/node_modules/loader-utils/",\
-        "packageDependencies": [\
-          ["loader-utils", "npm:3.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\

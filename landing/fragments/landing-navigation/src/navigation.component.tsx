@@ -73,7 +73,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
             </Layout>
             <Row justifyContent='flex-end' alignItems='center'>
               {navigation[language].map(({ contentAddons: { title, content } }) => (
-                <>
+                <React.Fragment key={title}>
                   <NextLink
                     color='black'
                     fontWeight='medium'
@@ -86,7 +86,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
                     {title}
                   </NextLink>
                   <Layout flexBasis={32} />
-                </>
+                </React.Fragment>
               ))}
               <Layout display={['none', 'none', 'flex']}>
                 <Button width='100%' onClick={() => setVisible(true)}>

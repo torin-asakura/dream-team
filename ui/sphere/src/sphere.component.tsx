@@ -1,11 +1,13 @@
 import { Canvas }      from '@react-three/fiber'
 
 import React           from 'react'
+import { lazy }        from 'react'
 import { memo }        from 'react'
 
 import { Loader }      from './loader'
-import { Model }       from './model'
 import { SphereProps } from './sphere.interfaces'
+
+const ModelComponent = lazy(() => import('./model').then(({ Model }) => ({ default: Model })))
 
 export const Sphere = memo<SphereProps>(({ style }) => (
   <Canvas style={style} camera={{ position: [10, 0, 0], fov: 30 }}>
@@ -15,7 +17,7 @@ export const Sphere = memo<SphereProps>(({ style }) => (
     <directionalLight color='#e261ff' position={[0, -2, 3]} intensity={2.5} />
     <directionalLight color='#ffffff' position={[0, -10, 0]} intensity={0.4} />
     <Loader>
-      <Model />
+      <ModelComponent />
     </Loader>
   </Canvas>
 ))

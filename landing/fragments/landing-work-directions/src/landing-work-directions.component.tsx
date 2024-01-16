@@ -27,21 +27,21 @@ const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => 
         <Row flexWrap={['wrap', 'wrap', 'nowrap']}>
           <Column width='100%' height={['auto', 'auto', '100%']}>
             {leftSide.map((category) => (
-              <>
+              <React.Fragment key={category.name}>
                 <Item category={category} language={language} />
                 <Layout flexBasis={32} />
-              </>
+              </React.Fragment>
             ))}
           </Column>
           <Layout flexBasis={32} flexShrink={0} />
           <Column width='100%' height={['auto', 'auto', '100%']}>
             {rightSide.map((category, index) => (
-              <>
+              <React.Fragment key={category.name}>
                 <Item category={category} language={language} />
                 <Condition match={rightSide.length - 1 !== index}>
                   <Layout flexBasis={32} />
                 </Condition>
-              </>
+              </React.Fragment>
             ))}
             <Layout flexBasis={[0, 0, 32]} />
           </Column>

@@ -2088,7 +2088,6 @@ __metadata:
     "@ui/theme": "workspace:0.0.1"
     events: "npm:3.3.0"
     express: "npm:4.17.1"
-    gltf-loader: "npm:1.0.0"
     graphql: "npm:15.8.0"
     locomotive-scroll: "npm:4.1.4"
     next: "npm:12.3.4"
@@ -7287,17 +7286,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gltf-loader@npm:1.0.0":
-  version: 1.0.0
-  resolution: "gltf-loader@npm:1.0.0"
-  dependencies:
-    loader-utils: "npm:^3.2.0"
-  peerDependencies:
-    webpack: ^5.32.0
-  checksum: 8a023cd135bec04a12f352dd255d1661c3c4f0bd14fbbd038f843cef24e5340bce1e84dc2a4deef26917fcd50f059d82e50cc0a5dcac11e7a2505ba3ca9c6c2a
-  languageName: node
-  linkType: hard
-
 "gopd@npm:^1.0.1":
   version: 1.0.1
   resolution: "gopd@npm:1.0.1"
@@ -8685,13 +8673,6 @@ __metadata:
     emojis-list: "npm:^3.0.0"
     json5: "npm:^2.1.2"
   checksum: 84384affee014c6b404124509f5550ce2bae3ae111df239e485e737ab3246c95fc84cd8918764471a4be4c64c3ca5bf3bf30e7e40baa5a5f363a043aec3aefa5
-  languageName: node
-  linkType: hard
-
-"loader-utils@npm:^3.2.0":
-  version: 3.2.1
-  resolution: "loader-utils@npm:3.2.1"
-  checksum: cda2ced4c887f6cafd2849f2648dd9a74c0d06ca83299c4b75c7a8062a2fe11ea4b62ae121fff3b9943a5af453d104b5d35831861b1b94aa71699ba0c4eaf136
   languageName: node
   linkType: hard
 

@@ -52,7 +52,7 @@ const LandingAbout: FC<LandingAboutProps> = ({ language, data }) => {
               { contentAddons: { title, content, excerpt, image } },
               index
             ) => (
-              <>
+              <React.Fragment key={title}>
                 <Condition match={index !== 0}>
                   <Layout flexBasis={[32, 32, 80]} />
                 </Condition>
@@ -66,7 +66,7 @@ const LandingAbout: FC<LandingAboutProps> = ({ language, data }) => {
                 <Condition match={index !== bottomSide.length - 1}>
                   <Layout flexBasis={[32, 32, 80]} />
                 </Condition>
-              </>
+              </React.Fragment>
             ))}
             <Layout flexBasis={[52, 52, 152]} />
           </Column>

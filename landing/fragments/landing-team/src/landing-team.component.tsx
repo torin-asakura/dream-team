@@ -41,12 +41,12 @@ const LandingTeam: FC<LandingProps> = ({ language }) => {
                 { title: recruit, featuredImage: image },
                 index
               ) => (
-                <>
+                <React.Fragment key={recruit}>
                   <Item recruit={recruit} image={image} language={language} />
                   <Condition match={recruits.filter(filterByLanguage).length - 1 !== index}>
                     <Layout flexBasis={32} flexShrink={0} />
                   </Condition>
-                </>
+                </React.Fragment>
               ))}
             </Layout>
             <Layout flexBasis={[60, 60, 160]} />
