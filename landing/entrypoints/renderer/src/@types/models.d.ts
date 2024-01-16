@@ -3,6 +3,8 @@ declare module '*.gltf' {
   export default content
 }
 
+declare module '*.bin' {}
+
 declare module '*.glb' {
   const content: string
   export default content

@@ -44,22 +44,17 @@ module.exports = {
     config.module.rules.push(
       {
         test: /\.(gltf)$/,
-        loader: 'gltf-loader',
-        /**
-         * @type {import("gltf-loader").GLTFLoaderOptions}
-         */
-        options: {
-          uriResolver: (module) => {
-            let result = module.default ?? module
-            // Use the "src" property returned by the `next-image-loader` if present:
-            if (typeof result === 'object' && 'src' in result) result = result.src
-            return result
-          },
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/media/[name][ext]',
         },
       },
       {
         test: /\.(bin)$/,
         type: 'asset/resource',
+        generator: {
+          filename: 'static/media/[name][ext]',
+        },
       }
     )
 

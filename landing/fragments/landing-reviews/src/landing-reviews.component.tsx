@@ -27,7 +27,12 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language, data }) => {
   const [mobileSwiper, setMobileSwiper] = useState<SwiperCore | null>(null)
 
   const carouselChildren = data[language].map((review, index) => (
-    <Item review={review} language={language} onClick={() => setActiveItem(index)} />
+    <Item
+      review={review}
+      key={review.title}
+      language={language}
+      onClick={() => setActiveItem(index)}
+    />
   ))
 
   const CarouselControlsExporter = ({ swiper, setSwiper }) => {
@@ -107,7 +112,7 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language, data }) => {
               >
                 <CarouselControlsExporter swiper={desktopSwiper} setSwiper={setDesktopSwiper} />
                 {Children.map(carouselChildren, (child) => (
-                  <SwiperSlide>{child}</SwiperSlide>
+                  <SwiperSlide key={child.key}>{child}</SwiperSlide>
                 ))}
               </Swiper>
             </Layout>
@@ -123,7 +128,7 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language, data }) => {
               >
                 <CarouselControlsExporter swiper={mobileSwiper} setSwiper={setMobileSwiper} />
                 {Children.map(carouselChildren, (child) => (
-                  <SwiperSlide>{child}</SwiperSlide>
+                  <SwiperSlide key={child.key}>{child}</SwiperSlide>
                 ))}
               </Swiper>
             </Layout>
@@ -139,7 +144,7 @@ const LandingReviews: FC<LandingReviewsProps> = ({ language, data }) => {
               >
                 <CarouselControlsExporter swiper={mobileSwiper} setSwiper={setMobileSwiper} />
                 {Children.map(carouselChildren, (child) => (
-                  <SwiperSlide>{child}</SwiperSlide>
+                  <SwiperSlide key={child.key}>{child}</SwiperSlide>
                 ))}
               </Swiper>
             </Layout>
