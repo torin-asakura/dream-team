@@ -1,16 +1,16 @@
-import { useAnimations } from '@react-three/drei'
-import { useGLTF }       from '@react-three/drei'
+import { useAnimations }   from '@react-three/drei'
+import { useGLTF }         from '@react-three/drei'
 
-import React             from 'react'
-import { FC }            from 'react'
-import { Group }         from 'three'
-import { useEffect }     from 'react'
-import { useRef }        from 'react'
+import React               from 'react'
+import { FC }              from 'react'
+import { Group }           from 'three'
+import { useEffect }       from 'react'
+import { useRef }          from 'react'
+
 import { CDN_SPHERE_PATH } from '../sphere.constants'
-
-import { GLTFResult }    from './model.interfaces'
-import { GLTFAction }    from './model.interfaces'
-import { ModelProps }    from './model.interfaces'
+import { GLTFResult }      from './model.interfaces'
+import { GLTFAction }      from './model.interfaces'
+import { ModelProps }      from './model.interfaces'
 
 export const Model: FC<ModelProps> = (props) => {
   const group = useRef<Group>(null)
