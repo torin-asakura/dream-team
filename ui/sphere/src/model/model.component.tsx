@@ -6,15 +6,15 @@ import { FC }            from 'react'
 import { Group }         from 'three'
 import { useEffect }     from 'react'
 import { useRef }        from 'react'
+import { CDN_SPHERE_PATH } from '../sphere.constants'
 
-import { SphereGltf }    from '../../assets'
 import { GLTFResult }    from './model.interfaces'
 import { GLTFAction }    from './model.interfaces'
 import { ModelProps }    from './model.interfaces'
 
 export const Model: FC<ModelProps> = (props) => {
   const group = useRef<Group>(null)
-  const { nodes, materials, animations } = useGLTF(SphereGltf, true) as unknown as GLTFResult
+  const { nodes, materials, animations } = useGLTF(CDN_SPHERE_PATH, true) as unknown as GLTFResult
   const { actions } = useAnimations<GLTFAction>(animations, group)
 
   useEffect(() => {
