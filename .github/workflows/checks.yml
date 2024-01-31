@@ -7,17 +7,11 @@ jobs:
     name: Typecheck, lint
     uses: atls/tools/.github/workflows/reusable-checks.yaml@master
     permissions: write-all
-    with:
-      node-version: '16.10'
   release:
     name: Release
     uses: atls/tools/.github/workflows/reusable-release.yaml@master
     permissions: write-all
-    with:
-      node-version: '16.10'
   test:
     name: Tests
     uses: atls/tools/.github/workflows/reusable-tests.yaml@master
     permissions: write-all
-    with:
-      node-version: '16.10'
