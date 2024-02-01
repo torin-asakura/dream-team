@@ -10,7 +10,7 @@ import { Row }          from '@ui/layout'
 import { Text }         from '@ui/text'
 
 import { ContentProps } from './content.interface'
-import { messages }     from '../messages'
+import { messages }     from '../landing-hero.constants'
 
 const Content: FC<ContentProps> = ({ title, content, language }) => {
   const [visible, setVisible] = useState<boolean>(false)
