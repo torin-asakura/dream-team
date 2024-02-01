@@ -5,7 +5,6 @@ import { Suspense }              from 'react'
 import { FC }                    from 'react'
 import { PropsWithChildren }     from 'react'
 
-import { OldSphereGltf }         from '../../assets'
 import { SphereNoAnimationGltf } from '../../assets'
 import { CDN_SPHERE_PATH }       from '../sphere.constants'
 
@@ -15,4 +14,3 @@ export const Loader: FC<PropsWithChildren<{}>> = ({ children }) => (
 
 useGLTF.preload(CDN_SPHERE_PATH)
 useGLTF.preload(SphereNoAnimationGltf)
-useGLTF.preload(OldSphereGltf)
