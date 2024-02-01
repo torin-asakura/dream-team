@@ -1,24 +1,21 @@
-import React             from 'react'
-import { FC }            from 'react'
+import React                  from 'react'
+import { FC }                 from 'react'
 
-import { Layout }        from '@ui/layout'
-import { Column }        from '@ui/layout'
-import { Box }           from '@ui/layout'
-import { AnimateOnLoad } from '@ui/preloader'
-import { Sphere }        from '@ui/sphere'
-import { extractObject } from '@globals/data'
+import { Layout }             from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Box }                from '@ui/layout'
+import { AnimateOnLoad }      from '@ui/preloader'
+import { Sphere }             from '@ui/sphere'
 
-import { Content }       from './content'
-import { HeroProps }     from './landing-hero.interface'
+import { VIDEO_DESKTOP }      from './landing-hero.constants'
+import { HeroProps }          from './landing-hero.interface'
+import { Video }              from './video'
+import { useGetAssetById }    from './data'
+import { sphereStyleDesktop } from './landing-hero.constants'
+import { sphereStyleMobile }  from './landing-hero.constants'
 
-const sphereStyleDesktop = { width: 600, height: 600 }
-const sphereStyleMobile = { width: 300, height: 300 }
-
-const LandingHero: FC<HeroProps> = ({ language, data }) => {
-  const obj = extractObject('contentAddons', 'lead', data[language])
-
-  const { title } = obj
-  const { content } = obj
+const LandingHero: FC<HeroProps> = () => {
+  const { mediaItem } = useGetAssetById(VIDEO_DESKTOP)
 
   return (
     <Box
@@ -49,8 +46,11 @@ const LandingHero: FC<HeroProps> = ({ language, data }) => {
             initial={{ opacity: 0, y: '100%' }}
             transition={{ duration: 1 }}
             animation={{ y: 0, opacity: 1 }}
+            delay={600}
           >
-            <Content title={title} content={content} language={language} />
+            <Layout display={['none', 'none', 'flex']}>
+              <Video src={mediaItem?.mediaItemUrl} mimeType={mediaItem?.mimeType} />
+            </Layout>
           </AnimateOnLoad>
         </Layout>
       </Column>
