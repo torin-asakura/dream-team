@@ -1,8 +1,12 @@
 {
   "asset": {
-    "generator": "Khronos glTF Blender I/O v1.6.16",
+    "generator": "Khronos glTF Blender I/O v3.6.28",
     "version": "2.0"
   },
+  "extensionsUsed": [
+    "KHR_materials_specular",
+    "KHR_materials_ior"
+  ],
   "scene": 0,
   "scenes": [
     {
@@ -17,21 +21,28 @@
       "mesh": 0,
       "name": "Sphere",
       "rotation": [
-        0.12316309660673141,
-        -0.2832651734352112,
-        0.013629190623760223,
-        0.9510027170181274
-      ],
-      "scale": [
-        1,
-        -1,
-        -1
+        -0.9510026574134827,
+        -0.013629190623760223,
+        -0.2832651436328888,
+        0.12316308170557022
       ]
     }
   ],
   "materials": [
     {
       "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            0.017931034564971925,
+            0.017931034564971925,
+            0.017931034564971925
+          ]
+        },
+        "KHR_materials_ior": {
+          "ior": 0
+        }
+      },
       "name": "Material.001",
       "pbrMetallicRoughness": {
         "baseColorFactor": [
@@ -39,7 +50,8 @@
           0.34191447496414185,
           0.7991030216217041,
           1
-        ]
+        ],
+        "metallicFactor": 0.517241358757019
       }
     }
   ],
@@ -99,22 +111,26 @@
     {
       "buffer": 0,
       "byteLength": 1087188,
-      "byteOffset": 0
+      "byteOffset": 0,
+      "target": 34962
     },
     {
       "buffer": 0,
       "byteLength": 1087188,
-      "byteOffset": 1087188
+      "byteOffset": 1087188,
+      "target": 34962
     },
     {
       "buffer": 0,
       "byteLength": 724792,
-      "byteOffset": 2174376
+      "byteOffset": 2174376,
+      "target": 34962
     },
     {
       "buffer": 0,
       "byteLength": 2152800,
-      "byteOffset": 2899168
+      "byteOffset": 2899168,
+      "target": 34963
     }
   ],
   "buffers": [

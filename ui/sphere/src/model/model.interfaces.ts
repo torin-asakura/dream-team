@@ -14,7 +14,7 @@ export interface GLTFResult extends GLTF {
     Sphere: Mesh
   }
   materials: {
-    ['Material.001']: MeshStandardMaterial
+    ['Material.003']: MeshStandardMaterial
   }
   animations: GLTFAction[]
 }

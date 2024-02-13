@@ -27,10 +27,10 @@ export const Model: FC<ModelProps> = (props) => {
         <mesh
           name='Sphere'
           geometry={nodes.Sphere.geometry}
-          material={materials['Material.001']}
+          material={materials['Material.003']}
           morphTargetDictionary={nodes.Sphere.morphTargetDictionary}
           morphTargetInfluences={nodes.Sphere.morphTargetInfluences}
-          rotation={[0.211, -0.63, -0.018]}
+          rotation={[0.03, -0.63, -0.018]}
           scale={[1, -1, -1]}
         />
       </group>
