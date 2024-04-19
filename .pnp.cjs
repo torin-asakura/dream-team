@@ -3874,7 +3874,7 @@ const RAW_RUNTIME_STATE =
           ["@ui/sphere", "virtual:c305568b4e8c77c0cbc45f56f83041ebd434acb72b675b4cee03f4c921649a0db1925c930cead8c7c1a52da495844bba119dfb2bd4a2ba3588fd66ed5bba50b3#workspace:ui/sphere"],\
           ["@ui/text", "virtual:aaf5b04dfdb1d01e368d5b76e89ada4021747428102bf573c45f3d2df82d92b4f5461079152d4614d8c7125aab9da7f712530546702fa28806a522c622ab3214#workspace:ui/text"],\
           ["@ui/video", "virtual:c305568b4e8c77c0cbc45f56f83041ebd434acb72b675b4cee03f4c921649a0db1925c930cead8c7c1a52da495844bba119dfb2bd4a2ba3588fd66ed5bba50b3#workspace:ui/video"],\
-          ["fast-average-color", "npm:9.4.0"],\
+          ["fast-average-color", "npm:9.0.0"],\
           ["graphql", null],\
           ["react", "npm:17.0.2"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:17.0.2"]\
@@ -3913,7 +3913,7 @@ const RAW_RUNTIME_STATE =
           ["@ui/sphere", "virtual:c305568b4e8c77c0cbc45f56f83041ebd434acb72b675b4cee03f4c921649a0db1925c930cead8c7c1a52da495844bba119dfb2bd4a2ba3588fd66ed5bba50b3#workspace:ui/sphere"],\
           ["@ui/text", "virtual:aaf5b04dfdb1d01e368d5b76e89ada4021747428102bf573c45f3d2df82d92b4f5461079152d4614d8c7125aab9da7f712530546702fa28806a522c622ab3214#workspace:ui/text"],\
           ["@ui/video", "virtual:c305568b4e8c77c0cbc45f56f83041ebd434acb72b675b4cee03f4c921649a0db1925c930cead8c7c1a52da495844bba119dfb2bd4a2ba3588fd66ed5bba50b3#workspace:ui/video"],\
-          ["fast-average-color", "npm:9.4.0"],\
+          ["fast-average-color", "npm:9.0.0"],\
           ["graphql", "npm:15.8.0"],\
           ["react", "npm:17.0.2"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:17.0.2"]\
@@ -3949,7 +3949,7 @@ const RAW_RUNTIME_STATE =
           ["@ui/sphere", "virtual:c305568b4e8c77c0cbc45f56f83041ebd434acb72b675b4cee03f4c921649a0db1925c930cead8c7c1a52da495844bba119dfb2bd4a2ba3588fd66ed5bba50b3#workspace:ui/sphere"],\
           ["@ui/text", "virtual:aaf5b04dfdb1d01e368d5b76e89ada4021747428102bf573c45f3d2df82d92b4f5461079152d4614d8c7125aab9da7f712530546702fa28806a522c622ab3214#workspace:ui/text"],\
           ["@ui/video", "virtual:c305568b4e8c77c0cbc45f56f83041ebd434acb72b675b4cee03f4c921649a0db1925c930cead8c7c1a52da495844bba119dfb2bd4a2ba3588fd66ed5bba50b3#workspace:ui/video"],\
-          ["fast-average-color", "npm:9.4.0"],\
+          ["fast-average-color", "npm:9.0.0"],\
           ["react", "npm:17.0.2"],\
           ["react-dom", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:17.0.2"]\
         ],\
@@ -4408,7 +4408,6 @@ const RAW_RUNTIME_STATE =
           ["@ui/theme", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:ui/theme"],\
           ["events", "npm:3.3.0"],\
           ["express", "npm:4.17.1"],\
-          ["file-loader", "virtual:ea8ef878f7073a665d7bdc2a4764059d2cc921662480affc5b7b7bc350efa3d7034887107d1b5aef7d691283375f67c90284dd3359bde5e6491cc6de557dd201#npm:6.2.0"],\
           ["graphql", "npm:15.8.0"],\
           ["locomotive-scroll", "npm:4.1.4"],\
           ["next", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#npm:12.3.4"],\
@@ -12296,10 +12295,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["fast-average-color", [\
-      ["npm:9.4.0", {\
-        "packageLocation": "./.yarn/cache/fast-average-color-npm-9.4.0-154dfe6c07-e9e2e065dc.zip/node_modules/fast-average-color/",\
+      ["npm:9.0.0", {\
+        "packageLocation": "./.yarn/cache/fast-average-color-npm-9.0.0-6a1e1981a3-6f3c565914.zip/node_modules/fast-average-color/",\
         "packageDependencies": [\
-          ["fast-average-color", "npm:9.4.0"]\
+          ["fast-average-color", "npm:9.0.0"],\
+          ["@types/offscreencanvas", "npm:2019.7.3"]\
         ],\
         "linkType": "HARD"\
       }]\

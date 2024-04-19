@@ -1926,7 +1926,7 @@ __metadata:
     "@ui/sphere": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/video": "workspace:0.0.1"
-    fast-average-color: "npm:9.4.0"
+    fast-average-color: "npm:9.0.0"
     react: "npm:17.0.2"
     react-dom: "npm:17.0.2"
   peerDependencies:
@@ -2089,7 +2089,6 @@ __metadata:
     "@ui/theme": "workspace:0.0.1"
     events: "npm:3.3.0"
     express: "npm:4.17.1"
-    file-loader: "npm:6.2.0"
     graphql: "npm:15.8.0"
     locomotive-scroll: "npm:4.1.4"
     next: "npm:12.3.4"
@@ -3065,7 +3064,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/offscreencanvas@npm:^2019.6.4":
+"@types/offscreencanvas@npm:^2019.6.4, @types/offscreencanvas@npm:^2019.7.0":
   version: 2019.7.3
   resolution: "@types/offscreencanvas@npm:2019.7.3"
   checksum: 21fe9b9f965fa0c728752a18d48a51e858a6a5c073aff7188944bdd1ae3e5790872cb11990c67db39edf39ba438b5393c855f271f082d398a97d4d9a0ce676e3
@@ -6668,10 +6667,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-average-color@npm:9.4.0":
-  version: 9.4.0
-  resolution: "fast-average-color@npm:9.4.0"
-  checksum: e9e2e065dce47bdcd3d93c5c33b48e3f466623be8c383c5827142981ff6d0a0b755aaa1808ca5a30cd005bc26c1efeb359e0c323c0d0e451467afd2c1be8fc47
+"fast-average-color@npm:9.0.0":
+  version: 9.0.0
+  resolution: "fast-average-color@npm:9.0.0"
+  dependencies:
+    "@types/offscreencanvas": "npm:^2019.7.0"
+  checksum: 6f3c565914a22f202ab076ffb1f7b83313b705a7298b683f6faa8596abbbeee547ffe6718ad0dab8191cf2a5c8e4d11957d1f67d9c4615fda5389626c783cd8e
   languageName: node
   linkType: hard
 
@@ -6779,18 +6780,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"file-loader@npm:6.2.0, file-loader@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "file-loader@npm:6.2.0"
-  dependencies:
-    loader-utils: "npm:^2.0.0"
-    schema-utils: "npm:^3.0.0"
-  peerDependencies:
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: 437c5fd08f2ec95c017510d8b14a490c1af4b01201efe228eaace5313c4eb61f3510137adf0945cf1fc64dec5f4bf1359d0bd6c67d51778801f6574f336cc08f
-  languageName: node
-  linkType: hard
-
 "file-loader@npm:^4.2.0":
   version: 4.3.0
   resolution: "file-loader@npm:4.3.0"
@@ -6800,6 +6789,18 @@ __metadata:
   peerDependencies:
     webpack: ^4.0.0
   checksum: d2b4322c613b3d449c0f628801953b677e580cfe89f3580d17568f5bd7c36f41ba90a399c6889dcbe6811a95a020e4f8daf4007ab3974835ca24efc0b1a26d76
+  languageName: node
+  linkType: hard
+
+"file-loader@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "file-loader@npm:6.2.0"
+  dependencies:
+    loader-utils: "npm:^2.0.0"
+    schema-utils: "npm:^3.0.0"
+  peerDependencies:
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 437c5fd08f2ec95c017510d8b14a490c1af4b01201efe228eaace5313c4eb61f3510137adf0945cf1fc64dec5f4bf1359d0bd6c67d51778801f6574f336cc08f
   languageName: node
   linkType: hard
 
