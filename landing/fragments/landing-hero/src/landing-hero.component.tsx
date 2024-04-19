@@ -25,7 +25,10 @@ const LandingHero: FC<HeroProps> = ({ data, language }) => {
 
     const getColor = async () => {
       try {
-        const color = await fac.getColorAsync(videoElement, { algorithm: 'dominant' })
+        const color = await fac.getColorAsync(videoElement, {
+          algorithm: 'dominant',
+          ignoredColor: [0, 0, 0],
+        })
         setBackgroundColor(color.rgb)
       } catch (error) {
         if (process.env.NODE_ENV !== 'production') throw error
