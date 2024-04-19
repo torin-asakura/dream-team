@@ -1,28 +1,62 @@
-import React                  from 'react'
-import { FC }                 from 'react'
+import React                      from 'react'
+import { FastAverageColor }       from 'fast-average-color'
+import { FastAverageColorResult } from 'fast-average-color'
+import { FC }                     from 'react'
+import { useEffect }              from 'react'
+import { useState }               from 'react'
 
-import { Layout }             from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Box }                from '@ui/layout'
-import { AnimateOnLoad }      from '@ui/preloader'
-import { Sphere }             from '@ui/sphere'
+import { Layout }                 from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Box }                    from '@ui/layout'
+import { AnimateOnLoad }          from '@ui/preloader'
+import { extractObject }          from '@globals/data'
 
-import { VIDEO_DESKTOP }      from './landing-hero.constants'
-import { HeroProps }          from './landing-hero.interface'
-import { Video }              from './video'
-import { useGetAssetById }    from './data'
-import { sphereStyleDesktop } from './landing-hero.constants'
-import { sphereStyleMobile }  from './landing-hero.constants'
+import { Content }                from './content'
+import { CDN_VIDEO_MINE }         from './landing-hero.constants'
+import { FAST_BLACK_COLOR_RGBA }  from './landing-hero.constants'
+import { CDN_VIDEO_PATH }         from './landing-hero.constants'
+import { HeroProps }              from './landing-hero.interface'
+import { Video }                  from './video'
 
-const LandingHero: FC<HeroProps> = () => {
-  const { mediaItem } = useGetAssetById(VIDEO_DESKTOP)
+const fac = new FastAverageColor()
+
+const LandingHero: FC<HeroProps> = ({ data, language }) => {
+  const [backgroundColor, setBackgroundColor] = useState<string>('')
+  const [videoIsPlaying, setVideoIsPlaying] = useState<boolean>(false)
+
+  const { title, content } = extractObject('contentAddons', 'lead', data[language])
+
+  useEffect(() => {
+    if (!videoIsPlaying) return
+
+    const videoElement = document.querySelector('video')
+
+    const getColor = () =>
+      setTimeout(() => {
+        try {
+          let colorValue = FAST_BLACK_COLOR_RGBA
+          let color: FastAverageColorResult | undefined
+
+          do {
+            color = fac.getColor(videoElement, { algorithm: 'dominant' })
+            colorValue = color.value
+          } while (colorValue.every((item) => item === 0))
+
+          setBackgroundColor(color.rgb)
+        } catch (error) {
+          if (process.env.NODE_ENV !== 'production') throw error
+        }
+      }, 500)
+
+    getColor()
+  }, [videoIsPlaying])
 
   return (
     <Box
       height={['auto', 'auto', '100vh']}
       width='100%'
       overflow='hidden'
-      backgroundColor='background.hero'
+      backgroundColor={backgroundColor || 'background.hero'}
     >
       <Column width='100%' alignItems='center' justifyContent='center'>
         <Layout flexBasis={[72, 72, 0]} />
@@ -33,24 +67,20 @@ const LandingHero: FC<HeroProps> = () => {
             animation={{ y: 0, opacity: 1 }}
             delay={600}
           >
-            <Layout display={['none', 'none', 'flex']}>
-              <Sphere style={sphereStyleDesktop} />
-            </Layout>
+            <Video
+              mimeType={CDN_VIDEO_MINE}
+              src={CDN_VIDEO_PATH}
+              onPlay={() => setVideoIsPlaying(true)}
+            />
           </AnimateOnLoad>
-          <Layout width={300} height={300} display={['flex', 'flex', 'none']}>
-            <Sphere style={sphereStyleMobile} />
-          </Layout>
           <Layout marginRight='120px' />
           <Layout display={['flex', 'flex', 'none']} height={80} />
           <AnimateOnLoad
             initial={{ opacity: 0, y: '100%' }}
             transition={{ duration: 1 }}
             animation={{ y: 0, opacity: 1 }}
-            delay={600}
           >
-            <Layout display={['none', 'none', 'flex']}>
-              <Video src={mediaItem?.mediaItemUrl} mimeType={mediaItem?.mimeType} />
-            </Layout>
+            <Content title={title} content={content} language={language} />
           </AnimateOnLoad>
         </Layout>
       </Column>

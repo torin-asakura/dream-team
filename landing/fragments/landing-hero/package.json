@@ -11,7 +11,8 @@
     "@ui/layout": "workspace:0.0.1",
     "@ui/sphere": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
-    "@ui/video": "workspace:0.0.1"
+    "@ui/video": "workspace:0.0.1",
+    "fast-average-color": "9.0.0"
   },
   "devDependencies": {
     "@apollo/client": "3.6.9",

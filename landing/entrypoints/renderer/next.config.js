@@ -1,4 +1,6 @@
-module.exports = {
+const withVideos = require('next-videos')
+
+module.exports = withVideos({
   experimental: {
     externalDir: true,
     swcFileReading: false,
@@ -60,4 +62,4 @@ module.exports = {
 
     return config
   },
-}
+})

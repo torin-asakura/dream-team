@@ -5,15 +5,18 @@ import { Video as VideoBase } from '@ui/video'
 
 import { VideoProps }         from './video.interfaces'
 
-export const Video: FC<VideoProps> = ({ src, mimeType }) => (
+export const Video: FC<VideoProps> = ({ src, mimeType, onPlay }) => (
   <VideoBase
     autoPlay
     muted
     loop
     playsInline
+    crossOrigin='anonymous'
+    onPlay={() => onPlay?.()}
+    poster='./sphere.png'
     src={src as any}
     mime={mimeType as any}
-    top={[300, 300, '50%']}
+    top={[250, 250, 320]}
     width={[375, 375, 631]}
   />
 )

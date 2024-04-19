@@ -1926,6 +1926,7 @@ __metadata:
     "@ui/sphere": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/video": "workspace:0.0.1"
+    fast-average-color: "npm:9.0.0"
     react: "npm:17.0.2"
     react-dom: "npm:17.0.2"
   peerDependencies:
@@ -2092,6 +2093,7 @@ __metadata:
     locomotive-scroll: "npm:4.1.4"
     next: "npm:12.3.4"
     next-compose-plugins: "npm:2.2.0"
+    next-videos: "npm:1.4.1"
     react: "npm:17.0.2"
     react-dom: "npm:17.0.2"
     react-helmet: "npm:6.1.0"
@@ -3000,7 +3002,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.8, @types/json-schema@npm:^7.0.9":
+"@types/json-schema@npm:*, @types/json-schema@npm:^7.0.5, @types/json-schema@npm:^7.0.8, @types/json-schema@npm:^7.0.9":
   version: 7.0.15
   resolution: "@types/json-schema@npm:7.0.15"
   checksum: 8fdb03a009d5dbe7beaead5e43f7d4f6fdff8619a5c956e4e80c1ef375ad8bd7ea8d5879c15e782118d4b6d57f1fc3de1daf2395b31654f0378cc6c94fadef7e
@@ -3062,7 +3064,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/offscreencanvas@npm:^2019.6.4":
+"@types/offscreencanvas@npm:^2019.6.4, @types/offscreencanvas@npm:^2019.7.0":
   version: 2019.7.3
   resolution: "@types/offscreencanvas@npm:2019.7.3"
   checksum: 21fe9b9f965fa0c728752a18d48a51e858a6a5c073aff7188944bdd1ae3e5790872cb11990c67db39edf39ba438b5393c855f271f082d398a97d4d9a0ce676e3
@@ -6665,6 +6667,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-average-color@npm:9.0.0":
+  version: 9.0.0
+  resolution: "fast-average-color@npm:9.0.0"
+  dependencies:
+    "@types/offscreencanvas": "npm:^2019.7.0"
+  checksum: 6f3c565914a22f202ab076ffb1f7b83313b705a7298b683f6faa8596abbbeee547ffe6718ad0dab8191cf2a5c8e4d11957d1f67d9c4615fda5389626c783cd8e
+  languageName: node
+  linkType: hard
+
 "fast-deep-equal@npm:^3.1.1, fast-deep-equal@npm:^3.1.3":
   version: 3.1.3
   resolution: "fast-deep-equal@npm:3.1.3"
@@ -6766,6 +6777,18 @@ __metadata:
   dependencies:
     flat-cache: "npm:^3.0.4"
   checksum: cac7f7775980e696eceb922313887c03204eaea3659e0cd5b9f83ef29c7e5c613a6aa7662a3e9d0f78cf68060b093b82572e554f5464c0b2f626db32ef969cdc
+  languageName: node
+  linkType: hard
+
+"file-loader@npm:^4.2.0":
+  version: 4.3.0
+  resolution: "file-loader@npm:4.3.0"
+  dependencies:
+    loader-utils: "npm:^1.2.3"
+    schema-utils: "npm:^2.5.0"
+  peerDependencies:
+    webpack: ^4.0.0
+  checksum: d2b4322c613b3d449c0f628801953b677e580cfe89f3580d17568f5bd7c36f41ba90a399c6889dcbe6811a95a020e4f8daf4007ab3974835ca24efc0b1a26d76
   languageName: node
   linkType: hard
 
@@ -8558,7 +8581,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^1.0.2":
+"json5@npm:^1.0.1, json5@npm:^1.0.2":
   version: 1.0.2
   resolution: "json5@npm:1.0.2"
   dependencies:
@@ -8662,6 +8685,17 @@ __metadata:
   version: 4.3.0
   resolution: "loader-runner@npm:4.3.0"
   checksum: 933f44df27137a0b3f06928615c9af8d3cde7086e46c23afb25e218f168bc4e9827cb1a9cebe15edb71df3562a97a70c37edadb80c5050fbd2135f85b16a5874
+  languageName: node
+  linkType: hard
+
+"loader-utils@npm:^1.2.3":
+  version: 1.4.2
+  resolution: "loader-utils@npm:1.4.2"
+  dependencies:
+    big.js: "npm:^5.2.2"
+    emojis-list: "npm:^3.0.0"
+    json5: "npm:^1.0.1"
+  checksum: 0954366f2f0a8c7633301223ad9c05928b27327a9602d65f360e81a3aad887cf8c4bad1a100e6558883059bf8f5f3931b1c12ac5f26c745619896c1962a80b66
   languageName: node
   linkType: hard
 
@@ -9157,6 +9191,15 @@ __metadata:
   version: 2.2.0
   resolution: "next-compose-plugins@npm:2.2.0"
   checksum: cd23d074568f07cad34d959d6f29a199601c1c081a0f1a1c271f0e2a6a8fef9ee681e2a412a40aa9423ff4bad1d705ba417d7e3d5c6c760f86ed1ef9cb242c00
+  languageName: node
+  linkType: hard
+
+"next-videos@npm:1.4.1":
+  version: 1.4.1
+  resolution: "next-videos@npm:1.4.1"
+  dependencies:
+    file-loader: "npm:^4.2.0"
+  checksum: 7b72856b60be9c3280b8e83834c9dbd87452ec7cf6dadf50ab9c7753e6be0d2d5a3474e676e7db06131cf6c8f15c61e44875041ca2ba69fd949bd7b106417ffc
   languageName: node
   linkType: hard
 
@@ -10420,6 +10463,17 @@ __metadata:
     loose-envify: "npm:^1.1.0"
     object-assign: "npm:^4.1.1"
   checksum: b3ec1f4367776c1e8632d9b6d594fdf0d4fe0aefd738a7f6902f60e9b910142e4997c4ad931f07a553de7bae7bfc2144e9966a9a35e8ef084fe6e48f5dcf94c6
+  languageName: node
+  linkType: hard
+
+"schema-utils@npm:^2.5.0":
+  version: 2.7.1
+  resolution: "schema-utils@npm:2.7.1"
+  dependencies:
+    "@types/json-schema": "npm:^7.0.5"
+    ajv: "npm:^6.12.4"
+    ajv-keywords: "npm:^3.5.2"
+  checksum: 80a77b8fe8793a81a37fb4915a1c7c93b9f43029a3f6d8e1971574ae1dd8808114ead54bd1f6c50c66988050e85126238cd61c0151b4894187e92bea8c661130
   languageName: node
   linkType: hard
 
