@@ -5,13 +5,15 @@ import { Video as VideoBase } from '@ui/video'
 
 import { VideoProps }         from './video.interfaces'
 
-export const Video: FC<VideoProps> = () => (
+export const Video: FC<VideoProps> = ({ callback }) => (
   <VideoBase
     autoPlay
     muted
     loop
     playsInline
-    src={require('./assets/2ee21dfa-sphere-with-bg.webm')}
+    onPlay={callback()}
+    poster='./sphere.png'
+    src={'https://cdn.dream-team.tech/sfera.webm'}
     mime={'video/webm' as any}
     top={[250, 250, 320]}
     width={[375, 375, 631]}
