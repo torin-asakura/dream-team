@@ -1,8 +1,8 @@
 import { useSkills } from './queries'
 import { sort }      from './sort'
 
-const useData = () => {
-  const skills = useSkills()
+const useData = (data) => {
+  const skills = useSkills(data)
 
   return sort(skills)
 }

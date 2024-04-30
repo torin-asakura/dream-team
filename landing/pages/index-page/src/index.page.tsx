@@ -24,21 +24,22 @@ interface Props {
   SEO: any
 }
 
-const Fragments = ({ recruitsData, footerData,language, data: { hero, about, reviews, feedback } }) => (
-  <>
-    <LandingHero language={language} data={hero} />
-    <LandingAbout language={language} data={about} />
-    <LandingReviews language={language} data={reviews} />
-    <LandingTeam language={language} recruitsData={recruitsData}/>
-    <LandingFeedback language={language} data={feedback} />
-    <LandingFooter language={language} footerData={footerData}/>
-  </>
-)
+const Fragments = ({ recruitsData, footerData,language, data: { hero, about, reviews,workDirections, feedback } }) => {
+  return(
+    <>
+      <LandingHero language={language} data={hero} />
+      <LandingAbout language={language} data={about} workDirectionsData={workDirections}/>
+      <LandingReviews language={language} data={reviews} />
+      <LandingTeam language={language} recruitsData={recruitsData} />
+      <LandingFeedback language={language} data={feedback} />
+      <LandingFooter language={language} footerData={footerData}/>
+    </>
+  )
+}
 
 const IndexPage: FC<Props> = ({ recruitsData,footerData,navigationData,SEO = { RU: {}, EN: {} }, data }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
-
   return (
     <Preloader>
       <LocomotiveScrollProvider

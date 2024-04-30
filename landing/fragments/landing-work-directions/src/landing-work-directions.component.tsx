@@ -12,8 +12,8 @@ import { LandingWorkDirectionsProps } from './landing-work-directions.interface'
 import { useData }                    from './data'
 import { messages }                   from './messages'
 
-const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => {
-  const { leftSide, rightSide } = useData()
+const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language,workDirectionsData }) => {
+  const { leftSide, rightSide } = useData(workDirectionsData)
 
   return (
     <Layout width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>

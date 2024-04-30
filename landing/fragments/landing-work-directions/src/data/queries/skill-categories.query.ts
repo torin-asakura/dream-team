@@ -27,15 +27,10 @@ const GET_SKILL_CATEGORIES = gql`
   }
 `
 
-const useSkills = () => {
-  const { data, error } = useQuery(GET_SKILL_CATEGORIES)
-
-  if (error) {
-    throw new Error(error.message)
-  }
+const useSkills = (data) => {
 
   if (data) {
-    return data.skillCategories.nodes.map((node) => validate(node))
+    return data.map((node) => validate(node))
   }
 
   return []

@@ -22,12 +22,30 @@ const GET_ABOUT = gql`
         }
       }
     }
+    skillCategories {
+      nodes {
+        name
+        skillAddons {
+          icon {
+            mediaItemUrl
+          }
+        }
+        skills {
+          nodes {
+            title
+            menuOrder
+            language {
+              code
+            }
+          }
+        }
+      }
+    }
   }
 `
 
 const runAboutQuery = async () => {
   const client = getClient()
-
   const { data: aboutData } = await client.query({
     query: GET_ABOUT,
   })
@@ -42,6 +60,7 @@ const runAboutQuery = async () => {
           (aboutFragment) => aboutFragment.language.code === 'EN'
         ),
       },
+      workDirections:aboutData.skillCategories.nodes
     }
   }
 
