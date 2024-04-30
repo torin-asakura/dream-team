@@ -1,33 +1,9 @@
-import { gql }      from '@apollo/client'
-import { useQuery } from '@apollo/client'
 
 import { validate } from '../validate'
 
-const GET_RECRUITS = gql`
-  query GetRecruits {
-    recruits {
-      nodes {
-        title
-        featuredImage {
-          node {
-            mediaItemUrl
-            title
-          }
-        }
-        language {
-          code
-        }
-      }
-    }
-  }
-`
 
-const useRecruits = () => {
-  const { data, error } = useQuery(GET_RECRUITS)
 
-  if (error) {
-    throw new Error(error.message)
-  }
+const useRecruits = (data) => {
 
   if (data) {
     return data.recruits.nodes.map((node) => validate(node))

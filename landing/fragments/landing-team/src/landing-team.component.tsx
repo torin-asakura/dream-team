@@ -1,19 +1,19 @@
 import React            from 'react'
 import { FC }           from 'react'
 
-import { Condition }    from '@ui/condition'
-import { Layout }       from '@ui/layout'
-import { Row }          from '@ui/layout'
-import { Column }       from '@ui/layout'
-import { Box }          from '@ui/layout'
-import { Text }         from '@ui/text'
+import { Condition }   from '@ui/condition'
+import { Layout }      from '@ui/layout'
+import { Row }         from '@ui/layout'
+import { Column }      from '@ui/layout'
+import { Box }         from '@ui/layout'
+import { Text }        from '@ui/text'
+import { useRecruits } from './data/queries'
 
 import { Item }         from './item'
 import { LandingProps } from './landing-team.interface'
-import { useData }      from './data'
 
-const LandingTeam: FC<LandingProps> = ({ language }) => {
-  const recruits = useData()
+const LandingTeam: FC<LandingProps> = ({recruitsData, language }) => {
+  const recruits = useRecruits(recruitsData)
 
   const filterByLanguage = ({ language: { code } }) => code === language
 
