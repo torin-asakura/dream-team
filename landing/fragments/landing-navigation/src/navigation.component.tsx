@@ -17,19 +17,31 @@ import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
 
 import { NavigationProps }     from './navigation.interface'
 import { Language }            from './navigation.interface'
-import { useNavigation }       from './data'
 import { messages }            from './messages'
+
 
 const switchLanguage = (language: Language, languageVar) => () => {
   languageVar(language === 'RU' ? 'EN' : 'RU')
 }
 
-const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
+const Navigation: FC<NavigationProps> = ({navigationData, language, languageVar }) => {
   const [visible, setVisible] = useState<boolean>(false)
   const [isNavVisible, setIsNavVisible] = useState<boolean>(true)
   const { scroll } = useLocomotiveScroll()
   const { shadows }: any = useTheme()
-  const { navigation } = useNavigation()
+  // const { navigation } = useNavigation()
+
+  const navigation = () => {
+    return {
+      RU: navigationData.filter(
+        (navigationFragment) => navigationFragment.language.code === 'RU'
+      ),
+      EN: navigationData.filter(
+        (navigationFragment) => navigationFragment.language.code === 'EN'
+      ),
+    }
+  }
+
 
   useEffect(() => {
     if (scroll) {
@@ -72,7 +84,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
               <Logo mobile />
             </Layout>
             <Row justifyContent='flex-end' alignItems='center'>
-              {navigation[language].map(({ contentAddons: { title, content } }) => (
+              {navigation()[language].map(({ contentAddons: { title, content } }) => (
                 <React.Fragment key={title}>
                   <NextLink
                     color='black'

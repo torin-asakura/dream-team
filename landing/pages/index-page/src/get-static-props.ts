@@ -5,8 +5,9 @@ import { runFeedbackQuery } from './queries'
 import { runReviewsQuery }  from './queries'
 import { runHeroQuery }     from './queries'
 import { runAboutQuery }    from './queries'
+import { GET_NAVIGATION }   from '@globals/data'
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const client = getClient()
 
   let SEO
@@ -33,5 +34,10 @@ export const getServerSideProps = async () => {
 
   const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
 
-  return { props: { SEO, data } }
+  const {data:navigationContent} = await client.query({query:GET_NAVIGATION})
+
+  const navigationData = navigationContent.navigationItems.nodes
+
+
+  return { props: { SEO, data,navigationData },revalidate:3600 }
 }

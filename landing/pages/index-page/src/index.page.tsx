@@ -35,7 +35,7 @@ const Fragments = ({ language, data: { hero, about, reviews, feedback } }) => (
   </>
 )
 
-const IndexPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data }) => {
+const IndexPage: FC<Props> = ({ navigationData,SEO = { RU: {}, EN: {} }, data }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
 
@@ -54,7 +54,7 @@ const IndexPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data }) => {
         containerRef={containerRef}
         watch={[]}
       >
-        <Navigation language={language} languageVar={languageVar} />
+        <Navigation navigationData={navigationData} language={language} languageVar={languageVar} />
         <Seo language={language} SEO={SEO} />
         <ScrollContainer data-scroll-container ref={containerRef}>
           <Fragments language={language} data={data} />

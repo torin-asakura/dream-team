@@ -20,14 +20,14 @@ interface Props {
   data: any
 }
 
-const PrivacyPolicyPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data: { privacyPolicy } }) => {
+const PrivacyPolicyPage: FC<Props> = ({ navigationData,SEO = { RU: {}, EN: {} }, data: { privacyPolicy } }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
 
   return (
     <Preloader>
       <Seo SEO={SEO} language={language} />
-      <Navigation language={language} languageVar={languageVar} />
+      <Navigation navigationData={navigationData} language={language} languageVar={languageVar} />
       <LocomotiveScrollProvider
         options={{
           smooth: true,

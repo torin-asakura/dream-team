@@ -19,14 +19,14 @@ interface Props {
   data: any
 }
 
-const ContactsPage: FC<Props> = ({ SEO = { RU: {}, EN: {} }, data: { contacts } }) => {
+const ContactsPage: FC<Props> = ({navigationData, SEO = { RU: {}, EN: {} }, data: { contacts } }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
 
   return (
     <Preloader>
       <Seo SEO={SEO} language={language} />
-      <Navigation language={language} languageVar={languageVar} />
+      <Navigation navigationData={navigationData} language={language} languageVar={languageVar} />
       <LocomotiveScrollProvider
         options={{
           smooth: true,
