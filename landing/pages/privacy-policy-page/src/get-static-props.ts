@@ -1,4 +1,5 @@
-import { getClient }              from '@globals/data'
+import { GET_FOOTER } from '@globals/data'
+import { getClient }  from '@globals/data'
 
 import { GET_PRIVACY_POLICY_SEO } from './queries'
 import { runPrivacyPolicyQuery }  from './queries'
@@ -30,6 +31,9 @@ export const getStaticProps = async () => {
 
   const navigationData = navigationContent.navigationItems.nodes
 
+  const {data: footerContent} = await client.query({query:GET_FOOTER})
 
-  return { props: { SEO, data,navigationData } }
+  const footerData = footerContent.footerItems.nodes
+
+  return { props: { footerData,SEO, data,navigationData } }
 }

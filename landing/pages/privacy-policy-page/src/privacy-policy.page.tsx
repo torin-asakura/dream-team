@@ -20,7 +20,7 @@ interface Props {
   data: any
 }
 
-const PrivacyPolicyPage: FC<Props> = ({ navigationData,SEO = { RU: {}, EN: {} }, data: { privacyPolicy } }) => {
+const PrivacyPolicyPage: FC<Props> = ({ footerData,navigationData,SEO = { RU: {}, EN: {} }, data: { privacyPolicy } }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
 
@@ -43,7 +43,7 @@ const PrivacyPolicyPage: FC<Props> = ({ navigationData,SEO = { RU: {}, EN: {} },
       >
         <ScrollContainer data-scroll-container ref={containerRef}>
           <PrivacyPolicy language={language} data={privacyPolicy} />
-          <LandingFooter language={language} />
+          <LandingFooter footerData={footerData} language={language} />
         </ScrollContainer>
       </LocomotiveScrollProvider>
     </Preloader>

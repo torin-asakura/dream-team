@@ -12,16 +12,16 @@ import { Preloader }      from '@ui/preloader'
 import { Language }       from './store'
 import { languageVar }    from './store'
 
-const Page404 = () => {
+const Page404 = ({footerData,navigationData}) => {
   const language = useReactiveVar<Language>(languageVar)
 
   return (
     <Preloader>
       <Box height='100vh' backgroundColor='background.lightBeige'>
         <Column width='100%'>
-          <Navigation language={language} languageVar={languageVar} />
+          <Navigation navigationData={navigationData} language={language} languageVar={languageVar} />
           <NotFound language={language} />
-          <LandingFooter language={language} />
+          <LandingFooter footerData={footerData} language={language} />
         </Column>
       </Box>
     </Preloader>

@@ -1,4 +1,5 @@
-import { getClient }        from '@globals/data'
+import { getClient }  from '@globals/data'
+import { GET_FOOTER } from '@globals/data'
 
 import { GET_INDEX_SEO }    from './queries'
 import { runFeedbackQuery } from './queries'
@@ -38,6 +39,9 @@ export const getStaticProps = async () => {
 
   const navigationData = navigationContent.navigationItems.nodes
 
+  const {data: footerContent} = await client.query({query:GET_FOOTER})
 
-  return { props: { SEO, data,navigationData },revalidate:3600 }
+  const footerData = footerContent.footerItems.nodes
+
+  return { props: { SEO, data,navigationData,footerData },revalidate:3600 }
 }

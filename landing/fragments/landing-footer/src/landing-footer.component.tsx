@@ -1,5 +1,6 @@
-import React                   from 'react'
-import { FC }                  from 'react'
+import { filter } from '@globals/data'
+import React      from 'react'
+import { FC }     from 'react'
 
 import { Divider }             from '@ui/divider'
 import { DreamTeamIcon }       from '@ui/icons'
@@ -17,12 +18,12 @@ import { extractObject }       from '@globals/data'
 import { useSphere }           from '@ui/logo'
 
 import { LandingProps }        from './landing-footer.interface'
-import { useFooter }           from './data'
 import { messages }            from './messages'
 
-const LandingFooter: FC<LandingProps> = ({ language }) => {
+const LandingFooter: FC<LandingProps> = ({footerData, language }) => {
   const sphere = useSphere()
-  const data = useFooter()
+
+  const data = filter(footerData || [])
 
   const workingHours = extractObject('contentAddons', 'working-hours', data[language])
   const by = extractObject('contentAddons', 'by', data[language])

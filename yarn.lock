@@ -1729,6 +1729,7 @@ __metadata:
   resolution: "@landing/404-page@workspace:landing/pages/404-page"
   dependencies:
     "@apollo/client": "npm:3.6.9"
+    "@globals/data": "workspace:0.0.1"
     "@landing/404-fragment": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"

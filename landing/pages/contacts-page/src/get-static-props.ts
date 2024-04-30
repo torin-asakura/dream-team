@@ -30,6 +30,5 @@ export const getStaticProps = async () => {
 
   const navigationData = navigationContent.navigationItems.nodes
 
-
   return { props: { SEO, data,navigationData },revalidate:3600 }
 }
