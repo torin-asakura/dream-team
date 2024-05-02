@@ -1,6 +1,6 @@
-import { useMemo } from 'react'
-import React       from 'react'
-import { FC }      from 'react'
+import React              from 'react'
+import { FC }             from 'react'
+import { useMemo }        from 'react'
 
 import { ArrowLeftIcon }  from '@ui/icons'
 import { ArrowRightIcon } from '@ui/icons'
@@ -12,19 +12,18 @@ import { Row }            from '@ui/layout'
 import { Tag }            from '@ui/tag/src'
 import { Text }           from '@ui/text'
 import { Space }          from '@ui/text'
-import { formatString }   from '../helpers'
 
 import { PopoverProps }   from './popover.interface'
+import { formatString }   from '../helpers'
 import { messages }       from '../messages'
 
+const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) => {
+  const contentWithoutTags = useMemo(
+    () => reviews.map((node) => formatString(node.content)),
+    [reviews]
+  )
 
-
-
-const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews , language }) => {
-
-  const contentWithoutTags = useMemo(() => reviews.map(node => formatString(node.content)),[reviews])
-
-  return(
+  return (
     <Layer visible={visible !== null} onClose={() => setVisible(null)} opacity='small'>
       <Box
         width={['100%', '100%', 960]}

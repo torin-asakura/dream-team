@@ -22,25 +22,6 @@ const GET_ABOUT = gql`
         }
       }
     }
-    skillCategories {
-      nodes {
-        name
-        skillAddons {
-          icon {
-            mediaItemUrl
-          }
-        }
-        skills {
-          nodes {
-            title
-            menuOrder
-            language {
-              code
-            }
-          }
-        }
-      }
-    }
   }
 `
 
@@ -60,7 +41,6 @@ const runAboutQuery = async () => {
           (aboutFragment) => aboutFragment.language.code === 'EN'
         ),
       },
-      workDirections:aboutData.skillCategories.nodes
     }
   }
 

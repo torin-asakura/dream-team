@@ -1,8 +1,8 @@
-import {RecruitsDataProps} from '@globals/data'
+import { RecruitsDataType } from '@globals/data'
 
 export type Language = 'RU' | 'EN'
 
 export interface LandingProps {
   language: Language
-  recruitsData:RecruitsDataProps
+  recruitsData: RecruitsDataType
 }

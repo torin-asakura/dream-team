@@ -1,6 +1,5 @@
-import { filter } from '@globals/data'
-import React      from 'react'
-import { FC }     from 'react'
+import React                   from 'react'
+import { FC }                  from 'react'
 
 import { Divider }             from '@ui/divider'
 import { DreamTeamIcon }       from '@ui/icons'
@@ -14,13 +13,14 @@ import { Link }                from '@ui/link'
 import { SocialLinks }         from '@ui/social-links'
 import { Text }                from '@ui/text'
 import { Space }               from '@ui/text'
+import { filter }              from '@globals/data'
 import { extractObject }       from '@globals/data'
 import { useSphere }           from '@ui/logo'
 
 import { LandingProps }        from './landing-footer.interface'
 import { messages }            from './messages'
 
-const LandingFooter: FC<LandingProps> = ({footerData, language }) => {
+const LandingFooter: FC<LandingProps> = ({ footerData, language }) => {
   const sphere = useSphere()
 
   const data = filter(footerData || [])

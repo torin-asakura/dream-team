@@ -1,8 +1,8 @@
+import { GET_NAVIGATION }   from '@globals/data'
 import { getClient }        from '@globals/data'
 
 import { GET_CONTACTS_SEO } from './queries'
 import { runContactsQuery } from './queries'
-import { GET_NAVIGATION }   from '@globals/data'
 
 export const getStaticProps = async () => {
   const client = getClient()
@@ -26,9 +26,9 @@ export const getStaticProps = async () => {
 
   const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
 
-  const {data:navigationContent} = await client.query({query:GET_NAVIGATION})
+  const { data: navigationContent } = await client.query({ query: GET_NAVIGATION })
 
   const navigationData = navigationContent.navigationItems.nodes
 
-  return { props: { SEO, data,navigationData },revalidate:3600 }
+  return { props: { SEO, data, navigationData }, revalidate: 3600 }
 }

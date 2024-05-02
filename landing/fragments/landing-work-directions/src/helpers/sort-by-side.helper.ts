@@ -12,7 +12,7 @@ export const sortBySide = (list) => {
     }
   }
 
-  [...list].sort(compare).forEach(split)
+  ;[...list].sort(compare).forEach(split)
 
   return { leftSide, rightSide }
 }

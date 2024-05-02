@@ -1,19 +1,18 @@
-import React            from 'react'
-import { FC }           from 'react'
+import React                   from 'react'
+import { FC }                  from 'react'
 
-import { Condition }   from '@ui/condition'
-import { Layout }      from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Box }         from '@ui/layout'
-import { Text }        from '@ui/text'
+import { Condition }           from '@ui/condition'
+import { Layout }              from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Box }                 from '@ui/layout'
+import { Text }                from '@ui/text'
+import { removeParagraphTags } from '@ui/utils'
 
-import { Item }         from './item'
-import { LandingProps } from './landing-team.interface'
-import {removeParagraphTags} from '@ui/utils'
+import { Item }                from './item'
+import { LandingProps }        from './landing-team.interface'
 
-const LandingTeam: FC<LandingProps> = ({recruitsData, language }) => {
-
+const LandingTeam: FC<LandingProps> = ({ recruitsData, language }) => {
   const recruitsWithoutTags = recruitsData.map((node) => removeParagraphTags(node))
 
   const filterByLanguage = ({ language: { code } }) => code === language
@@ -44,7 +43,9 @@ const LandingTeam: FC<LandingProps> = ({recruitsData, language }) => {
               ) => (
                 <React.Fragment key={recruit}>
                   <Item recruit={recruit} image={image} language={language} />
-                  <Condition match={recruitsWithoutTags.filter(filterByLanguage).length - 1 !== index}>
+                  <Condition
+                    match={recruitsWithoutTags.filter(filterByLanguage).length - 1 !== index}
+                  >
                     <Layout flexBasis={32} flexShrink={0} />
                   </Condition>
                 </React.Fragment>

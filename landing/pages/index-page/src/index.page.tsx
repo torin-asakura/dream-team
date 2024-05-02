@@ -14,30 +14,36 @@ import { LandingReviews }           from '@landing/reviews-fragment'
 import { LandingTeam }              from '@landing/team-fragment'
 import { Preloader }                from '@ui/preloader'
 import { ScrollContainer }          from '@ui/scroll'
-import { IndexPageProps }           from './index.interfaces'
 
+import { IndexPageProps }           from './index.interfaces'
 import { Seo }                      from './seo.component'
 import { Language }                 from './store'
 import { languageVar }              from './store'
 
-const Fragments = ({ recruitsData, footerData,language, data: { hero, about, reviews,workDirections, feedback } }) => {
-  return(
-    <>
-      <LandingHero language={language} data={hero} />
-      <LandingAbout language={language} data={about} workDirectionsData={workDirections}/>
-      <LandingReviews language={language} data={reviews} />
-      <LandingTeam language={language} recruitsData={recruitsData} />
-      <LandingFeedback language={language} data={feedback} />
-      <LandingFooter language={language} footerData={footerData}/>
-    </>
-  )
-}
+const Fragments = ({
+  skillsData,
+  recruitsData,
+  footerData,
+  language,
+  data: { hero, about, reviews, feedback },
+}) => (
+  <>
+    <LandingHero language={language} data={hero} />
+    <LandingAbout language={language} data={about} skillsData={skillsData} />
+    <LandingReviews language={language} data={reviews} />
+    <LandingTeam language={language} recruitsData={recruitsData} />
+    <LandingFeedback language={language} data={feedback} />
+    <LandingFooter language={language} footerData={footerData} />
+  </>
+)
 
 const IndexPage: FC<IndexPageProps> = ({
+  skillsData,
   recruitsData,
   footerData,
   navigationData,
-  SEO = { RU: {}, EN: {} }, data
+  SEO = { RU: {}, EN: {} },
+  data,
 }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
@@ -59,7 +65,13 @@ const IndexPage: FC<IndexPageProps> = ({
         <Navigation navigationData={navigationData} language={language} languageVar={languageVar} />
         <Seo language={language} SEO={SEO} />
         <ScrollContainer data-scroll-container ref={containerRef}>
-          <Fragments recruitsData={recruitsData} language={language} data={data} footerData={footerData}/>
+          <Fragments
+            skillsData={skillsData}
+            recruitsData={recruitsData}
+            language={language}
+            data={data}
+            footerData={footerData}
+          />
         </ScrollContainer>
       </LocomotiveScrollProvider>
     </Preloader>

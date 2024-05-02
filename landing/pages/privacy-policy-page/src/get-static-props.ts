@@ -1,9 +1,9 @@
-import { GET_FOOTER } from '@globals/data'
-import { getClient }  from '@globals/data'
+import { GET_FOOTER }             from '@globals/data'
+import { GET_NAVIGATION }         from '@globals/data'
+import { getClient }              from '@globals/data'
 
 import { GET_PRIVACY_POLICY_SEO } from './queries'
 import { runPrivacyPolicyQuery }  from './queries'
-import { GET_NAVIGATION }   from '@globals/data'
 
 export const getStaticProps = async () => {
   const client = getClient()
@@ -27,13 +27,13 @@ export const getStaticProps = async () => {
 
   const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
 
-  const {data:navigationContent} = await client.query({query:GET_NAVIGATION})
+  const { data: navigationContent } = await client.query({ query: GET_NAVIGATION })
 
   const navigationData = navigationContent.navigationItems.nodes
 
-  const {data: footerContent} = await client.query({query:GET_FOOTER})
+  const { data: footerContent } = await client.query({ query: GET_FOOTER })
 
   const footerData = footerContent.footerItems.nodes
 
-  return { props: { footerData,SEO, data,navigationData } }
+  return { props: { footerData, SEO, data, navigationData } }
 }

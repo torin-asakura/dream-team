@@ -1,10 +1,13 @@
-import { RecruitsDataProps }               from '@globals/data'
-import {FooterDataType,NavigationDataType} from '@globals/data'
+import { SkillsDataType }     from '@globals/data'
+import { RecruitsDataType }   from '@globals/data'
+import { FooterDataType }     from '@globals/data'
+import { NavigationDataType } from '@globals/data'
 
-export interface IndexPageProps{
+export interface IndexPageProps {
   data: any
   SEO: any
-  recruitsData:RecruitsDataProps
-  footerData:FooterDataType
-  navigationData:NavigationDataType
+  skillsData: SkillsDataType
+  recruitsData: RecruitsDataType
+  footerData: FooterDataType
+  navigationData: NavigationDataType
 }

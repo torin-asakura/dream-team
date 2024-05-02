@@ -11,7 +11,7 @@ import { Item }                  from './item'
 import { LandingAboutProps }     from './landing-about.interface'
 import { splitItems }            from './helpers'
 
-const LandingAbout: FC<LandingAboutProps> = ({ language, data,workDirectionsData }) => {
+const LandingAbout: FC<LandingAboutProps> = ({ language, data, skillsData }) => {
   const [topSide, bottomSide] = splitItems(data[language])
   return (
     <Box px={['20px', '20px', '0px']}>
@@ -45,7 +45,7 @@ const LandingAbout: FC<LandingAboutProps> = ({ language, data,workDirectionsData
               </React.Fragment>
             ))}
             <Layout flexBasis={[64, 64, 160]} />
-            <LandingWorkDirections language={language} workDirectionsData={workDirectionsData}/>
+            <LandingWorkDirections language={language} skillsData={skillsData} />
             <Layout flexBasis={[64, 64, 160]} />
             {bottomSide.reverse().map((
               { contentAddons: { title, content, excerpt, image } },

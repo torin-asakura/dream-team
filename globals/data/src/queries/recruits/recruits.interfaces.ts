@@ -1,12 +1,12 @@
-export type RecruitsDataProps = {
-  title:string
+export type RecruitsDataType = {
+  title: string
   featuredImage: {
-  node: {
-    title:string
-    mediaItemUrl:string
+    node: {
+      title: string
+      mediaItemUrl: string
+    }
   }
-}
-language: {
-  code:string
-}
+  language: {
+    code: string
+  }
 }[]

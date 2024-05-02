@@ -1,8 +1,9 @@
-import {FooterDataType,NavigationDataType} from '@globals/data'
+import { FooterDataType }     from '@globals/data'
+import { NavigationDataType } from '@globals/data'
 
-export interface PrivacyPolicyPageProps{
+export interface PrivacyPolicyPageProps {
   SEO: any
   data: any
-  footerData:FooterDataType
-  navigationData:NavigationDataType
+  footerData: FooterDataType
+  navigationData: NavigationDataType
 }

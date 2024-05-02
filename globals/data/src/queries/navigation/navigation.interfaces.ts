@@ -1,10 +1,10 @@
 export type NavigationDataType = {
   contentAddons: {
-    title:string
-    content:string
-    role:string
+    title: string
+    content: string
+    role: string
   }
   language: {
-    code:string
+    code: string
   }
 }[]

@@ -19,28 +19,20 @@ import { NavigationProps }     from './navigation.interface'
 import { Language }            from './navigation.interface'
 import { messages }            from './messages'
 
-
 const switchLanguage = (language: Language, languageVar) => () => {
   languageVar(language === 'RU' ? 'EN' : 'RU')
 }
 
-const Navigation: FC<NavigationProps> = ({navigationData, language, languageVar }) => {
+const Navigation: FC<NavigationProps> = ({ navigationData, language, languageVar }) => {
   const [visible, setVisible] = useState<boolean>(false)
   const [isNavVisible, setIsNavVisible] = useState<boolean>(true)
   const { scroll } = useLocomotiveScroll()
   const { shadows }: any = useTheme()
 
-  const navigation = () => {
-    return {
-      RU: navigationData.filter(
-        (navigationFragment) => navigationFragment.language.code === 'RU'
-      ),
-      EN: navigationData.filter(
-        (navigationFragment) => navigationFragment.language.code === 'EN'
-      ),
-    }
-  }
-
+  const navigation = () => ({
+    RU: navigationData.filter((navigationFragment) => navigationFragment.language.code === 'RU'),
+    EN: navigationData.filter((navigationFragment) => navigationFragment.language.code === 'EN'),
+  })
 
   useEffect(() => {
     if (scroll) {

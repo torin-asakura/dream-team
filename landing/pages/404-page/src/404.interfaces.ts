@@ -1,6 +1,7 @@
-import {FooterDataType,NavigationDataType} from '@globals/data'
+import { FooterDataType }     from '@globals/data'
+import { NavigationDataType } from '@globals/data'
 
-export interface Page404Props{
-  footerData:FooterDataType
-  navigationData:NavigationDataType
+export interface Page404Props {
+  footerData: FooterDataType
+  navigationData: NavigationDataType
 }

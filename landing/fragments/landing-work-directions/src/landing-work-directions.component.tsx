@@ -1,21 +1,20 @@
-import { removeParagraphTags } from '@ui/utils/src'
-import React                   from 'react'
-import { FC }                  from 'react'
+import React                          from 'react'
+import { FC }                         from 'react'
 
-import { Condition }  from '@ui/condition'
-import { Layout }     from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Text }       from '@ui/text'
-import { sortBySide } from './helpers'
+import { Condition }                  from '@ui/condition'
+import { Layout }                     from '@ui/layout'
+import { Row }                        from '@ui/layout'
+import { Column }                     from '@ui/layout'
+import { Text }                       from '@ui/text'
+import { removeParagraphTags }        from '@ui/utils/src'
 
 import { Item }                       from './item'
 import { LandingWorkDirectionsProps } from './landing-work-directions.interface'
+import { sortBySide }                 from './helpers'
 import { messages }                   from './messages'
 
-const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language,workDirectionsData }) => {
-
-  const {leftSide, rightSide} = sortBySide(workDirectionsData.map((node) => removeParagraphTags(node)))
+const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language, skillsData }) => {
+  const { leftSide, rightSide } = sortBySide(skillsData.map((node) => removeParagraphTags(node)))
 
   return (
     <Layout width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>

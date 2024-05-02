@@ -1,3 +1,5 @@
+import { SkillsDataType } from '@globals/data'
+
 export type Language = 'RU' | 'EN'
 
 interface ContentData {
@@ -21,6 +23,8 @@ interface Data {
 }
 
 export interface LandingAboutProps {
+  skillsData: SkillsDataType
+
   language: Language
   data: Data
 }

@@ -1,7 +1,6 @@
-const formaString = (str:string):string => str.replace(/(<p>|<\/p>)/g, '')
+const formaString = (str: string): string => str.replace(/(<p>|<\/p>)/g, '')
 
 const stringProps = ['title', 'content', 'excerpt']
-
 
 export const removeParagraphTags = (target) =>
   stringProps.reduce((acc, prop) => {
