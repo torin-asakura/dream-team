@@ -1,20 +1,18 @@
 const compare = ({ menuOrder: a }, { menuOrder: b }) => (a > b ? 1 : -1)
 
-const sort = (skills) => {
+export const sortBySide = (list) => {
   const leftSide: any[] = []
   const rightSide: any[] = []
 
-  const split = (skill, index) => {
+  const split = (item, index) => {
     if (index % 2 === 0) {
-      leftSide.push(skill)
+      leftSide.push(item)
     } else {
-      rightSide.push(skill)
+      rightSide.push(item)
     }
   }
 
-  ;[...skills].sort(compare).forEach(split)
+  [...list].sort(compare).forEach(split)
 
   return { leftSide, rightSide }
 }
-
-export { sort }

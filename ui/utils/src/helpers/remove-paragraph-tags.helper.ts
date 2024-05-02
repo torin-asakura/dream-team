@@ -1,16 +1,15 @@
+const formaString = (str:string):string => str.replace(/(<p>|<\/p>)/g, '')
+
 const stringProps = ['title', 'content', 'excerpt']
 
-const formatString = (str) => str.replace(/(<p>|<\/p>)/g, '')
 
-const validate = (target) =>
+export const removeParagraphTags = (target) =>
   stringProps.reduce((acc, prop) => {
     if (target[prop]) {
       return {
         ...acc,
-        [prop]: formatString(target[prop]),
+        [prop]: formaString(target[prop]),
       }
     }
     return acc
   }, target)
-
-export { validate }

@@ -2142,6 +2142,7 @@ __metadata:
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react: "npm:17.0.2"
     react-dom: "npm:17.0.2"
   peerDependencies:
@@ -2164,6 +2165,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/tag": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react: "npm:17.0.2"
     react-dom: "npm:17.0.2"
   peerDependencies:
