@@ -14,7 +14,7 @@ import {removeParagraphTags} from '@ui/utils'
 
 const LandingTeam: FC<LandingProps> = ({recruitsData, language }) => {
 
-  const recruitsWithoutTags = recruitsData.recruits.nodes.map((node) => removeParagraphTags(node))
+  const recruitsWithoutTags = recruitsData.map((node) => removeParagraphTags(node))
 
   const filterByLanguage = ({ language: { code } }) => code === language
 

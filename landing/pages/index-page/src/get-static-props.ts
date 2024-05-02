@@ -1,6 +1,6 @@
 import { getClient }    from '@globals/data'
 import { GET_FOOTER }   from '@globals/data'
-import { GET_RECRUITS } from './queries'
+import { GET_RECRUITS } from '@globals/data'
 
 import { GET_INDEX_SEO }    from './queries'
 import { runFeedbackQuery } from './queries'
@@ -47,7 +47,7 @@ export const getStaticProps = async () => {
 
   const {data: recruitsContent} = await client.query({query:GET_RECRUITS})
 
-  const recruitsData = recruitsContent
+  const recruitsData = recruitsContent.recruits.nodes
 
   return { props: { SEO, data,navigationData,footerData,recruitsData },revalidate:3600 }
 }

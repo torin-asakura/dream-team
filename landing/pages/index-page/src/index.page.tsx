@@ -33,7 +33,12 @@ const Fragments = ({ recruitsData, footerData,language, data: { hero, about, rev
   )
 }
 
-const IndexPage: FC<IndexPageProps> = ({ recruitsData,footerData,navigationData,SEO = { RU: {}, EN: {} }, data }) => {
+const IndexPage: FC<IndexPageProps> = ({
+  recruitsData,
+  footerData,
+  navigationData,
+  SEO = { RU: {}, EN: {} }, data
+}) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
   return (
