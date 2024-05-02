@@ -29,7 +29,6 @@ const Navigation: FC<NavigationProps> = ({navigationData, language, languageVar 
   const [isNavVisible, setIsNavVisible] = useState<boolean>(true)
   const { scroll } = useLocomotiveScroll()
   const { shadows }: any = useTheme()
-  // const { navigation } = useNavigation()
 
   const navigation = () => {
     return {

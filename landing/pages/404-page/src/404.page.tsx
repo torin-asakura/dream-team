@@ -1,18 +1,20 @@
 import { useReactiveVar } from '@apollo/client'
+import { FC }             from 'react'
 
 import React              from 'react'
 
-import { NotFound }       from '@landing/404-fragment'
-import { LandingFooter }  from '@landing/footer-fragment'
-import { Navigation }     from '@landing/navigation-fragment'
-import { Column }         from '@ui/layout'
-import { Box }            from '@ui/layout'
-import { Preloader }      from '@ui/preloader'
+import { NotFound }      from '@landing/404-fragment'
+import { LandingFooter } from '@landing/footer-fragment'
+import { Navigation }    from '@landing/navigation-fragment'
+import { Column }        from '@ui/layout'
+import { Box }           from '@ui/layout'
+import { Preloader }     from '@ui/preloader'
+import { Page404Props }  from './404.interfaces'
 
 import { Language }       from './store'
 import { languageVar }    from './store'
 
-const Page404 = ({footerData,navigationData}) => {
+const Page404:FC<Page404Props> = ({footerData,navigationData}) => {
   const language = useReactiveVar<Language>(languageVar)
 
   return (

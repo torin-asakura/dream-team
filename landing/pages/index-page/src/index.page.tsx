@@ -14,15 +14,11 @@ import { LandingReviews }           from '@landing/reviews-fragment'
 import { LandingTeam }              from '@landing/team-fragment'
 import { Preloader }                from '@ui/preloader'
 import { ScrollContainer }          from '@ui/scroll'
+import { IndexPageProps }           from './index.interfaces'
 
 import { Seo }                      from './seo.component'
 import { Language }                 from './store'
 import { languageVar }              from './store'
-
-interface Props {
-  data: any
-  SEO: any
-}
 
 const Fragments = ({ recruitsData, footerData,language, data: { hero, about, reviews,workDirections, feedback } }) => {
   return(
@@ -37,7 +33,7 @@ const Fragments = ({ recruitsData, footerData,language, data: { hero, about, rev
   )
 }
 
-const IndexPage: FC<Props> = ({ recruitsData,footerData,navigationData,SEO = { RU: {}, EN: {} }, data }) => {
+const IndexPage: FC<IndexPageProps> = ({ recruitsData,footerData,navigationData,SEO = { RU: {}, EN: {} }, data }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
   return (

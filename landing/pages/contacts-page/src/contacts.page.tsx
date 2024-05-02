@@ -9,17 +9,15 @@ import { LandingContacts }          from '@landing/contacts-fragment'
 import { Navigation }               from '@landing/navigation-fragment'
 import { Preloader }                from '@ui/preloader'
 import { ScrollContainer }          from '@ui/scroll'
+import { ContactsPageProps }        from './contacts.interfaces'
 
 import { Seo }                      from './seo.component'
 import { Language }                 from './store'
 import { languageVar }              from './store'
 
-interface Props {
-  SEO: any
-  data: any
-}
 
-const ContactsPage: FC<Props> = ({navigationData, SEO = { RU: {}, EN: {} }, data: { contacts } }) => {
+
+const ContactsPage: FC<ContactsPageProps> = ({navigationData, SEO = { RU: {}, EN: {} }, data: { contacts } }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
 

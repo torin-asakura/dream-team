@@ -10,17 +10,14 @@ import { Navigation }               from '@landing/navigation-fragment'
 import { PrivacyPolicy }            from '@landing/privacy-policy-fragment'
 import { Preloader }                from '@ui/preloader'
 import { ScrollContainer }          from '@ui/scroll'
+import { PrivacyPolicyPageProps }   from './privacy-policy.interfaces'
 
 import { Seo }                      from './seo.component'
 import { Language }                 from './store'
 import { languageVar }              from './store'
 
-interface Props {
-  SEO: any
-  data: any
-}
 
-const PrivacyPolicyPage: FC<Props> = ({ footerData,navigationData,SEO = { RU: {}, EN: {} }, data: { privacyPolicy } }) => {
+const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ footerData,navigationData,SEO = { RU: {}, EN: {} }, data: { privacyPolicy } }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
 

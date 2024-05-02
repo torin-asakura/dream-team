@@ -1,2 +1,2 @@
-export * from './navigation.query'
-export * from './footer.query'
+export * from './navigation'
+export * from './footer'
