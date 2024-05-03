@@ -28,7 +28,7 @@ export const getStaticProps = async () => {
 
   const { data: navigationContent } = await client.query({ query: GET_NAVIGATION })
 
-  const navigationData = navigationContent.navigationItems.nodes
+  const navigationData = navigationContent.navigationItems?.nodes
 
   return { props: { SEO, data, navigationData }, revalidate: 3600 }
 }

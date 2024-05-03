@@ -1,6 +1,6 @@
-import { gql } from '@apollo/client'
+import { gql } from '../../__generated__'
 
-export const GET_NAVIGATION = gql`
+export const GET_NAVIGATION = gql(`
   query GetNavigation {
     navigationItems {
       nodes {
@@ -15,4 +15,4 @@ export const GET_NAVIGATION = gql`
       }
     }
   }
-`
+`)

@@ -1,6 +1,6 @@
-import { gql } from '@apollo/client'
+import { gql } from '../../__generated__'
 
-export const GET_FOOTER = gql`
+export const GET_FOOTER = gql(`
   query GetFooter {
     footerItems {
       nodes {
@@ -16,4 +16,4 @@ export const GET_FOOTER = gql`
       }
     }
   }
-`
+`)

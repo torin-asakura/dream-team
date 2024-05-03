@@ -29,11 +29,11 @@ export const getStaticProps = async () => {
 
   const { data: navigationContent } = await client.query({ query: GET_NAVIGATION })
 
-  const navigationData = navigationContent.navigationItems.nodes
+  const navigationData = navigationContent.navigationItems?.nodes
 
   const { data: footerContent } = await client.query({ query: GET_FOOTER })
 
-  const footerData = footerContent.footerItems.nodes
+  const footerData = footerContent.footerItems?.nodes
 
   return { props: { footerData, SEO, data, navigationData } }
 }

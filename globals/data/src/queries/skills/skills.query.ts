@@ -1,6 +1,6 @@
-import { gql } from '@apollo/client'
+import { gql } from '../../__generated__'
 
-export const GET_SKILLS = gql`
+export const GET_SKILLS = gql(`
   query GetSkills {
     skillCategories {
       nodes {
@@ -22,4 +22,4 @@ export const GET_SKILLS = gql`
       }
     }
   }
-`
+`)
