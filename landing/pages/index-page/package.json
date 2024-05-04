@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
+    "@globals/seo": "workspace:0.0.1",
     "@landing/about-fragment": "workspace:0.0.1",
     "@landing/feedback-fragment": "workspace:0.0.1",
     "@landing/footer-fragment": "workspace:0.0.1",

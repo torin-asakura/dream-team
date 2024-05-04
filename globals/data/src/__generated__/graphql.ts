@@ -18691,6 +18691,22 @@ export type GetRecruitsQuery = {
   } | null
 }
 
+export type GetSeoQueryVariables = Exact<{
+  uri: Scalars['String']['input']
+}>
+
+export type GetSeoQuery = {
+  __typename?: 'RootQuery'
+  pageBy?: {
+    __typename?: 'Page'
+    seo?: { __typename?: 'PostTypeSEO'; title?: string | null; metaDesc?: string | null } | null
+    translation?: {
+      __typename?: 'Page'
+      seo?: { __typename?: 'PostTypeSEO'; title?: string | null; metaDesc?: string | null } | null
+    } | null
+  } | null
+}
+
 export type GetSkillsQueryVariables = Exact<{ [key: string]: never }>
 
 export type GetSkillsQuery = {
@@ -18886,6 +18902,85 @@ export const GetRecruitsDocument = {
     },
   ],
 } as unknown as DocumentNode<GetRecruitsQuery, GetRecruitsQueryVariables>
+export const GetSeoDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'GetSeo' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: { kind: 'Variable', name: { kind: 'Name', value: 'uri' } },
+          type: {
+            kind: 'NonNullType',
+            type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'pageBy' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'uri' },
+                value: { kind: 'Variable', name: { kind: 'Name', value: 'uri' } },
+              },
+            ],
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'seo' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'metaDesc' } },
+                    ],
+                  },
+                },
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'translation' },
+                  arguments: [
+                    {
+                      kind: 'Argument',
+                      name: { kind: 'Name', value: 'language' },
+                      value: { kind: 'EnumValue', value: 'EN' },
+                    },
+                  ],
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'seo' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            { kind: 'Field', name: { kind: 'Name', value: 'title' } },
+                            { kind: 'Field', name: { kind: 'Name', value: 'metaDesc' } },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<GetSeoQuery, GetSeoQueryVariables>
 export const GetSkillsDocument = {
   kind: 'Document',
   definitions: [

@@ -1,7 +1,7 @@
 import React  from 'react'
 import Helmet from 'react-helmet'
 
-const Seo = ({ SEO, language }) => {
+export const Seo = ({ SEO, language }) => {
   const { title } = SEO[language]
 
   return (
@@ -58,4 +58,3 @@ const Seo = ({ SEO, language }) => {
     />
   )
 }
-export { Seo }

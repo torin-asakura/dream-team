@@ -1,8 +1,8 @@
-import { gql } from '@apollo/client'
+import { gql } from '../../__generated__'
 
-export const GET_INDEX_SEO = gql`
-  query GetIndexSeo {
-    pageBy(uri: "/") {
+export const GET_SEO = gql(`
+  query GetSeo($uri:String!) {
+    pageBy(uri: $uri) {
       seo {
         title
         metaDesc
@@ -15,4 +15,4 @@ export const GET_INDEX_SEO = gql`
       }
     }
   }
-`
+`)

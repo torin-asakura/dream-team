@@ -1,10 +1,11 @@
+import { PageUri }          from '@globals/data'
 import { GET_FOOTER }       from '@globals/data'
 import { GET_RECRUITS }     from '@globals/data'
 import { GET_SKILLS }       from '@globals/data'
 import { GET_NAVIGATION }   from '@globals/data'
+import { GET_SEO }          from '@globals/data'
 import { getClient }        from '@globals/data'
 
-import { GET_INDEX_SEO }    from './queries'
 import { runFeedbackQuery } from './queries'
 import { runReviewsQuery }  from './queries'
 import { runHeroQuery }     from './queries'
@@ -16,13 +17,14 @@ export const getStaticProps = async () => {
   let SEO
 
   const { data: seoData } = await client.query({
-    query: GET_INDEX_SEO,
+    query: GET_SEO,
+    variables: { uri: PageUri.INDEX },
   })
 
   if (seoData) {
     SEO = {
-      RU: seoData.pageBy.seo,
-      EN: seoData.pageBy.translation.seo,
+      RU: seoData.pageBy?.seo,
+      EN: seoData.pageBy?.translation?.seo,
     }
   } else SEO = { RU: {}, EN: {} }
 

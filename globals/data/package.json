@@ -13,7 +13,7 @@
     "@graphql-codegen/typescript-resolvers": "4.0.6",
     "@graphql-typed-document-node/core": "3.2.0",
     "@types/lodash": "^4",
-    "@types/react": "18.2.20",
+    "@types/react": "17.0.73",
     "graphql": "15.8.0",
     "react": "17.0.2"
   },

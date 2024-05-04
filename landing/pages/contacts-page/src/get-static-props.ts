@@ -1,7 +1,8 @@
 import { GET_NAVIGATION }   from '@globals/data'
+import { GET_SEO }          from '@globals/data'
+import { PageUri } from '@globals/data'
 import { getClient }        from '@globals/data'
 
-import { GET_CONTACTS_SEO } from './queries'
 import { runContactsQuery } from './queries'
 
 export const getStaticProps = async () => {
@@ -10,13 +11,14 @@ export const getStaticProps = async () => {
   let SEO
 
   const { data: seoData } = await client.query({
-    query: GET_CONTACTS_SEO,
+    query: GET_SEO,
+    variables: { uri: PageUri.CONTACTS },
   })
 
   if (seoData) {
     SEO = {
-      RU: seoData.pageBy.seo,
-      EN: seoData.pageBy.translation.seo,
+      RU: seoData.pageBy?.seo,
+      EN: seoData.pageBy?.translation?.seo,
     }
   } else SEO = { RU: {}, EN: {} }
 

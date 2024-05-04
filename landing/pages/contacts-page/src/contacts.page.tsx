@@ -5,13 +5,13 @@ import { FC }                       from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { Seo }                      from '@globals/seo'
 import { LandingContacts }          from '@landing/contacts-fragment'
 import { Navigation }               from '@landing/navigation-fragment'
 import { Preloader }                from '@ui/preloader'
 import { ScrollContainer }          from '@ui/scroll'
 
 import { ContactsPageProps }        from './contacts.interfaces'
-import { Seo }                      from './seo.component'
 import { Language }                 from './store'
 import { languageVar }              from './store'
 

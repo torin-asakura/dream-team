@@ -5,6 +5,7 @@ import { FC }                       from 'react'
 import { useRef }                   from 'react'
 
 import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
+import { Seo }                      from '@globals/seo'
 import { LandingAbout }             from '@landing/about-fragment'
 import { LandingFeedback }          from '@landing/feedback-fragment'
 import { LandingFooter }            from '@landing/footer-fragment'
@@ -16,7 +17,6 @@ import { Preloader }                from '@ui/preloader'
 import { ScrollContainer }          from '@ui/scroll'
 
 import { IndexPageProps }           from './index.interfaces'
-import { Seo }                      from './seo.component'
 import { Language }                 from './store'
 import { languageVar }              from './store'
 
