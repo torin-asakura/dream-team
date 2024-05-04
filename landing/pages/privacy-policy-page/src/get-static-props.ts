@@ -4,7 +4,7 @@ import { GET_NAVIGATION }        from '@globals/data'
 import { GET_SEO }               from '@globals/data'
 import { getClient }             from '@globals/data'
 
-import { runPrivacyPolicyQuery } from './queries'
+import { runPrivacyPolicyQuery } from '@landing/privacy-policy-fragment'
 
 export const getStaticProps = async () => {
   const client = getClient()

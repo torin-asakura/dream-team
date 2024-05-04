@@ -6,10 +6,10 @@ import { GET_NAVIGATION }   from '@globals/data'
 import { GET_SEO }          from '@globals/data'
 import { getClient }        from '@globals/data'
 
-import { runFeedbackQuery } from './queries'
-import { runReviewsQuery }  from './queries'
-import { runHeroQuery }     from './queries'
-import { runAboutQuery }    from './queries'
+import { runFeedbackQuery } from '@landing/feedback-fragment'
+import { runReviewsQuery }  from '@landing/reviews-fragment'
+import { runHeroQuery }     from '@landing/hero-fragment'
+import { runAboutQuery }    from '@landing/about-fragment'
 
 export const getStaticProps = async () => {
   const client = getClient()

@@ -6549,6 +6549,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@landing/reviews-fragment", "virtual:09e125a7dbc99b48dbd8b6d8e8ecfabc4199e657267e2eacea44267006e849cacafe5bb631c40c7ca29ca9de5eb91410e8e961ae61edd55b7a34ddaff952bf2c#workspace:landing/fragments/landing-reviews"],\
           ["@apollo/client", "virtual:6efc7307c64eb843935f28570918834352d46694051adccf1bd81feaccc2915256fb6f4bb1828750e8b3f26f0b02c77530075d5cf95eec16c8f9f288120e3450#npm:3.6.9"],\
+          ["@globals/data", "virtual:6efc7307c64eb843935f28570918834352d46694051adccf1bd81feaccc2915256fb6f4bb1828750e8b3f26f0b02c77530075d5cf95eec16c8f9f288120e3450#workspace:globals/data"],\
           ["@types/apollo__client", null],\
           ["@types/graphql", null],\
           ["@types/react", "npm:17.0.73"],\
@@ -6583,6 +6584,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@landing/reviews-fragment", "virtual:cc78e21148998824319f94f7bd4268caa455a0fb66439594f6e5393376ecaa7c62f848e87bd93c4e08e85a1f23eb22c4dd727a6bda68c77e7c67936bd75f88ca#workspace:landing/fragments/landing-reviews"],\
           ["@apollo/client", "virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#npm:3.6.9"],\
+          ["@globals/data", "virtual:653a57b63a7031a0376395884bb5c6d490870f863d88034cd33fbb9aa17424c3e058f3b2b1798911ce28fa465fb80eb9677a4e9b6dfd5be1268baa84ea3216bb#workspace:globals/data"],\
           ["@types/apollo__client", null],\
           ["@types/graphql", null],\
           ["@types/react", "npm:17.0.73"],\
@@ -6617,6 +6619,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@landing/reviews-fragment", "workspace:landing/fragments/landing-reviews"],\
           ["@apollo/client", "virtual:6efc7307c64eb843935f28570918834352d46694051adccf1bd81feaccc2915256fb6f4bb1828750e8b3f26f0b02c77530075d5cf95eec16c8f9f288120e3450#npm:3.6.9"],\
+          ["@globals/data", "virtual:6efc7307c64eb843935f28570918834352d46694051adccf1bd81feaccc2915256fb6f4bb1828750e8b3f26f0b02c77530075d5cf95eec16c8f9f288120e3450#workspace:globals/data"],\
           ["@types/react", "npm:17.0.73"],\
           ["@types/react-dom", "npm:17.0.25"],\
           ["@ui/button", "virtual:aaf5b04dfdb1d01e368d5b76e89ada4021747428102bf573c45f3d2df82d92b4f5461079152d4614d8c7125aab9da7f712530546702fa28806a522c622ab3214#workspace:ui/button"],\

@@ -3382,6 +3382,7 @@ __metadata:
   resolution: "@landing/reviews-fragment@workspace:landing/fragments/landing-reviews"
   dependencies:
     "@apollo/client": "npm:3.6.9"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": "npm:17.0.73"
     "@types/react-dom": "npm:17.0.25"
     "@ui/button": "workspace:0.0.1"

@@ -3,7 +3,7 @@ import { GET_SEO }          from '@globals/data'
 import { PageUri } from '@globals/data'
 import { getClient }        from '@globals/data'
 
-import { runContactsQuery } from './queries'
+import { runContactsQuery } from '@landing/contacts-fragment'
 
 export const getStaticProps = async () => {
   const client = getClient()
