@@ -11,9 +11,12 @@ import { Text }                 from '@ui/text'
 import { extractObject }        from '@globals/data'
 
 import { LandingFeedbackProps } from './landing-feedback.interface'
+import { useFeedback }          from './data'
 
-const LandingFeedback: FC<LandingFeedbackProps> = ({ language, data }) => {
-  const obj = extractObject('contentAddons', 'lead', data[language])
+const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
+  const { feedbackData } = useFeedback()
+
+  const obj = extractObject('contentAddons', 'lead', feedbackData[language])
 
   const imageUrl = obj.image.sourceUrl
   const imageAltText = obj.image.altText

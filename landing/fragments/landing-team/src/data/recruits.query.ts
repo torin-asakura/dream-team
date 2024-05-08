@@ -1,4 +1,4 @@
-import { gql } from '../../__generated__'
+import { gql } from '@apollo/client'
 
 export const GET_RECRUITS = gql(`
   query GetRecruits {

@@ -9,10 +9,13 @@ import { Box }                   from '@ui/layout'
 
 import { Item }                  from './item'
 import { LandingAboutProps }     from './landing-about.interface'
+import { useAbout }              from './data'
 import { splitItems }            from './helpers'
 
-const LandingAbout: FC<LandingAboutProps> = ({ language, data, skillsData }) => {
-  const [topSide, bottomSide] = splitItems(data[language])
+const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
+  const { aboutData } = useAbout()
+
+  const [topSide, bottomSide] = splitItems(aboutData[language])
   return (
     <Box px={['20px', '20px', '0px']}>
       <Column
@@ -45,7 +48,7 @@ const LandingAbout: FC<LandingAboutProps> = ({ language, data, skillsData }) => 
               </React.Fragment>
             ))}
             <Layout flexBasis={[64, 64, 160]} />
-            <LandingWorkDirections language={language} skillsData={skillsData} />
+            <LandingWorkDirections language={language} />
             <Layout flexBasis={[64, 64, 160]} />
             {bottomSide.reverse().map((
               { contentAddons: { title, content, excerpt, image } },

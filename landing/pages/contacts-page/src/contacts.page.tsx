@@ -1,15 +1,16 @@
-import { useReactiveVar }           from '@apollo/client'
+import { useReactiveVar }            from '@apollo/client'
 
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
 
 import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
-import { Seo }                       from '@globals/seo'
 import { LandingContacts }           from '@landing/contacts-fragment'
 import { Navigation }                from '@landing/navigation-fragment'
+import { Seo }                       from '@shared/seo'
 import { Preloader }                 from '@ui/preloader'
 import { ScrollContainer }           from '@ui/scroll'
+
 import { LOCOMOTIVE_SCROLL_WATCH }   from './contacts.constants'
 import { LOCOMOTIVE_SCROLL_OPTIONS } from './contacts.constants'
 import { ContactsPageProps }         from './contacts.interfaces'

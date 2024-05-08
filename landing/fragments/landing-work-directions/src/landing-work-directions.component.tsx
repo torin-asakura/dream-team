@@ -6,15 +6,14 @@ import { Layout }                     from '@ui/layout'
 import { Row }                        from '@ui/layout'
 import { Column }                     from '@ui/layout'
 import { Text }                       from '@ui/text'
-import { removeParagraphTags }        from '@ui/utils/src'
 
 import { Item }                       from './item'
 import { LandingWorkDirectionsProps } from './landing-work-directions.interface'
-import { sortBySide }                 from './helpers'
+import { useSkills }                  from './data/skills.hook'
 import { messages }                   from './messages'
 
-const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language, skillsData }) => {
-  const { leftSide, rightSide } = sortBySide(skillsData.map((node) => removeParagraphTags(node)))
+const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => {
+  const { leftSide, rightSide } = useSkills()
 
   return (
     <Layout width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>

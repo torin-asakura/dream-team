@@ -1,22 +1,22 @@
-import { useReactiveVar }           from '@apollo/client'
+import { useReactiveVar }            from '@apollo/client'
 
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useRef }                   from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
 
 import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
-import { Seo }                       from '@globals/seo'
 import { LandingFooter }             from '@landing/footer-fragment'
 import { Navigation }                from '@landing/navigation-fragment'
 import { PrivacyPolicy }             from '@landing/privacy-policy-fragment'
+import { Seo }                       from '@shared/seo'
 import { Preloader }                 from '@ui/preloader'
 import { ScrollContainer }           from '@ui/scroll'
+
 import { LOCOMOTIVE_SCROLL_OPTIONS } from './privacy-policy.constants'
 import { LOCOMOTIVE_SCROLL_WATCH }   from './privacy-policy.constants'
-
-import { PrivacyPolicyPageProps }   from './privacy-policy.interfaces'
-import { Language }                 from './store'
-import { languageVar }              from './store'
+import { PrivacyPolicyPageProps }    from './privacy-policy.interfaces'
+import { Language }                  from './store'
+import { languageVar }               from './store'
 
 const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ SEO }) => {
   const language = useReactiveVar<Language>(languageVar)
@@ -33,7 +33,7 @@ const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ SEO }) => {
       >
         <ScrollContainer data-scroll-container ref={containerRef}>
           <PrivacyPolicy language={language} />
-          <LandingFooter  language={language} />
+          <LandingFooter language={language} />
         </ScrollContainer>
       </LocomotiveScrollProvider>
     </Preloader>

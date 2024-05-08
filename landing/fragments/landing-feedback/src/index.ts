@@ -1,2 +1,2 @@
 export * from './landing-feedback.component'
-export * from './queries'
+export * from './data'

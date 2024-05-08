@@ -1,62 +1,93 @@
-import { PageUri }          from '@globals/data'
-import { GET_FOOTER }       from '@globals/data'
-import { GET_RECRUITS }     from '@globals/data'
-import { GET_SKILLS }       from '@globals/data'
-import { GET_NAVIGATION }   from '@globals/data'
-import { GET_SEO }          from '@globals/data'
-import { getClient }        from '@globals/data'
+/* eslint-disable one-var */
+/* eslint-disable prefer-const */
 
-import { runFeedbackQuery } from '@landing/feedback-fragment'
-import { runReviewsQuery }  from '@landing/reviews-fragment'
-import { runHeroQuery }     from '@landing/hero-fragment'
-import { runAboutQuery }    from '@landing/about-fragment'
+import { PageUri }          from '@globals/data'
+import { GET_SEO }          from '@globals/data'
+import { GET_ABOUT }        from '@landing/about-fragment'
+import { GET_FEEDBACK }     from '@landing/feedback-fragment'
+import { GET_FOOTER }       from '@landing/footer-fragment'
+import { GET_HERO }         from '@landing/hero-fragment'
+import { GET_NAVIGATION }   from '@landing/navigation-fragment'
+import { GET_REVIEWS }      from '@landing/reviews-fragment'
+import { GET_RECRUITS }     from '@landing/team-fragment'
+import { GET_SKILLS }       from '@landing/work-directions-fragment'
+import { addApolloState }   from '@globals/data'
+import { initializeApollo } from '@globals/data'
 
 export const getStaticProps = async () => {
-  const client = getClient()
+  const client = initializeApollo({})
 
-  let SEO
+  let seoContent,
+    navigationContent,
+    footerContent,
+    heroContent,
+    aboutContent,
+    reviewsContent,
+    feedbackContent,
+    skillsContent,
+    recruitsContent
 
-  const { data: seoData } = await client.query({
-    query: GET_SEO,
-    variables: { uri: PageUri.INDEX },
-  })
+  const seoPromise = client.query({ query: GET_SEO, variables: { uri: PageUri.INDEX } })
+  const navigationPromise = client.query({ query: GET_NAVIGATION })
+  const footerPromise = client.query({ query: GET_FOOTER })
 
-  if (seoData) {
-    SEO = {
-      RU: seoData.pageBy?.seo,
-      EN: seoData.pageBy?.translation?.seo,
-    }
-  } else SEO = { RU: {}, EN: {} }
+  const heroPromise = client.query({ query: GET_HERO })
+  const aboutPromise = client.query({ query: GET_ABOUT })
+  const reviewsPromise = client.query({ query: GET_REVIEWS })
+  const feedbackPromise = client.query({ query: GET_FEEDBACK })
+  const skillsPromise = client.query({ query: GET_SKILLS })
+  const recruitsPromise = client.query({ query: GET_RECRUITS })
 
-  const queryPromises: Array<Promise<any>> = [
-    runHeroQuery(),
-    runAboutQuery(),
-    runReviewsQuery(),
-    runFeedbackQuery(),
-  ]
+  ;[
+    seoContent,
+    navigationContent,
+    footerContent,
 
-  const retrievedData = await Promise.all(queryPromises)
+    heroContent,
+    aboutContent,
+    reviewsContent,
+    feedbackContent,
+    skillsContent,
+    recruitsContent,
+  ] = await Promise.allSettled([
+    seoPromise,
+    navigationPromise,
+    footerPromise,
+    heroPromise,
+    aboutPromise,
+    reviewsPromise,
+    feedbackPromise,
+    skillsPromise,
+    recruitsPromise,
+  ])
 
-  const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
-
-  const { data: navigationContent } = await client.query({ query: GET_NAVIGATION })
-
-  const navigationData = navigationContent.navigationItems?.nodes
-
-  const { data: footerContent } = await client.query({ query: GET_FOOTER })
-
-  const footerData = footerContent.footerItems?.nodes
-
-  const { data: recruitsContent } = await client.query({ query: GET_RECRUITS })
-
-  const recruitsData = recruitsContent.recruits?.nodes
-
-  const { data: skillsContent } = await client.query({ query: GET_SKILLS })
-
-  const skillsData = skillsContent.skillCategories?.nodes
-
-  return {
-    props: { skillsData, SEO, data, navigationData, footerData, recruitsData },
-    revalidate: 3600,
+  const SEO = {
+    RU: seoContent.value.data.pageBy.seo || null,
+    EN: seoContent.value.data.pageBy.translation.seo || null,
   }
+  const navigationData = navigationContent || null
+  const footerData = footerContent || null
+
+  const heroData = heroContent || null
+  const aboutData = aboutContent || null
+  const reviewsData = reviewsContent || null
+  const feedbackData = feedbackContent || null
+  const skillsData = skillsContent || null
+  const recruitsData = recruitsContent || null
+
+  return addApolloState(client, {
+    props: {
+      SEO,
+      navigationData,
+      footerData,
+
+      heroData,
+      aboutData,
+      reviewsData,
+      feedbackData,
+      skillsData,
+      recruitsData,
+    },
+    revalidate: 3600,
+  })
 }

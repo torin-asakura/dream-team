@@ -1,5 +1,5 @@
 {
-  "name": "@globals/seo",
+  "name": "@shared/seo",
   "version": "0.0.1",
   "main": "src/index.ts",
   "devDependencies": {

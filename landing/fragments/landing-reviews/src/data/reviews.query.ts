@@ -2,7 +2,7 @@ import { gql }       from '@apollo/client'
 
 import { getClient } from '@globals/data'
 
-const GET_REVIEWS = gql`
+export const GET_REVIEWS = gql`
   query GetReviews {
     reviews {
       nodes {

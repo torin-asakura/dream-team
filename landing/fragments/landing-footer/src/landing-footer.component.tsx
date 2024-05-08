@@ -5,25 +5,25 @@ import { Divider }             from '@ui/divider'
 import { DreamTeamIcon }       from '@ui/icons'
 import { DreamTeamMobileIcon } from '@ui/icons'
 import { Image }               from '@ui/image'
-import { Layout }        from '@ui/layout'
-import { Row }           from '@ui/layout'
-import { Column }        from '@ui/layout'
-import { Box }           from '@ui/layout'
-import { Link }          from '@ui/link'
-import { SocialLinks }   from '@ui/social-links'
-import { Text }          from '@ui/text'
-import { Space }         from '@ui/text'
-import { extractObject } from '@globals/data'
-import { useSphere }     from '@ui/logo'
-import { useFooter }     from './data'
+import { Layout }              from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Box }                 from '@ui/layout'
+import { Link }                from '@ui/link'
+import { SocialLinks }         from '@ui/social-links'
+import { Text }                from '@ui/text'
+import { Space }               from '@ui/text'
+import { extractObject }       from '@globals/data'
+import { useSphere }           from '@ui/logo'
 
 import { LandingProps }        from './landing-footer.interface'
+import { useFooter }           from './data'
 import { messages }            from './messages'
 
 const LandingFooter: FC<LandingProps> = ({ language }) => {
   const sphere = useSphere()
 
-  const {footerData} = useFooter()
+  const { footerData } = useFooter()
 
   const workingHours = extractObject('contentAddons', 'working-hours', footerData[language])
   const by = extractObject('contentAddons', 'by', footerData[language])

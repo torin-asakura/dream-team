@@ -1,20 +1,19 @@
-import React                   from 'react'
-import { FC }                  from 'react'
+import React            from 'react'
+import { FC }           from 'react'
 
-import { Condition }           from '@ui/condition'
-import { Layout }              from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Box }                 from '@ui/layout'
-import { Text }                from '@ui/text'
-import { removeParagraphTags } from '@ui/utils'
+import { Condition }    from '@ui/condition'
+import { Layout }       from '@ui/layout'
+import { Row }          from '@ui/layout'
+import { Column }       from '@ui/layout'
+import { Box }          from '@ui/layout'
+import { Text }         from '@ui/text'
 
-import { Item }                from './item'
-import { LandingProps }        from './landing-team.interface'
+import { Item }         from './item'
+import { LandingProps } from './landing-team.interface'
+import { useRecruits }  from './data'
 
-const LandingTeam: FC<LandingProps> = ({ recruitsData, language }) => {
-  const recruitsWithoutTags = recruitsData.map((node) => removeParagraphTags(node))
-
+const LandingTeam: FC<LandingProps> = ({ language }) => {
+  const { recruitsData } = useRecruits()
   const filterByLanguage = ({ language: { code } }) => code === language
 
   return (
@@ -37,15 +36,13 @@ const LandingTeam: FC<LandingProps> = ({ recruitsData, language }) => {
               flexDirection={['column', 'column', 'row']}
               flexWrap={['wrap', 'wrap', 'nowrap']}
             >
-              {recruitsWithoutTags.filter(filterByLanguage).map((
+              {recruitsData.filter(filterByLanguage).map((
                 { title: recruit, featuredImage: image },
                 index
               ) => (
                 <React.Fragment key={recruit}>
                   <Item recruit={recruit} image={image} language={language} />
-                  <Condition
-                    match={recruitsWithoutTags.filter(filterByLanguage).length - 1 !== index}
-                  >
+                  <Condition match={recruitsData.filter(filterByLanguage).length - 1 !== index}>
                     <Layout flexBasis={32} flexShrink={0} />
                   </Condition>
                 </React.Fragment>

@@ -1,22 +1,21 @@
 /* eslint-disable one-var */
 /* eslint-disable prefer-const */
 
+import { GET_FOOTER }       from '@landing/footer-fragment'
+import { GET_NAVIGATION }   from '@landing/navigation-fragment'
 import { addApolloState }   from '@globals/data'
 import { initializeApollo } from '@globals/data'
-import { GET_FOOTER }       from '@landing/footer-fragment'
-import { GET_NAVIGATION }    from '@landing/navigation-fragment'
-
 
 export const getStaticProps = async () => {
   const client = initializeApollo({})
 
-  let navigationContent,footerContent
+  let navigationContent, footerContent
 
-  const navigationPromise = client.query({query:GET_NAVIGATION})
+  const navigationPromise = client.query({ query: GET_NAVIGATION })
 
-  const footerPromise = client.query({query:GET_FOOTER})
+  const footerPromise = client.query({ query: GET_FOOTER })
 
-  ;[navigationContent,footerContent] = await Promise.allSettled([navigationPromise,footerPromise])
+  ;[navigationContent, footerContent] = await Promise.allSettled([navigationPromise, footerPromise])
 
   const navigationData = navigationContent || null
   const footerData = footerContent || null
@@ -24,7 +23,7 @@ export const getStaticProps = async () => {
   return addApolloState(client, {
     props: {
       navigationData,
-      footerData
+      footerData,
     },
     revalidate: 3600,
   })

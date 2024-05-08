@@ -14,23 +14,22 @@ import { NextLink }            from '@ui/link'
 import { Logo }                from '@ui/logo'
 import { AnimateOnLoad }       from '@ui/preloader'
 import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
-import {useNavigation} from './data'
 
 import { NavigationProps }     from './navigation.interface'
 import { Language }            from './navigation.interface'
+import { useNavigation }        from './data'
 import { messages }            from './messages'
 
 const switchLanguage = (language: Language, languageVar) => () => {
   languageVar(language === 'RU' ? 'EN' : 'RU')
 }
 
-const Navigation: FC<NavigationProps> = ({  language, languageVar }) => {
+const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
   const [visible, setVisible] = useState<boolean>(false)
   const [isNavVisible, setIsNavVisible] = useState<boolean>(true)
   const { scroll } = useLocomotiveScroll()
   const { shadows }: any = useTheme()
-  const {navigationData} = useNavigation()
-
+  const { navigationData } = useNavigation()
 
   useEffect(() => {
     if (scroll) {

@@ -1,20 +1,22 @@
 import { useQuery }           from '@apollo/client'
+
 import { GET_PRIVACY_POLICY } from './privacy-policy.query'
 
 export const usePrivacyPolicy = () => {
+  const { data } = useQuery(GET_PRIVACY_POLICY)
 
-  const {data} = useQuery(GET_PRIVACY_POLICY)
+  if (!data) {
+    return { privacyPolicyData: { RU: [], EN: [] } }
+  }
 
-  if (!data){ return {privacyPolicyData:{ RU: [], EN: [] }}}
-
-  return{
-    privacyPolicyData:{
+  return {
+    privacyPolicyData: {
       RU: data.privacyPolicyItems.nodes.filter(
         (privacyPolicyFragment) => privacyPolicyFragment.language.code === 'RU'
       ),
       EN: data.privacyPolicyItems.nodes.filter(
         (privacyPolicyFragment) => privacyPolicyFragment.language.code === 'EN'
       ),
-    }
+    },
   }
 }

@@ -4,7 +4,8 @@
     "ui/**/*",
     "landing/**/*",
     "globals/**/*",
-    "forks/**/*"
+    "forks/**/*",
+    "shared/**/*"
   ],
   "prettier": "@atls/config-prettier",
   "resolutions": {

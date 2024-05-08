@@ -1,2 +1,2 @@
 export * from './landing-about.component'
-export * from './queries'
+export * from './data'

@@ -1954,20 +1954,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@globals/seo@workspace:0.0.1, @globals/seo@workspace:globals/seo":
-  version: 0.0.0-use.local
-  resolution: "@globals/seo@workspace:globals/seo"
-  dependencies:
-    react: "npm:17.0.2"
-    react-dom: "npm:17.0.2"
-    react-helmet: "npm:6.1.0"
-  peerDependencies:
-    react: 17
-    react-dom: 17
-    react-helmet: "*"
-  languageName: unknown
-  linkType: soft
-
 "@graphql-codegen/add@npm:^5.0.2":
   version: 5.0.2
   resolution: "@graphql-codegen/add@npm:5.0.2"
@@ -3000,7 +2986,6 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.6.9"
     "@globals/data": "workspace:0.0.1"
-    "@globals/seo": "workspace:0.0.1"
     "@landing/404-fragment": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"
@@ -3082,9 +3067,9 @@ __metadata:
     "@emotion/styled": "npm:11.9.3"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
-    "@globals/seo": "workspace:0.0.1"
     "@landing/contacts-fragment": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"
+    "@shared/seo": "workspace:0.0.1"
     "@types/react": "npm:17.0.73"
     "@types/react-dom": "npm:17.0.25"
     "@types/react-helmet": "npm:6"
@@ -3220,7 +3205,6 @@ __metadata:
     "@emotion/styled": "npm:11.9.3"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
-    "@globals/seo": "workspace:0.0.1"
     "@landing/about-fragment": "workspace:0.0.1"
     "@landing/feedback-fragment": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
@@ -3228,6 +3212,8 @@ __metadata:
     "@landing/navigation-fragment": "workspace:0.0.1"
     "@landing/reviews-fragment": "workspace:0.0.1"
     "@landing/team-fragment": "workspace:0.0.1"
+    "@landing/work-directions-fragment": "workspace:0.0.1"
+    "@shared/seo": "workspace:0.0.1"
     "@types/react": "npm:17.0.73"
     "@types/react-dom": "npm:17.0.25"
     "@types/react-helmet": "npm:6"
@@ -3310,10 +3296,10 @@ __metadata:
     "@emotion/styled": "npm:11.9.3"
     "@forks/react-locomotive-scroll": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
-    "@globals/seo": "workspace:0.0.1"
     "@landing/footer-fragment": "workspace:0.0.1"
     "@landing/navigation-fragment": "workspace:0.0.1"
     "@landing/privacy-policy-fragment": "workspace:0.0.1"
+    "@shared/seo": "workspace:0.0.1"
     "@types/react": "npm:17.0.73"
     "@types/react-dom": "npm:17.0.25"
     "@types/react-helmet": "npm:6"
@@ -3811,6 +3797,20 @@ __metadata:
   checksum: cf2cc9a7e653d555a7b7d4898931d588ea308108d0acfd20ffab2039fa90793f33a4e7cd465b4527ad31e4b7b59df84295339e94a19c60a51490744c14b937b3
   languageName: node
   linkType: hard
+
+"@shared/seo@workspace:0.0.1, @shared/seo@workspace:shared/seo":
+  version: 0.0.0-use.local
+  resolution: "@shared/seo@workspace:shared/seo"
+  dependencies:
+    react: "npm:17.0.2"
+    react-dom: "npm:17.0.2"
+    react-helmet: "npm:6.1.0"
+  peerDependencies:
+    react: 17
+    react-dom: 17
+    react-helmet: "*"
+  languageName: unknown
+  linkType: soft
 
 "@sinclair/typebox@npm:^0.24.1":
   version: 0.24.51

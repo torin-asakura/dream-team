@@ -1,17 +1,16 @@
 import React                  from 'react'
 import { FC }                 from 'react'
 
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
-import { extractObject }    from '@globals/data'
-import { usePrivacyPolicy } from './data'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Text }               from '@ui/text'
+import { extractObject }      from '@globals/data'
 
 import { PrivacyPolicyProps } from './privacy-policy.interface'
+import { usePrivacyPolicy }   from './data'
 
 const PrivacyPolicy: FC<PrivacyPolicyProps> = ({ language }) => {
-
-  const {privacyPolicyData} = usePrivacyPolicy()
+  const { privacyPolicyData } = usePrivacyPolicy()
 
   const policyObj = extractObject('contentAddons', 'lead', privacyPolicyData[language])
 

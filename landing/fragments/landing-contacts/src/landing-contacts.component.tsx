@@ -20,12 +20,11 @@ import { extractObject }        from '@globals/data'
 import { useHover }             from '@ui/utils'
 
 import { LandingContactsProps } from './landing-contacts.interface'
-import { messages }             from './messages'
 import { useContacts }          from './data'
+import { messages }             from './messages'
 
 const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
-
-  const {contactsData} = useContacts()
+  const { contactsData } = useContacts()
 
   const theme: any = useTheme()
   const [hover, hoverProps] = useHover()
