@@ -1937,7 +1937,9 @@ __metadata:
     "@graphql-typed-document-node/core": "npm:3.2.0"
     "@types/lodash": "npm:^4"
     "@types/react": "npm:17.0.73"
+    deepmerge: "npm:4.3.1"
     graphql: "npm:15.8.0"
+    lodash: "npm:4.17.21"
     react: "npm:17.0.2"
   peerDependencies:
     "@apollo/client": "*"
@@ -7464,17 +7466,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"deepmerge@npm:4.3.1, deepmerge@npm:^4.2.2":
+  version: 4.3.1
+  resolution: "deepmerge@npm:4.3.1"
+  checksum: 367ae28f98c94b2807dd6eba48f4c3d051742c2ab431f1037d60f5cb5af989aac2b170b6a891d5617679bcb95881b4e22a0616161a1f2154894b349b13d384e0
+  languageName: node
+  linkType: hard
+
 "deepmerge@npm:^1.5.2":
   version: 1.5.2
   resolution: "deepmerge@npm:1.5.2"
   checksum: cd2f09ad1ada5915179951f1a111c18cb0f42530edea0c8890dcaade5ae9984e66b3e114c41852dc8b4dea36fa4c024ed9dbd87b4299e14db0a3ab17e2de7605
-  languageName: node
-  linkType: hard
-
-"deepmerge@npm:^4.2.2":
-  version: 4.3.1
-  resolution: "deepmerge@npm:4.3.1"
-  checksum: 367ae28f98c94b2807dd6eba48f4c3d051742c2ab431f1037d60f5cb5af989aac2b170b6a891d5617679bcb95881b4e22a0616161a1f2154894b349b13d384e0
   languageName: node
   linkType: hard
 

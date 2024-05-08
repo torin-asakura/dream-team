@@ -2,7 +2,7 @@ import { gql }       from '@apollo/client'
 
 import { getClient } from '@globals/data'
 
-const GET_CONTACTS = gql`
+export const GET_CONTACTS = gql`
   query GetContacts {
     contactItems {
       nodes {

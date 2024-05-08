@@ -22,5 +22,5 @@ interface Data {
 
 export interface LandingContactsProps {
   language: Language
-  data: Data
+
 }

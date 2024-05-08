@@ -1,36 +1,38 @@
-import { GET_NAVIGATION }   from '@globals/data'
-import { GET_SEO }          from '@globals/data'
-import { PageUri } from '@globals/data'
-import { getClient }        from '@globals/data'
+/* eslint-disable one-var */
+/* eslint-disable prefer-const */
 
-import { runContactsQuery } from '@landing/contacts-fragment'
+import { initializeApollo } from '@globals/data'
+import { GET_NAVIGATION }   from '@landing/navigation-fragment'
+import { GET_SEO }          from '@globals/data'
+import { PageUri }          from '@globals/data'
+import { GET_CONTACTS }     from '@landing/contacts-fragment'
+import {addApolloState} from '@globals/data'
 
 export const getStaticProps = async () => {
-  const client = getClient()
+  const client = initializeApollo({})
 
-  let SEO
+  let seoContent,navigationContent,contactsContent
 
-  const { data: seoData } = await client.query({
-    query: GET_SEO,
-    variables: { uri: PageUri.CONTACTS },
+  const seoPromise = client.query({query:GET_SEO,variables:{uri:PageUri.CONTACTS}})
+
+  const navigationPromise = client.query({query:GET_NAVIGATION})
+
+  const contactsPromise = client.query({query:GET_CONTACTS})
+
+  ;[seoContent,navigationContent,contactsContent] = await Promise.allSettled([
+    seoPromise,navigationPromise,contactsPromise
+  ])
+
+  const SEO = {RU: seoContent.value.data.pageBy.seo || null, EN: seoContent.value.data.pageBy.translation.seo || null}
+  const navigationData = navigationContent || null
+  const contactsData = contactsContent || null
+
+  return addApolloState(client, {
+    props: {
+      SEO,
+      navigationData,
+      contactsData
+    },
+    revalidate: 3600,
   })
-
-  if (seoData) {
-    SEO = {
-      RU: seoData.pageBy?.seo,
-      EN: seoData.pageBy?.translation?.seo,
-    }
-  } else SEO = { RU: {}, EN: {} }
-
-  const queryPromises: Array<Promise<any>> = [runContactsQuery()]
-
-  const retrievedData = await Promise.all(queryPromises)
-
-  const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
-
-  const { data: navigationContent } = await client.query({ query: GET_NAVIGATION })
-
-  const navigationData = navigationContent.navigationItems?.nodes
-
-  return { props: { SEO, data, navigationData }, revalidate: 3600 }
 }

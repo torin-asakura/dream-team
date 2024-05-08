@@ -21,16 +21,20 @@ import { useHover }             from '@ui/utils'
 
 import { LandingContactsProps } from './landing-contacts.interface'
 import { messages }             from './messages'
+import { useContacts }          from './data'
 
-const LandingContacts: FC<LandingContactsProps> = ({ language, data }) => {
+const LandingContacts: FC<LandingContactsProps> = ({ language }) => {
+
+  const {contactsData} = useContacts()
+
   const theme: any = useTheme()
   const [hover, hoverProps] = useHover()
 
-  const objLead = extractObject('contentAddons', 'lead', data[language])
-  const objWorkingHours = extractObject('contentAddons', 'working-hours', data[language])
-  const objEmail = extractObject('contentAddons', 'email', data[language])
-  const objWhatsapp = extractObject('contentAddons', 'whatsapp', data[language])
-  const objPhone = extractObject('contentAddons', 'phone', data[language])
+  const objLead = extractObject('contentAddons', 'lead', contactsData[language])
+  const objWorkingHours = extractObject('contentAddons', 'working-hours', contactsData[language])
+  const objEmail = extractObject('contentAddons', 'email', contactsData[language])
+  const objWhatsapp = extractObject('contentAddons', 'whatsapp', contactsData[language])
+  const objPhone = extractObject('contentAddons', 'phone', contactsData[language])
 
   const { title } = objLead
   const { content } = objLead

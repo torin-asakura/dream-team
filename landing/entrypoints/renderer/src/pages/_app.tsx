@@ -4,11 +4,11 @@ import { ApolloProvider } from '@apollo/client'
 
 import React              from 'react'
 
-import { ThemeProvider }  from '@ui/theme'
-import { getClient }      from '@globals/data'
+import { ThemeProvider } from '@ui/theme'
+import {useApollo}       from '@globals/data'
 
 const Bare = ({ Component, pageProps, props }) => {
-  const client = getClient()
+  const client = useApollo(pageProps)
 
   return (
     <ApolloProvider client={client}>
