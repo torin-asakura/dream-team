@@ -1,17 +1,31 @@
-import { GET_FOOTER }     from '@globals/data'
-import { GET_NAVIGATION } from '@globals/data'
-import { getClient }      from '@globals/data'
+/* eslint-disable one-var */
+/* eslint-disable prefer-const */
+
+import { addApolloState }   from '@globals/data'
+import { initializeApollo } from '@globals/data'
+import { GET_FOOTER }       from '@landing/footer-fragment'
+import { GET_NAVIGATION }    from '@landing/navigation-fragment'
+
 
 export const getStaticProps = async () => {
-  const client = getClient()
+  const client = initializeApollo({})
 
-  const { data: navigationContent } = await client.query({ query: GET_NAVIGATION })
+  let navigationContent,footerContent
 
-  const navigationData = navigationContent.navigationItems?.nodes
+  const navigationPromise = client.query({query:GET_NAVIGATION})
 
-  const { data: footerContent } = await client.query({ query: GET_FOOTER })
+  const footerPromise = client.query({query:GET_FOOTER})
 
-  const footerData = footerContent.footerItems?.nodes
+  ;[navigationContent,footerContent] = await Promise.allSettled([navigationPromise,footerPromise])
 
-  return { props: { navigationData, footerData }, revalidate: 3600 }
+  const navigationData = navigationContent || null
+  const footerData = footerContent || null
+
+  return addApolloState(client, {
+    props: {
+      navigationData,
+      footerData
+    },
+    revalidate: 3600,
+  })
 }
