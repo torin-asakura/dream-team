@@ -5,7 +5,7 @@ import { ApolloProvider } from '@apollo/client'
 import React              from 'react'
 
 import { ThemeProvider }  from '@ui/theme'
-import { useApollo }       from '@globals/data'
+import { useApollo }      from '@globals/data'
 
 const Bare = ({ Component, pageProps, props }) => {
   const client = useApollo(pageProps)

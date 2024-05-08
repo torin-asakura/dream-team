@@ -1,3 +1,5 @@
+import { SeoDataProps } from '@shared/seo'
+
 export interface PrivacyPolicyPageProps {
-  SEO: any
+  SEO: SeoDataProps
 }

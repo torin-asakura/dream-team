@@ -6,7 +6,7 @@ import { PageUri }          from '@globals/data'
 import { GET_CONTACTS }     from '@landing/contacts-fragment'
 import { GET_NAVIGATION }   from '@landing/navigation-fragment'
 import { initializeApollo } from '@globals/data'
-import { addApolloState }    from '@globals/data'
+import { addApolloState }   from '@globals/data'
 
 export const getStaticProps = async () => {
   const client = initializeApollo({})

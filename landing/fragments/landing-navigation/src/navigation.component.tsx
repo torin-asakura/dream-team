@@ -17,7 +17,7 @@ import { useLocomotiveScroll } from '@forks/react-locomotive-scroll'
 
 import { NavigationProps }     from './navigation.interface'
 import { Language }            from './navigation.interface'
-import { useNavigation }        from './data'
+import { useNavigation }       from './data'
 import { messages }            from './messages'
 
 const switchLanguage = (language: Language, languageVar) => () => {

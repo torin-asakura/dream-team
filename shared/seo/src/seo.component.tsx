@@ -1,7 +1,10 @@
-import React  from 'react'
-import Helmet from 'react-helmet'
+import React        from 'react'
+import Helmet       from 'react-helmet'
+import { FC }       from 'react'
 
-export const Seo = ({ SEO, language }) => {
+import { SeoProps } from './seo.interfaces'
+
+export const Seo: FC<SeoProps> = ({ SEO, language }) => {
   const { title } = SEO[language]
 
   return (
