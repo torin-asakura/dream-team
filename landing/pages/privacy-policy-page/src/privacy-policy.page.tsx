@@ -4,47 +4,36 @@ import React                        from 'react'
 import { FC }                       from 'react'
 import { useRef }                   from 'react'
 
-import { LocomotiveScrollProvider } from '@forks/react-locomotive-scroll'
-import { Seo }                      from '@globals/seo'
-import { LandingFooter }            from '@landing/footer-fragment'
-import { Navigation }               from '@landing/navigation-fragment'
-import { PrivacyPolicy }            from '@landing/privacy-policy-fragment'
-import { Preloader }                from '@ui/preloader'
-import { ScrollContainer }          from '@ui/scroll'
+import { LocomotiveScrollProvider }  from '@forks/react-locomotive-scroll'
+import { Seo }                       from '@globals/seo'
+import { LandingFooter }             from '@landing/footer-fragment'
+import { Navigation }                from '@landing/navigation-fragment'
+import { PrivacyPolicy }             from '@landing/privacy-policy-fragment'
+import { Preloader }                 from '@ui/preloader'
+import { ScrollContainer }           from '@ui/scroll'
+import { LOCOMOTIVE_SCROLL_OPTIONS } from './privacy-policy.constants'
+import { LOCOMOTIVE_SCROLL_WATCH }   from './privacy-policy.constants'
 
 import { PrivacyPolicyPageProps }   from './privacy-policy.interfaces'
 import { Language }                 from './store'
 import { languageVar }              from './store'
 
-const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({
-  footerData,
-  navigationData,
-  SEO = { RU: {}, EN: {} },
-  data: { privacyPolicy },
-}) => {
+const PrivacyPolicyPage: FC<PrivacyPolicyPageProps> = ({ SEO }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
 
   return (
     <Preloader>
       <Seo SEO={SEO} language={language} />
-      <Navigation navigationData={navigationData} language={language} languageVar={languageVar} />
+      <Navigation language={language} languageVar={languageVar} />
       <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          smartphone: {
-            smooth: true,
-          },
-          tablet: {
-            smooth: true,
-          },
-        }}
+        options={LOCOMOTIVE_SCROLL_OPTIONS}
+        watch={LOCOMOTIVE_SCROLL_WATCH}
         containerRef={containerRef}
-        watch={[]}
       >
         <ScrollContainer data-scroll-container ref={containerRef}>
-          <PrivacyPolicy language={language} data={privacyPolicy} />
-          <LandingFooter footerData={footerData} language={language} />
+          <PrivacyPolicy language={language} />
+          <LandingFooter  language={language} />
         </ScrollContainer>
       </LocomotiveScrollProvider>
     </Preloader>

@@ -1,41 +1,40 @@
-import { PageUri }               from '@globals/data'
-import { GET_FOOTER }            from '@globals/data'
-import { GET_NAVIGATION }        from '@globals/data'
-import { GET_SEO }               from '@globals/data'
-import { getClient }             from '@globals/data'
+/* eslint-disable one-var */
+/* eslint-disable prefer-const */
 
-import { runPrivacyPolicyQuery } from '@landing/privacy-policy-fragment'
+import { addApolloState }     from '@globals/data'
+import { initializeApollo }   from '@globals/data'
+import { PageUri }            from '@globals/data'
+import { GET_FOOTER }         from '@landing/footer-fragment'
+import { GET_NAVIGATION }     from '@landing/navigation-fragment'
+import { GET_SEO }            from '@globals/data'
+import { GET_PRIVACY_POLICY } from '@landing/privacy-policy-fragment'
 
 export const getStaticProps = async () => {
-  const client = getClient()
+  const client = initializeApollo({})
 
-  let SEO
+  let seoContent, navigationContent, privacyPolicyContent, footerContent
 
-  const { data: seoData } = await client.query({
-    query: GET_SEO,
-    variables: { uri: PageUri.PRIVACY_POLICY },
+  const seoPromise = client.query({query:GET_SEO,variables:{uri:PageUri.PRIVACY_POLICY}})
+  const navigationPromise = client.query({query:GET_NAVIGATION})
+  const privacyPolicyPromise = client.query({query:GET_PRIVACY_POLICY})
+  const footerPromise = client.query({query:GET_FOOTER})
+
+  ;[seoContent,navigationContent,privacyPolicyContent,footerContent] = await Promise.allSettled([
+    seoPromise,navigationPromise,privacyPolicyPromise,footerPromise])
+
+  const SEO = {RU: seoContent.value.data.pageBy.seo || null, EN: seoContent.value.data.pageBy.translation.seo || null}
+  const navigationData = navigationContent || null
+  const privacyPolicyData = privacyPolicyContent || null
+  const footerData = footerContent || null
+
+  return addApolloState(client, {
+    props: {
+      SEO,
+      navigationData,
+      privacyPolicyData,
+      footerData
+    },
+    revalidate: 3600,
   })
 
-  if (seoData) {
-    SEO = {
-      RU: seoData.pageBy?.seo,
-      EN: seoData.pageBy?.translation?.seo,
-    }
-  } else SEO = { RU: {}, EN: {} }
-
-  const queryPromises: Array<Promise<any>> = [runPrivacyPolicyQuery()]
-
-  const retrievedData = await Promise.all(queryPromises)
-
-  const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
-
-  const { data: navigationContent } = await client.query({ query: GET_NAVIGATION })
-
-  const navigationData = navigationContent.navigationItems?.nodes
-
-  const { data: footerContent } = await client.query({ query: GET_FOOTER })
-
-  const footerData = footerContent.footerItems?.nodes
-
-  return { props: { footerData, SEO, data, navigationData } }
 }

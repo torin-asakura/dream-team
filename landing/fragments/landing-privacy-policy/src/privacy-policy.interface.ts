@@ -18,5 +18,4 @@ interface Data {
 
 export interface PrivacyPolicyProps {
   language: Language
-  data: Data
 }

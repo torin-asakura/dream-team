@@ -1,2 +1,2 @@
 export * from './privacy-policy.component'
-export * from './queries'
+export * from './data'
