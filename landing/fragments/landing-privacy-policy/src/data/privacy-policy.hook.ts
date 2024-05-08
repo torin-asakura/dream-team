@@ -3,7 +3,7 @@ import { useQuery }           from '@apollo/client'
 import { GET_PRIVACY_POLICY } from './privacy-policy.query'
 
 export const usePrivacyPolicy = () => {
-  const { data } = useQuery(GET_PRIVACY_POLICY)
+  const { data } = useQuery(GET_PRIVACY_POLICY,{fetchPolicy:'cache-only'})
 
   if (!data) {
     return { privacyPolicyData: { RU: [], EN: [] } }
