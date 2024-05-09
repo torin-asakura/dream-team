@@ -17,14 +17,17 @@ import { FAST_BLACK_COLOR_RGBA }  from './landing-hero.constants'
 import { CDN_VIDEO_PATH }         from './landing-hero.constants'
 import { HeroProps }              from './landing-hero.interface'
 import { Video }                  from './video'
+import { useHero }                from './data'
 
 const fac = new FastAverageColor()
 
-const LandingHero: FC<HeroProps> = ({ data, language }) => {
+const LandingHero: FC<HeroProps> = ({ language }) => {
+  const { heroData } = useHero()
+
   const [backgroundColor, setBackgroundColor] = useState<string>('')
   const [videoIsPlaying, setVideoIsPlaying] = useState<boolean>(false)
 
-  const { title, content } = extractObject('contentAddons', 'lead', data[language])
+  const { title, content } = extractObject('contentAddons', 'lead', heroData[language])
 
   useEffect(() => {
     if (!videoIsPlaying) return

@@ -1,1 +1,2 @@
-export * from './queries'
+export * from './footer.query'
+export * from './footer.hook'

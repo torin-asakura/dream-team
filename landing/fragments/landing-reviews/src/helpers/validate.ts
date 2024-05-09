@@ -1,1 +1,2 @@
-export const formatString = (str) => str.replace(/(<p>|<\/p>)/g, '').replace(/&nbsp;/g, ' ')
+export const formatString = (str: string): string =>
+  str.replace(/(<p>|<\/p>)/g, '').replace(/&nbsp;/g, ' ')

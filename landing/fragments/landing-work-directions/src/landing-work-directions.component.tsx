@@ -9,11 +9,11 @@ import { Text }                       from '@ui/text'
 
 import { Item }                       from './item'
 import { LandingWorkDirectionsProps } from './landing-work-directions.interface'
-import { useData }                    from './data'
+import { useSkills }                  from './data/skills.hook'
 import { messages }                   from './messages'
 
 const LandingWorkDirections: FC<LandingWorkDirectionsProps> = ({ language }) => {
-  const { leftSide, rightSide } = useData()
+  const { leftSide, rightSide } = useSkills()
 
   return (
     <Layout width='100%' flexWrap={['wrap', 'wrap', 'nowrap']}>

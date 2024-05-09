@@ -22,12 +22,13 @@ import { messages }            from './messages'
 
 const LandingFooter: FC<LandingProps> = ({ language }) => {
   const sphere = useSphere()
-  const data = useFooter()
 
-  const workingHours = extractObject('contentAddons', 'working-hours', data[language])
-  const by = extractObject('contentAddons', 'by', data[language])
-  const email = extractObject('contentAddons', 'email', data[language])
-  const phone = extractObject('contentAddons', 'phone', data[language])
+  const { footerData } = useFooter()
+
+  const workingHours = extractObject('contentAddons', 'working-hours', footerData[language])
+  const by = extractObject('contentAddons', 'by', footerData[language])
+  const email = extractObject('contentAddons', 'email', footerData[language])
+  const phone = extractObject('contentAddons', 'phone', footerData[language])
 
   return (
     <Box itemScope itemType='http://schema.org/Organization'>

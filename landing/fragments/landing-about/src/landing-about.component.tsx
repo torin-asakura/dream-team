@@ -9,11 +9,13 @@ import { Box }                   from '@ui/layout'
 
 import { Item }                  from './item'
 import { LandingAboutProps }     from './landing-about.interface'
+import { useAbout }              from './data'
 import { splitItems }            from './helpers'
 
-const LandingAbout: FC<LandingAboutProps> = ({ language, data }) => {
-  const [topSide, bottomSide] = splitItems(data[language])
+const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
+  const { aboutData } = useAbout()
 
+  const [topSide, bottomSide] = splitItems(aboutData[language])
   return (
     <Box px={['20px', '20px', '0px']}>
       <Column

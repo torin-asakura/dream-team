@@ -6,6 +6,7 @@
     "@forks/react-locomotive-scroll": "workspace:0.0.1",
     "@landing/contacts-fragment": "workspace:0.0.1",
     "@landing/navigation-fragment": "workspace:0.0.1",
+    "@shared/seo": "workspace:0.0.1",
     "locomotive-scroll": "4.1.4"
   },
   "devDependencies": {

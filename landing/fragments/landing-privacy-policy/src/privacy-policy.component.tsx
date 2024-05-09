@@ -7,9 +7,12 @@ import { Text }               from '@ui/text'
 import { extractObject }      from '@globals/data'
 
 import { PrivacyPolicyProps } from './privacy-policy.interface'
+import { usePrivacyPolicy }   from './data'
 
-const PrivacyPolicy: FC<PrivacyPolicyProps> = ({ language, data }) => {
-  const policyObj = extractObject('contentAddons', 'lead', data[language])
+const PrivacyPolicy: FC<PrivacyPolicyProps> = ({ language }) => {
+  const { privacyPolicyData } = usePrivacyPolicy()
+
+  const policyObj = extractObject('contentAddons', 'lead', privacyPolicyData[language])
 
   const policyContent = policyObj.content
   const policyTitle = policyObj.title

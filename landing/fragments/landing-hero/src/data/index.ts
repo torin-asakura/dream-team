@@ -1,1 +1,2 @@
-export * from './use-get-asset-by-id.hook'
+export * from './hero.query'
+export * from './hero.hook'

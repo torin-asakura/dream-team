@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@apollo/client": "3.6.9",
+    "@globals/data": "workspace:0.0.1",
     "@ui/preloader": "workspace:0.0.1",
     "react": "17.0.2"
   },

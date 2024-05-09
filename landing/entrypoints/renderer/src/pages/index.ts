@@ -1,1 +1,1 @@
-export { default, getServerSideProps } from '@landing/index-page'
+export { default, getStaticProps } from '@landing/index-page'

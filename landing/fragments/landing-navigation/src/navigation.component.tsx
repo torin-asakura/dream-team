@@ -29,7 +29,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
   const [isNavVisible, setIsNavVisible] = useState<boolean>(true)
   const { scroll } = useLocomotiveScroll()
   const { shadows }: any = useTheme()
-  const { navigation } = useNavigation()
+  const { navigationData } = useNavigation()
 
   useEffect(() => {
     if (scroll) {
@@ -72,7 +72,7 @@ const Navigation: FC<NavigationProps> = ({ language, languageVar }) => {
               <Logo mobile />
             </Layout>
             <Row justifyContent='flex-end' alignItems='center'>
-              {navigation[language].map(({ contentAddons: { title, content } }) => (
+              {navigationData[language].map(({ contentAddons: { title, content } }) => (
                 <React.Fragment key={title}>
                   <NextLink
                     color='black'

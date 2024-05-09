@@ -14,7 +14,6 @@ import { languageVar }    from './store'
 
 const Page404 = () => {
   const language = useReactiveVar<Language>(languageVar)
-
   return (
     <Preloader>
       <Box height='100vh' backgroundColor='background.lightBeige'>
