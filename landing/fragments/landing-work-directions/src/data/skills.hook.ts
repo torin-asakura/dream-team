@@ -6,7 +6,7 @@ import { GET_SKILLS }          from './skills.query'
 import { sortBySide }          from '../helpers'
 
 export const useSkills = () => {
-  const { data } = useQuery(GET_SKILLS,{fetchPolicy:'cache-only'})
+  const { data } = useQuery(GET_SKILLS, { fetchPolicy: 'cache-only' })
 
   if (!data) {
     return { leftSide: [], rightSide: [] }
