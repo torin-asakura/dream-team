@@ -12,7 +12,7 @@ import { Row }            from '@ui/layout'
 import { Tag }            from '@ui/tag/src'
 import { Text }           from '@ui/text'
 import { Space }          from '@ui/text'
-
+import uniqid from 'uniqid'
 import { PopoverProps }   from './popover.interface'
 import { formatString }   from '../helpers'
 import { messages }       from '../messages'
@@ -44,10 +44,10 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
                 <Row justifyContent='flex-end' display={['none', 'none', 'flex']}>
                   {visible !== null &&
                     reviews[visible].customerReview.skills?.edges?.map(({ node }) => (
-                      <>
+                      <React.Fragment key={uniqid()}>
                         <Layout flexBasis={8} />
                         <Tag title={node?.title} variant='secondary' />
-                      </>
+                      </React.Fragment>
                     ))}
                 </Row>
               </Row>
@@ -61,14 +61,14 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
               <Row justifyContent='flex-start' flexWrap='wrap' display={['flex', 'flex', 'none']}>
                 {visible !== null &&
                   reviews[visible].customerReview.skills?.edges?.map(({ node }) => (
-                    <>
+                    <React.Fragment key={uniqid()}>
                       <Column height='auto'>
                         <Layout flexBasis={[0, 0, 8]} />
                         <Tag title={node?.title} variant='secondary' />
                         <Layout flexBasis={[8, 8, 0]} />
                       </Column>
                       <Layout flexBasis={[8, 8, 0]} />
-                    </>
+                    </React.Fragment>
                   ))}
               </Row>
             </Column>

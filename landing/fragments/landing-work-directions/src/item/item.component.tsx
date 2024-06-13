@@ -8,6 +8,7 @@ import { Column }    from '@ui/layout'
 import { Box }       from '@ui/layout'
 import { Tag }       from '@ui/tag'
 import { Text }      from '@ui/text'
+import uniqid from 'uniqid'
 
 import { ItemProps } from './item.interface'
 
@@ -44,10 +45,10 @@ const Item: FC<ItemProps> = ({ category, language }) => (
       <Layout flexBasis={32} />
       <Row flexWrap='wrap'>
         {category.skills.nodes.filter(filterByLanguage(language)).map(({ title }) => (
-          <>
+          <React.Fragment key={uniqid()}>
             <Tag title={title} />
             <Layout flexBasis={8} flexShrink={0} />
-          </>
+          </React.Fragment>
         ))}
       </Row>
       <Layout flexBasis={[20, 20, 32]} />
