@@ -35,7 +35,7 @@ const IndexPage: FC<IndexPageProps> = ({ SEO }) => {
         <Navigation language={language} languageVar={languageVar} />
         <Seo language={language} SEO={SEO} />
         <ScrollContainer data-scroll-container ref={containerRef}>
-          {/*<LandingHero language={language} />*/}
+          <LandingHero language={language} />
           <LandingAbout language={language} />
           <LandingReviews language={language} />
           <LandingTeam language={language} />

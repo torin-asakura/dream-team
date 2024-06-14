@@ -25,7 +25,7 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
   const [backgroundColor, setBackgroundColor] = useState<string>('')
   const [videoIsPlaying, setVideoIsPlaying] = useState<boolean>(false)
 
-  const { title , content } = extractObject('contentAddons', 'lead', heroData[language])
+  const { title, content } = extractObject('contentAddons', 'lead', heroData[language])
 
   useEffect(() => {
     if (!videoIsPlaying) return

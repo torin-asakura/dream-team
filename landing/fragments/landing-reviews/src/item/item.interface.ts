@@ -3,10 +3,10 @@ import { Language } from '../landing-reviews.interface'
 export interface Review {
   title: string
   content: string
-  review: {
+  customerReview: {
     respondent: string
     companylink: string
-    skills: any[]
+    skills: { edges: any[] }
   }
 }
 

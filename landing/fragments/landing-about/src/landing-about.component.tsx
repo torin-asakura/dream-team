@@ -14,7 +14,6 @@ import { splitItems }            from './helpers'
 
 const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
   const { aboutData } = useAbout()
-  console.log(aboutData)
   const [topSide, bottomSide] = splitItems(aboutData[language])
   return (
     <Box px={['20px', '20px', '0px']}>

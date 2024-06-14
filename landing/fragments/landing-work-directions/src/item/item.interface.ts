@@ -4,7 +4,7 @@ export interface Category {
   name: string
   skillAddons: {
     icon?: {
-      mediaItemUrl?: string
+      node: { mediaItemUrl?: string }
     }
   }
   skills: {
