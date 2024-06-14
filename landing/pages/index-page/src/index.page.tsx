@@ -33,13 +33,13 @@ const IndexPage: FC<IndexPageProps> = ({ SEO }) => {
         containerRef={containerRef}
       >
         <Navigation language={language} languageVar={languageVar} />
-        <Seo language={language} SEO={SEO} />
+        {/*<Seo language={language} SEO={SEO} />*/}
         <ScrollContainer data-scroll-container ref={containerRef}>
           <LandingHero language={language} />
           <LandingAbout language={language} />
           <LandingReviews language={language} />
           <LandingTeam language={language} />
-          <LandingFeedback language={language} />
+          {/*<LandingFeedback language={language} />*/}
           <LandingFooter language={language} />
         </ScrollContainer>
       </LocomotiveScrollProvider>
