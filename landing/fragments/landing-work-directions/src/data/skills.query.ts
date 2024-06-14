@@ -7,7 +7,9 @@ export const GET_SKILLS = gql(`
         name
         skillAddons {
           icon {
-            mediaItemUrl
+            node {
+              mediaItemUrl
+            }
           }
         }
         skills {
