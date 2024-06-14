@@ -6,7 +6,7 @@ export const useReviews = () => {
   const { data } = useQuery(GET_REVIEWS,
     // { fetchPolicy: 'cache-only' }
   )
-  console.log(data)
+
   if (!data) {
     return { reviewsData: { RU: [], EN: [] } }
   }

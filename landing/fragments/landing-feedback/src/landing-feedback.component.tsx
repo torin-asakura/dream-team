@@ -18,8 +18,8 @@ const LandingFeedback: FC<LandingFeedbackProps> = ({ language }) => {
 
   const obj = extractObject('contentAddons', 'lead', feedbackData[language])
 
-  const imageUrl = obj.image.sourceUrl
-  const imageAltText = obj.image.altText
+  const imageUrl = obj.image.node.sourceUrl
+  const imageAltText = obj.image.node.altText
   const { title } = obj
   const { content } = obj
 

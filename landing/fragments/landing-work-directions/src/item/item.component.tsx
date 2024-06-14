@@ -30,7 +30,7 @@ const Item: FC<ItemProps> = ({ category, language }) => (
       <Layout flexBasis={[20, 20, 32]} />
       <Row>
         <Layout width={56} height={56}>
-          <Image src={category?.skillAddons?.icon?.mediaItemUrl} />
+          <Image src={category?.skillAddons?.icon?.node?.mediaItemUrl} />
         </Layout>
       </Row>
       <Layout flexBasis={24} />
