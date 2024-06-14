@@ -43,10 +43,10 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
                 </Layout>
                 <Row justifyContent='flex-end' display={['none', 'none', 'flex']}>
                   {visible !== null &&
-                    reviews[visible].customerReview.skills?.edges?.map(({ title }) => (
+                    reviews[visible].customerReview.skills?.edges?.map(({ node }) => (
                       <>
                         <Layout flexBasis={8} />
-                        <Tag title={title} variant='secondary' />
+                        <Tag title={node?.title} variant='secondary' />
                       </>
                     ))}
                 </Row>
@@ -60,11 +60,11 @@ const Popover: FC<PopoverProps> = ({ visible, setVisible, reviews, language }) =
               <Layout flexBasis={[24, 24, 0]} />
               <Row justifyContent='flex-start' flexWrap='wrap' display={['flex', 'flex', 'none']}>
                 {visible !== null &&
-                  reviews[visible].customerReview.skills?.edges?.map(({ title }) => (
+                  reviews[visible].customerReview.skills?.edges?.map(({ node }) => (
                     <>
                       <Column height='auto'>
                         <Layout flexBasis={[0, 0, 8]} />
-                        <Tag title={title} variant='secondary' />
+                        <Tag title={node?.title} variant='secondary' />
                         <Layout flexBasis={[8, 8, 0]} />
                       </Column>
                       <Layout flexBasis={[8, 8, 0]} />
