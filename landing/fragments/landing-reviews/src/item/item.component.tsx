@@ -33,7 +33,7 @@ const Item: FC<ItemProps> = ({ review, language, onClick }) => (
       <Layout flexBasis={4} />
       <Layout>
         <Text fontSize='regular' color='text.lightGray'>
-          {formatString(review.review.respondent)}
+          {formatString(review.customerReview.respondent)}
         </Text>
       </Layout>
       <Layout flexGrow={1} />
