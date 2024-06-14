@@ -8,7 +8,6 @@ export const useHero = () => {
   if (!data) {
     return { heroData: { RU: [], EN: [] } }
   }
-
   return {
     heroData: {
       RU: data.heroItems.nodes.filter((heroFragment) => heroFragment.language.code === 'RU'),

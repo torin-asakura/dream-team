@@ -6,7 +6,6 @@ import { GET_RECRUITS }        from './recruits.query'
 
 export const useRecruits = () => {
   const { data } = useQuery(GET_RECRUITS, { fetchPolicy: 'cache-only' })
-
   if (!data) {
     return { recruitsData: [] }
   }

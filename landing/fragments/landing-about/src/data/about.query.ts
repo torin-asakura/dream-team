@@ -9,8 +9,10 @@ export const GET_ABOUT = gql`
           content
           excerpt
           image {
-            altText
-            sourceUrl
+            node {
+              altText
+              sourceUrl
+            }
           }
           role
           order

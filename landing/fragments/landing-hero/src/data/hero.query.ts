@@ -8,8 +8,10 @@ export const GET_HERO = gql`
           title
           content
           image {
-            altText
-            sourceUrl
+            node {
+              altText
+              sourceUrl
+            }
           }
           role
         }

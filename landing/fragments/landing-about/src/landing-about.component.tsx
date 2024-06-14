@@ -14,7 +14,6 @@ import { splitItems }            from './helpers'
 
 const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
   const { aboutData } = useAbout()
-
   const [topSide, bottomSide] = splitItems(aboutData[language])
   return (
     <Box px={['20px', '20px', '0px']}>
@@ -39,7 +38,7 @@ const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
                   title={title}
                   content={content}
                   excerpt={excerpt}
-                  image={image}
+                  image={image.node}
                   index={index}
                 />
                 <Condition match={index !== topSide.length - 1}>
@@ -62,7 +61,7 @@ const LandingAbout: FC<LandingAboutProps> = ({ language }) => {
                   title={title}
                   content={content}
                   excerpt={excerpt}
-                  image={image}
+                  image={image.node}
                   index={index}
                 />
                 <Condition match={index !== bottomSide.length - 1}>

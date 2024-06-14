@@ -9,8 +9,10 @@ export const GET_FEEDBACK = gql`
           role
           content
           image {
-            altText
-            sourceUrl
+            node {
+              altText
+              sourceUrl
+            }
           }
         }
         language {
