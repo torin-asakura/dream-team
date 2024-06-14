@@ -1,21 +1,23 @@
-import React                from 'react'
-import { FastAverageColor } from 'fast-average-color'
-import { FC }               from 'react'
-import { useEffect }        from 'react'
-import { useState }         from 'react'
+import React                      from 'react'
+import { FastAverageColor }       from 'fast-average-color'
+import { FastAverageColorResult } from 'fast-average-color'
+import { FC }                     from 'react'
+import { useEffect }              from 'react'
+import { useState }               from 'react'
 
-import { Layout }           from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { AnimateOnLoad }    from '@ui/preloader'
-import { extractObject }    from '@globals/data'
+import { Layout }                 from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Box }                    from '@ui/layout'
+import { AnimateOnLoad }          from '@ui/preloader'
+import { extractObject }          from '@globals/data'
 
-import { Content }          from './content'
-import { CDN_VIDEO_MINE }   from './landing-hero.constants'
-import { CDN_VIDEO_PATH }   from './landing-hero.constants'
-import { HeroProps }        from './landing-hero.interface'
-import { Video }            from './video'
-import { useHero }          from './data'
+import { Content }                from './content'
+import { CDN_VIDEO_MINE }         from './landing-hero.constants'
+import { FAST_BLACK_COLOR_RGBA }  from './landing-hero.constants'
+import { CDN_VIDEO_PATH }         from './landing-hero.constants'
+import { HeroProps }              from './landing-hero.interface'
+import { Video }                  from './video'
+import { useHero }                from './data'
 
 const fac = new FastAverageColor()
 
@@ -32,18 +34,24 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
 
     const videoElement = document.querySelector('video')
 
-    const getColor = () => {
-      try {
-        const color = fac.getColor(videoElement, { algorithm: 'dominant' })
-        setBackgroundColor(color.rgb)
-      } catch (error) {
-        if (process.env.NODE_ENV !== 'production') throw error
-      }
-    }
+    const getColor = () =>
+      setTimeout(() => {
+        try {
+          let colorValue = FAST_BLACK_COLOR_RGBA
+          let color: FastAverageColorResult | undefined
 
-    const interval = setInterval(getColor, 500)
-    /* eslint-disable-next-line consistent-return */
-    return () => clearInterval(interval)
+          do {
+            color = fac.getColor(videoElement, { algorithm: 'dominant' })
+            colorValue = color.value
+          } while (colorValue.every((item) => item === 0))
+
+          setBackgroundColor(color.rgb)
+        } catch (error) {
+          if (process.env.NODE_ENV !== 'production') throw error
+        }
+      }, 10000)
+
+    getColor()
   }, [videoIsPlaying])
 
   return (

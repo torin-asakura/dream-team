@@ -1,4 +1,5 @@
 import React              from 'react'
+import uniqid             from 'uniqid'
 import { FC }             from 'react'
 import { useMemo }        from 'react'
 
@@ -12,7 +13,7 @@ import { Row }            from '@ui/layout'
 import { Tag }            from '@ui/tag/src'
 import { Text }           from '@ui/text'
 import { Space }          from '@ui/text'
-import uniqid from 'uniqid'
+
 import { PopoverProps }   from './popover.interface'
 import { formatString }   from '../helpers'
 import { messages }       from '../messages'

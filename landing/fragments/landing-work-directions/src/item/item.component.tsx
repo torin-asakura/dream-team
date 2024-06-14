@@ -1,4 +1,5 @@
 import React         from 'react'
+import uniqid        from 'uniqid'
 import { FC }        from 'react'
 
 import { Image }     from '@ui/image'
@@ -8,7 +9,6 @@ import { Column }    from '@ui/layout'
 import { Box }       from '@ui/layout'
 import { Tag }       from '@ui/tag'
 import { Text }      from '@ui/text'
-import uniqid from 'uniqid'
 
 import { ItemProps } from './item.interface'
 
