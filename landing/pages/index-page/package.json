@@ -13,6 +13,7 @@
     "@landing/team-fragment": "workspace:0.0.1",
     "@landing/work-directions-fragment": "workspace:0.0.1",
     "@shared/seo": "workspace:0.0.1",
+    "@ui/form": "workspace:0.0.1",
     "locomotive-scroll": "4.1.4"
   },
   "devDependencies": {
