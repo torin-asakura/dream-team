@@ -24,7 +24,7 @@ const fac = new FastAverageColor()
 const LandingHero: FC<HeroProps> = ({ language }) => {
   const { heroData } = useHero()
 
-  const [backgroundColor, setBackgroundColor] = useState<string>('')
+  const [backgroundColor, setBackgroundColor] = useState<string>('background.purple')
   const [videoIsPlaying, setVideoIsPlaying] = useState<boolean>(false)
 
   const { title, content } = extractObject('contentAddons', 'lead', heroData[language])
@@ -49,17 +49,18 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
         } catch (error) {
           if (process.env.NODE_ENV !== 'production') throw error
         }
-      }, 10000)
+      }, 7000)
 
     getColor()
   }, [videoIsPlaying])
+
 
   return (
     <Box
       height={['auto', 'auto', '100vh']}
       width='100%'
       overflow='hidden'
-      backgroundColor={backgroundColor || 'background.hero'}
+      backgroundColor={backgroundColor || 'background.purple'}
     >
       <Column width='100%' alignItems='center' justifyContent='center'>
         <Layout flexBasis={[72, 72, 0]} />

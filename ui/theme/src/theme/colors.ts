@@ -77,9 +77,7 @@ const colors = {
     hero: 'rgba(48, 51, 121, 1)',
     blue: 'rgba(36,114,238,1)',
     white: 'rgba(255,255,255,1)',
-    purpleInChrome: 'rgba(55,57,106,1)',
-    purpleInSafari: 'rgba(55,55,105,1)',
-    purpleInFirefox: 'rgba(56,54,105,1)',
+    purple: 'rgb(63, 66, 118)',
   },
   input: {
     background: 'rgba(255, 255, 255, 1)',

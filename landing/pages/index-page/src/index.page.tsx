@@ -26,7 +26,7 @@ const IndexPage: FC<IndexPageProps> = ({ SEO }) => {
   const language = useReactiveVar<Language>(languageVar)
   const containerRef = useRef(null)
   return (
-    <Preloader>
+    <Preloader seconds={6}>
       <LocomotiveScrollProvider
         options={LOCOMOTIVE_SCROLL_OPTIONS}
         watch={LOCOMOTIVE_SCROLL_WATCH}
@@ -43,7 +43,7 @@ const IndexPage: FC<IndexPageProps> = ({ SEO }) => {
           <LandingFooter language={language} />
         </ScrollContainer>
       </LocomotiveScrollProvider>
-    </Preloader>
+     </Preloader>
   )
 }
 
