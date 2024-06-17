@@ -11,9 +11,9 @@ import { GET_NAVIGATION }   from '@landing/navigation-fragment'
 import { GET_REVIEWS }      from '@landing/reviews-fragment'
 import { GET_RECRUITS }     from '@landing/team-fragment'
 import { GET_SKILLS }       from '@landing/work-directions-fragment'
+import { GET_FORMS }        from '@ui/form'
 import { addApolloState }   from '@globals/data'
 import { initializeApollo } from '@globals/data'
-import {GET_FORMS} from '@ui/form'
 export const getStaticProps = async () => {
   const client = initializeApollo({})
 
@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
     feedbackContent,
     skillsContent,
     recruitsContent,
-      formsContent
+    formsContent
 
   const seoPromise = client.query({ query: GET_SEO, variables: { uri: PageUri.INDEX } })
   const navigationPromise = client.query({ query: GET_NAVIGATION })
@@ -40,7 +40,6 @@ export const getStaticProps = async () => {
   const recruitsPromise = client.query({ query: GET_RECRUITS })
   const formsPromise = client.query({ query: GET_FORMS })
 
-
   ;[
     seoContent,
     navigationContent,
@@ -52,7 +51,7 @@ export const getStaticProps = async () => {
     feedbackContent,
     skillsContent,
     recruitsContent,
-    formsContent
+    formsContent,
   ] = await Promise.allSettled([
     seoPromise,
     navigationPromise,
@@ -63,7 +62,7 @@ export const getStaticProps = async () => {
     feedbackPromise,
     skillsPromise,
     recruitsPromise,
-    formsPromise
+    formsPromise,
   ])
 
   const SEO = {
@@ -93,7 +92,7 @@ export const getStaticProps = async () => {
       feedbackData,
       skillsData,
       recruitsData,
-      formData
+      formData,
     },
     revalidate: 3600,
   })

@@ -18,3 +18,11 @@ export const messages = {
 
 export const sphereStyleDesktop = { width: 600, height: 600 }
 export const sphereStyleMobile = { width: 300, height: 300 }
+
+export enum Browser {
+  SAFARI = 'safari',
+  CHROME = 'chrome',
+  OPERA = 'opr',
+  YANDEX = 'yabrowser',
+  FIREFOX = 'firefox',
+}

@@ -5,9 +5,9 @@ import { GET_SEO }          from '@globals/data'
 import { PageUri }          from '@globals/data'
 import { GET_CONTACTS }     from '@landing/contacts-fragment'
 import { GET_NAVIGATION }   from '@landing/navigation-fragment'
+import { GET_FORMS }        from '@ui/form'
 import { initializeApollo } from '@globals/data'
 import { addApolloState }   from '@globals/data'
-import {GET_FORMS} from '@ui/form'
 
 export const getStaticProps = async () => {
   const client = initializeApollo({})
@@ -22,12 +22,11 @@ export const getStaticProps = async () => {
 
   const formsPromise = client.query({ query: GET_FORMS })
 
-
-  ;[seoContent, navigationContent, contactsContent,formsContent] = await Promise.allSettled([
+  ;[seoContent, navigationContent, contactsContent, formsContent] = await Promise.allSettled([
     seoPromise,
     navigationPromise,
     contactsPromise,
-    formsPromise
+    formsPromise,
   ])
 
   const SEO = {
@@ -43,7 +42,7 @@ export const getStaticProps = async () => {
       SEO,
       navigationData,
       contactsData,
-      formsData
+      formsData,
     },
     revalidate: 3600,
   })
