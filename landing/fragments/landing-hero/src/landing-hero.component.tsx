@@ -34,22 +34,18 @@ const LandingHero: FC<HeroProps> = ({ language }) => {
 
     const videoElement = document.querySelector('video')
 
-    const getColor = () =>
-      setTimeout(() => {
-        try {
-          let colorValue = FAST_BLACK_COLOR_RGBA
-          let color: FastAverageColorResult | undefined
+    const getColor = () => {
+      try {
+        let color: FastAverageColorResult | undefined
 
-          do {
-            color = fac.getColor(videoElement, { algorithm: 'dominant' })
-            colorValue = color.value
-          } while (colorValue.every((item) => item === 0))
+        color = fac.getColor(videoElement, { algorithm: 'dominant' })
+        if (color.value.every(value => value === 0)) return
 
-          setBackgroundColor(color.rgb)
-        } catch (error) {
-          if (process.env.NODE_ENV !== 'production') throw error
-        }
-      }, 7000)
+        setBackgroundColor(color?.rgb)
+      } catch (error) {
+        if (process.env.NODE_ENV !== 'production') throw error
+      }
+    }
 
     getColor()
   }, [videoIsPlaying])
