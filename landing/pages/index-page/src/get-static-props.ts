@@ -13,7 +13,7 @@ import { GET_RECRUITS }     from '@landing/team-fragment'
 import { GET_SKILLS }       from '@landing/work-directions-fragment'
 import { addApolloState }   from '@globals/data'
 import { initializeApollo } from '@globals/data'
-
+import {GET_FORMS} from '@ui/form'
 export const getStaticProps = async () => {
   const client = initializeApollo({})
 
@@ -25,7 +25,8 @@ export const getStaticProps = async () => {
     reviewsContent,
     feedbackContent,
     skillsContent,
-    recruitsContent
+    recruitsContent,
+      formsContent
 
   const seoPromise = client.query({ query: GET_SEO, variables: { uri: PageUri.INDEX } })
   const navigationPromise = client.query({ query: GET_NAVIGATION })
@@ -37,6 +38,8 @@ export const getStaticProps = async () => {
   const feedbackPromise = client.query({ query: GET_FEEDBACK })
   const skillsPromise = client.query({ query: GET_SKILLS })
   const recruitsPromise = client.query({ query: GET_RECRUITS })
+  const formsPromise = client.query({ query: GET_FORMS })
+
 
   ;[
     seoContent,
@@ -49,6 +52,7 @@ export const getStaticProps = async () => {
     feedbackContent,
     skillsContent,
     recruitsContent,
+    formsContent
   ] = await Promise.allSettled([
     seoPromise,
     navigationPromise,
@@ -59,6 +63,7 @@ export const getStaticProps = async () => {
     feedbackPromise,
     skillsPromise,
     recruitsPromise,
+    formsPromise
   ])
 
   const SEO = {
@@ -74,6 +79,7 @@ export const getStaticProps = async () => {
   const feedbackData = feedbackContent || null
   const skillsData = skillsContent || null
   const recruitsData = recruitsContent || null
+  const formData = formsContent || null
 
   return addApolloState(client, {
     props: {
@@ -87,6 +93,7 @@ export const getStaticProps = async () => {
       feedbackData,
       skillsData,
       recruitsData,
+      formData
     },
     revalidate: 3600,
   })
