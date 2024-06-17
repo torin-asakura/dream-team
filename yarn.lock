@@ -3386,6 +3386,7 @@ __metadata:
     react: "npm:17.0.2"
     react-dom: "npm:17.0.2"
     swiper: "npm:8.3.1"
+    uniqid: "npm:5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     graphql: "*"
@@ -3433,6 +3434,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react: "npm:17.0.2"
     react-dom: "npm:17.0.2"
+    uniqid: "npm:5.4.0"
   peerDependencies:
     "@apollo/client": "*"
     graphql: "*"
@@ -14240,6 +14242,13 @@ __metadata:
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
   checksum: 7f556493e22e9023f1f9be0d516f5c3cf74d1d6a090c2701ada5117e99900e8cdf8b5540ad3ceed1a672d3532bdfcd0149c444b980731aacc840eb0660ba8587
+  languageName: node
+  linkType: hard
+
+"uniqid@npm:5.4.0":
+  version: 5.4.0
+  resolution: "uniqid@npm:5.4.0"
+  checksum: d2bb6655417616d2f99fadf50aa7aee592c41b4b9bf08c3715a37d8afee5a51c0e7dc297d4aa7251e23d9fb010016a70f506c2ecaba5391b393faba4513eff70
   languageName: node
   linkType: hard
 

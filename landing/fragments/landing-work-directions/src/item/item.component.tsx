@@ -1,4 +1,5 @@
 import React         from 'react'
+import uniqid        from 'uniqid'
 import { FC }        from 'react'
 
 import { Image }     from '@ui/image'
@@ -44,10 +45,10 @@ const Item: FC<ItemProps> = ({ category, language }) => (
       <Layout flexBasis={32} />
       <Row flexWrap='wrap'>
         {category.skills.nodes.filter(filterByLanguage(language)).map(({ title }) => (
-          <>
+          <React.Fragment key={uniqid()}>
             <Tag title={title} />
             <Layout flexBasis={8} flexShrink={0} />
-          </>
+          </React.Fragment>
         ))}
       </Row>
       <Layout flexBasis={[20, 20, 32]} />

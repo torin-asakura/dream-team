@@ -6506,7 +6506,8 @@ const RAW_RUNTIME_STATE =
           ["graphql", null],\
           ["react", "npm:17.0.2"],\
           ["react-dom", "virtual:949b466a656e34d9dda4a347f3de1b674fbea8538aaa67a12a0e686509b062d481e2831bc57479824396e206f4e1dfead258b10c52f050f068cc62dc955b5af2#npm:17.0.2"],\
-          ["swiper", "npm:8.3.1"]\
+          ["swiper", "npm:8.3.1"],\
+          ["uniqid", "npm:5.4.0"]\
         ],\
         "packagePeers": [\
           "@apollo/client",\
@@ -6541,7 +6542,8 @@ const RAW_RUNTIME_STATE =
           ["graphql", "npm:15.8.0"],\
           ["react", "npm:17.0.2"],\
           ["react-dom", "virtual:949b466a656e34d9dda4a347f3de1b674fbea8538aaa67a12a0e686509b062d481e2831bc57479824396e206f4e1dfead258b10c52f050f068cc62dc955b5af2#npm:17.0.2"],\
-          ["swiper", "npm:8.3.1"]\
+          ["swiper", "npm:8.3.1"],\
+          ["uniqid", "npm:5.4.0"]\
         ],\
         "packagePeers": [\
           "@apollo/client",\
@@ -6573,7 +6575,8 @@ const RAW_RUNTIME_STATE =
           ["@ui/utils", "virtual:aaf5b04dfdb1d01e368d5b76e89ada4021747428102bf573c45f3d2df82d92b4f5461079152d4614d8c7125aab9da7f712530546702fa28806a522c622ab3214#workspace:ui/utils"],\
           ["react", "npm:17.0.2"],\
           ["react-dom", "virtual:949b466a656e34d9dda4a347f3de1b674fbea8538aaa67a12a0e686509b062d481e2831bc57479824396e206f4e1dfead258b10c52f050f068cc62dc955b5af2#npm:17.0.2"],\
-          ["swiper", "npm:8.3.1"]\
+          ["swiper", "npm:8.3.1"],\
+          ["uniqid", "npm:5.4.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -6679,7 +6682,8 @@ const RAW_RUNTIME_STATE =
           ["@ui/utils", "virtual:aaf5b04dfdb1d01e368d5b76e89ada4021747428102bf573c45f3d2df82d92b4f5461079152d4614d8c7125aab9da7f712530546702fa28806a522c622ab3214#workspace:ui/utils"],\
           ["graphql", null],\
           ["react", "npm:17.0.2"],\
-          ["react-dom", "virtual:949b466a656e34d9dda4a347f3de1b674fbea8538aaa67a12a0e686509b062d481e2831bc57479824396e206f4e1dfead258b10c52f050f068cc62dc955b5af2#npm:17.0.2"]\
+          ["react-dom", "virtual:949b466a656e34d9dda4a347f3de1b674fbea8538aaa67a12a0e686509b062d481e2831bc57479824396e206f4e1dfead258b10c52f050f068cc62dc955b5af2#npm:17.0.2"],\
+          ["uniqid", "npm:5.4.0"]\
         ],\
         "packagePeers": [\
           "@apollo/client",\
@@ -6711,7 +6715,8 @@ const RAW_RUNTIME_STATE =
           ["@ui/utils", "virtual:aaf5b04dfdb1d01e368d5b76e89ada4021747428102bf573c45f3d2df82d92b4f5461079152d4614d8c7125aab9da7f712530546702fa28806a522c622ab3214#workspace:ui/utils"],\
           ["graphql", "npm:15.8.0"],\
           ["react", "npm:17.0.2"],\
-          ["react-dom", "virtual:949b466a656e34d9dda4a347f3de1b674fbea8538aaa67a12a0e686509b062d481e2831bc57479824396e206f4e1dfead258b10c52f050f068cc62dc955b5af2#npm:17.0.2"]\
+          ["react-dom", "virtual:949b466a656e34d9dda4a347f3de1b674fbea8538aaa67a12a0e686509b062d481e2831bc57479824396e206f4e1dfead258b10c52f050f068cc62dc955b5af2#npm:17.0.2"],\
+          ["uniqid", "npm:5.4.0"]\
         ],\
         "packagePeers": [\
           "@apollo/client",\
@@ -6740,7 +6745,8 @@ const RAW_RUNTIME_STATE =
           ["@ui/text", "virtual:aaf5b04dfdb1d01e368d5b76e89ada4021747428102bf573c45f3d2df82d92b4f5461079152d4614d8c7125aab9da7f712530546702fa28806a522c622ab3214#workspace:ui/text"],\
           ["@ui/utils", "virtual:aaf5b04dfdb1d01e368d5b76e89ada4021747428102bf573c45f3d2df82d92b4f5461079152d4614d8c7125aab9da7f712530546702fa28806a522c622ab3214#workspace:ui/utils"],\
           ["react", "npm:17.0.2"],\
-          ["react-dom", "virtual:949b466a656e34d9dda4a347f3de1b674fbea8538aaa67a12a0e686509b062d481e2831bc57479824396e206f4e1dfead258b10c52f050f068cc62dc955b5af2#npm:17.0.2"]\
+          ["react-dom", "virtual:949b466a656e34d9dda4a347f3de1b674fbea8538aaa67a12a0e686509b062d481e2831bc57479824396e206f4e1dfead258b10c52f050f068cc62dc955b5af2#npm:17.0.2"],\
+          ["uniqid", "npm:5.4.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -21998,6 +22004,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/undici-types-npm-5.26.5-de4f7c7bb9-7f556493e2.zip/node_modules/undici-types/",\
         "packageDependencies": [\
           ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["uniqid", [\
+      ["npm:5.4.0", {\
+        "packageLocation": "./.yarn/cache/uniqid-npm-5.4.0-f982bda028-d2bb665541.zip/node_modules/uniqid/",\
+        "packageDependencies": [\
+          ["uniqid", "npm:5.4.0"]\
         ],\
         "linkType": "HARD"\
       }]\
